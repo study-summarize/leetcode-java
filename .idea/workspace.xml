@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a663eba0-ef2d-4ee8-8c37-e0458989ab47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/struct/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +106,9 @@
       <workItem from="1661875162523" duration="59000" />
       <workItem from="1664460529305" duration="34000" />
       <workItem from="1666408341975" duration="164000" />
+      <workItem from="1667308749767" duration="2708000" />
+      <workItem from="1667735275017" duration="2968000" />
+      <workItem from="1670160852165" duration="4741000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1661010995582</created>
@@ -134,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663683715612</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="project config">
+      <created>1667308793916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667308793916</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +172,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="temp" />
     <MESSAGE value="impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="impl" />
+    <MESSAGE value="project config" />
+    <option name="LAST_COMMIT_MESSAGE" value="project config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
