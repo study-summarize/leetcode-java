@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a663eba0-ef2d-4ee8-8c37-e0458989ab47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/struct/MyArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NextGreaterDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Demo">
+  <component name="RunManager" selected="Application.NextGreaterDemo">
     <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bst.BinarySearchTree" />
       <module name="leetcode-java" />
@@ -66,6 +66,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NextGreaterDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NextGreaterDemo" />
+      <module name="leetcode-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortArrayByParity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SortArrayByParity" />
       <module name="leetcode-java" />
@@ -73,20 +80,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ThreeSum" />
-      <module name="leetcode-java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NextGreaterDemo" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="Application.DepthFirstSearch" />
         <item itemvalue="Application.BinarySearchTree" />
         <item itemvalue="Application.SortArrayByParity" />
-        <item itemvalue="Application.ThreeSum" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +108,8 @@
       <workItem from="1666408341975" duration="164000" />
       <workItem from="1667308749767" duration="2708000" />
       <workItem from="1667735275017" duration="2968000" />
-      <workItem from="1670160852165" duration="4741000" />
+      <workItem from="1670160852165" duration="8614000" />
+      <workItem from="1671456787121" duration="2092000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1661010995582</created>
@@ -145,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667308793916</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: 数组数据结构的实现">
+      <created>1670249026675</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670249026675</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +181,8 @@
     <MESSAGE value="temp" />
     <MESSAGE value="impl" />
     <MESSAGE value="project config" />
-    <option name="LAST_COMMIT_MESSAGE" value="project config" />
+    <MESSAGE value="feat: 数组数据结构的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 数组数据结构的实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
