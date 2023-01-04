@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a663eba0-ef2d-4ee8-8c37-e0458989ab47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BinarySearchDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/struct/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/struct/MyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.NextGreaterDemo">
+  <component name="RunManager" selected="Application.MyLinkedList">
     <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bst.BinarySearchTree" />
       <module name="leetcode-java" />
@@ -66,6 +67,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="struct.MyLinkedList" />
+      <module name="leetcode-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="struct.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NextGreaterDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NextGreaterDemo" />
       <module name="leetcode-java" />
@@ -73,20 +87,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortArrayByParity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SortArrayByParity" />
-      <module name="leetcode-java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyLinkedList" />
         <item itemvalue="Application.NextGreaterDemo" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="Application.DepthFirstSearch" />
         <item itemvalue="Application.BinarySearchTree" />
-        <item itemvalue="Application.SortArrayByParity" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +116,7 @@
       <workItem from="1667308749767" duration="2708000" />
       <workItem from="1667735275017" duration="2968000" />
       <workItem from="1670160852165" duration="8614000" />
-      <workItem from="1671456787121" duration="6707000" />
+      <workItem from="1671456787121" duration="9265000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1661010995582</created>
@@ -160,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671957111567</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add： 二分查找模板代码">
+      <created>1672762222715</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672762222715</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +204,8 @@
     <MESSAGE value="project config" />
     <MESSAGE value="feat: 数组数据结构的实现" />
     <MESSAGE value="feat: 下一个最大值" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 下一个最大值" />
+    <MESSAGE value="add： 二分查找模板代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="add： 二分查找模板代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
