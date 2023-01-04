@@ -50,6 +50,32 @@ public class MyLinkedList {
         newNode.next = curNode;
     }
 
+    public void addWithDummyNode(int index, int value) {
+        preCheck(index, this.length);
+
+        // Build new Node
+        ListNode newNode = new ListNode(value);
+        this.length++;
+
+        // Build Dummy Node
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+
+        ListNode preNode = dummyNode;
+        while (index > 0) {
+            preNode = preNode.next;
+            index--;
+        }
+        // Search
+        ListNode curNode = preNode.next;
+
+        // change Linked list structure
+        preNode.next = newNode;
+        newNode.next = curNode;
+
+        this.head = dummyNode.next;
+    }
+
     private void preCheck(int index, int restriction) {
         if (index < 0 || index > restriction) {
             throw new RuntimeException(String.format("The index %s is out of index, the restriction for check %s", index, this.length));
@@ -81,6 +107,27 @@ public class MyLinkedList {
         // change Linked list structure
         preNode.next = cur.next;
         this.length--;
+    }
+
+    public void removeByIndexWithDummyNode(int index) {
+        preCheck(index, this.length - 1);
+        this.length--;
+
+        // Build Dummy Node
+        ListNode dummyNode = new ListNode(-1);
+        dummyNode.next = head;
+
+        ListNode preNode = dummyNode;
+        while (index > 0) {
+            preNode = preNode.next;
+            index--;
+        }
+
+        // change Linked list structure
+        ListNode nextNode = preNode.next.next;
+        preNode.next = nextNode;
+
+        this.head = dummyNode.next;
     }
 
     public void removeByValue(int value) {
@@ -145,5 +192,13 @@ public class MyLinkedList {
         // 5
         System.out.println(list.length);
         System.out.println(list.getLengthByTraverse());
+
+        list.addWithDummyNode(0, 99);
+        // 99 3 1 6 1000 100 null
+        System.out.println(list.get(0));
+
+        list.removeByIndexWithDummyNode(1);
+        // 99 1 6 1000 100 null
+        System.out.println(list.get(1));
     }
 }
