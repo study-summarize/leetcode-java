@@ -117,43 +117,4 @@ public class BinarySearchTree {
         return root;
     }
 
-
-
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(30);
-        TreeNode node1 = new TreeNode(19);
-        TreeNode node2 = new TreeNode(34);
-        root.setLeft(node1);
-        root.setRight(node2);
-
-        TreeNode node3 = new TreeNode(12);
-        TreeNode node4 = new TreeNode(22);
-        TreeNode node5 = new TreeNode(31);
-        TreeNode node6 = new TreeNode(42);
-        node1.setLeft(node3);
-        node1.setRight(node4);
-        node2.setLeft(node5);
-        node2.setRight(node6);
-
-        TreeNode node7 = new TreeNode(20);
-        TreeNode node8 = new TreeNode(28);
-        TreeNode node9 = new TreeNode(36);
-        TreeNode node10 = new TreeNode(47);
-        node4.setLeft(node7);
-        node4.setRight(node8);
-        node6.setLeft(node9);
-        node6.setRight(node10);
-
-        BinarySearchTree bst = new BinarySearchTree(root);
-
-        // find 22
-        System.out.println("find 22: " + bst.find(22));
-        System.out.println("find 45: " + bst.find(45));
-
-        // add 45
-        bst.add(45);
-        System.out.println("find 45 after adding: " + bst.find(45));
-        System.out.println("add 22: " + bst.add(22));
-    }
-
 }

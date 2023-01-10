@@ -117,20 +117,4 @@ public class MyArrayList<T> {
         }
     }
 
-    public static void main(String[] args) {
-        MyArrayList<Integer> list1 = new MyArrayList<>();
-        MyArrayList<Integer> list2 = new MyArrayList<>(20);
-
-        list1.add(1);
-        list1.add(2);
-        list1.add(3);
-        int len = list1.length();
-        System.out.println("The length of list 1: " + len);
-        System.out.println("The empty status: " + list1.isEmpty());
-        for (int i = 0; i < len; i++) {
-            System.out.println("The item of list 1:" + list1.get(i));
-        }
-
-    }
-
 }
