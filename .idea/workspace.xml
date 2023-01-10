@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a663eba0-ef2d-4ee8-8c37-e0458989ab47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/build_and_test.yml" afterDir="false" />
+    <list default="true" id="9058549c-c8cd-4717-a6c0-2c7df0d43dd3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/struct/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/struct/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/array/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/struct/linkedlist/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/linkedlist/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/struct/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/struct/MyArrayListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -25,262 +29,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/struct/bst/TreeNode.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2DKSw1xxRiULNIhN4owF9Ob8bw5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTreeTest.test">
-    <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="struct.linkedlist.MyLinkedList" />
-      <module name="leetcode-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="struct.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NextGreaterDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NextGreaterDemo" />
-      <module name="leetcode-java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinarySearchTreeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="struct.bst.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="struct.bst" />
-      <option name="MAIN_CLASS_NAME" value="struct.bst.BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyArrayListTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="struct.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="struct" />
-      <option name="MAIN_CLASS_NAME" value="struct.MyArrayListTest" />
-      <option name="METHOD_NAME" value="testAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyLinkedListTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="struct.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="struct.linkedlist" />
-      <option name="MAIN_CLASS_NAME" value="struct.linkedlist.MyLinkedListTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.BinarySearchTreeTest.test" />
-        <item itemvalue="JUnit.MyLinkedListTest.test" />
-        <item itemvalue="JUnit.MyArrayListTest.testAdd" />
-        <item itemvalue="Application.MyLinkedList" />
-        <item itemvalue="Application.NextGreaterDemo" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a663eba0-ef2d-4ee8-8c37-e0458989ab47" name="Changes" comment="" />
-      <created>1660446521290</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1660446521290</updated>
-      <workItem from="1660446521292" duration="320000" />
-      <workItem from="1660446877890" duration="5070000" />
-      <workItem from="1660568855801" duration="5469000" />
-      <workItem from="1661010835544" duration="262000" />
-      <workItem from="1661011110391" duration="7399000" />
-      <workItem from="1661875162523" duration="59000" />
-      <workItem from="1664460529305" duration="34000" />
-      <workItem from="1666408341975" duration="164000" />
-      <workItem from="1667308749767" duration="2708000" />
-      <workItem from="1667735275017" duration="2968000" />
-      <workItem from="1670160852165" duration="8614000" />
-      <workItem from="1671456787121" duration="11012000" />
-      <workItem from="1673347149038" duration="1610000" />
-    </task>
-    <task id="LOCAL-00001" summary="init">
-      <created>1661010995582</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1661010995582</updated>
-    </task>
-    <task id="LOCAL-00002" summary="init">
-      <created>1661351400855</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1661351400856</updated>
-    </task>
-    <task id="LOCAL-00003" summary="temp">
-      <created>1661351413295</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1661351413295</updated>
-    </task>
-    <task id="LOCAL-00004" summary="impl">
-      <created>1663683715612</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1663683715612</updated>
-    </task>
-    <task id="LOCAL-00005" summary="project config">
-      <created>1667308793916</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1667308793916</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat: 数组数据结构的实现">
-      <created>1670249026675</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1670249026675</updated>
-    </task>
-    <task id="LOCAL-00007" summary="feat: 下一个最大值">
-      <created>1671957111567</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1671957111567</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add： 二分查找模板代码">
-      <created>1672762222715</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1672762222715</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add：单链表实现">
-      <created>1672838132830</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1672838132830</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update">
-      <created>1673347364686</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1673347364686</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update: 移动测试代码">
-      <created>1673348656698</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1673348656698</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
-    <MESSAGE value="temp" />
-    <MESSAGE value="impl" />
-    <MESSAGE value="project config" />
-    <MESSAGE value="feat: 数组数据结构的实现" />
-    <MESSAGE value="feat: 下一个最大值" />
-    <MESSAGE value="add： 二分查找模板代码" />
-    <MESSAGE value="add：单链表实现" />
-    <MESSAGE value="update" />
-    <MESSAGE value="update: 移动测试代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: 移动测试代码" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file:///var/folders/99/j2_wtwqd7lv7l8d1k04k78380000gn/T/leetcode/editor/cn/[905]按奇偶排序数组.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DepthFirstSearch.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Demo.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Demo.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,11 @@
-package struct;
+package struct.array;
 
+
+/**
+ * 数组列表实现：
+ *
+ * 1、相关题目
+ */
 public class MyArrayList<T> {
 
     private final static int DEFAULT_CAPACITY = 10;
