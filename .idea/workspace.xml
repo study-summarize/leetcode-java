@@ -40,11 +40,11 @@
   </component>
   <component name="RunManager" selected="Application.MyLinkedList">
     <configuration name="BinarySearchTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bst.BinarySearchTree" />
+      <option name="MAIN_CLASS_NAME" value="struct.bst.BinarySearchTree" />
       <module name="leetcode-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bst.*" />
+          <option name="PATTERN" value="struct.bst.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,11 +67,11 @@
       </method>
     </configuration>
     <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="struct.MyLinkedList" />
+      <option name="MAIN_CLASS_NAME" value="struct.linkedlist.MyLinkedList" />
       <module name="leetcode-java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="struct.*" />
+          <option name="PATTERN" value="struct.linkedlist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

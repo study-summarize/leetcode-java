@@ -1,4 +1,4 @@
-package bst;
+package struct.bst;
 
 public class BinarySearchTree {
 

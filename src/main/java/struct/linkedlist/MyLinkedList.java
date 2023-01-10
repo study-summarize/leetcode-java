@@ -1,6 +1,9 @@
-package struct;
+package struct.linkedlist;
 
 /**
+ * 头插法：
+ * 将俩个相邻节点旋转：
+ *
  * @author jwang55
  */
 public class MyLinkedList {

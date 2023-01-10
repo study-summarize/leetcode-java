@@ -1,4 +1,4 @@
-package struct;
+package struct.linkedlist;
 
 public class ListNode {
     int val;
