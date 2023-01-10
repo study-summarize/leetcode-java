@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a663eba0-ef2d-4ee8-8c37-e0458989ab47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/struct/MyArrayListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/struct/linkedlist/MyLinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/struct/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DepthFirstSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build_and_test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +141,7 @@
       <workItem from="1667735275017" duration="2968000" />
       <workItem from="1670160852165" duration="8614000" />
       <workItem from="1671456787121" duration="11012000" />
-      <workItem from="1673347149038" duration="1282000" />
+      <workItem from="1673347149038" duration="1610000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1661010995582</created>
@@ -219,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673347364686</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update: 移动测试代码">
+      <created>1673348656698</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673348656698</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +254,8 @@
     <MESSAGE value="add： 二分查找模板代码" />
     <MESSAGE value="add：单链表实现" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update: 移动测试代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: 移动测试代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
