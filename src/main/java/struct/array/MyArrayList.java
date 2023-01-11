@@ -3,8 +3,13 @@ package struct.array;
 
 /**
  * 数组列表实现：
+ * 1、相关技巧
+ * (1)前缀和
+ * - 一维数组前缀和
+ * - 二维数组前缀和
+ * - 前缀积
  *
- * 1、相关题目
+ * 2、相关题目
  */
 public class MyArrayList<T> {
 
