@@ -12,17 +12,19 @@ package struct.array;
  * 2、相关题目
  * (1)普通问题
  * - k-sum之和
- *      四数之和
- * - 反转字符数组
- * - 奇偶排序
- * - 合并俩个有序数组
+ *      01-俩数之和：https://leetcode.cn/problems/two-sum/
+ *      15-三数之和：https://leetcode.cn/problems/3sum/
+ *      18-四数之和：https://leetcode.cn/problems/4sum/
+ * - 344-反转字符串：https://leetcode.cn/problems/reverse-string/
+ * - 905-奇偶排序：https://leetcode.cn/problems/sort-array-by-parity/
+ * - 088-合并俩个有序数组：https://leetcode.cn/problems/merge-sorted-array/
  * (2)前缀和问题
- * - 区域和检索-数组不可变
- * - 一维数组的动态和
- * - 所有奇数长度子数组之和
- * - 和为k的子数组
- * - 二维区域和检索-矩阵不可变
- * - 除自身以外数组的乘积
+ * - 0303-区域和检索-数组不可变：https://leetcode.cn/problems/range-sum-query-immutable/
+ * - 1480-一维数组的动态和：https://leetcode.cn/problems/running-sum-of-1d-array/
+ * - 1588-所有奇数长度子数组之和：https://leetcode.cn/problems/sum-of-all-odd-length-subarrays/
+ * - 0560-和为k的子数组：https://leetcode.cn/problems/subarray-sum-equals-k/
+ * - 0304-二维区域和检索-矩阵不可变：https://leetcode.cn/problems/range-sum-query-2d-immutable/
+ * - 0238-除自身以外数组的乘积：https://leetcode.cn/problems/product-of-array-except-self/
  * -
  */
 public class MyArrayList<T> {
