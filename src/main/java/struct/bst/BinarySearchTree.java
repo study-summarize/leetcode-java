@@ -22,9 +22,9 @@ public class BinarySearchTree {
     public boolean find(int value) {
         TreeNode node = root;
         while (node != null) {
-            if (node.getValue() == value) {
+            if (node.getVal() == value) {
                 return true;
-            } else if (node.getValue() > value) {
+            } else if (node.getVal() > value) {
                 node = node.getLeft();
             } else {
                 node = node.getRight();
@@ -46,9 +46,9 @@ public class BinarySearchTree {
         }
         TreeNode node = root;
         while (node != null) {
-            if (node.getValue() == value) {
+            if (node.getVal() == value) {
                 return false;
-            } else if (node.getValue() > value) {
+            } else if (node.getVal() > value) {
                 if (node.getLeft() == null) {
                     node.setLeft(new TreeNode(value));
                     return true;
@@ -80,10 +80,10 @@ public class BinarySearchTree {
             return null;
         }
 
-        if (root.getValue() > value) {
+        if (root.getVal() > value) {
             // 要删除的节点只可能在左子树
             root.setLeft(deleteAndReturn(root.getLeft(), value));
-        } else if(root.getValue() < value) {
+        } else if(root.getVal() < value) {
             // 要删除的节点只可能在右子树
             root.setRight(deleteAndReturn(root.getRight(), value));
         } else {
@@ -100,8 +100,8 @@ public class BinarySearchTree {
             } else {
                 // 3、节点左右子树都有节点
                 TreeNode newRightNode = getMinNode(root.getRight());
-                root.setValue(newRightNode.getValue());
-                root.setRight(deleteAndReturn(root.getRight(), newRightNode.getValue()));
+                root.setVal(newRightNode.getVal());
+                root.setRight(deleteAndReturn(root.getRight(), newRightNode.getVal()));
             }
         }
         return root;

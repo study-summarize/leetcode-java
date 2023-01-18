@@ -18,6 +18,7 @@ package struct.array;
  * - 344-反转字符串：https://leetcode.cn/problems/reverse-string/
  * - 905-奇偶排序：https://leetcode.cn/problems/sort-array-by-parity/
  * - 088-合并俩个有序数组：https://leetcode.cn/problems/merge-sorted-array/
+ * - ???-回文数组判读
  * (2)前缀和问题
  * - 0303-区域和检索-数组不可变：https://leetcode.cn/problems/range-sum-query-immutable/
  * - 1480-一维数组的动态和：https://leetcode.cn/problems/running-sum-of-1d-array/

@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9058549c-c8cd-4717-a6c0-2c7df0d43dd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/struct/bst/TreeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/struct/recursion/RecursionDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/GrayCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_113_pathSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_129_sumNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_131_partition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_139_wordBreak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_140_wordBreak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_257_BinaryTreePaths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/leetcode/GrayCodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BinarySearchDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/binarySearch/BinarySearchDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/struct/array/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/array/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/struct/linkedlist/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/linkedlist/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/struct/stackAndQueue/MyDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/stackAndQueue/MyDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/struct/bst/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/bst/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/struct/bst/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/bst/TreeNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +51,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../github/elasticsearch" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GrayCodeTest.test">
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
+      <module name="leetcode-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinarySearchTreeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode-java" />
       <extension name="coverage">
@@ -61,8 +75,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GrayCodeTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="leetcode" />
+      <option name="MAIN_CLASS_NAME" value="leetcode.GrayCodeTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GrayCodeTest.test" />
+        <item itemvalue="Application.Solution" />
         <item itemvalue="JUnit.BinarySearchTreeTest.test" />
       </list>
     </recent_temporary>
@@ -91,6 +123,18 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
