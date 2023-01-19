@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9058549c-c8cd-4717-a6c0-2c7df0d43dd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/GrayCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_113_pathSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_129_sumNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_131_partition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_139_wordBreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_140_wordBreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_257_BinaryTreePaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/leetcode/GrayCodeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/struct/graph/UndirectedGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/struct/array/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/array/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/struct/bst/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/bst/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/struct/bst/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/struct/bst/TreeNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +39,23 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../github/elasticsearch" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="JUnit.GrayCodeTest.test">
+  <component name="RunManager" selected="Application.UndirectedGraph">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="leetcode-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UndirectedGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="struct.graph.UndirectedGraph" />
+      <module name="leetcode-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="struct.graph.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UndirectedGraph" />
         <item itemvalue="JUnit.GrayCodeTest.test" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="JUnit.BinarySearchTreeTest.test" />
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673426409594</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add 回溯法相关题目">
+      <created>1674021913451</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674021913451</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +149,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="add 构建插件" />
     <MESSAGE value="add note" />
-    <option name="LAST_COMMIT_MESSAGE" value="add note" />
+    <MESSAGE value="add 回溯法相关题目" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 回溯法相关题目" />
   </component>
 </project>
