@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9058549c-c8cd-4717-a6c0-2c7df0d43dd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_133_cloneGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_261_validTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_323_countComponents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_547_findCircleNum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/Test_490_hasPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/matrix/Maze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +35,34 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="2L4Xu4Eq4khAvTmkRgXlSujGwF5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../github/elasticsearch" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Application.UndirectedGraph">
+  <component name="RunManager" selected="Application.Maze">
+    <configuration name="Maze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.other.matrix.Maze" />
+      <module name="leetcode-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.other.matrix.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="leetcode-java" />
@@ -97,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Maze" />
         <item itemvalue="Application.UndirectedGraph" />
         <item itemvalue="JUnit.GrayCodeTest.test" />
         <item itemvalue="Application.Solution" />
@@ -104,6 +125,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="update">
       <created>1673350532308</created>
@@ -140,8 +162,27 @@
       <option name="project" value="LOCAL" />
       <updated>1674093889534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add 无向图的遍历">
+      <created>1674108105662</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674108105662</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9058549c-c8cd-4717-a6c0-2c7df0d43dd3" name="Changes" comment="" />
+      <created>1675131548375</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675131548375</updated>
+      <workItem from="1675131552499" duration="739000" />
+      <workItem from="1675134488871" duration="10721000" />
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -161,6 +202,18 @@
     <MESSAGE value="add note" />
     <MESSAGE value="add 回溯法相关题目" />
     <MESSAGE value="add: 无向图实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: 无向图实现" />
+    <MESSAGE value="add 无向图的遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 无向图的遍历" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/other/matrix/Maze.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
