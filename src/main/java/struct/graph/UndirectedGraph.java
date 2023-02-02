@@ -14,6 +14,8 @@ public class UndirectedGraph {
     private final Map<Node, List<Node>> adjacencyList;
     // 是否被访问过的节点标识
     private final boolean[] marked;
+    // 统计联通分量
+    private int connectComponentCount;
 
     // 构造器
     public UndirectedGraph(int vertexCount) {
@@ -35,6 +37,10 @@ public class UndirectedGraph {
         // note: u、v是否都在？？？
         this.adjacencyList.get(u).add(v);
         this.adjacencyList.get(v).add(u);
+    }
+
+    public int getConnectComponentCount() {
+        return connectComponentCount;
     }
 
     public void printGraph() {
@@ -63,8 +69,6 @@ public class UndirectedGraph {
         this.dfs(start);
     }
 
-    // 统计联通分量
-    private int connectComponentCount;
 
     /**
      * dfs模板
@@ -80,13 +84,51 @@ public class UndirectedGraph {
         }
     }
 
-    public int getConnectComponentCount() {
-        return connectComponentCount;
+    // BFS模板：BFS全图
+    public void bfsInGraph() {
+        Arrays.fill(marked, false);
+        connectComponentCount = 0;
+        for (Node startNode : adjacencyList.keySet()) {
+            if (!marked[startNode.getNo()]) {
+                this.bfs(startNode);
+                this.connectComponentCount++;
+            }
+        }
     }
+
+    // BFS模板：以start节点为起点在某一连通分量上BFS
+    public void bfsInComponent(Node start) {
+        Arrays.fill(marked, false);
+        bfs(start);
+    }
+
+    // BFS
+    public void bfs(Node start) {
+        // 创建队列
+        Queue<Node> queue = new LinkedList<>();
+        // 把start节点放入队列，并标记
+        queue.offer(start);
+        marked[start.getNo()] = true;
+        // BFS遍历
+        while (!queue.isEmpty()) {
+            Node curNode = queue.poll();
+            System.out.println("BFS current node : " + curNode.no + " value: " + curNode.value);
+            // 以curNode为圆心画圆：找邻接节点
+            for (Node adjNode : adjacencyList.get(curNode)) {
+                // 防止重复遍历
+                if (!marked[adjNode.getNo()]) {
+                    // 该节点已经放入队列中
+                    marked[adjNode.getNo()] = true;
+                    queue.offer(adjNode);
+                }
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
         // 构造图
-        UndirectedGraph graph = new UndirectedGraph(7);
+        UndirectedGraph graph = new UndirectedGraph(8);
 
         // add vertex
         Node node0 = new Node(0, 1);
@@ -96,6 +138,7 @@ public class UndirectedGraph {
         Node node4 = new Node(4, 5);
         Node node5 = new Node(5, 6);
         Node node6 = new Node(6, 7);
+        Node node7 = new Node(7, 8);
         graph.addVertex(node0);
         graph.addVertex(node1);
         graph.addVertex(node2);
@@ -103,6 +146,7 @@ public class UndirectedGraph {
         graph.addVertex(node4);
         graph.addVertex(node5);
         graph.addVertex(node6);
+        graph.addVertex(node7);
         // add edge
         graph.addEdge(node0, node1);
         graph.addEdge(node0, node2);
@@ -123,5 +167,16 @@ public class UndirectedGraph {
         System.out.println("DFS in Graph:");
         graph.dfsInGraph();
         System.out.println("component count: " + graph.getConnectComponentCount());
+
+        System.out.println("==================================");
+
+        // print bfs
+        System.out.println("BFS: Starting from node0");
+        graph.bfsInComponent(node0);
+        System.out.println("BFS: Starting from node1");
+        graph.bfsInComponent(node1);
+        System.out.println("BFS in Graph:");
+        graph.bfsInGraph();
+        System.out.println("BFS component count: " + graph.getConnectComponentCount());
     }
 }

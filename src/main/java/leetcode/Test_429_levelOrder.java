@@ -26,15 +26,17 @@ public class Test_429_levelOrder {
         // 3、层序遍历
         while (!queue.isEmpty()) {
             int size = queue.size();
+            List<Integer> levelList = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 Node node = queue.poll();
-                if (node.children != null) {
-
-
+                levelList.add(node.val);
+                for (Node childNode : node.children) {
+                    queue.offer(childNode);
                 }
             }
-
+            result.add(levelList);
         }
+        return result;
     }
 
     private static class Node {
