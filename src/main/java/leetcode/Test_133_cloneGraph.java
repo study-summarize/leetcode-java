@@ -14,28 +14,29 @@ public class Test_133_cloneGraph {
         // key是原图节点，value是新图节点
         Map<Node, Node> map = new HashMap<>();
 
-        return bfs(node, map);
-    }
-    private Node bfs(Node node, Map<Node, Node> map) {
-        // 已经复制过的节点直接返回
-        if (map.containsKey(node)) {
-            return map.get(node);
-        }
-
         // 1、创建队列
         Queue<Node> queue = new LinkedList<>();
         // 2、将初始节点放入队列
-        queue.add(node);
-        // 3、bfs遍历
+        queue.offer(node);
         Node copyNode = new Node(node.val);
         map.put(node, copyNode);
+        // 3、bfs遍历
         while (!queue.isEmpty()) {
             Node curNode = queue.poll();
-            for (Node adjNode : curNode.neighbors) {
-                Node adjCopyNode = bfs(adjNode, map);
-                copyNode.neighbors.add(adjCopyNode);
+            for (Node neighborNode : curNode.neighbors) {
+                if (!map.containsKey(neighborNode)) {
+                    Node cloneNeighborNode = new Node(neighborNode.val);
+                    map.put(neighborNode, cloneNeighborNode);
+                    queue.offer(neighborNode);
+                }
+                // 边的关系都需要更新到curNode的克隆节点的邻接节点列表
+                Node cloneCurNode = map.get(curNode);
+                List<Node> neighborsOfcloneCurNode = cloneCurNode.neighbors;
+                neighborsOfcloneCurNode.add(map.get(neighborNode));
+
             }
         }
+
         return copyNode;
     }
 

@@ -1,5 +1,8 @@
 package leetcode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author jwang55
  */
@@ -8,7 +11,81 @@ public class Test_130_solve {
     int[] dx = {1, 0, -1, 0};
     int[] dy = {0, 1, 0, -1};
 
+    private static class Point {
+        int x;
+        int y;
+
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
     public void solve(char[][] board) {
+        if (board == null || board.length == 0
+                || board[0] == null || board[0].length == 0) {
+            return;
+        }
+
+        int m = board.length;
+        int n = board[0].length;
+        boolean[][] visited = new boolean[m][n];
+
+        // 从矩阵边界遍历，将O变成B
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // 只对边界的O进行遍历
+                if (isEdge(i, j, m, n) && board[i][j] == 'O' && !visited[i][j]) {
+                    bfs(board, visited, new Point(i, j));
+                }
+            }
+        }
+
+        // 遍历矩阵，将剩余的O变成X，将B变成O
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == 'O') {
+                    board[i][j] = 'X';
+                } else if (board[i][j] == 'B') {
+                    board[i][j] = 'O';
+                }
+            }
+        }
+    }
+
+    private void bfs(char[][] board, boolean[][] visited, Point startNode) {
+        // 1、创建队列
+        Queue<Point> queue = new LinkedList<>();
+        // 2、加入初始节点，并标记
+        queue.offer(startNode);
+        visited[startNode.x][startNode.y] = true;
+        board[startNode.x][startNode.y] = 'B';
+        // 3、BFS遍历
+        while (!queue.isEmpty()) {
+            Point point = queue.poll();
+            for (int i = 0; i < 4; i++) {
+                Point newPoint = new Point(point.x + dx[i], point.y + dy[i]);
+                if (checkRange(board, newPoint.x, newPoint.y)
+                        && !visited[newPoint.x][newPoint.y]
+                        && board[newPoint.x][newPoint.y] == 'O') {
+                    // 将入到队列中，并标记
+                    queue.offer(newPoint);
+                    visited[newPoint.x][newPoint.y] = true;
+                    board[newPoint.x][newPoint.y] = 'B';
+                }
+            }
+        }
+    }
+
+    private boolean isEdge(int x, int y, int m, int n) {
+        return x == 0 || x == m - 1 || y == 0 || y == n - 1;
+    }
+
+
+    /**
+     * 使用DFS方法解决
+     */
+    public void solveWithDfs(char[][] board) {
         if (board == null || board.length == 0
                 || board[0] == null || board[0].length == 0) {
             return;
@@ -53,7 +130,7 @@ public class Test_130_solve {
         board[x][y] = 'B';
 
         // 移动
-        for (int i = 0; i < 4 ; i++) {
+        for (int i = 0; i < 4; i++) {
             int newX = x + dx[i];
             int newY = y + dy[i];
             if (checkRange(board, newX, newY)
