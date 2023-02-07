@@ -7,8 +7,7 @@ import java.util.*;
  */
 public class Test_207_canFinish {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        if (numCourses < 0 || prerequisites == null || prerequisites.length == 0
-                || prerequisites[0] == null || prerequisites[0].length == 0) {
+        if (numCourses < 0 || prerequisites == null) {
             return false;
         }
         List<Integer> result = new ArrayList<>();

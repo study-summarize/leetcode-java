@@ -8,8 +8,7 @@ import java.util.*;
 public class Test_210_findOrder {
 
     public int[] findOrder(int numCourses, int[][] prerequisites) {
-        if (numCourses < 0 || prerequisites == null || prerequisites.length == 0
-                || prerequisites[0] == null || prerequisites[0].length == 0) {
+        if (numCourses < 0 || prerequisites == null) {
             return new int[0];
         }
         int[] result = new int[numCourses];
@@ -43,12 +42,12 @@ public class Test_210_findOrder {
         for (int i = 0; i < numCourses; i++) {
             if (!indegreeMap.containsKey(i)) {
                 queue.add(i);
+                result[index++] = i;
             }
         }
         // 3、BFS
         while(!queue.isEmpty()) {
             Integer curNode = queue.poll();
-            result[index++] = curNode;
             List<Integer> adjNodes = graphNodes.get(curNode);
             for (Integer adjNode : adjNodes) {
                 // 邻接节点入度减1
@@ -57,6 +56,7 @@ public class Test_210_findOrder {
                 // 如果更新后节点入度为0，则入队
                 if (updatedIndegree == 0) {
                     queue.offer(adjNode);
+                    result[index++] = adjNode;
                 }
             }
         }
