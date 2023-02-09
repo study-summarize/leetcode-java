@@ -39,7 +39,8 @@ public class Test_127_ladderLength {
         int beginToEndCount = 1;
         int endToBeginCount = 1;
         while (!beginToEndQueue.isEmpty() && !endToBeginQueue.isEmpty()) {
-            if (beginToEndQueue.size() >= endToBeginQueue.size()) {
+            // 不能用=号：有一个case是-"hog","cog",["cog"]
+            if (beginToEndQueue.size() > endToBeginQueue.size()) {
                 // 扩展endToBeginQueue
                 if (update(dict, endToBeginQueue, endToBeginSet, beginToEndSet)){
                     // 俩个BFS已经相遇，得到答案
