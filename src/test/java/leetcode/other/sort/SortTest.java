@@ -4,10 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-
 /**
  * @author jwang55
  */
@@ -69,5 +65,49 @@ public class SortTest {
         new MergeSort().sort2(nums);
         // assert
         Assertions.assertArrayEquals(nums, target);
+    }
+
+    @Test
+    @DisplayName("快速排序1测试")
+    public void quickSort1Test() {
+        // arrange
+        int[] nums = new int[]{4, 3, 5, 6, 2, 1, 10, 8, 7, 6, 6, 5};
+        // act
+        new QuickSort().sort(nums);
+        // assert
+        Assertions.assertArrayEquals(nums, target);
+    }
+
+
+    @Test
+    @DisplayName("快速排序2测试")
+    public void quickSort2Test() {
+        // arrange
+        int[] nums = new int[]{4, 3, 5, 6, 2, 1, 10, 8, 7, 6, 6, 5};
+        // act
+        new QuickSort().sort2(nums);
+        // assert
+        Assertions.assertArrayEquals(nums, target);
+    }
+
+    @Test
+    @DisplayName("quickSelect测试")
+    public void quickSelectTest() {
+        // arrange
+        // {1, 2, 3, 4, 5, 5, 6, 6, 6, 7, 8, 10};
+        int[] nums = new int[]{4, 3, 5, 6, 2, 1, 10, 8, 7, 6, 6, 5};
+        // act
+        QuickSelect quickSelect = new QuickSelect();
+        int _1th = quickSelect.getKthSmallerElement(nums, 1);
+        int _3th = quickSelect.getKthSmallerElement(nums, 3);
+        int _5th = quickSelect.getKthSmallerElement(nums, 5);
+        int _6th = quickSelect.getKthSmallerElement(nums, 6);
+        int _9th = quickSelect.getKthSmallerElement(nums, 9);
+        // assert
+        Assertions.assertEquals(1, _1th);
+        Assertions.assertEquals(3, _3th);
+        Assertions.assertEquals(5, _5th);
+        Assertions.assertEquals(5, _6th);
+        Assertions.assertEquals(6, _9th);
     }
 }

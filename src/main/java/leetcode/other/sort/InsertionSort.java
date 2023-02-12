@@ -1,7 +1,5 @@
 package leetcode.other.sort;
 
-import java.util.Arrays;
-
 /**
  * 插入排序
  *
@@ -27,11 +25,5 @@ public class InsertionSort {
             }
             nums[i + 1] = key;
         }
-    }
-
-    public static void main(String[] args) {
-        int[] nums = new int[]{4, 3, 5, 6, 2, 1, 10, 8, 7, 6, 6, 5};
-        new InsertionSort().sort(nums);
-        System.out.println(Arrays.toString(nums));
     }
 }
