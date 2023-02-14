@@ -6,8 +6,7 @@ import java.util.*;
  * @author jwang55
  */
 public class Test_217_containDuplicate {
-
-    public boolean containDuplicate(int[] nums) {
+    public boolean containsDuplicate(int[] nums) {
         if (nums == null || nums.length == 0) {
             return false;
         }
