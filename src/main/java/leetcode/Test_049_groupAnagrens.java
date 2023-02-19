@@ -9,7 +9,7 @@ public class Test_049_groupAnagrens {
     /**
      * 使用字符+count为key
      */
-    public List<List<String>> group2(String[] strs) {
+    public List<List<String>> groupAnagrams2(String[] strs) {
         List<List<String>> result = new ArrayList<>();
         if (strs == null || strs.length == 0) {
             return result;
@@ -34,7 +34,9 @@ public class Test_049_groupAnagrens {
             if (map.containsKey(sb.toString())) {
                 map.get(sb.toString()).add(str);
             } else {
-                map.put(sb.toString(), Arrays.asList(str));
+                List<String> list = new ArrayList<>();
+                list.add(str);
+                map.put(sb.toString(), list);
             }
         }
         result.addAll(map.values());
@@ -44,7 +46,7 @@ public class Test_049_groupAnagrens {
     /**
      * 对字符串使用同一的排序为key
      */
-    public List<List<String>> group(String[] strs) {
+    public List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> result = new ArrayList<>();
         if (strs == null || strs.length == 0) {
             return result;
@@ -59,11 +61,12 @@ public class Test_049_groupAnagrens {
             if (map.containsKey(sortedStr)) {
                 map.get(sortedStr).add(str);
             } else {
-                map.put(sortedStr, Arrays.asList(str));
+                List<String> list = new ArrayList<>();
+                list.add(str);
+                map.put(sortedStr, list);
             }
         }
         result.addAll(map.values());
         return result;
     }
-
 }

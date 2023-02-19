@@ -17,7 +17,7 @@ public class Test_016_threeSumClosest {
         int result = Integer.MAX_VALUE;
         for (int i = 0; i < nums.length - 2; i++) {
             // 去重1
-            if (i > 0 && nums[i] == nums[i + 1]) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
@@ -29,7 +29,7 @@ public class Test_016_threeSumClosest {
                     return target;
                 }
 
-                result = Math.min(Math.abs(sum - target), Math.abs(sum - result));
+                result = Math.abs(sum - target) > Math.abs(result - target) ? result : sum;
 
                 if (sum > target) {
                     end--;
