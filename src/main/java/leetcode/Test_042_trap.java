@@ -1,6 +1,9 @@
 package leetcode;
 
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * @author jwang55
  */
@@ -109,6 +112,24 @@ public class Test_042_trap {
      * 方法三：单调栈解决
      */
     public int trap3(int[] height) {
-        return 0;
+        int area = 0;
+        if (height == null || height.length == 0) {
+            return area;
+        }
+
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < height.length; i++) {
+            while (!stack.isEmpty() && height[i] > height[stack.peek()]) {
+                int index = stack.pop();
+                if (!stack.isEmpty()) {
+                    int right = i;
+                    int left = stack.peek();
+                    int currentArea = (Math.min(height[left], height[right]) - height[index]) * (right - left - 1);
+                    area += currentArea;
+                }
+            }
+            stack.push(i);
+        }
+        return area;
     }
 }
