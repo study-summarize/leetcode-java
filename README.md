@@ -18,3 +18,6 @@
 
 思路：
 - 分治法
+
+相关资料：
+- 一个YouTuber分享的解题思路：https://www.youtube.com/playlist?list=PLwdV8xC1EWHrtgsYCcDTXIMVaHSlsnLzL
