@@ -21,3 +21,7 @@
 
 相关资料：
 - 一个YouTuber分享的解题思路：https://www.youtube.com/playlist?list=PLwdV8xC1EWHrtgsYCcDTXIMVaHSlsnLzL
+
+后期待做：
+- 升级JDK
+- 使用Gradle
