@@ -28,7 +28,7 @@ public class Test_213_rob {
             }
             dp1[i % 2] = Math.max(
                     dp1[(i - 1) % 2],
-                    dp1[(i - 2) % 2] + nums[(i - 1) % 2]);
+                    dp1[(i - 2) % 2] + nums[i - 1]);
         }
 
         int[] dp2 = new int[2];
@@ -37,7 +37,7 @@ public class Test_213_rob {
         for (int i = 2; i <= nums.length; i++) {
             dp2[i % 2] = Math.max(
                     dp2[(i - 1) % 2],
-                    dp2[(i - 2) % 2] + nums[(i - 1) % 2]);
+                    dp2[(i - 2) % 2] + nums[i - 1]);
         }
 
         return Math.max(dp1[nums.length % 2], dp2[nums.length % 2]);
