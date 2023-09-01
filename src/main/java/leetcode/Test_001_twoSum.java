@@ -44,7 +44,7 @@ public class Test_001_twoSum {
         int start = 0;
         int end = nums.length - 1;
 
-        // 二分法一定要这样写，记得模板
+        // 类似二分法的写法；O(n)
         while (start < end) {
             if (nums[start] + nums[end] == target) {
                 return new int[]{nums[start], nums[end]};

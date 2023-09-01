@@ -9,6 +9,26 @@ import java.util.List;
  */
 public class Test_015_threeSum {
 
+    /**
+     * 暴力解法：三层for循环
+     */
+    public int[] threeSum01(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
+            return null;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                for (int m = j + 1; m < nums.length; m++) {
+                    if (nums[i] + nums[j] + nums[m] == target) {
+                        return new int[]{nums[i], nums[j], nums[m]};
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length == 0) {
@@ -48,7 +68,7 @@ public class Test_015_threeSum {
                 } else if (sum > 0) {
                     end--;
                 } else {
-                    start ++;
+                    start++;
                 }
             }
         }
