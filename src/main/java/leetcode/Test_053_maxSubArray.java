@@ -32,7 +32,7 @@ public class Test_053_maxSubArray {
     /**
      * 动态规划、滚动数组优化
      */
-    public int maxSubArray_Refine(int[] nums) {
+    public int maxSubArrayRefine(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }

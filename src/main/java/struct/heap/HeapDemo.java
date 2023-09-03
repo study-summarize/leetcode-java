@@ -1,10 +1,13 @@
 package struct.heap;
 
-import java.util.Comparator;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class HeapDemo {
+
+    @SuppressFBWarnings("DLS_DEAD_LOCAL_STORE")
     public static void main(String[] args) {
         // 默认是最小堆
         PriorityQueue<Integer> heap = new PriorityQueue<>();
@@ -16,7 +19,7 @@ public class HeapDemo {
         heap.offer(8);
 
         // 打印堆数组
-        System.out.println("Min heap output: " + heap.toString());
+        System.out.println("Min heap output: " + heap);
         // 获取堆顶最小值 expected： 3
         int min = heap.peek();
         System.out.println("The min value of heap : " + min);
@@ -31,11 +34,6 @@ public class HeapDemo {
 
         // 实现最大堆
         Queue<Integer> pq1 = new PriorityQueue<>((a, b) -> b - a);
-        Queue<Integer> pq2 = new PriorityQueue<>(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer a, Integer b) {
-                return b - a;
-            }
-        });
+        Queue<Integer> pq2 = new PriorityQueue<>((a, b) -> b - a);
     }
 }

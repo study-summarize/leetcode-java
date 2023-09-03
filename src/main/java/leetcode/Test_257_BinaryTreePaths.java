@@ -4,11 +4,12 @@ import struct.bst.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * @author jwang55
  */
 public class Test_257_BinaryTreePaths {
-    
+
     public List<String> binaryTreePaths(TreeNode root) {
         // 解集
         List<String> result = new ArrayList<>();

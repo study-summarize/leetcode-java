@@ -84,7 +84,7 @@ public class Test_261_validTree {
         }
         // DFS
         boolean[] marked = new boolean[n];
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i < n; i++) {
             if (!marked[i]) {
                 dfs(adj, i, marked);
                 count++;

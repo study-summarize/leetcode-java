@@ -1,11 +1,14 @@
 package struct.graph;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.*;
 
 public class DirectedGraph {
 
     private final List<DirectedGraphNode> graphNodes;
 
+    @SuppressFBWarnings("EI_EXPOSE_REP2")
     public DirectedGraph(List<DirectedGraphNode> graphNodes) {
         this.graphNodes = graphNodes;
     }

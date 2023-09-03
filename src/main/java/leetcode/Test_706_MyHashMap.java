@@ -1,5 +1,7 @@
 package leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 public class Test_706_MyHashMap {
 
     private static final int DEFAULT_CAPACITY = 10_0000;
@@ -43,7 +45,7 @@ public class Test_706_MyHashMap {
         int hashCode = hash(key);
         Node node = this.table[hashCode];
 
-            Node newNode = new Node(key, value, null);
+        Node newNode = new Node(key, value, null);
         if (node == null) {
             this.table[hashCode] = newNode;
         } else {
@@ -53,7 +55,7 @@ public class Test_706_MyHashMap {
                     node.value = value;
                     return;
                 }
-                if(node.next == null) {
+                if (node.next == null) {
                     node.next = newNode;
                 }
                 node = node.next;
@@ -74,6 +76,7 @@ public class Test_706_MyHashMap {
         return -1;
     }
 
+    @SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALU")
     public void remove(int key) {
         int hashCode = hash(key);
         Node node = this.table[hashCode];

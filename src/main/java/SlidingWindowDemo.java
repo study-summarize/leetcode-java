@@ -1,3 +1,5 @@
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,6 +10,7 @@ import java.util.Map;
  */
 public class SlidingWindowDemo {
 
+    @SuppressFBWarnings({"DLS_DEAD_LOCAL_STORE", "UC_USELESS_VOID_METHOD"})
     public void slidingWindow(int[] nums) {
         // 可能需要map记录窗口内元素
         Map<Integer, Integer> map = new HashMap<>();
@@ -20,7 +23,7 @@ public class SlidingWindowDemo {
         for (i = 0; i < nums.length; i++) {
             while (j < nums.length) {
                 // 搞清窗口扩展条件
-                if (condition) {
+                if (CONDITION) {
                     // 更新j状态，窗口内数据更新
                     j++;
                 } else {
@@ -33,5 +36,5 @@ public class SlidingWindowDemo {
     }
 
     // 题目条件的扩展条件
-    private static final boolean condition = true;
+    private static final boolean CONDITION = true;
 }

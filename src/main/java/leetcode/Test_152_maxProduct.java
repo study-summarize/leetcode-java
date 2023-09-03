@@ -29,7 +29,7 @@ public class Test_152_maxProduct {
             if (nums[i] > 0) {
                 maxDp[i] = Math.max(maxDp[i], maxDp[i - 1] * nums[i]);
                 minDp[i] = Math.min(minDp[i], minDp[i - 1] * nums[i]);
-            } else if (nums[i] < 0){
+            } else if (nums[i] < 0) {
                 maxDp[i] = Math.max(maxDp[i], minDp[i - 1] * nums[i]);
                 minDp[i] = Math.min(minDp[i], maxDp[i - 1] * nums[i]);
             }

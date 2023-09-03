@@ -12,6 +12,7 @@ public class Test_042_trap {
     /**
      * 方法一：三次遍历
      */
+    @SuppressWarnings("UnnecessaryParentheses")
     public int trap1(int[] height) {
         int result = 0;
         if (height == null || height.length == 0) {
@@ -47,6 +48,7 @@ public class Test_042_trap {
     /**
      * 方法一优化版本：减少一次遍历
      */
+    @SuppressWarnings("UnnecessaryParentheses")
     public int trap1Refine(int[] height) {
         int result = 0;
         if (height == null || height.length == 0) {

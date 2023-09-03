@@ -46,7 +46,7 @@ public class Test_210_findOrder {
             }
         }
         // 3、BFS
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             Integer curNode = queue.poll();
             List<Integer> adjNodes = graphNodes.get(curNode);
             for (Integer adjNode : adjNodes) {

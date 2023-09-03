@@ -2,6 +2,7 @@ package leetcode;
 
 import struct.linkedlist.ListNode;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -16,7 +17,7 @@ public class Test_023_mergeKLists {
         }
 
         // k个元素最小堆
-        Queue<ListNode> heap = new PriorityQueue<>(lists.length, (node1, node2) -> node1.val - node2.val);
+        Queue<ListNode> heap = new PriorityQueue<>(lists.length, Comparator.comparingInt(node -> node.val));
         for (ListNode list : lists) {
             if (list != null) {
                 heap.offer(list);

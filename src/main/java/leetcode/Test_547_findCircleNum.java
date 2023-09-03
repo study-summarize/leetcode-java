@@ -63,7 +63,7 @@ public class Test_547_findCircleNum {
         int count = 0;
 
         boolean[] visited = new boolean[isConnected.length];
-        for (int i = 0; i < isConnected.length ; i++) {
+        for (int i = 0; i < isConnected.length; i++) {
             if (!visited[i]) {
                 dfs(isConnected, visited, i);
                 count++;

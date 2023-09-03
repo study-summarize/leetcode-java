@@ -23,7 +23,7 @@ public class Test_309_maxProfit {
     /**
      * 滚动数组优化
      */
-    public int maxProfit_refine(int[] prices) {
+    public int maxProfitRefine(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }

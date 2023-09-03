@@ -42,7 +42,7 @@ public class Test_127_ladderLength {
             // 不能用=号：有一个case是-"hog","cog",["cog"]
             if (beginToEndQueue.size() > endToBeginQueue.size()) {
                 // 扩展endToBeginQueue
-                if (update(dict, endToBeginQueue, endToBeginSet, beginToEndSet)){
+                if (update(dict, endToBeginQueue, endToBeginSet, beginToEndSet)) {
                     // 俩个BFS已经相遇，得到答案
                     return beginToEndCount + endToBeginCount;
                 }
@@ -60,7 +60,7 @@ public class Test_127_ladderLength {
     }
 
     private boolean update(Set<String> dict, Queue<String> queueToUpdate,
-                       Set<String> visited, Set<String> anotherVisited) {
+                           Set<String> visited, Set<String> anotherVisited) {
         // 层级遍历
         int size = queueToUpdate.size();
         for (int i = 0; i < size; i++) {

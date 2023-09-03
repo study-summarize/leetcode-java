@@ -34,7 +34,7 @@ public class ThreeSum {
 
         for (int i = 0; i < nums.length; i++) {
             int nowTarget = target - nums[i];
-            int first = i+1;
+            int first = i + 1;
             int second = nums.length - 1;
             while (first < second) {
                 if (nums[first] + nums[second] == nowTarget) {

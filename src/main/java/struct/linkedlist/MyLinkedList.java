@@ -2,12 +2,12 @@ package struct.linkedlist;
 
 /**
  * 单链表的实现
- *
+ * <p>
  * 1、相关技巧
  * (1)DummyNode
  * (2)头插法
  * (3)将俩个相邻节点旋转
- *
+ * <p>
  * 2、相关题目
  * （1）与计数或位置相关的问题
  * - 876-链表的中间结点：https://leetcode.cn/problems/middle-of-the-linked-list/
@@ -28,9 +28,6 @@ package struct.linkedlist;
  * - 143-重排链表：https://leetcode.cn/problems/reorder-list/
  * - 234-回文链表：https://leetcode.cn/problems/palindrome-linked-list/
  * - 061-旋转链表：https://leetcode.cn/problems/rotate-list/
- *
- *
- *
  *
  * @author jwang55
  */

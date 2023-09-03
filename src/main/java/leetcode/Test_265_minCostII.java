@@ -1,6 +1,8 @@
 package leetcode;
 
 public class Test_265_minCostII {
+
+    @SuppressWarnings("LocalVariableName")
     public int minCostII(int[][] costs) {
         if (costs == null || costs.length == 0
                 || costs[0] == null || costs[0].length == 0) {
@@ -36,7 +38,8 @@ public class Test_265_minCostII {
         return result;
     }
 
-    public int minCostII_refine(int[][] costs) {
+    @SuppressWarnings("LocalVariableName")
+    public int minCostIIRefine(int[][] costs) {
         if (costs == null || costs.length == 0
                 || costs[0] == null || costs[0].length == 0) {
             return 0;

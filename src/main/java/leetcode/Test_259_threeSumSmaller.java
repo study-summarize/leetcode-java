@@ -21,7 +21,7 @@ public class Test_259_threeSumSmaller {
                 int sum = nums[i] + nums[start] + nums[end];
                 if (sum < target) {
                     count += (end - start);
-                    start ++;
+                    start++;
                 } else {
                     end--;
                 }

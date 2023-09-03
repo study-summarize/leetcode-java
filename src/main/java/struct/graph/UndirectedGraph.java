@@ -1,5 +1,7 @@
 package struct.graph;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -23,6 +25,7 @@ public class UndirectedGraph {
         this.marked = new boolean[vertexCount];
     }
 
+    @SuppressFBWarnings("EI_EXPOSE_REP2")
     public UndirectedGraph(Map<Node, List<Node>> adjacencyList, boolean[] marked) {
         this.adjacencyList = adjacencyList;
         this.marked = marked;
@@ -43,6 +46,7 @@ public class UndirectedGraph {
         return connectComponentCount;
     }
 
+    @SuppressFBWarnings("WMI_WRONG_MAP_ITERATOR")
     public void printGraph() {
         for (Node key : adjacencyList.keySet()) {
             List<Node> adjNodes = adjacencyList.get(key);

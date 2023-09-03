@@ -7,6 +7,7 @@ import java.util.Arrays;
  */
 public class Test_611_triangleNumber {
 
+    @SuppressWarnings("UnnecessaryParentheses")
     public int triangleNumber(int[] nums) {
         if (nums == null || nums.length == 0) {
             return -1;

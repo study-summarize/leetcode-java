@@ -7,6 +7,7 @@ public class Test_673_findNumberOfLIS {
     /**
      * 动态规划、制表法找function
      */
+    @SuppressWarnings("EmptyBlock")
     public int findNumberOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
@@ -32,7 +33,7 @@ public class Test_673_findNumberOfLIS {
                         dp[i] = Math.max(dp[i], dp[j] + 1);
                         // 这种情况相当于找到新的LIS
                         count[i] = count[j];
-                    } else if (dp[i] == dp[j] + 1){
+                    } else if (dp[i] == dp[j] + 1) {
                         // 又一次遇到了该长度的LIS
                         count[i] += count[j];
                     } else {

@@ -11,7 +11,7 @@ public class Test_102_levelOrder {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-        if(root == null) {
+        if (root == null) {
             return result;
         }
 
@@ -22,11 +22,11 @@ public class Test_102_levelOrder {
         queue.add(root);
 
         // step3：层序遍历
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int size = queue.size();
             List<Integer> list = new ArrayList<>();
             // for循环层级遍历：需要分层必须要有for循环
-            for (int i = 0; i < size ; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 list.add(node.val);
                 if (node.left != null) {

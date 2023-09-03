@@ -20,7 +20,7 @@ public class Matrix {
         for (int i = 0; i < m; i++) {
             for (int j = 0; i < n; j++) {
                 Point start = new Point(i, j);
-                if (special_condition && !visited[i][j]) {
+                if (specialCondition && !visited[i][j]) {
                     bfs(matrix, visited, start);
                 }
             }
@@ -43,7 +43,7 @@ public class Matrix {
                 Point newPoint = new Point(curPoint.x + dx[i], curPoint.y + dy[i]);
                 if (checkRange(matrix, newPoint)
                         && !visited[newPoint.x][newPoint.y]
-                        && special_condition) {
+                        && specialCondition) {
                     visited[newPoint.x][newPoint.y] = true;
                     queue.offer(newPoint);
                 }
@@ -60,7 +60,7 @@ public class Matrix {
 
 
     // note
-    boolean special_condition = true;
+    boolean specialCondition = true;
 }
 
 class Point {
