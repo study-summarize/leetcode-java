@@ -1,4 +1,6 @@
 # leetcode-java
+<a href="https://codecov.io/gh/wangjie-fourth/leetcode-java/branch/main"><img src="https://img.shields.io/codecov/c/github/wangjie-fourth/leetcode-java/main?logo=codecov&logoColor=white" alt="Coverage Status"></a>
+
 
 数组：
 - 数组中swap俩个位置的数字
