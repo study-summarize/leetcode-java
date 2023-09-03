@@ -1,9 +1,10 @@
-# leetcode-java
 <a href="https://codecov.io/gh/wangjie-fourth/leetcode-java/branch/main"><img src="https://img.shields.io/codecov/c/github/wangjie-fourth/leetcode-java/main?logo=codecov&logoColor=white" alt="Coverage Status"></a>
 <a href="https://github.com/wangjie-fourth/leetcode-java/actions/workflows/build_and_test.yaml">
     <img src="https://img.shields.io/github/actions/workflow/status/wangjie-fourth/leetcode-java/build_and_test.yaml?branch=main&logo=github&logoColor=white&label=fast ci" alt="Github Workflow Build Status">
 </a>
 <a href="https://github.com/wangjie-fourth/leetcode-java"><img src="https://img.shields.io/github/repo-size/wangjie-fourth/leetcode-java" alt="GitHub repo size"></a>
+
+# leetcode-java
 数组：
 - 数组中swap俩个位置的数字
 - 字符串中字符统计技巧
