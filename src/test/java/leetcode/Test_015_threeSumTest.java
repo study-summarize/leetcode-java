@@ -29,7 +29,6 @@ public class Test_015_threeSumTest {
         }
     }
 
-
     public static Stream<Arguments> generateRight01Case() {
         return Stream.of(
                 arguments(new int[]{2, 7, 11, 15}, 20, new int[]{2, 7, 11}),
