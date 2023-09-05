@@ -5,27 +5,27 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName("三角形最小路径和测试")
 class Test_120_minimumTotalTest {
     private final Test_120_minimumTotal minimumTotal = new Test_120_minimumTotal();
 
-//    @ParameterizedTest
+    //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(List<List<Integer>> triangle, int expectedResult) {
-
         int actResult = minimumTotal.minimumTotal(triangle);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1,8,6,2,5,4,8,3,7}, 49),
-                arguments(new int[]{1,1}, 1)
+                arguments(Arrays.asList(List.of(2), List.of(3, 4), List.of(6, 5, 7), List.of(4, 1, 8, 3)), 11),
+                arguments(List.of(List.of(-10)), -10)
         );
     }
 }

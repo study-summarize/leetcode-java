@@ -7,13 +7,15 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXX测试")
+
+@DisplayName("不同路径测试")
 class Test_062_uniquePathsTest {
 
     private final Test_062_uniquePaths uniquePaths = new Test_062_uniquePaths();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int m, int n, int expectedResult) {
 
@@ -23,6 +25,10 @@ class Test_062_uniquePathsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(3, 7, 28),
+                arguments(3, 2, 3),
+                arguments(7, 3, 28),
+                arguments(3, 3, 6)
         );
     }
 }

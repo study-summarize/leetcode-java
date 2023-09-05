@@ -8,7 +8,7 @@ import struct.linkedlist.ListNode;
 
 import java.util.stream.Stream;
 
-@DisplayName("XXX测试")
+@DisplayName("合并 K 个升序链表测试")
 class Test_023_mergeKListsTest {
 
     private final Test_023_mergeKLists mergeKLists = new Test_023_mergeKLists();

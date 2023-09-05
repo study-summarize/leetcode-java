@@ -7,19 +7,24 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.params.provider.Arguments.arguments;
+
 @DisplayName("XXX测试")
 class Test_076_minWindowTest {
     private final Test_076_minWindow minWindow = new Test_076_minWindow();
-    //    @ParameterizedTest
+
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(String s, String t, String expectedResult) {
-
         String actResult = minWindow.minWindow(s, t);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments("ADOBECODEBANC", "ABC", "BANC"),
+                arguments("a", "a", "a"),
+                arguments("a", "aa", "")
         );
     }
 }

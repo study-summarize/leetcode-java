@@ -12,11 +12,11 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXX测试")
+@DisplayName("最接近的三数之和测试")
 class Test_016_threeSumClosestTest {
     private final Test_016_threeSumClosest threeSumClosest = new Test_016_threeSumClosest();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int target, int expectedResult) {
         int actResult = threeSumClosest.threeSumClosest(nums, target);
@@ -25,6 +25,8 @@ class Test_016_threeSumClosestTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(new int[]{-1, 2, 1, -4}, 1, 2),
+                arguments(new int[]{0, 0, 0}, 1, 0)
         );
     }
 }
