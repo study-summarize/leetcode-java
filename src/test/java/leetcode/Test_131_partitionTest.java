@@ -10,12 +10,12 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName("分割回文串 测试")
 class Test_131_partitionTest {
 
     private final Test_131_partition partition = new Test_131_partition();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(String s, List<List<String>> expectedResult) {
         List<List<String>> actResult = partition.partition(s);
@@ -24,8 +24,8 @@ class Test_131_partitionTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1,8,6,2,5,4,8,3,7}, 49),
-                arguments(new int[]{1,1}, 1)
+                arguments("aab", List.of(List.of("a", "a", "b"), List.of("aa", "b"))),
+                arguments("a", List.of(List.of("a")))
         );
     }
 }

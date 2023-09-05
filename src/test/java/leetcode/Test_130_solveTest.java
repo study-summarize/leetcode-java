@@ -2,6 +2,7 @@ package leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -9,12 +10,12 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName("被围绕的区域 测试")
 class Test_130_solveTest {
+
     private final Test_130_solve solve = new Test_130_solve();
 
-
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(char[][] board, char[][] expectedResult) {
         char[][] board1 = board.clone();
@@ -28,8 +29,24 @@ class Test_130_solveTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1,8,6,2,5,4,8,3,7}, 49),
-                arguments(new int[]{1,1}, 1)
+                arguments(new char[][]{
+                                new char[]{'X', 'X', 'X', 'X'},
+                                new char[]{'X', 'O', 'O', 'X'},
+                                new char[]{'X', 'X', 'O', 'X'},
+                                new char[]{'X', 'O', 'X', 'X'}},
+                        new char[][]{
+                                new char[]{'X', 'X', 'X', 'X'},
+                                new char[]{'X', 'X', 'X', 'X'},
+                                new char[]{'X', 'X', 'X', 'X'},
+                                new char[]{'X', 'O', 'X', 'X'}
+                        }
+                ),
+                arguments(new char[][]{
+                                new char[]{'X'}
+                        }, new char[][]{
+                                new char[]{'X'}
+                        }
+                )
         );
     }
 }

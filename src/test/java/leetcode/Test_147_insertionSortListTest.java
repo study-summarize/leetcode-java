@@ -10,22 +10,21 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
-
+@DisplayName("对链表进行插入排序 测试")
 class Test_147_insertionSortListTest {
     private final Test_147_insertionSortList insertionSortList = new Test_147_insertionSortList();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(ListNode head,ListNode expectedResult) {
+    public void test(ListNode head, ListNode expectedResult) {
         ListNode actResult = insertionSortList.insertionSortList(head);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1,8,6,2,5,4,8,3,7}, 49),
-                arguments(new int[]{1,1}, 1)
+                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
+                arguments(new int[]{1, 1}, 1)
         );
     }
 }

@@ -9,21 +9,21 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
-
+@DisplayName("买卖股票的最佳时机 IV 测试")
 class Test_188_maxProfitTest {
     private final Test_188_maxProfit maxProfit = new Test_188_maxProfit();
-    //    @ParameterizedTest
+
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int k, int[] prices,int expectedResult) {
+    public void test(int k, int[] prices, int expectedResult) {
         int actResult = maxProfit.maxProfit(k, prices);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1,8,6,2,5,4,8,3,7}, 49),
-                arguments(new int[]{1,1}, 1)
+                arguments(2, new int[]{2, 4, 1}, 2),
+                arguments(2, new int[]{3, 2, 6, 5, 0, 3}, 7)
         );
     }
 }
