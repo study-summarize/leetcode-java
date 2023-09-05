@@ -53,22 +53,4 @@ public class ThreeSum {
         }
         return result;
     }
-
-
-    public static void main(String[] args) {
-        ThreeSum threeSum = new ThreeSum();
-
-        int[] nums = {-1, 0, 1, 2, -4};
-        int target = 0;
-        int[] result = {-1, 0, 1};
-
-        // ==============
-
-        System.out.println(Arrays.equals(threeSum.threeSum(nums, target), result));
-        System.out.println(Arrays.toString(threeSum.threeSum(nums, target)));
-
-        System.out.println(Arrays.equals(threeSum.threeSumV2(nums, target), result));
-        System.out.println(Arrays.toString(threeSum.threeSumV2(nums, target)));
-
-    }
 }
