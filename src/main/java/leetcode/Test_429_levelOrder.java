@@ -39,7 +39,7 @@ public class Test_429_levelOrder {
         return result;
     }
 
-    private static class Node {
+    public static class Node {
         public int val;
         public List<Node> children;
 
