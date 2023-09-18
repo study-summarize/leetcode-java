@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_242_isAnagramTest {
     private final Test_242_isAnagram isAnagram = new Test_242_isAnagram();
 

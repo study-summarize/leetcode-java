@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_323_countComponentsTest {
     private final Test_323_countComponents countComponents = new Test_323_countComponents();
 

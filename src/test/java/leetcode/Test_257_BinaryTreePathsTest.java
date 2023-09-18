@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_257_BinaryTreePathsTest {
     private final Test_257_BinaryTreePaths binaryTreePaths = new Test_257_BinaryTreePaths();
 

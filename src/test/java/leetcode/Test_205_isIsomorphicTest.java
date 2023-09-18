@@ -9,8 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
-
+@DisplayName("同构字符串 测试")
 class Test_205_isIsomorphicTest {
     private final Test_205_isIsomorphic isIsomorphic = new Test_205_isIsomorphic();
 

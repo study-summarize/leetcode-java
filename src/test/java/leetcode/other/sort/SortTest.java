@@ -40,28 +40,40 @@ public class SortTest {
         Assertions.assertEquals(6, _9th);
     }
 
-    @DisplayName("排序测试")
+    @DisplayName("插入排序测试")
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void testSort(int[] nums, int[] target) {
-        // 插入排序测试
+    public void testInsertionSort(int[] nums, int[] target) {
         int[] insertionNums = nums.clone();
         new InsertionSort().sort(insertionNums);
         Assertions.assertArrayEquals(insertionNums, target);
         assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+    }
 
-        // 冒泡排序测试
+    @DisplayName("冒泡排序测试")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testBubbleSort(int[] nums, int[] target) {
         int[] bubbleNums = nums.clone();
         new BubbleSort().sort(bubbleNums);
         Assertions.assertArrayEquals(bubbleNums, target);
         assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+    }
 
-        // 优化版冒泡排序测试
+    @DisplayName("优化版冒泡排序测试")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testBubbleBetterSort(int[] nums, int[] target) {
         int[] betterBubbleNums = nums.clone();
         new BubbleSort().betterSort(betterBubbleNums);
         Assertions.assertArrayEquals(betterBubbleNums, target);
         assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+    }
 
+    @DisplayName("归并排序测试")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testMergeSort(int[] nums, int[] target) {
         // 归并排序1测试
         int[] mergeSort1Nums = nums.clone();
         new MergeSort().sort(mergeSort1Nums);
@@ -73,7 +85,12 @@ public class SortTest {
         new MergeSort().sort2(mergeSort2Nums);
         Assertions.assertArrayEquals(mergeSort2Nums, target);
         assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+    }
 
+    @DisplayName("快速排序测试")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testQuickSort(int[] nums, int[] target) {
         // 快速排序1测试
         int[] quickSort1Nums = nums.clone();
         new QuickSort().sort(quickSort1Nums);

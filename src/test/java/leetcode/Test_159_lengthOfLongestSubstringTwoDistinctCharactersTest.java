@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_159_lengthOfLongestSubstringTwoDistinctCharactersTest {
     private final Test_159_lengthOfLongestSubstringTwoDistinctCharacters lengthOfLongestSubstringTwoDistinctCharacters = new Test_159_lengthOfLongestSubstringTwoDistinctCharacters();
 

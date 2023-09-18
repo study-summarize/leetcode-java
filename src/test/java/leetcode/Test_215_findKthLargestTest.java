@@ -9,8 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
-
+@DisplayName("数组中的第K大元素 测试")
 class Test_215_findKthLargestTest {
     private final Test_215_findKthLargest findKthLargest = new Test_215_findKthLargest();
 

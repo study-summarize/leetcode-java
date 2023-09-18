@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_221_maximalSquareTest {
     private final Test_221_maximalSquare maximalSquare = new Test_221_maximalSquare();
 

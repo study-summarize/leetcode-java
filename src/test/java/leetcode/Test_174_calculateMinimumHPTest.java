@@ -9,8 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
-
+@DisplayName(" 测试")
 class Test_174_calculateMinimumHPTest {
     private final Test_174_calculateMinimumHP calculateMinimumHP = new Test_174_calculateMinimumHP();
 

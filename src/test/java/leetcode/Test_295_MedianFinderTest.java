@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_295_MedianFinderTest {
     private final Test_295_MedianFinder medianFinder = new Test_295_MedianFinder();
 

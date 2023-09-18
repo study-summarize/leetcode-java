@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_416_canPartitionTest {
     private final Test_416_canPartition canPartition = new Test_416_canPartition();
 

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_429_levelOrderTest {
     private final Test_429_levelOrder levelOrder = new Test_429_levelOrder();
 

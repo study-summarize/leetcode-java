@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_673_findNumberOfLISTest {
     private final Test_673_findNumberOfLIS findNumberOfLIS = new Test_673_findNumberOfLIS();
 

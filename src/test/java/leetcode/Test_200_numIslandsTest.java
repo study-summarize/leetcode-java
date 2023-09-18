@@ -9,8 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
-
+@DisplayName(" 测试")
 class Test_200_numIslandsTest {
     private final Test_200_numIslands numIslands = new Test_200_numIslands();
 

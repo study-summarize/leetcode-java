@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_547_findCircleNumTest {
     private final Test_547_findCircleNum findCircleNum = new Test_547_findCircleNum();
 

@@ -29,7 +29,10 @@ public class Test_015_threeSum {
         return null;
     }
 
-    public List<List<Integer>> threeSum(int[] nums) {
+    /**
+     * 方法二：将题目看成俩数之和
+     */
+    public List<List<Integer>> threeSum02(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length == 0) {
             return result;

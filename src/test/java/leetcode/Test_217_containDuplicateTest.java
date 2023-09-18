@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName("存在重复元素 测试")
 class Test_217_containDuplicateTest {
     private final Test_217_containDuplicate containDuplicate = new Test_217_containDuplicate();
 

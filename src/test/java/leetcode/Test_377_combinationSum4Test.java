@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_377_combinationSum4Test {
     private final Test_377_combinationSum4 combinationSum4 = new Test_377_combinationSum4();
 

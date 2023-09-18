@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_490_hasPathTest {
     private final Test_490_hasPath hasPath = new Test_490_hasPath();
 

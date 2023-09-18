@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_706_MyHashMapTest {
     private final Test_706_MyHashMap myHashMap = new Test_706_MyHashMap();
 

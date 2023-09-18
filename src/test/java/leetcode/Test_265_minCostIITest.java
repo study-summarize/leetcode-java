@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_265_minCostIITest {
     private final Test_265_minCostII minCostII = new Test_265_minCostII();
 

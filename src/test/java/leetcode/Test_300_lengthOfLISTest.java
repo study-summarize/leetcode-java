@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_300_lengthOfLISTest {
     private final Test_300_lengthOfLIS lengthOfLIS = new Test_300_lengthOfLIS();
 

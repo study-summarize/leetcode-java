@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX")
+@DisplayName(" 测试")
 class Test_329_longestIncreasingPathTest {
     private final Test_329_longestIncreasingPath longestIncreasingPath = new Test_329_longestIncreasingPath();
 
