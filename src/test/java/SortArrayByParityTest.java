@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -15,12 +16,16 @@ public class SortArrayByParityTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int pos, int[] expectedResults) {
-        int[] actResult = new SortArrayByParity().sortArrayByParity(nums);
-        Assertions.assertEquals(expectedResults.length, actResult.length);
+        SortArrayByParity sortArrayByParity = new SortArrayByParity();
+        int[] actResult = sortArrayByParity.sortArrayByParityExample(Arrays.copyOf(nums, nums.length));
+        int[] actResult01 = sortArrayByParity.sortArrayByParity(Arrays.copyOf(nums, nums.length));
+        Assertions.assertEquals(expectedResults.length, actResult01.length);
         for (int i = 0; i < pos; i++) {
+            Assertions.assertEquals(0, actResult01[i] % 2);
             Assertions.assertEquals(0, actResult[i] % 2);
         }
         for (int i = pos; i < nums.length; i++) {
+            Assertions.assertEquals(1, actResult01[i] % 2);
             Assertions.assertEquals(1, actResult[i] % 2);
         }
     }
