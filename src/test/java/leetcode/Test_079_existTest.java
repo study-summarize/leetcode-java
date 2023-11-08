@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_079_exist;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("XXX测试")
 class Test_079_existTest {
 
-    private final Test_079_exist exist = new Test_079_exist();
+    private final LeetCode_079_exist exist = new LeetCode_079_exist();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

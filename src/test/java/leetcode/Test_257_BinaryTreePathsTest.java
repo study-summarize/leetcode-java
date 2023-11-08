@@ -1,10 +1,11 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_257_BinaryTreePaths;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import struct.bst.TreeNode;
+import org.github.fourth.struct.bst.TreeNode;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_257_BinaryTreePathsTest {
-    private final Test_257_BinaryTreePaths binaryTreePaths = new Test_257_BinaryTreePaths();
+    private final LeetCode_257_BinaryTreePaths binaryTreePaths = new LeetCode_257_BinaryTreePaths();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

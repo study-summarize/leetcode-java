@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_198_rob;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("打家劫舍 测试")
 class Test_198_robTest {
-    private final Test_198_rob rob = new Test_198_rob();
+    private final LeetCode_198_rob rob = new LeetCode_198_rob();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

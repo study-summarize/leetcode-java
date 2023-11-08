@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_323_countComponents;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_323_countComponentsTest {
-    private final Test_323_countComponents countComponents = new Test_323_countComponents();
+    private final LeetCode_323_countComponents countComponents = new LeetCode_323_countComponents();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

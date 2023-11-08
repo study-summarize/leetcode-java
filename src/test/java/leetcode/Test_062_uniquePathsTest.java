@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_062_uniquePaths;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("不同路径测试")
 class Test_062_uniquePathsTest {
 
-    private final Test_062_uniquePaths uniquePaths = new Test_062_uniquePaths();
+    private final LeetCode_062_uniquePaths uniquePaths = new LeetCode_062_uniquePaths();
 
 //    @ParameterizedTest
     @MethodSource("generateRightCase")

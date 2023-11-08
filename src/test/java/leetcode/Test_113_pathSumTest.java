@@ -1,10 +1,11 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_113_pathSum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import struct.bst.TreeNode;
+import org.github.fourth.struct.bst.TreeNode;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXX")
 class Test_113_pathSumTest {
-    private final Test_113_pathSum pathSum = new Test_113_pathSum();
+    private final LeetCode_113_pathSum pathSum = new LeetCode_113_pathSum();
 //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(TreeNode root, int targetSum, List<List<Integer>> expectedResult) {

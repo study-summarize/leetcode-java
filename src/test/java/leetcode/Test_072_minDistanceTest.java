@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_072_minDistance;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +11,7 @@ import java.util.stream.Stream;
 
 @DisplayName("XXX测试")
 class Test_072_minDistanceTest {
-    private final Test_072_minDistance minDistance = new Test_072_minDistance();
+    private final LeetCode_072_minDistance minDistance = new LeetCode_072_minDistance();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

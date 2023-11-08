@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_207_canFinish;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("课程表 测试")
 class Test_207_canFinishTest {
-    private final Test_207_canFinish canFinish = new Test_207_canFinish();
+    private final LeetCode_207_canFinish canFinish = new LeetCode_207_canFinish();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

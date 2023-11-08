@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_215_findKthLargest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("数组中的第K大元素 测试")
 class Test_215_findKthLargestTest {
-    private final Test_215_findKthLargest findKthLargest = new Test_215_findKthLargest();
+    private final LeetCode_215_findKthLargest findKthLargest = new LeetCode_215_findKthLargest();
 
 
     //    @ParameterizedTest

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_209_minSubArrayLen;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("长度最小的子数组 测试")
 class Test_209_minSubArrayLenTest {
-    private final Test_209_minSubArrayLen minSubArrayLen = new Test_209_minSubArrayLen();
+    private final LeetCode_209_minSubArrayLen minSubArrayLen = new LeetCode_209_minSubArrayLen();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

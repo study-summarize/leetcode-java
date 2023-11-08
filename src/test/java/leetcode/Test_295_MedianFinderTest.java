@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_295_MedianFinder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -10,7 +11,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_295_MedianFinderTest {
-    private final Test_295_MedianFinder medianFinder = new Test_295_MedianFinder();
+    private final LeetCode_295_MedianFinder medianFinder = new LeetCode_295_MedianFinder();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

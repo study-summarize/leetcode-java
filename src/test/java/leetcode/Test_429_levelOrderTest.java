@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_429_levelOrder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,11 +13,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_429_levelOrderTest {
-    private final Test_429_levelOrder levelOrder = new Test_429_levelOrder();
+    private final LeetCode_429_levelOrder levelOrder = new LeetCode_429_levelOrder();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(Test_429_levelOrder.Node root, List<List<Integer>> expectedResult) {
+    public void test(LeetCode_429_levelOrder.Node root, List<List<Integer>> expectedResult) {
         List<List<Integer>> actResult = levelOrder.levelOrder(root);
         Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }

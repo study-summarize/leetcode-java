@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_547_findCircleNum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_547_findCircleNumTest {
-    private final Test_547_findCircleNum findCircleNum = new Test_547_findCircleNum();
+    private final LeetCode_547_findCircleNum findCircleNum = new LeetCode_547_findCircleNum();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

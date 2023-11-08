@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.GrayCode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

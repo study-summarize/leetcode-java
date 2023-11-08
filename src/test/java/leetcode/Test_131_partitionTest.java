@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_131_partition;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("分割回文串 测试")
 class Test_131_partitionTest {
 
-    private final Test_131_partition partition = new Test_131_partition();
+    private final LeetCode_131_partition partition = new LeetCode_131_partition();
 
 //    @ParameterizedTest
     @MethodSource("generateRightCase")

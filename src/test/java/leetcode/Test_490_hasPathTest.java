@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_490_hasPath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_490_hasPathTest {
-    private final Test_490_hasPath hasPath = new Test_490_hasPath();
+    private final LeetCode_490_hasPath hasPath = new LeetCode_490_hasPath();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_028_strStr;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("找出字符串中第一个匹配项的下标测试")
 class Test_028_strStrTest {
 
-    private final Test_028_strStr strStr = new Test_028_strStr();
+    private final LeetCode_028_strStr strStr = new LeetCode_028_strStr();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_714_maxProfit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_714_maxProfitTest {
-    private final Test_714_maxProfit maxProfit = new Test_714_maxProfit();
+    private final LeetCode_714_maxProfit maxProfit = new LeetCode_714_maxProfit();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

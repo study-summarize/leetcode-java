@@ -1,5 +1,7 @@
 package struct.bst;
 
+import org.github.fourth.struct.bst.BinarySearchTree;
+import org.github.fourth.struct.bst.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_075_sortColors;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("XXX测试")
 class Test_075_sortColorsTest {
 
-    private final Test_075_sortColors sortColors = new Test_075_sortColors();
+    private final LeetCode_075_sortColors sortColors = new LeetCode_075_sortColors();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

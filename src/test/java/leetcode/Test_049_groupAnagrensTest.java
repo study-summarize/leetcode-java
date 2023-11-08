@@ -1,6 +1,6 @@
 package leetcode;
 
-import com.google.common.collect.Sets;
+import org.github.fourth.leetcode.LeetCode_049_groupAnagrens;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,7 +18,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("字母异位词分组测试")
 class Test_049_groupAnagrensTest {
-    private final Test_049_groupAnagrens groupAnagrens = new Test_049_groupAnagrens();
+    private final LeetCode_049_groupAnagrens groupAnagrens = new LeetCode_049_groupAnagrens();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,16 +1,17 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_111_minDepth;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import struct.bst.TreeNode;
+import org.github.fourth.struct.bst.TreeNode;
 
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class Test_111_minDepthTest {
-    private final Test_111_minDepth minDepth = new Test_111_minDepth();
+    private final LeetCode_111_minDepth minDepth = new LeetCode_111_minDepth();
 
 //    @ParameterizedTest
     @MethodSource("generateRightCase")

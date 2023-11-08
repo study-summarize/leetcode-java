@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_329_longestIncreasingPath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_329_longestIncreasingPathTest {
-    private final Test_329_longestIncreasingPath longestIncreasingPath = new Test_329_longestIncreasingPath();
+    private final LeetCode_329_longestIncreasingPath longestIncreasingPath = new LeetCode_329_longestIncreasingPath();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_1137_tribonacci;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("XXXX 测试")
 class Test_1137_tribonacciTest {
 
-    private final Test_1137_tribonacci tribonacci = new Test_1137_tribonacci();
+    private final LeetCode_1137_tribonacci tribonacci = new LeetCode_1137_tribonacci();
 
 
     //    @ParameterizedTest

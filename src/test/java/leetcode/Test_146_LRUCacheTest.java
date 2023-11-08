@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_146_LRUCache;
 import org.junit.jupiter.api.DisplayName;
 
 
@@ -7,7 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 
 class Test_146_LRUCacheTest {
 
-    private final Test_146_LRUCache lruCache = new Test_146_LRUCache(2);
+    private final LeetCode_146_LRUCache lruCache = new LeetCode_146_LRUCache(2);
 
 
 }

@@ -1,5 +1,7 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_133_cloneGraph;
+import org.github.fourth.leetcode.Node;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXXX")
 class Test_133_cloneGraphTest {
-    private final Test_133_cloneGraph cloneGraph = new Test_133_cloneGraph();
+    private final LeetCode_133_cloneGraph cloneGraph = new LeetCode_133_cloneGraph();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

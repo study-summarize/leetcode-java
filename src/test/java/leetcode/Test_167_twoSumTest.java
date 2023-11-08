@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_167_twoSum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("两数之和 II - 输入有序数组 测试")
 class Test_167_twoSumTest {
-    private final Test_167_twoSum twoSum = new Test_167_twoSum();
+    private final LeetCode_167_twoSum twoSum = new LeetCode_167_twoSum();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

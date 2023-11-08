@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_205_isIsomorphic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("同构字符串 测试")
 class Test_205_isIsomorphicTest {
-    private final Test_205_isIsomorphic isIsomorphic = new Test_205_isIsomorphic();
+    private final LeetCode_205_isIsomorphic isIsomorphic = new LeetCode_205_isIsomorphic();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

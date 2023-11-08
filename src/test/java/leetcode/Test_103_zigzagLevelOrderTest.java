@@ -1,10 +1,11 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_103_zigzagLevelOrder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import struct.bst.TreeNode;
+import org.github.fourth.struct.bst.TreeNode;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXX")
 class Test_103_zigzagLevelOrderTest {
-    private final Test_103_zigzagLevelOrder zigzagLevelOrder = new Test_103_zigzagLevelOrder();
+    private final LeetCode_103_zigzagLevelOrder zigzagLevelOrder = new LeetCode_103_zigzagLevelOrder();
 //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, List<List<Integer>> expectedResult) {

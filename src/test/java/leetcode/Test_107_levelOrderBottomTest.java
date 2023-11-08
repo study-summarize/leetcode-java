@@ -1,9 +1,10 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_107_levelOrderBottom;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import struct.bst.TreeNode;
+import org.github.fourth.struct.bst.TreeNode;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -11,7 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class Test_107_levelOrderBottomTest {
-    private final Test_107_levelOrderBottom levelOrderBottom = new Test_107_levelOrderBottom();
+    private final LeetCode_107_levelOrderBottom levelOrderBottom = new LeetCode_107_levelOrderBottom();
 
 //    @ParameterizedTest
     @MethodSource("generateRightCase")

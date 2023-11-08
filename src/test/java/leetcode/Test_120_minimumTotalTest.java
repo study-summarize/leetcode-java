@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_120_minimumTotal;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("三角形最小路径和测试")
 class Test_120_minimumTotalTest {
-    private final Test_120_minimumTotal minimumTotal = new Test_120_minimumTotal();
+    private final LeetCode_120_minimumTotal minimumTotal = new LeetCode_120_minimumTotal();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

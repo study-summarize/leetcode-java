@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_070_climbStairs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("XXX测试")
 class Test_070_climbStairsTest {
 
-    private final Test_070_climbStairs climbStairs = new Test_070_climbStairs();
+    private final LeetCode_070_climbStairs climbStairs = new LeetCode_070_climbStairs();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

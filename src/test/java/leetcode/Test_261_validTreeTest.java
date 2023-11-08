@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_261_validTree;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_261_validTreeTest {
-    private final Test_261_validTree validTree = new Test_261_validTree();
+    private final LeetCode_261_validTree validTree = new LeetCode_261_validTree();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

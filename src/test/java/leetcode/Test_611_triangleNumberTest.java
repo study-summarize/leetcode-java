@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_611_triangleNumber;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_611_triangleNumberTest {
-    private final Test_611_triangleNumber triangleNumber = new Test_611_triangleNumber();
+    private final LeetCode_611_triangleNumber triangleNumber = new LeetCode_611_triangleNumber();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_256_minCost;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_256_minCostTest {
-    private final Test_256_minCost minCost = new Test_256_minCost();
+    private final LeetCode_256_minCost minCost = new LeetCode_256_minCost();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_042_trap;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("接雨水测试")
 public class Test_042_trapTest {
 
-    private final Test_042_trap trapTest = new Test_042_trap();
+    private final LeetCode_042_trap trapTest = new LeetCode_042_trap();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_130_solve;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("被围绕的区域 测试")
 class Test_130_solveTest {
 
-    private final Test_130_solve solve = new Test_130_solve();
+    private final LeetCode_130_solve solve = new LeetCode_130_solve();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

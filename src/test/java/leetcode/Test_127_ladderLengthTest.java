@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_127_ladderLength;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("单词接龙 测试")
 class Test_127_ladderLengthTest {
-    private final Test_127_ladderLength ladderLength = new Test_127_ladderLength();
+    private final LeetCode_127_ladderLength ladderLength = new LeetCode_127_ladderLength();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

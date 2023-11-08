@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_053_maxSubArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("最大子数组和测试")
 class Test_053_maxSubArrayTest {
 
-    private final Test_053_maxSubArray maxSubArray = new Test_053_maxSubArray();
+    private final LeetCode_053_maxSubArray maxSubArray = new LeetCode_053_maxSubArray();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

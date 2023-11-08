@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_015_threeSum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("三数之和测试数据")
 public class Test_015_threeSumTest {
 
-    private static final Test_015_threeSum test015ThreeSum = new Test_015_threeSum();
+    private static final LeetCode_015_threeSum test015ThreeSum = new LeetCode_015_threeSum();
 
     @DisplayName("原版题目解法")
     @ParameterizedTest

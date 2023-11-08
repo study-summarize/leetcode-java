@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_200_numIslands;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_200_numIslandsTest {
-    private final Test_200_numIslands numIslands = new Test_200_numIslands();
+    private final LeetCode_200_numIslands numIslands = new LeetCode_200_numIslands();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_152_maxProduct;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("乘积最大子数组 测试")
 class Test_152_maxProductTest {
-    private final Test_152_maxProduct maxProduct = new Test_152_maxProduct();
+    private final LeetCode_152_maxProduct maxProduct = new LeetCode_152_maxProduct();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

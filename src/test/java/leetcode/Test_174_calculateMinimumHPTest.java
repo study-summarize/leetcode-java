@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_174_calculateMinimumHP;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_174_calculateMinimumHPTest {
-    private final Test_174_calculateMinimumHP calculateMinimumHP = new Test_174_calculateMinimumHP();
+    private final LeetCode_174_calculateMinimumHP calculateMinimumHP = new LeetCode_174_calculateMinimumHP();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

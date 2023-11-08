@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_695_maxAreaOfIsland;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName(" 测试")
 class Test_695_maxAreaOfIslandTest {
 
-    private final Test_695_maxAreaOfIsland maxAreaOfIsland = new Test_695_maxAreaOfIsland();
+    private final LeetCode_695_maxAreaOfIsland maxAreaOfIsland = new LeetCode_695_maxAreaOfIsland();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

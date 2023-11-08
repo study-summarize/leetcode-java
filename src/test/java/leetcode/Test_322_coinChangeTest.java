@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_322_coinChange;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_322_coinChangeTest {
-    private final Test_322_coinChange coinChange = new Test_322_coinChange();
+    private final LeetCode_322_coinChange coinChange = new LeetCode_322_coinChange();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

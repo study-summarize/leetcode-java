@@ -1,10 +1,11 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_148_sortList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import struct.linkedlist.ListNode;
+import org.github.fourth.struct.linkedlist.ListNode;
 
 import java.util.stream.Stream;
 
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("XXXX")
 
 class Test_148_sortListTest {
-    private final Test_148_sortList sortList = new Test_148_sortList();
+    private final LeetCode_148_sortList sortList = new LeetCode_148_sortList();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

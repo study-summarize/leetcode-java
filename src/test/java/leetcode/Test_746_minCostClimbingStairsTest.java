@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_746_minCostClimbingStairs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXXX 测试")
 class Test_746_minCostClimbingStairsTest {
-    private final Test_746_minCostClimbingStairs minCostClimbingStairs = new Test_746_minCostClimbingStairs();
+    private final LeetCode_746_minCostClimbingStairs minCostClimbingStairs = new LeetCode_746_minCostClimbingStairs();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

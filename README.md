@@ -46,3 +46,5 @@ interval[2, 5] = prefixSum[6] - prefixSum[2];
 后期待做：
 - 使用Gradle
 - 做一个插件来收集每题的标签？  
+- 测试类名应该以LeetCode开头
+

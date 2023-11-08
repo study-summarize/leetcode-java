@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_509_fib;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_509_fibTest {
-    private final Test_509_fib fib = new Test_509_fib();
+    private final LeetCode_509_fib fib = new LeetCode_509_fib();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

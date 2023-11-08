@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_712_minimumDeleteSum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_712_minimumDeleteSumTest {
-    private final Test_712_minimumDeleteSum minimumDeleteSum = new Test_712_minimumDeleteSum();
+    private final LeetCode_712_minimumDeleteSum minimumDeleteSum = new LeetCode_712_minimumDeleteSum();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

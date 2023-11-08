@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_1143_longestCommonSubsequence;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXXX 测试")
 class Test_1143_longestCommonSubsequenceTest {
-    private final Test_1143_longestCommonSubsequence longestCommonSubsequence = new Test_1143_longestCommonSubsequence();
+    private final LeetCode_1143_longestCommonSubsequence longestCommonSubsequence = new LeetCode_1143_longestCommonSubsequence();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

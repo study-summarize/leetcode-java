@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_377_combinationSum4;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_377_combinationSum4Test {
-    private final Test_377_combinationSum4 combinationSum4 = new Test_377_combinationSum4();
+    private final LeetCode_377_combinationSum4 combinationSum4 = new LeetCode_377_combinationSum4();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

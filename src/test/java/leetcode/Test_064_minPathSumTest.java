@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_064_minPathSum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +11,7 @@ import java.util.stream.Stream;
 @DisplayName("XXX测试")
 class Test_064_minPathSumTest {
 
-    private final Test_064_minPathSum minPathSum = new Test_064_minPathSum();
+    private final LeetCode_064_minPathSum minPathSum = new LeetCode_064_minPathSum();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

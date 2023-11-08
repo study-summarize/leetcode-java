@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_159_lengthOfLongestSubstringTwoDistinctCharactersTest {
-    private final Test_159_lengthOfLongestSubstringTwoDistinctCharacters lengthOfLongestSubstringTwoDistinctCharacters = new Test_159_lengthOfLongestSubstringTwoDistinctCharacters();
+    private final LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters lengthOfLongestSubstringTwoDistinctCharacters = new LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

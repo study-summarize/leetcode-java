@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_139_wordBreak;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("单词拆分 测试")
 class Test_139_wordBreakTest {
-    private final Test_139_wordBreak wordBreak = new Test_139_wordBreak();
+    private final LeetCode_139_wordBreak wordBreak = new LeetCode_139_wordBreak();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

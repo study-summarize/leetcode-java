@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_221_maximalSquare;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_221_maximalSquareTest {
-    private final Test_221_maximalSquare maximalSquare = new Test_221_maximalSquare();
+    private final LeetCode_221_maximalSquare maximalSquare = new LeetCode_221_maximalSquare();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

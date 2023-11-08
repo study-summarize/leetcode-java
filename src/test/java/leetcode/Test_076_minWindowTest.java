@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_076_minWindow;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXX测试")
 class Test_076_minWindowTest {
-    private final Test_076_minWindow minWindow = new Test_076_minWindow();
+    private final LeetCode_076_minWindow minWindow = new LeetCode_076_minWindow();
 
 //    @ParameterizedTest
     @MethodSource("generateRightCase")

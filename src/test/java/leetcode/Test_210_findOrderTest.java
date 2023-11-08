@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_210_findOrder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("课程表 II 测试")
 class Test_210_findOrderTest {
-    private final Test_210_findOrder findOrder = new Test_210_findOrder();
+    private final LeetCode_210_findOrder findOrder = new LeetCode_210_findOrder();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_122_maxProfit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("买卖股票的最佳时机 II测试")
 class Test_122_maxProfitTest {
 
-    private final Test_122_maxProfit maxProfit = new Test_122_maxProfit();
+    private final LeetCode_122_maxProfit maxProfit = new LeetCode_122_maxProfit();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

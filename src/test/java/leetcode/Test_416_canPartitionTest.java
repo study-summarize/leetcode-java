@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_416_canPartition;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_416_canPartitionTest {
-    private final Test_416_canPartition canPartition = new Test_416_canPartition();
+    private final LeetCode_416_canPartition canPartition = new LeetCode_416_canPartition();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

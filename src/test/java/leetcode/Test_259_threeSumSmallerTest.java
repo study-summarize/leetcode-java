@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_259_threeSumSmaller;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_259_threeSumSmallerTest {
-    private final Test_259_threeSumSmaller threeSumSmaller = new Test_259_threeSumSmaller();
+    private final LeetCode_259_threeSumSmaller threeSumSmaller = new LeetCode_259_threeSumSmaller();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

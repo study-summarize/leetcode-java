@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_242_isAnagram;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_242_isAnagramTest {
-    private final Test_242_isAnagram isAnagram = new Test_242_isAnagram();
+    private final LeetCode_242_isAnagram isAnagram = new LeetCode_242_isAnagram();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

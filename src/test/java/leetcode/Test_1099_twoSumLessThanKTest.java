@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_1099_twoSumLessThanK;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXXX 测试")
 class Test_1099_twoSumLessThanKTest {
-    private final Test_1099_twoSumLessThanK test1099TwoSumLessThanK = new Test_1099_twoSumLessThanK();
+    private final LeetCode_1099_twoSumLessThanK test1099TwoSumLessThanK = new LeetCode_1099_twoSumLessThanK();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

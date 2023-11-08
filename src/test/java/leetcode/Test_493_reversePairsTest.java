@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_493_reversePairs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_493_reversePairsTest {
-    private final Test_493_reversePairs reversePairs = new Test_493_reversePairs();
+    private final LeetCode_493_reversePairs reversePairs = new LeetCode_493_reversePairs();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

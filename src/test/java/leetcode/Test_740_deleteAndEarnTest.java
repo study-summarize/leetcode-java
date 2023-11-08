@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_740_deleteAndEarn;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("XXXX 测试")
 class Test_740_deleteAndEarnTest {
-    private final Test_740_deleteAndEarn deleteAndEarn = new Test_740_deleteAndEarn();
+    private final LeetCode_740_deleteAndEarn deleteAndEarn = new LeetCode_740_deleteAndEarn();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

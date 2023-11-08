@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_219_containsNearbyDuplicate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_219_containsNearbyDuplicateTest {
-    private final Test_219_containsNearbyDuplicate containsNearbyDuplicate = new Test_219_containsNearbyDuplicate();
+    private final LeetCode_219_containsNearbyDuplicate containsNearbyDuplicate = new LeetCode_219_containsNearbyDuplicate();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

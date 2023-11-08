@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_290_wordPattern;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_290_wordPatternTest {
-    private final Test_290_wordPattern wordPattern = new Test_290_wordPattern();
+    private final LeetCode_290_wordPattern wordPattern = new LeetCode_290_wordPattern();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

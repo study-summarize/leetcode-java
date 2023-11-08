@@ -1,5 +1,6 @@
 package struct.linkedlist;
 
+import org.github.fourth.struct.linkedlist.MyLinkedList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

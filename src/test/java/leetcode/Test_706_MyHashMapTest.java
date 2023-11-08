@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_706_MyHashMap;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -10,7 +11,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_706_MyHashMapTest {
-    private final Test_706_MyHashMap myHashMap = new Test_706_MyHashMap();
+    private final LeetCode_706_MyHashMap myHashMap = new LeetCode_706_MyHashMap();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

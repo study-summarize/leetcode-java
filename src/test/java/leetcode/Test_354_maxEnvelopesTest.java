@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_354_maxEnvelopes;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_354_maxEnvelopesTest {
-    private final Test_354_maxEnvelopes maxEnvelopes = new Test_354_maxEnvelopes();
+    private final LeetCode_354_maxEnvelopes maxEnvelopes = new LeetCode_354_maxEnvelopes();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

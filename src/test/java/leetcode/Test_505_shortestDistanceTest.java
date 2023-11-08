@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_505_shortestDistance;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName(" 测试")
 class Test_505_shortestDistanceTest {
-    private final Test_505_shortestDistance shortestDistance = new Test_505_shortestDistance();
+    private final LeetCode_505_shortestDistance shortestDistance = new LeetCode_505_shortestDistance();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

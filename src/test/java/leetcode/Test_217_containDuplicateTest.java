@@ -1,5 +1,6 @@
 package leetcode;
 
+import org.github.fourth.leetcode.LeetCode_217_containDuplicate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("存在重复元素 测试")
 class Test_217_containDuplicateTest {
-    private final Test_217_containDuplicate containDuplicate = new Test_217_containDuplicate();
+    private final LeetCode_217_containDuplicate containDuplicate = new LeetCode_217_containDuplicate();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
