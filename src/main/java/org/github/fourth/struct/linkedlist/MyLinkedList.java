@@ -33,8 +33,8 @@ package org.github.fourth.struct.linkedlist;
  */
 public class MyLinkedList {
     // field
-    ListNode head;
-    int length;
+    public ListNode head;
+    public int length;
 
     // Constructor
     public MyLinkedList() {

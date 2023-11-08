@@ -1,7 +1,7 @@
 package leetcode;
 
 import org.github.fourth.leetcode.LeetCode_133_cloneGraph;
-import org.github.fourth.leetcode.Node;
+import org.github.fourth.leetcode.LeetCode_133_cloneGraph.Node;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
