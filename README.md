@@ -12,7 +12,18 @@
 # leetcode-java
 数组：
 - 数组中swap俩个位置的数字
-- 字符串中字符统计技巧
+- 字符串中字符统计技巧？？？
+- 前缀和模板
+```groovy
+int[] prefixSum = new int[nums.length + 1];
+for(int i = 0; i < nums.length ; i++) {
+    prefixSum[i + 1] = prefixSum[i] + nums[i];
+}
+
+// 求nums中下标2～5的值
+interval[2, 5] = prefixSum[6] - prefixSum[2];
+```
+
 
 栈和队列：
 
