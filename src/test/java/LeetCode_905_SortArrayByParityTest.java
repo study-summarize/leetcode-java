@@ -1,4 +1,4 @@
-import org.github.fourth.SortArrayByParity;
+import org.github.fourth.leetcode.LeetCode_905_SortArrayByParity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,13 +11,13 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("奇偶排序测试")
-public class SortArrayByParityTest {
+public class LeetCode_905_SortArrayByParityTest {
 
     @DisplayName("奇偶排序测试")
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int pos, int[] expectedResults) {
-        SortArrayByParity sortArrayByParity = new SortArrayByParity();
+        LeetCode_905_SortArrayByParity sortArrayByParity = new LeetCode_905_SortArrayByParity();
         int[] actResult = sortArrayByParity.sortArrayByParityExample(Arrays.copyOf(nums, nums.length));
         int[] actResult01 = sortArrayByParity.sortArrayByParity(Arrays.copyOf(nums, nums.length));
         Assertions.assertEquals(expectedResults.length, actResult01.length);

@@ -1,4 +1,4 @@
-package org.github.fourth;
+package org.github.fourth.leetcode;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
@@ -6,7 +6,7 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
  * Origin:
  * 给你一个整数数组nums，将nums中的的所有偶数元素移动到数组的前面，后跟所有奇数元素。返回满足此条件的任一数组作为答案。
  */
-public class SortArrayByParity {
+public class LeetCode_905_SortArrayByParity {
 
     /**
      * 相向型双指针
