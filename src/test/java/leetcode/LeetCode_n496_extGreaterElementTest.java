@@ -1,6 +1,6 @@
 package leetcode;
 
-import org.github.fourth.leetcode.LeetCode_496_extGreaterElement;
+import org.github.fourth.leetcode.LeetCode_496_nextGreaterElement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,8 +12,8 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("下一个更大元素 I")
-public class LeetCode_496_extGreaterElementTest {
-    private final LeetCode_496_extGreaterElement extGreaterElement = new LeetCode_496_extGreaterElement();
+public class LeetCode_n496_extGreaterElementTest {
+    private final LeetCode_496_nextGreaterElement extGreaterElement = new LeetCode_496_nextGreaterElement();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")

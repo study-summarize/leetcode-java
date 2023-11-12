@@ -1,6 +1,5 @@
 package leetcode;
 
-import org.github.fourth.leetcode.LeetCode_496_extGreaterElement;
 import org.github.fourth.leetcode.LeetCode_503_nextGreaterElements;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
