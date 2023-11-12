@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("接雨水测试")
+@DisplayName("接雨水")
 public class LeetCode_042_trapTest {
 
     private final LeetCode_042_trap trapTest = new LeetCode_042_trap();
