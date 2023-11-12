@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("下一个更大元素 I")
-public class LeetCode_n496_extGreaterElementTest {
+public class LeetCode_496_nextGreaterElementTest {
     private final LeetCode_496_nextGreaterElement extGreaterElement = new LeetCode_496_nextGreaterElement();
 
     //    @ParameterizedTest
