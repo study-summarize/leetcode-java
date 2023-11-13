@@ -18,9 +18,9 @@ public class LeetCode_018_fourSumTest {
 
     private static final LeetCode_018_fourSum test018FourSum = new LeetCode_018_fourSum();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateOriginRightCase")
-    public void testOrigin(int[] nums, int target, List<List<Integer>> expectedResults) {
+    public void test(int[] nums, int target, List<List<Integer>> expectedResults) {
         expectedResults.forEach(x -> x.sort(Integer::compareTo));
 
         List<List<Integer>> actResultList = test018FourSum.fourSumExample(Arrays.copyOf(nums, nums.length), target);
@@ -46,12 +46,17 @@ public class LeetCode_018_fourSumTest {
 
     public static Stream<Arguments> generateOriginRightCase() {
         return Stream.of(
-                arguments(new int[]{-1, 0, 1, 2, -1, -4}, 0, List.of(Arrays.asList(-1, -1, 2), Arrays.asList(-1, 0, 1))),
-                arguments(new int[]{-1, 0, 1, 2, -4}, 0, List.of(Arrays.asList(-1, 0, 1))),
-                arguments(new int[]{0, 0, 0, 0, 0}, 0, List.of(Arrays.asList(0, 0, 0))),
-                arguments(new int[]{0, 1, 1}, 0, List.of()),
-                arguments(new int[]{0, 0, 0}, 0, List.of(Arrays.asList(0, 0, 0))),
-                arguments(new int[]{3, 2, -5}, 0, List.of(Arrays.asList(3, 2, -5)))
+                arguments(new int[]{2, 2, 2, 2, 2}, 8, List.of(Arrays.asList(2, 2, 2, 2))),
+                arguments(new int[]{-4, -1, -1, 0, 1, 2}, -1, List.of(Arrays.asList(-4, 0, 1, 2), Arrays.asList(-1, -1, 0, 1))),
+                // note: 这里溢出的题目好烦啊
+                arguments(new int[]{1000000000, 1000000000, 1000000000, 1000000000}, -294967296, List.of()),
+
+                arguments(new int[]{-1, 0, 1, 2, -1, -4, 0}, 0, List.of(Arrays.asList(-1, -1, 2, 0), Arrays.asList(-1, 0, 1, 0))),
+                arguments(new int[]{-1, 0, 1, 2, -4, 0}, 0, List.of(Arrays.asList(-1, 0, 1, 0))),
+                arguments(new int[]{0, 0, 0, 0, 0, 0}, 0, List.of(Arrays.asList(0, 0, 0, 0))),
+                arguments(new int[]{0, 1, 1, 0}, 0, List.of()),
+                arguments(new int[]{0, 0, 0, 0}, 0, List.of(Arrays.asList(0, 0, 0, 0))),
+                arguments(new int[]{3, 2, -5, 0}, 0, List.of(Arrays.asList(3, 2, -5, 0)))
         );
     }
 
