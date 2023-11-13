@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Origin:
- *
+ * 给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0 。
  *
  * Change:
  * 给定一个包含n个整数的数组（无重复元素）nums和一个目标值target，找出数组中和为目标值的三个数。可以假设每个输入只对应一种答案。
@@ -21,15 +21,17 @@ public class LeetCode_015_threeSum {
      * 空间负责度：O（1）
      */
     public List<List<Integer>> threeSum01(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length == 0) {
-            return null;
+            return result;
         }
+        // 返回值不是下标，这里其实可以无脑排序一下
         Arrays.sort(nums);
 
-        List<List<Integer>> result = new ArrayList<>();
         for (int i = 0; i < nums.length - 2; i++) {
             int start = i + 1;
             int end = nums.length - 1;
+            // 前后数值相同时，后面的排序其实就是重复操作。这里可以想特殊案例：0,0,0,0
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -39,6 +41,7 @@ public class LeetCode_015_threeSum {
                     result.add(Arrays.asList(nums[i], nums[start], nums[end]));
                     start++;
                     end--;
+                    // 去除重复元素。这里也是可以想特殊案例：0,0,0,0,0,0
                     if (start > 1 && nums[start] == nums[start - 1]) {
                         start++;
                         continue;
