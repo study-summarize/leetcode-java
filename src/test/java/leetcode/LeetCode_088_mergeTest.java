@@ -3,6 +3,7 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_088_merge;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,7 +17,7 @@ public class LeetCode_088_mergeTest {
 
     private static final LeetCode_088_merge leetCode_088_merge = new LeetCode_088_merge();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums1, int m, int[] nums2, int[] expectedResults) {
         int[] actResult = Arrays.copyOf(nums1, nums1.length);
@@ -37,7 +38,7 @@ public class LeetCode_088_mergeTest {
         return Stream.of(
                 arguments(new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, new int[]{1, 2, 2, 3, 5, 6}),
                 arguments(new int[]{1}, 1, new int[0], new int[]{1}),
-                arguments(new int[]{0}, 0, new int[1], new int[]{1})
+                arguments(new int[]{0}, 0, new int[]{1}, new int[]{1})
         );
     }
 }
