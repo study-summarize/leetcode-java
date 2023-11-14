@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("奇偶排序测试")
+@DisplayName("奇偶排序")
 public class LeetCode_905_SortArrayByParityTest {
 
     @DisplayName("奇偶排序测试")
