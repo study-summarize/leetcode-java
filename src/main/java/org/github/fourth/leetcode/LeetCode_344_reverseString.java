@@ -19,7 +19,7 @@ public class LeetCode_344_reverseString {
         }
         int swapCount = s.length / 2;
         for (int i = 0; i < swapCount; i++) {
-            swap(s, i, s.length - 1 -i);
+            swap(s, i, s.length - 1 - i);
         }
     }
 
