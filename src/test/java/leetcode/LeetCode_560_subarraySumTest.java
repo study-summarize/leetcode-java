@@ -2,6 +2,8 @@ package leetcode;
 
 import org.github.fourth.leetcode.LeetCode_560_subarraySum;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -10,11 +12,12 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
+@DisplayName("和为k的子数组")
 public class LeetCode_560_subarraySumTest {
 
     private static final LeetCode_560_subarraySum leetCode560 = new LeetCode_560_subarraySum();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int k, int expectedResults) {
 
