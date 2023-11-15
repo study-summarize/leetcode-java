@@ -4,6 +4,7 @@ import org.github.fourth.leetcode.LeetCode_1480_runningSum;
 import org.github.fourth.leetcode.LeetCode_303_NumArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,7 +18,7 @@ public class LeetCode_1480_runningSumTest {
 
     private static final LeetCode_1480_runningSum leetCode1480 = new LeetCode_1480_runningSum();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int[] expectedResults) {
         int[] actResult01 = leetCode1480.runningSum(Arrays.copyOf(nums, nums.length));
