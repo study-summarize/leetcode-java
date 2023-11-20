@@ -39,6 +39,28 @@ for (int i = 0; i < m; i++) {
 // 求nums(5, 1, 9,2)
 sumRange = prefixSum[10][3] - prefixSum[10][1] - prefixSum[5][3] + prefixSum[5][1];
 ```
+(3)一维数组动态积
+```groovy
+int[] nums = new int[length];
+
+int[] left = new int[length];
+int[] right = new int[length];
+int[] answer = new int[length];
+
+left[0] = 1;
+for (int i = 1; i < length; i++) {
+    left[i] = left[i - 1] * nums[i - 1];
+}
+
+right[length - 1] = 1;
+for (int i = length - 2; i >= 0; i--) {
+    right[i] = right[i + 1] * nums[i + 1];
+}
+
+for (int i = 0; i < length; i++) {
+    answer[i] = left[i] * right[i];
+}
+```
 
 栈和队列：
 - 单调栈
