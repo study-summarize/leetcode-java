@@ -25,6 +25,7 @@ public class LeetCode_020_isValidTest {
         return Stream.of(
                 arguments("()", true),
                 arguments("(]", false),
+                arguments("(", false),
                 arguments("()[]{}", true)
         );
     }

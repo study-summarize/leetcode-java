@@ -26,6 +26,11 @@ public class LeetCode_020_isValid {
                 continue;
             }
 
+            // 防止空元素
+            if (stack.isEmpty()) {
+                return false;
+            }
+
             char currentChar = stack.pop();
             if (')' == element) {
                 if (currentChar != '(') {
@@ -43,6 +48,6 @@ public class LeetCode_020_isValid {
                 return false;
             }
         }
-        return true;
+        return stack.isEmpty();
     }
 }
