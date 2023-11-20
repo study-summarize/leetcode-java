@@ -3,6 +3,7 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_238_productExceptSelf;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,7 +17,7 @@ public class LeetCode_238_productExceptSelfTest {
 
     private static final LeetCode_238_productExceptSelf leetCode238 = new LeetCode_238_productExceptSelf();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int[] expectedResults) {
         int[] actResult = leetCode238.productExceptSelf(Arrays.copyOf(nums, nums.length));
