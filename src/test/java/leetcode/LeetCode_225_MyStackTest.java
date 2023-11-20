@@ -3,9 +3,12 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_225_MyStack;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 @DisplayName("用队列实现栈")
 public class LeetCode_225_MyStackTest {
+
+    @Test
     public void test() {
         LeetCode_225_MyStack myStack = new LeetCode_225_MyStack();
         myStack.push(1);
