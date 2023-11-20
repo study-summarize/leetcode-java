@@ -14,6 +14,7 @@
 - 数组中swap俩个位置的数字（为了省空间）
 - 字符串中字符统计技巧？？？
 - 前缀和模板
+(1)一维数组动态和
 ```groovy
 int[] prefixSum = new int[nums.length + 1];
 for(int i = 0; i < nums.length ; i++) {
@@ -23,7 +24,21 @@ for(int i = 0; i < nums.length ; i++) {
 // 求nums中下标2～5的值
 interval[2, 5] = prefixSum[6] - prefixSum[2];
 ```
+(2)二维数组动态和
+```groovy
+int m = nums.length;
+int n = nums[0].length;
 
+int[][] prefixSum = new int[m + 1][n + 1];
+for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++) {
+        prefixSum[i + 1][j + 1] = prefixSum[i][j + 1] + prefixSum[i + 1][j] - prefixSum[i][j] + nums[i][j];
+    }
+}
+
+// 求nums(5, 1, 9,2)
+sumRange = prefixSum[10][3] - prefixSum[10][1] - prefixSum[5][3] + prefixSum[5][1];
+```
 
 栈和队列：
 

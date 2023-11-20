@@ -3,6 +3,7 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_304_NumMatrix;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -14,7 +15,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("二维区域和检索 - 矩阵不可变")
 public class LeetCode_304_NumMatrixTest {
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] matrix, int row1, int col1, int row2, int col2, int expectedResults) {
         int actResult01 = new LeetCode_304_NumMatrix(Arrays.copyOf(matrix, matrix.length))
