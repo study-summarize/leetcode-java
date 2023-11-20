@@ -3,10 +3,12 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_232_MyQueue;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 @DisplayName("用栈实现队列")
 public class LeetCode_232_MyQueueTest {
 
+    @Test
     public void test() {
         LeetCode_232_MyQueue myQueue = new LeetCode_232_MyQueue();
         myQueue.push(1); // queue is: [1]
