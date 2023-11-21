@@ -4,8 +4,14 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
-public class NextGreaterDemo {
+/**
+ * 给定一个整型数组nums，要求打印出所有元素右边第一个大于该元素的值。
+ */
+public class NextGreaterNumber {
 
+    /**
+     * 右侧、大于元素
+     */
     public static int[] findRightNextGreater(int[] nums) {
         int[] result = new int[nums.length];
         Arrays.fill(result, -1);
@@ -60,14 +66,5 @@ public class NextGreaterDemo {
             stack.push(i);
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = new int[]{2, 3, 4, 1, 5, 3, 4};
-        System.out.println("findRightNextGreater: " + Arrays.toString(findRightNextGreater(nums)));
-        System.out.println("findRightNextSmaller: " + Arrays.toString(findRightNextSmaller(nums)));
-        System.out.println("findLeftNextGreater: " + Arrays.toString(findLeftNextGreater(nums)));
-        System.out.println("findLeftNextSmaller: " + Arrays.toString(findLeftNextSmaller(nums)));
-
     }
 }
