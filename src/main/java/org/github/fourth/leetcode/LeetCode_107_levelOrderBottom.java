@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * 给你二叉树的根节点 root ，返回其节点值 自底向上的层序遍历 。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+ */
 public class LeetCode_107_levelOrderBottom {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {

@@ -3,7 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.struct.linkedlist.ListNode;
 
 /**
- * @author jwang55
+ * 给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。
  */
 public class LeetCode_148_sortList {
 
