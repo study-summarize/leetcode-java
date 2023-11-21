@@ -41,6 +41,9 @@ sumRange = prefixSum[10][3] - prefixSum[10][1] - prefixSum[5][3] + prefixSum[5][
 ```
 
 栈和队列：
+- 单调栈
+  - 适合的问题
+  - 解题的思路
 
 链表：
 - 求链表中点
