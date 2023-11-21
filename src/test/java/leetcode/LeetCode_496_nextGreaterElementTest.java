@@ -3,6 +3,7 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_496_nextGreaterElement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class LeetCode_496_nextGreaterElementTest {
     private final LeetCode_496_nextGreaterElement extGreaterElement = new LeetCode_496_nextGreaterElement();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums1, int[] nums2, int[] expectedResult) {
         int[] actResult = extGreaterElement.nextGreaterElement(Arrays.copyOf(nums1, nums1.length), Arrays.copyOf(nums2, nums2.length));
