@@ -3,6 +3,7 @@ package leetcode;
 import org.github.fourth.leetcode.LeetCode_739_dailyTemperatures;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,7 +17,7 @@ public class LeetCode_739_dailyTemperaturesTest {
 
     private final LeetCode_739_dailyTemperatures leetCode739 = new LeetCode_739_dailyTemperatures();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] temperatures, int[] expectedResult) {
         int[] actResult = leetCode739.dailyTemperatures(Arrays.copyOf(temperatures, temperatures.length));
