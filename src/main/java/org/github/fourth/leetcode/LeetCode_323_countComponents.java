@@ -3,7 +3,6 @@ package org.github.fourth.leetcode;
 import java.util.*;
 
 /**
- * @author jwang55
  */
 public class LeetCode_323_countComponents {
 

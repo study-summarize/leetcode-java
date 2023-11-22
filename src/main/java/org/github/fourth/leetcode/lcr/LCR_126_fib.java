@@ -5,7 +5,7 @@ package org.github.fourth.leetcode.lcr;
  * F(0) = 0，F(1) = 1
  * F(n) = F(n - 1) + F(n - 2)，其中 n > 1
  * 给定 n ，请计算 F(n) 。
- *
+ * <br/>
  * 答案需要取模 1e9+7(1000000007) ，如计算初始结果为：1000000008，请返回 1。
  */
 public class LCR_126_fib {

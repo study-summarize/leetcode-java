@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author jwang55
  */
 public class LeetCode_505_shortestDistance {
 

@@ -1,7 +1,6 @@
 package org.github.fourth.leetcode;
 
 /**
- * @author jwang55
  */
 public class LeetCode_490_hasPath {
 

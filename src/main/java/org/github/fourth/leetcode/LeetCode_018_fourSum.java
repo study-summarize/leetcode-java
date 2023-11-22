@@ -9,7 +9,6 @@ import java.util.List;
  * 0 <= a, b, c, d < n
  * a、b、c 和 d 互不相同
  * nums[a] + nums[b] + nums[c] + nums[d] == target
- *
  * 你可以按 任意顺序 返回答案 。
  */
 public class LeetCode_018_fourSum {

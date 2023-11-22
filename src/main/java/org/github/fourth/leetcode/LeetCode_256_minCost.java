@@ -2,6 +2,9 @@ package org.github.fourth.leetcode;
 
 import java.util.Arrays;
 
+/**
+ *
+ */
 public class LeetCode_256_minCost {
 
     public int minCost(int[][] costs) {

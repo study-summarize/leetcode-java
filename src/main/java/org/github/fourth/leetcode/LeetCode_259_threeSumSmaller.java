@@ -3,7 +3,6 @@ package org.github.fourth.leetcode;
 import java.util.Arrays;
 
 /**
- * @author jwang55
  */
 public class LeetCode_259_threeSumSmaller {
 
