@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX 测试")
+@DisplayName("小于 K 的两数之和")
 class LeetCode_1099_twoSumLessThanKTest {
     private final LeetCode_1099_twoSumLessThanK test1099TwoSumLessThanK = new LeetCode_1099_twoSumLessThanK();
 
@@ -23,8 +23,8 @@ class LeetCode_1099_twoSumLessThanKTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{34, 23, 1, 24, 75, 33, 54, 8}, 60, 58),
+                arguments(new int[]{10, 20, 30}, 15, -1)
         );
     }
 }

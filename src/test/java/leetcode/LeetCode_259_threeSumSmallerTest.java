@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("较小的三数之和")
 class LeetCode_259_threeSumSmallerTest {
     private final LeetCode_259_threeSumSmaller threeSumSmaller = new LeetCode_259_threeSumSmaller();
 
@@ -23,8 +23,9 @@ class LeetCode_259_threeSumSmallerTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{-2, 0, 1, 3}, 2, 2),
+                arguments(new int[0], 0, 0),
+                arguments(new int[]{0}, 0, 0)
         );
     }
 }

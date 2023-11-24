@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("有效三角形的个数")
 class LeetCode_611_triangleNumberTest {
     private final LeetCode_611_triangleNumber triangleNumber = new LeetCode_611_triangleNumber();
 
@@ -23,8 +23,8 @@ class LeetCode_611_triangleNumberTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{2, 2, 3, 4}, 3),
+                arguments(new int[]{4, 2, 3, 4}, 4)
         );
     }
 }
