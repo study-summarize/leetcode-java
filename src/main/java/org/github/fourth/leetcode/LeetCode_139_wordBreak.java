@@ -10,7 +10,10 @@ import java.util.Set;
  * 注意：不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。
  */
 public class LeetCode_139_wordBreak {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean wordBreak(String s, List<String> wordDict) {
         if (s == null || s.length() == 0 || wordDict == null) {
             return false;

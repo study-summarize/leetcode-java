@@ -7,7 +7,10 @@ package org.github.fourth.leetcode;
  * 注意：不允许使用任何内置指数函数和算符，例如 pow(x, 0.5) 或者 x ** 0.5 。
  */
 public class LeetCode_069_mySqrt {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int mySqrt(int x) {
         return 0;
     }

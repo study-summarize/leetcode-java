@@ -9,6 +9,8 @@ public class LeetCode_148_sortList {
 
     /**
      * 利用快速排序实现
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public ListNode sortList(ListNode head) {
         // 注意：head.next 也不能为空

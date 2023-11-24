@@ -10,6 +10,10 @@ import java.util.Map;
  */
 public class LeetCode_205_isIsomorphic {
 
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean isIsomorphic(String s, String t) {
         char[] sCharArr = s == null ? new char[0] : s.toCharArray();
         char[] tCharArr = t == null ? new char[0] : t.toCharArray();

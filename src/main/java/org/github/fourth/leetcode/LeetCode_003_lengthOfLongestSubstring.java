@@ -10,6 +10,8 @@ public class LeetCode_003_lengthOfLongestSubstring {
 
     /**
      * 利用Set来判断重复元素
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int lengthOfLongestSubstring1(String s) {
         int result = 0;
@@ -40,6 +42,8 @@ public class LeetCode_003_lengthOfLongestSubstring {
 
     /**
      * 方法一的优化版：利用数组来节省空间、速度
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int lengthOfLongestSubstring1Refine(String s) {
         int result = 0;

@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("打家劫舍 测试")
+@DisplayName("打家劫舍")
 class LeetCode_198_robTest {
     private final LeetCode_198_rob rob = new LeetCode_198_rob();
 

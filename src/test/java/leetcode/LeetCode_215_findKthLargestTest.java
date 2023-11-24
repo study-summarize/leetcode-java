@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("数组中的第K大元素 测试")
+@DisplayName("数组中的第K大元素")
 class LeetCode_215_findKthLargestTest {
     private final LeetCode_215_findKthLargest findKthLargest = new LeetCode_215_findKthLargest();
 
@@ -18,13 +18,18 @@ class LeetCode_215_findKthLargestTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int k,int expectedResult) {
-
         int actResult1 = findKthLargest.findKthLargest(nums, k);
         Assertions.assertEquals(expectedResult, actResult1);
-
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int k,int expectedResult) {
         int actResult2 = findKthLargest.findKthLargest2(nums, k);
         Assertions.assertEquals(expectedResult, actResult2);
-
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] nums, int k,int expectedResult) {
         int actResult3 = findKthLargest.findKthLargest3(nums, k);
         Assertions.assertEquals(expectedResult, actResult3);
     }

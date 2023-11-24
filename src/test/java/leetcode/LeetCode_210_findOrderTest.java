@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("课程表 II 测试")
+@DisplayName("课程表 II")
 class LeetCode_210_findOrderTest {
     private final LeetCode_210_findOrder findOrder = new LeetCode_210_findOrder();
 

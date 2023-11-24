@@ -5,7 +5,10 @@ import java.util.*;
 /**
  */
 public class LeetCode_261_validTree {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean validTree(int n, int[][] edges) {
         if (n == 0 || edges == null || edges.length == 0
                 || edges[0] == null || edges[0].length == 0) {

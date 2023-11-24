@@ -6,6 +6,10 @@ package org.github.fourth.leetcode;
  * 你必须设计并实现时间复杂度为 O(log n) 的算法解决此问题。
  */
 public class LeetCode_034_searchRange {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int[] searchRange(int[] nums, int target) {
         return null;
     }

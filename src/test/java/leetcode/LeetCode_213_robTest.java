@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("打家劫舍 II 测试")
+@DisplayName("打家劫舍 II")
 class LeetCode_213_robTest {
     private final LeetCode_213_rob rob = new LeetCode_213_rob();
 

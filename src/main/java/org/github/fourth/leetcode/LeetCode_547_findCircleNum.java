@@ -13,6 +13,8 @@ public class LeetCode_547_findCircleNum {
 
     /**
      * 使用BFS方式
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int findCircleNum(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0
@@ -57,6 +59,8 @@ public class LeetCode_547_findCircleNum {
 
     /**
      * 使用DFS方式
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int findCircleNumWithDfs(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0) {

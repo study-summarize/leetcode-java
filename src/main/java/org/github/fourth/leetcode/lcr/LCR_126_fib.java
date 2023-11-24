@@ -9,6 +9,10 @@ package org.github.fourth.leetcode.lcr;
  * 答案需要取模 1e9+7(1000000007) ，如计算初始结果为：1000000008，请返回 1。
  */
 public class LCR_126_fib {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int fib(int n) {
         return 0;
     }

@@ -8,7 +8,10 @@ import java.util.Map;
  * 这里的 遵循 指完全匹配，例如， pattern 里的每个字母和字符串 s 中的每个非空单词之间存在着双向连接的对应规律。
  */
 public class LeetCode_290_wordPattern {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean wordPattern(String pattern, String s) {
         if (pattern == null || s == null) {
             return false;

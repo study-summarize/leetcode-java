@@ -12,7 +12,10 @@ import java.util.Map;
 public class LeetCode_131_partition {
 
     private boolean[][] isPalindrome;
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public List<List<String>> partition(String s) {
         if (s == null || s.length() == 0) {
             return null;

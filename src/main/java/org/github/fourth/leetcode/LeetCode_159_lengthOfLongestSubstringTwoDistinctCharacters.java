@@ -5,7 +5,10 @@ import java.util.Map;
 /**
  */
 public class LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int lengthOfLongestSubstringTwoDistinctCharacters(String s) {
         int result = 0;
         if (s == null || s.length() == 0) {

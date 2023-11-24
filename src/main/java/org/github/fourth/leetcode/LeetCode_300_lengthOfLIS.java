@@ -10,6 +10,8 @@ public class LeetCode_300_lengthOfLIS {
 
     /**
      * 动态规划、制表法找function
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {

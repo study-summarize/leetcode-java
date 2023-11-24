@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("存在重复元素 测试")
+@DisplayName("存在重复元素")
 class LeetCode_217_containDuplicateTest {
     private final LeetCode_217_containDuplicate containDuplicate = new LeetCode_217_containDuplicate();
 

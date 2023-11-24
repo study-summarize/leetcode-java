@@ -11,6 +11,10 @@ import java.util.LinkedList;
  * 3. 每个右括号都有一个对应的相同类型的左括号。
  */
 public class LeetCode_020_isValid {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean isValid(String s) {
         if (s == null || "".equalsIgnoreCase(s)) {
             return true;

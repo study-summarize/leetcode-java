@@ -9,6 +9,8 @@ public class LeetCode_152_maxProduct {
 
     /**
      * 动态规划
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int maxProduct(int[] nums) {
         if (nums == null || nums.length == 0) {

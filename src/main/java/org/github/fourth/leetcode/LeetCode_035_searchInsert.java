@@ -5,6 +5,10 @@ package org.github.fourth.leetcode;
  * 请必须使用时间复杂度为 O(log n) 的算法。
  */
 public class LeetCode_035_searchInsert {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int searchInsert(int[] nums, int target) {
         return 0;
     }

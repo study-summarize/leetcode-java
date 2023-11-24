@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LeetCode_340_lengthOfLongestSubstringKDistinctCharacters {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int lengthOfLongestSubstringKDistinctCharacters(String s, int k) {
         int result = 0;
         if (s == null || s.length() == 0 || k == 0) {

@@ -11,18 +11,22 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("被围绕的区域 测试")
+@DisplayName("被围绕的区域")
 class LeetCode_130_solveTest {
 
     private final LeetCode_130_solve solve = new LeetCode_130_solve();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(char[][] board, char[][] expectedResult) {
+    public void test01(char[][] board, char[][] expectedResult) {
         char[][] board1 = board.clone();
         solve.solve(board1);
         Assertions.assertArrayEquals(expectedResult, board1);
+    }
 
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(char[][] board, char[][] expectedResult) {
         char[][] board2 = board.clone();
         solve.solveWithDfs(board2);
         Assertions.assertArrayEquals(expectedResult, board2);

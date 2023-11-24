@@ -10,6 +10,10 @@ package org.github.fourth.leetcode;
  * 你必须设计并实现时间复杂度为 O(log(n)) 的解决方案。
  */
 public class LeetCode_852_peakIndexInMountainArray {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int peakIndexInMountainArray(int[] arr) {
         return 0;
     }

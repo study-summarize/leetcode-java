@@ -13,6 +13,8 @@ public class LeetCode_001_twoSum {
 
     /**
      * 暴力解法1：双层for循环
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(1)
      */
     public int[] twoSum01(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
@@ -35,6 +37,7 @@ public class LeetCode_001_twoSum {
     /**
      * 排序+双指针，求具体值，而不是下标
      * 时间复杂度：O(nlogn)
+     * 空间复杂度：O(1)
      */
     public int[] twoSum02(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
@@ -63,6 +66,8 @@ public class LeetCode_001_twoSum {
 
     /**
      * 哈希表
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
      */
     public int[] twoSum03(int[] nums, int target) {
         if (nums == null || nums.length == 0) {

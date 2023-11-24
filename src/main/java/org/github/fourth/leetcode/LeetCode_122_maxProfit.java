@@ -8,6 +8,8 @@ package org.github.fourth.leetcode;
 public class LeetCode_122_maxProfit {
     /**
      * 贪心法
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int maxProfit01(int[] prices) {
         if (prices == null || prices.length == 0) {
@@ -26,6 +28,8 @@ public class LeetCode_122_maxProfit {
 
     /**
      * 动态规划
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int maxProfit02(int[] prices) {
         if (prices == null || prices.length == 0) {

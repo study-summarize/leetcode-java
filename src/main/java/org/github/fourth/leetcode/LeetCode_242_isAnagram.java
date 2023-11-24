@@ -5,7 +5,10 @@ package org.github.fourth.leetcode;
  * 注意：若 s 和 t 中每个字符出现的次数都相同，则称 s 和 t 互为字母异位词。
  */
 public class LeetCode_242_isAnagram {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean isAnagram(String s, String t) {
         if (s == null || t == null || s.length() != t.length()) {
             return false;

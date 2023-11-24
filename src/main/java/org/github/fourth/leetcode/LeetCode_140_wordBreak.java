@@ -11,6 +11,10 @@ import java.util.Map;
  */
 public class LeetCode_140_wordBreak {
     /* 记忆化搜索 */
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public List<String> wordBreak(String s, List<String> wordDict) {
         // 解集
         List<String> result = new ArrayList<>();

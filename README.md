@@ -66,6 +66,70 @@ for (int i = 0; i < length; i++) {
 - 单调栈
   - 适合的问题
   - 解题的思路
+（1）从左往右，递增栈
+```groovy
+int[] nums = new int[length];
+
+int[] right = new int[length];
+// 防止右边没有比当前元素小的值
+Arrays.fill(right, length);
+Deque<Integer> stack = new LinkedList<>();
+for (int i = 0; i < length; i++) {
+    while(!stack.isEmpty() && nums[stack.peek()] > nums[i]) {
+        int index = stack.pop();
+        right[index] = i;
+    }
+    stack.push(i);
+}
+```
+（2）从右往左，递增栈
+```groovy
+int[] nums = new int[length];
+
+int[] left = new int[length];
+// 防止左边没有比当前元素小的值
+Arrays.fill(left, -1);
+Deque<Integer> stack = new LinkedList<>();
+for (int i = length - 1; i >= 0; i--) {
+    while(!stack.isEmpty() && nums[stack.peek()] > nums[i]) {
+        int index = stack.pop();
+        left[index] = i;
+    }
+    stack.push(i);
+}
+```
+（3）从左到右，递减栈
+```groovy
+int[] nums = new int[length];
+
+int[] right = new int[length];
+// 防止右边没有比当前元素大的值
+Arrays.fill(right, length);
+Deque<Integer> stack = new LinkedList<>();
+for (int i = 0; i < length; i++) {
+    while(!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+        int index = stack.pop();
+        right[index] = i;
+    }
+    stack.push(i);
+}
+```
+（4）从右到左，递减栈
+```groovy
+int[] nums = new int[length];
+
+int[] left = new int[length];
+// 防止左边没有比当前元素大的值
+Arrays.fill(length, -1);
+Deque<Integer> stack = new LinkedList<>();
+for (int i = length - 1; i >= 0; i--) {
+    while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+        int index = stack.pop();
+        left[index] = i;
+    }
+    stack.push(i);
+}
+```
 
 ## 链表：
 - 求链表中点
@@ -86,5 +150,4 @@ for (int i = 0; i < length; i++) {
 后期待做：
 - 使用Gradle
 - 做一个插件来收集每题的标签？  
-- 测试类名应该以LeetCode开头
 

@@ -6,6 +6,10 @@ package org.github.fourth.leetcode;
  * - 每列的元素从上到下升序排列。
  */
 public class LeetCode_240_searchMatrix {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean searchMatrix(int[][] matrix, int target) {
         return false;
     }

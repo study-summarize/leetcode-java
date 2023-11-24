@@ -8,7 +8,10 @@ package org.github.fourth.leetcode;
 public class LeetCode_278_firstBadVersion {
 
     // extends VersionControl
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int firstBadVersion(int n) {
         return 0;
     }

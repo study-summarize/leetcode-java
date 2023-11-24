@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("两数之和 II - 输入有序数组 测试")
+@DisplayName("两数之和 II - 输入有序数组")
 class LeetCode_167_twoSumTest {
     private final LeetCode_167_twoSum twoSum = new LeetCode_167_twoSum();
 

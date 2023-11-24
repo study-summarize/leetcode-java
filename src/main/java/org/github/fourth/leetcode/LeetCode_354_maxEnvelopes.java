@@ -9,6 +9,10 @@ import java.util.Arrays;
  * 注意：不允许旋转信封。
  */
 public class LeetCode_354_maxEnvelopes {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int maxEnvelopes(int[][] envelopes) {
         if (envelopes == null || envelopes.length == 0 || envelopes[0] == null
                 || envelopes[0].length == 0) {
@@ -30,6 +34,8 @@ public class LeetCode_354_maxEnvelopes {
 
     /**
      * 动态规划、制表法找function
+     * 时间复杂度：
+     * 空间复杂度：
      */
     private int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {

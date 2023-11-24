@@ -7,6 +7,10 @@ package org.github.fourth.leetcode;
  * 你必须设计一个时间复杂度为 O(log n) 的算法解决此问题。
  */
 public class LeetCode_033_search {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int search(int[] nums, int target) {
         return 0;
     }

@@ -6,7 +6,10 @@ public class LeetCode_490_hasPath {
 
     int[] dx = {1, 0, -1, 0};
     int[] dy = {0, 1, 0, -1};
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean hasPath(int[][] maze, int[] start, int[] destination) {
         if (maze == null || maze.length == 0
                 || maze[0] == null || maze[0].length == 0) {

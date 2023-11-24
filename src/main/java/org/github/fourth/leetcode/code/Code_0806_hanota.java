@@ -12,6 +12,10 @@ import java.util.List;
  * 你需要原地修改栈。
  */
 public class Code_0806_hanota {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public void hanota(List<Integer> A, List<Integer> B, List<Integer> C) {
 
     }

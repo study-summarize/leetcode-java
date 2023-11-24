@@ -48,15 +48,23 @@ public class LeetCode_015_threeSumTest {
     @DisplayName("变版题目解法")
     @ParameterizedTest
     @MethodSource("generateChangeRightCase")
-    public void testChange(int[] nums, int target, int[] expectedResults) {
+    public void testChange01(int[] nums, int target, int[] expectedResults) {
         int[] actResult1 = test015ThreeSum.threeSumChange01(nums, target);
-        int[] actResult2 = test015ThreeSum.threeSumChange02(nums, target);
         Arrays.sort(expectedResults);
         Arrays.sort(actResult1);
-        Arrays.sort(actResult2);
         Assertions.assertEquals(expectedResults.length, actResult1.length);
         for (int i = 0; i < expectedResults.length; i++) {
             Assertions.assertEquals(expectedResults[i], actResult1[i]);
+        }
+    }
+    @DisplayName("变版题目解法")
+    @ParameterizedTest
+    @MethodSource("generateChangeRightCase")
+    public void testChange02(int[] nums, int target, int[] expectedResults) {
+        int[] actResult2 = test015ThreeSum.threeSumChange02(nums, target);
+        Arrays.sort(expectedResults);
+        Arrays.sort(actResult2);
+        for (int i = 0; i < expectedResults.length; i++) {
             Assertions.assertEquals(expectedResults[i], actResult2[i]);
         }
     }

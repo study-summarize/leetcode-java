@@ -5,7 +5,10 @@ package org.github.fourth.leetcode;
  * 单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。
  */
 public class LeetCode_079_exist {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean exist(char[][] board, String word) {
         if (board == null || board.length == 0 || board[0].length == 0 || word == null) {
             return false;

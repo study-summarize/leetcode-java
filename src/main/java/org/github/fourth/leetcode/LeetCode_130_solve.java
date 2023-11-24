@@ -20,7 +20,10 @@ public class LeetCode_130_solve {
             this.y = y;
         }
     }
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public void solve(char[][] board) {
         if (board == null || board.length == 0
                 || board[0] == null || board[0].length == 0) {

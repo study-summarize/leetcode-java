@@ -10,6 +10,11 @@ import java.util.*;
  */
 public class LeetCode_496_nextGreaterElement {
 
+    /**
+     * 一次单调栈
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
+     */
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         if (nums1 == null || nums2 == null) {
             return null;

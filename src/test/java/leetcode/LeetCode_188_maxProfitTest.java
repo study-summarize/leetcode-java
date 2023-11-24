@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("买卖股票的最佳时机 IV 测试")
+@DisplayName("买卖股票的最佳时机 IV")
 class LeetCode_188_maxProfitTest {
     private final LeetCode_188_maxProfit maxProfit = new LeetCode_188_maxProfit();
 

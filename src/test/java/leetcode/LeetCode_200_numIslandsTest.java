@@ -16,10 +16,13 @@ class LeetCode_200_numIslandsTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(char[][] grid,int expectedResult) {
+    public void test01(char[][] grid,int expectedResult) {
         int actResult1 = numIslands.numIslands(grid);
         Assertions.assertEquals(expectedResult, actResult1);
-
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(char[][] grid,int expectedResult) {
         int actResult2 = numIslands.numIslandsWithDfs(grid);
         Assertions.assertEquals(expectedResult, actResult2);
     }

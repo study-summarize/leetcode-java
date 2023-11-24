@@ -19,7 +19,10 @@ class LeetCode_265_minCostIITest {
     public void test(int[][] costs, int expectedResult) {
         int actResult1 = minCostII.minCostII(costs);
         Assertions.assertEquals(expectedResult, actResult1);
-
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testRefine(int[][] costs, int expectedResult) {
         int actResult2 = minCostII.minCostIIRefine(costs);
         Assertions.assertEquals(expectedResult, actResult2);
     }

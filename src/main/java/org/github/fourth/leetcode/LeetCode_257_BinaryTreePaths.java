@@ -10,7 +10,10 @@ import java.util.List;
  * 叶子节点 是指没有子节点的节点。
  */
 public class LeetCode_257_BinaryTreePaths {
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public List<String> binaryTreePaths(TreeNode root) {
         // 解集
         List<String> result = new ArrayList<>();

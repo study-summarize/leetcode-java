@@ -14,8 +14,8 @@ import java.util.List;
 public class LeetCode_018_fourSum {
     /**
      * 转换成三数之和、二数之和
-     *
      * 时间复杂度：O(nlogn) + n*n*n = n^3
+     * 空间复杂度：
      */
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
@@ -67,7 +67,8 @@ public class LeetCode_018_fourSum {
     }
 
     /**
-     * 暂时没找到
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public List<List<Integer>> fourSumExample(int[] nums, int target) {
         return fourSum(nums, target);

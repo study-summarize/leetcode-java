@@ -20,9 +20,21 @@ public class LeetCode_042_trapTest {
     @MethodSource("generateRightCase")
     public void test01(int[] height, int waterCount) {
         Assertions.assertEquals(waterCount, trapTest.trap1(height));
-        Assertions.assertEquals(waterCount, trapTest.trap1Refine(height));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] height, int waterCount) {
         Assertions.assertEquals(waterCount, trapTest.trap2(height));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] height, int waterCount) {
         Assertions.assertEquals(waterCount, trapTest.trap3(height));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01Refine(int[] height, int waterCount) {
+        Assertions.assertEquals(waterCount, trapTest.trap1Refine(height));
     }
 
     public static Stream<Arguments> generateRightCase() {

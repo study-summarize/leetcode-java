@@ -18,12 +18,18 @@ public class LeetCode_303_NumArray {
             prefixSum[i + 1] = prefixSum[i] + nums[i];
         }
     }
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int sumRange(int left, int right) {
         // 脑中想象一下前缀和数组的下标
         return prefixSum[right + 1] - prefixSum[left];
     }
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int sumRangeExample(int left, int right) {
         return sumRange(left, right);
     }

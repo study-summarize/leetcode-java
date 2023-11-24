@@ -8,6 +8,8 @@ public class LeetCode_323_countComponents {
 
     /**
      * 使用BFS方式计算
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int countComponents(int n, int[][] edges) {
         int result = 0;
@@ -59,6 +61,8 @@ public class LeetCode_323_countComponents {
 
     /**
      * 使用DFS方法计算
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int countComponentsWithDFS(int n, int[][] edges) {
         // 做了几次DFS

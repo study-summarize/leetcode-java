@@ -6,6 +6,10 @@ package org.github.fourth.leetcode;
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  */
 public class LeetCode_123_maxProfit {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int maxProfit(int[] prices) {
         return new LeetCode_188_maxProfit()
                 .maxProfit(2, prices);

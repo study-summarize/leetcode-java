@@ -8,6 +8,10 @@ package org.github.fourth.leetcode;
  * 两个字符串的 公共子序列 是这两个字符串所共同拥有的子序列。
  */
 public class LeetCode_1143_longestCommonSubsequence {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int longestCommonSubsequence(String text1, String text2) {
         return 0;
     }

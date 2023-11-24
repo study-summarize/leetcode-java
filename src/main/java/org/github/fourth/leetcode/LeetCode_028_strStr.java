@@ -8,6 +8,8 @@ public class LeetCode_028_strStr {
 
     /**
      * 方法一：暴力解法
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int strStr01(String haystack, String needle) {
         if (haystack == null || haystack.length() == 0 || needle == null || needle.length() == 0) {
@@ -35,6 +37,8 @@ public class LeetCode_028_strStr {
 
     /**
      * 方法二：Robin-Karp算法
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int strStr02(String haystack, String needle) {
         return -1;

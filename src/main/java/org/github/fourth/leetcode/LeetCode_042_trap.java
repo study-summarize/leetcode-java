@@ -11,6 +11,8 @@ public class LeetCode_042_trap {
 
     /**
      * 方法一：三次遍历
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int trap1(int[] height) {
         int result = 0;
@@ -46,6 +48,8 @@ public class LeetCode_042_trap {
 
     /**
      * 方法一优化版本：减少一次遍历
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int trap1Refine(int[] height) {
         int result = 0;
@@ -79,6 +83,8 @@ public class LeetCode_042_trap {
 
     /**
      * 方法二：双指针一次遍历
+     * 时间复杂度：
+     * 空间复杂度：
      * note：有点难理解，易错
      */
     public int trap2(int[] height) {
@@ -110,6 +116,8 @@ public class LeetCode_042_trap {
 
     /**
      * 方法三：单调栈解决
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int trap3(int[] height) {
         int area = 0;

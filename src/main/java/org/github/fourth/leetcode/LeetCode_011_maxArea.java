@@ -8,6 +8,10 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_011_maxArea {
 
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int maxArea(int[] height) {
         if (height == null || height.length == 0) {
             return 0;

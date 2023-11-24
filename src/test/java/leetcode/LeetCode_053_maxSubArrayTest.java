@@ -19,10 +19,14 @@ class LeetCode_053_maxSubArrayTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int expectedResult) {
-
         int actResult1 = maxSubArray.maxSubArray(nums);
         Assertions.assertEquals(expectedResult, actResult1);
 
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testRefine(int[] nums, int expectedResult) {
         int actResult2 = maxSubArray.maxSubArrayRefine(nums);
         Assertions.assertEquals(expectedResult, actResult2);
     }

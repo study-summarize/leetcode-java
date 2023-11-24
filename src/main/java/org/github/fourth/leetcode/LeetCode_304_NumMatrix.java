@@ -20,11 +20,17 @@ public class LeetCode_304_NumMatrix {
             }
         }
     }
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int sumRegion(int row1, int col1, int row2, int col2) {
         return prefixSum[row2 + 1][col2 + 1] - prefixSum[row1][col2 + 1] - prefixSum[row2 + 1][col1] + prefixSum[row1][col1];
     }
-
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public int sumRegionExample(int row1, int col1, int row2, int col2) {
         return sumRegion(row1, col1, row2, col2);
     }

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("")
 class LeetCode_221_maximalSquareTest {
     private final LeetCode_221_maximalSquare maximalSquare = new LeetCode_221_maximalSquare();
 

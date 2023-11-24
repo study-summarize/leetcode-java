@@ -29,6 +29,11 @@ class LeetCode_049_groupAnagrensTest {
         actResult1.removeAll(finalExpectResult);
         Assertions.assertEquals(0, actResult1.size());
 
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(String[] strs, List<List<String>> expectedResult) {
+        Set<Set<String>> finalExpectResult = expectedResult.stream().map(HashSet::new).collect(Collectors.toSet());
 
         Set<Set<String>> actResult2 = groupAnagrens.groupAnagrams2(strs).stream().map(HashSet::new).collect(Collectors.toSet());
         actResult2.removeAll(finalExpectResult);

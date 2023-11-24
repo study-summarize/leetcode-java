@@ -21,8 +21,12 @@ public class LeetCode_084_largestRectangleAreaTest {
     @MethodSource("generateRightCase")
     public void test(int[] heights, int expectedResult) {
         int actResult1 = largestRectangleArea.largestRectangleArea01(Arrays.copyOf(heights, heights.length));
-        int actResult2 = largestRectangleArea.largestRectangleArea02(Arrays.copyOf(heights, heights.length));
         Assertions.assertEquals(expectedResult, actResult1);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] heights, int expectedResult) {
+        int actResult2 = largestRectangleArea.largestRectangleArea02(Arrays.copyOf(heights, heights.length));
         Assertions.assertEquals(expectedResult, actResult2);
     }
 

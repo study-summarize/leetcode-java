@@ -9,6 +9,8 @@ import java.util.*;
 public class LeetCode_049_groupAnagrens {
     /**
      * 使用字符+count为key
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public List<List<String>> groupAnagrams2(String[] strs) {
         List<List<String>> result = new ArrayList<>();
@@ -46,6 +48,8 @@ public class LeetCode_049_groupAnagrens {
 
     /**
      * 对字符串使用同一的排序为key
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> result = new ArrayList<>();

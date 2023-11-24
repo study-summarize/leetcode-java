@@ -13,6 +13,8 @@ public class LeetCode_127_ladderLength {
 
     /**
      * 使用双向BFS解决
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         if (beginWord == null || endWord == null || wordList == null) {
@@ -88,6 +90,8 @@ public class LeetCode_127_ladderLength {
 
     /**
      * 使用单向BFS解决
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public int ladderLengthWithSingleBfs(String beginWord, String endWord, List<String> wordList) {
         if (beginWord == null || endWord == null || wordList == null) {

@@ -16,7 +16,7 @@ public class LeetCode_015_threeSum {
     /**
      * 消元：转换成俩数之和
      * 时间复杂度：O(nlogn) + nO(n) = O(n^2);
-     * 空间负责度：O（1）
+     * 空间复杂度：O（1）
      */
     public List<List<Integer>> threeSum01(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
