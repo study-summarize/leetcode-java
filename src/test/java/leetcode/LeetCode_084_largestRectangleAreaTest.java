@@ -21,13 +21,11 @@ public class LeetCode_084_largestRectangleAreaTest {
     @MethodSource("generateRightCase")
     public void test(int[] heights, int expectedResult) {
         int actResult1 = largestRectangleArea.largestRectangleArea01(Arrays.copyOf(heights, heights.length));
-        Assertions.assertEquals(expectedResult, actResult1);
-    }
-    @ParameterizedTest
-    @MethodSource("generateRightCase")
-    public void test02(int[] heights, int expectedResult) {
         int actResult2 = largestRectangleArea.largestRectangleArea02(Arrays.copyOf(heights, heights.length));
+        int actResult3 = largestRectangleArea.largestRectangleArea03(Arrays.copyOf(heights, heights.length));
+        Assertions.assertEquals(expectedResult, actResult1);
         Assertions.assertEquals(expectedResult, actResult2);
+        Assertions.assertEquals(expectedResult, actResult3);
     }
 
     public static Stream<Arguments> generateRightCase() {
@@ -35,6 +33,7 @@ public class LeetCode_084_largestRectangleAreaTest {
                 arguments(new int[]{2, 1, 5, 6, 2, 3}, 10),
                 arguments(new int[]{1, 1, 1, 1, 1, 1}, 6),
                 arguments(new int[]{1, 2, 2, 2, 2, 2}, 10),
+                arguments(new int[]{0}, 0),
                 arguments(new int[]{2, 4}, 4)
         );
     }
