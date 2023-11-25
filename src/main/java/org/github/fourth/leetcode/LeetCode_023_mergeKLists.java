@@ -1,6 +1,7 @@
 package org.github.fourth.leetcode;
 
-import org.github.fourth.struct.linkedlist.ListNode;
+
+import org.github.fourth.leetcode.common.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

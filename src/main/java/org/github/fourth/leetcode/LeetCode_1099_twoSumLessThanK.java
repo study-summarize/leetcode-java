@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import java.util.Arrays;
 
 /**
+ * 给你一个整数数组 nums 和整数 k ，返回最大和 sum ，满足存在 i < j 使得 nums[i] + nums[j] = sum 且 sum < k 。如果没有满足此等式的 i,j 存在，则返回 -1 。
  */
 public class LeetCode_1099_twoSumLessThanK {
     /**

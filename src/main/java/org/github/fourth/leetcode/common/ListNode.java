@@ -12,6 +12,9 @@ public class ListNode {
         next = null;
     }
 
+    public ListNode() {
+    }
+
     public static ListNode build(int[] nums) {
         return build(nums, -1);
     }
