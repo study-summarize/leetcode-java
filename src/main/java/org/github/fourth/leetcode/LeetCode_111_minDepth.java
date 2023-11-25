@@ -1,6 +1,7 @@
 package org.github.fourth.leetcode;
 
-import org.github.fourth.struct.bst.TreeNode;
+
+import org.github.fourth.leetcode.common.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

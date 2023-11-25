@@ -6,9 +6,9 @@ import java.util.List;
 
 @SuppressFBWarnings({"URF_UNREAD_FIELD"})
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
     TreeNode() {
     }
