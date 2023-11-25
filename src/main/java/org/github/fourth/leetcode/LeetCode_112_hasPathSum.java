@@ -8,6 +8,10 @@ import org.github.fourth.leetcode.common.TreeNode;
  * 叶子节点 是指没有子节点的节点。
  */
 public class LeetCode_112_hasPathSum {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean hasPathSum(TreeNode root, int targetSum) {
         return false;
     }

@@ -11,6 +11,10 @@ import org.github.fourth.leetcode.common.TreeNode;
  * - 所有左子树和右子树自身必须也是二叉搜索树。
  */
 public class LeetCode_098_isValidBST {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public boolean isValidBST(TreeNode root) {
         return false;
     }

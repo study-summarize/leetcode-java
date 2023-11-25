@@ -16,6 +16,10 @@ import java.util.List;
  * 注意：输出天际线中不得有连续的相同高度的水平线。例如 [...[2 3], [4 5], [7 5], [11 5], [12 7]...] 是不正确的答案；三条高度为 5 的线应该在最终输出中合并为一个：[...[2 3], [4 5], [12 7], ...]
  */
 public class LeetCode_218_getSkyline {
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
     public List<List<Integer>> getSkyline(int[][] buildings) {
         return null;
     }

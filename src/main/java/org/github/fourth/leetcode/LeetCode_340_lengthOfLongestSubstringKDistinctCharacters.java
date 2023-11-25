@@ -3,6 +3,9 @@ package org.github.fourth.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *
+ */
 public class LeetCode_340_lengthOfLongestSubstringKDistinctCharacters {
     /**
      * 时间复杂度：
