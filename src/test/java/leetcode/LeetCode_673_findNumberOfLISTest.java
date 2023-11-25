@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("最长递增子序列的个数")
 class LeetCode_673_findNumberOfLISTest {
     private final LeetCode_673_findNumberOfLIS findNumberOfLIS = new LeetCode_673_findNumberOfLIS();
 
@@ -23,8 +23,8 @@ class LeetCode_673_findNumberOfLISTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 3, 5, 4, 7}, 2),
+                arguments(new int[]{2, 2, 2, 2, 2}, 5)
         );
     }
 }

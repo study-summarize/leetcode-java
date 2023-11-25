@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("")
+@DisplayName("存在重复元素 II")
 class LeetCode_219_containsNearbyDuplicateTest {
     private final LeetCode_219_containsNearbyDuplicate containsNearbyDuplicate = new LeetCode_219_containsNearbyDuplicate();
 
@@ -23,8 +23,9 @@ class LeetCode_219_containsNearbyDuplicateTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 2, 3, 1}, 3, true),
+                arguments(new int[]{1, 0, 1, 1}, 1, true),
+                arguments(new int[]{1, 2, 3, 1, 2, 3}, 2, false)
         );
     }
 }

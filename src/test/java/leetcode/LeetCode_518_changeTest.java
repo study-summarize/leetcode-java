@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("零钱兑换 II")
 class LeetCode_518_changeTest {
     private final LeetCode_518_change change = new LeetCode_518_change();
 
@@ -23,8 +23,9 @@ class LeetCode_518_changeTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(5, new int[]{1, 2, 5}, 4),
+                arguments(3, new int[]{2}, 0),
+                arguments(10, new int[]{10}, 1)
         );
     }
 }

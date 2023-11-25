@@ -23,8 +23,16 @@ class LeetCode_210_findOrderTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(2, new int[][]{
+                        {1, 0}
+                }, new int[]{0, 1}),
+                arguments(4, new int[][]{
+                        {1, 0},
+                        {2, 0},
+                        {3, 1},
+                        {3, 2}
+                }, new int[]{0, 2, 1, 3}),
+                arguments(1, new int[0][0], new int[]{0})
         );
     }
 }

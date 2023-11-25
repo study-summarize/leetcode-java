@@ -4,10 +4,10 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 @SuppressFBWarnings("URF_UNREAD_FIELD")
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
         next = null;
     }

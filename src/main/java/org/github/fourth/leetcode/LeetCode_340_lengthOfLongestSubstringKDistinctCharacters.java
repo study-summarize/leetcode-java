@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * 给你一个字符串 s 和一个整数 k ，请你找出 至多 包含 k 个 不同 字符的最长子串，并返回该子串的长度。
  */
 public class LeetCode_340_lengthOfLongestSubstringKDistinctCharacters {
     /**

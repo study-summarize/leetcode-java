@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX 测试")
+@DisplayName("最长公共子序列")
 class LeetCode_1143_longestCommonSubsequenceTest {
     private final LeetCode_1143_longestCommonSubsequence longestCommonSubsequence = new LeetCode_1143_longestCommonSubsequence();
 
@@ -23,8 +23,9 @@ class LeetCode_1143_longestCommonSubsequenceTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments("abcde", "ace", 3),
+                arguments("abc", "abc", 3),
+                arguments("abc", "def", 0)
         );
     }
 }

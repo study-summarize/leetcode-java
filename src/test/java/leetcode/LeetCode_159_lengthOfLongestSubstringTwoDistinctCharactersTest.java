@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("至多包含两个不同字符的最长子串")
 class LeetCode_159_lengthOfLongestSubstringTwoDistinctCharactersTest {
     private final LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters lengthOfLongestSubstringTwoDistinctCharacters = new LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters();
 
@@ -23,8 +23,8 @@ class LeetCode_159_lengthOfLongestSubstringTwoDistinctCharactersTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments("eceba", 3),
+                arguments("ccaabbb", 5)
         );
     }
 }

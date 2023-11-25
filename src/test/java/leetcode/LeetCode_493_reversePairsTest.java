@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("翻转对")
 class LeetCode_493_reversePairsTest {
     private final LeetCode_493_reversePairs reversePairs = new LeetCode_493_reversePairs();
 
@@ -23,8 +23,8 @@ class LeetCode_493_reversePairsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 3, 2, 3, 1}, 2),
+                arguments(new int[]{2, 4, 3, 5, 1}, 3)
         );
     }
 }

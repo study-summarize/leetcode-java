@@ -24,8 +24,9 @@ class LeetCode_217_containDuplicateTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 2, 3, 1}, true),
+                arguments(new int[]{1, 2, 3, 4}, false),
+                arguments(new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2}, true)
         );
     }
 }

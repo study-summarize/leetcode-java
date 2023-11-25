@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("省份数量")
 class LeetCode_547_findCircleNumTest {
     private final LeetCode_547_findCircleNum findCircleNum = new LeetCode_547_findCircleNum();
 
@@ -26,8 +26,16 @@ class LeetCode_547_findCircleNumTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {1, 1, 0},
+                        {1, 1, 0},
+                        {0, 0, 1}
+                }, 2),
+                arguments(new int[][]{
+                        {1, 0, 0},
+                        {0, 1, 0},
+                        {0, 0, 1}
+                }, 3)
         );
     }
 }

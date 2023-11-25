@@ -2,6 +2,7 @@ package org.github.fourth.leetcode.common;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
+import java.util.Arrays;
 import java.util.List;
 
 @SuppressFBWarnings({"URF_UNREAD_FIELD", "URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"})
@@ -30,5 +31,8 @@ public class TreeNode {
     public static TreeNode build(List<Integer> list) {
         TreeNode result = new TreeNode(list.get(0));
         return result;
+    }
+    public static TreeNode build(Integer... list) {
+        return build(Arrays.stream(list).toList());
     }
 }

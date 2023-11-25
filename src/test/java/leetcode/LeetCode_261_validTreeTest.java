@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("261. 以图判树")
 class LeetCode_261_validTreeTest {
     private final LeetCode_261_validTree validTree = new LeetCode_261_validTree();
 
@@ -23,8 +23,19 @@ class LeetCode_261_validTreeTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(5, new int[][]{
+                        {0, 1},
+                        {0, 2},
+                        {0, 3},
+                        {1, 4}
+                }, true),
+                arguments(5, new int[][]{
+                        {0, 1},
+                        {1, 2},
+                        {2, 3},
+                        {1, 3},
+                        {1, 4}
+                }, false)
         );
     }
 }

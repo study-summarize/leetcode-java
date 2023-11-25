@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("单词拆分 测试")
+@DisplayName("单词拆分")
 class LeetCode_139_wordBreakTest {
     private final LeetCode_139_wordBreak wordBreak = new LeetCode_139_wordBreak();
 

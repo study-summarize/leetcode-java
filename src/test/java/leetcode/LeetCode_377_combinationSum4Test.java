@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("组合总和 Ⅳ")
 class LeetCode_377_combinationSum4Test {
     private final LeetCode_377_combinationSum4 combinationSum4 = new LeetCode_377_combinationSum4();
 
@@ -23,8 +23,8 @@ class LeetCode_377_combinationSum4Test {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 2, 3}, 4, 7),
+                arguments(new int[]{9}, 3, 0)
         );
     }
 }

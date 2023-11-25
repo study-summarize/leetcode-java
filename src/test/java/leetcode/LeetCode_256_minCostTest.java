@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("256. 粉刷房子")
 class LeetCode_256_minCostTest {
     private final LeetCode_256_minCost minCost = new LeetCode_256_minCost();
 
@@ -23,8 +23,14 @@ class LeetCode_256_minCostTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {17, 2, 17},
+                        {16, 16, 5},
+                        {14, 3, 19}
+                }, 10),
+                arguments(new int[][]{
+                        {7, 6, 2}
+                }, 2)
         );
     }
 }

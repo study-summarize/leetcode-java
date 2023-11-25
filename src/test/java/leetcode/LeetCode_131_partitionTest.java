@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("分割回文串 测试")
+@DisplayName("分割回文串")
 class LeetCode_131_partitionTest {
 
     private final LeetCode_131_partition partition = new LeetCode_131_partition();

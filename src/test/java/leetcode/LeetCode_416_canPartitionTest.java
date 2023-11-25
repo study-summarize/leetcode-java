@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("分割等和子集")
 class LeetCode_416_canPartitionTest {
     private final LeetCode_416_canPartition canPartition = new LeetCode_416_canPartition();
 
@@ -23,8 +23,8 @@ class LeetCode_416_canPartitionTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 5, 11, 5}, true),
+                arguments(new int[]{1, 2, 3, 5}, false)
         );
     }
 }

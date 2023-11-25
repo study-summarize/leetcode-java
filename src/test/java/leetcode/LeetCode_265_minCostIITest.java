@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("265. 粉刷房子 II")
 class LeetCode_265_minCostIITest {
     private final LeetCode_265_minCostII minCostII = new LeetCode_265_minCostII();
 
@@ -20,6 +20,7 @@ class LeetCode_265_minCostIITest {
         int actResult1 = minCostII.minCostII(costs);
         Assertions.assertEquals(expectedResult, actResult1);
     }
+
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testRefine(int[][] costs, int expectedResult) {
@@ -29,8 +30,14 @@ class LeetCode_265_minCostIITest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {1, 5, 3},
+                        {2, 9, 4}
+                }, 5),
+                arguments(new int[][]{
+                        {1, 3},
+                        {2, 4}
+                }, 5)
         );
     }
 }

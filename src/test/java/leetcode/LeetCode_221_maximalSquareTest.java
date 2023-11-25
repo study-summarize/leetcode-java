@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("")
+@DisplayName("最大正方形")
 class LeetCode_221_maximalSquareTest {
     private final LeetCode_221_maximalSquare maximalSquare = new LeetCode_221_maximalSquare();
 
@@ -23,8 +23,19 @@ class LeetCode_221_maximalSquareTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new char[][]{
+                        {'1', '0', '1', '0', '0'},
+                        {'1', '0', '1', '1', '1'},
+                        {'1', '1', '1', '1', '1'},
+                        {'1', '0', '0', '1', '0'}
+                }, 4),
+                arguments(new char[][]{
+                        {'0', '1'},
+                        {'1', '0'}
+                }, 1),
+                arguments(new char[][]{
+                        {'0'}
+                }, 0)
         );
     }
 }

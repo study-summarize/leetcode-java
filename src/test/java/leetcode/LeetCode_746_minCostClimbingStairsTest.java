@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX 测试")
+@DisplayName("使用最小花费爬楼梯")
 class LeetCode_746_minCostClimbingStairsTest {
     private final LeetCode_746_minCostClimbingStairs minCostClimbingStairs = new LeetCode_746_minCostClimbingStairs();
 
@@ -23,8 +23,8 @@ class LeetCode_746_minCostClimbingStairsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{10, 15, 20}, 15),
+                arguments(new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}, 6)
         );
     }
 }

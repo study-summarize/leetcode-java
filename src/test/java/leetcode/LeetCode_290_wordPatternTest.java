@@ -11,21 +11,22 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("单词规律")
 class LeetCode_290_wordPatternTest {
     private final LeetCode_290_wordPattern wordPattern = new LeetCode_290_wordPattern();
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String pattern, String s, List<String> expectedResult) {
+    public void test(String pattern, String s, boolean expectedResult) {
         boolean actResult = wordPattern.wordPattern(pattern, s);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments("abba", "dog cat cat dog", true),
+                arguments("abba", "dog cat cat fish", false),
+                arguments("aaaa", "dog cat cat dog", false)
         );
     }
 }

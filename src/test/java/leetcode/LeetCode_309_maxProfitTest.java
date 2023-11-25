@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("买卖股票的最佳时机含冷冻期")
 class LeetCode_309_maxProfitTest {
     private final LeetCode_309_maxProfit maxProfit = new LeetCode_309_maxProfit();
 
@@ -27,8 +27,8 @@ class LeetCode_309_maxProfitTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{1, 2, 3, 0, 2}, 3),
+                arguments(new int[]{1}, 0)
         );
     }
 }

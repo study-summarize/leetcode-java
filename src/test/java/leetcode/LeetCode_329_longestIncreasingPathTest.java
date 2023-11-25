@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("矩阵中的最长递增路径")
 class LeetCode_329_longestIncreasingPathTest {
     private final LeetCode_329_longestIncreasingPath longestIncreasingPath = new LeetCode_329_longestIncreasingPath();
 
@@ -24,8 +24,19 @@ class LeetCode_329_longestIncreasingPathTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {9, 9, 4},
+                        {6, 6, 8},
+                        {2, 1, 1}
+                }, 4),
+                arguments(new int[][]{
+                        {3, 4, 5},
+                        {3, 2, 6},
+                        {2, 2, 1}
+                }, 4),
+                arguments(new int[][]{
+                        {1}
+                }, 1)
         );
     }
 }

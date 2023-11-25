@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX 测试")
+@DisplayName("第 N 个泰波那契数")
 class LeetCode_1137_tribonacciTest {
 
     private final LeetCode_1137_tribonacci tribonacci = new LeetCode_1137_tribonacci();
@@ -25,10 +25,8 @@ class LeetCode_1137_tribonacciTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(4, 4),
+                arguments(25, 1389537)
         );
     }
-
-
 }

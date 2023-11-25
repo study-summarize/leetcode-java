@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("俄罗斯套娃信封问题")
 class LeetCode_354_maxEnvelopesTest {
     private final LeetCode_354_maxEnvelopes maxEnvelopes = new LeetCode_354_maxEnvelopes();
 
@@ -24,8 +24,17 @@ class LeetCode_354_maxEnvelopesTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {5, 4},
+                        {6, 4},
+                        {6, 7},
+                        {2, 3}
+                }, 3),
+                arguments(new int[][]{
+                        {1, 1},
+                        {1, 1},
+                        {1, 1}
+                }, 1)
         );
     }
 }

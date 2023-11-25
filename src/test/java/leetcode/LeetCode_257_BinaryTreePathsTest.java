@@ -1,18 +1,18 @@
 package leetcode;
 
 import org.github.fourth.leetcode.LeetCode_257_BinaryTreePaths;
+import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.github.fourth.struct.bst.TreeNode;
 
 import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("二叉树的所有路径")
 class LeetCode_257_BinaryTreePathsTest {
     private final LeetCode_257_BinaryTreePaths binaryTreePaths = new LeetCode_257_BinaryTreePaths();
 
@@ -25,8 +25,8 @@ class LeetCode_257_BinaryTreePathsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(TreeNode.build(1, 2, 3, null, 5), List.of("1->2->5", "1->3")),
+                arguments(TreeNode.build(1), List.of("1"))
         );
     }
 }

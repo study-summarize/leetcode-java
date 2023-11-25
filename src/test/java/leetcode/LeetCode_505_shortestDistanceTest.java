@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("505. 迷宫 II")
 class LeetCode_505_shortestDistanceTest {
     private final LeetCode_505_shortestDistance shortestDistance = new LeetCode_505_shortestDistance();
 
@@ -23,8 +23,28 @@ class LeetCode_505_shortestDistanceTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {0, 0, 1, 0, 0},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 1, 0},
+                        {1, 1, 0, 1, 1},
+                        {0, 0, 0, 0, 0}
+                }, new int[]{0, 4}, new int[]{4, 4}, 12),
+                arguments(new int[][]{
+                        {0, 0, 1, 0, 0},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 1, 0},
+                        {1, 1, 0, 1, 1},
+                        {0, 0, 0, 0, 0}
+                }, new int[]{0, 4}, new int[]{3, 2}, -1),
+                arguments(new int[][]{
+                        {0, 0, 0, 0, 0},
+                        {1, 1, 0, 0, 1},
+                        {0, 0, 0, 0, 0},
+                        {0, 1, 0, 0, 1},
+                        {0, 1, 0, 0, 0}
+                }, new int[]{4, 3}, new int[]{0, 1}, -1
+                )
         );
     }
 }

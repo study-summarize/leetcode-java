@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName("XXXX 测试")
+@DisplayName("删除并获得点数")
 class LeetCode_740_deleteAndEarnTest {
     private final LeetCode_740_deleteAndEarn deleteAndEarn = new LeetCode_740_deleteAndEarn();
 
@@ -23,8 +23,8 @@ class LeetCode_740_deleteAndEarnTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[]{3, 4, 2}, 6),
+                arguments(new int[]{2, 2, 3, 3, 3, 4}, 9)
         );
     }
 }

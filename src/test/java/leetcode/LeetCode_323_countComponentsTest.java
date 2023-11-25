@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("323. 无向图中连通分量的数目")
 class LeetCode_323_countComponentsTest {
     private final LeetCode_323_countComponents countComponents = new LeetCode_323_countComponents();
 
@@ -23,8 +23,17 @@ class LeetCode_323_countComponentsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(5, new int[][]{
+                        {0, 1},
+                        {1, 2},
+                        {3, 4}
+                }, 2),
+                arguments(5, new int[][]{
+                        {0, 1},
+                        {1, 2},
+                        {2, 3},
+                        {3, 4}
+                }, 1)
         );
     }
 }

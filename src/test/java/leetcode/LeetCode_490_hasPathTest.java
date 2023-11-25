@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-@DisplayName(" 测试")
+@DisplayName("490. 迷宫")
 class LeetCode_490_hasPathTest {
     private final LeetCode_490_hasPath hasPath = new LeetCode_490_hasPath();
 
@@ -23,8 +23,27 @@ class LeetCode_490_hasPathTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),
-                arguments(new int[]{1, 1}, 1)
+                arguments(new int[][]{
+                        {0, 0, 1, 0, 0},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 1, 0},
+                        {1, 1, 0, 1, 1},
+                        {0, 0, 0, 0, 0}
+                }, new int[]{0, 4}, new int[]{4, 4}, true),
+                arguments(new int[][]{
+                        {0, 0, 1, 0, 0},
+                        {0, 0, 0, 0, 0},
+                        {0, 0, 0, 1, 0},
+                        {1, 1, 0, 1, 1},
+                        {0, 0, 0, 0, 0}
+                }, new int[]{0, 4}, new int[]{3, 2}, false),
+                arguments(new int[][]{
+                        {0, 0, 0, 0, 0},
+                        {1, 1, 0, 0, 1},
+                        {0, 0, 0, 0, 0},
+                        {0, 1, 0, 0, 1},
+                        {0, 1, 0, 0, 0}
+                }, new int[]{4, 3}, new int[]{0, 1}, false)
         );
     }
 }
