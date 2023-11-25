@@ -8,13 +8,14 @@ import java.util.LinkedList;
  */
 public class LeetCode_739_dailyTemperatures {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
      */
     public int[] dailyTemperatures(int[] temperatures) {
         if (temperatures == null || temperatures.length == 0) {
             return null;
         }
+        // 从左到右，下一个更大元素；递减栈
 
         Deque<Integer> minStack = new LinkedList<>();
         int[] result = new int[temperatures.length];

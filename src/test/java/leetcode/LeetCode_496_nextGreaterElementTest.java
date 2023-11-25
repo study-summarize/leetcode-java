@@ -18,8 +18,18 @@ public class LeetCode_496_nextGreaterElementTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test01(int[] nums1, int[] nums2, int[] expectedResult) {
+        int[] actResult = extGreaterElement.nextGreaterElement01(Arrays.copyOf(nums1, nums1.length), Arrays.copyOf(nums2, nums2.length));
+        Assertions.assertEquals(expectedResult.length, actResult.length);
+        for (int i = 0; i < expectedResult.length; i++) {
+            Assertions.assertEquals(expectedResult[i], actResult[i]);
+        }
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test(int[] nums1, int[] nums2, int[] expectedResult) {
-        int[] actResult = extGreaterElement.nextGreaterElement(Arrays.copyOf(nums1, nums1.length), Arrays.copyOf(nums2, nums2.length));
+        int[] actResult = extGreaterElement.nextGreaterElement02(Arrays.copyOf(nums1, nums1.length), Arrays.copyOf(nums2, nums2.length));
         Assertions.assertEquals(expectedResult.length, actResult.length);
         for (int i = 0; i < expectedResult.length; i++) {
             Assertions.assertEquals(expectedResult[i], actResult[i]);

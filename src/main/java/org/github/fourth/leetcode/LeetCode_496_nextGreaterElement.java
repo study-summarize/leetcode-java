@@ -11,11 +11,11 @@ import java.util.*;
 public class LeetCode_496_nextGreaterElement {
 
     /**
-     * 一次单调栈
+     * 一次单调栈 + 哈希表
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
-    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+    public int[] nextGreaterElement02(int[] nums1, int[] nums2) {
         if (nums1 == null || nums2 == null) {
             return null;
         }
@@ -33,7 +33,41 @@ public class LeetCode_496_nextGreaterElement {
 
         int[] result = new int[nums1.length];
         for (int i = 0; i < nums1.length; i++) {
-            result[i] = Optional.ofNullable(answer.get(nums1[i])).orElse(-1);
+            result[i] = answer.get(nums1[i]) == null ? -1 : answer.get(nums1[i]);
+        }
+        return result;
+    }
+
+    /**
+     * 一次单调栈
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(n)
+     */
+    public int[] nextGreaterElement01(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums1.length == 0
+                || nums2 == null || nums2.length == 0) {
+            return null;
+        }
+
+        // nums2，从左到右，一个大的元素；递减栈
+        int[] right = new int[nums2.length];
+        Arrays.fill(right, -1);
+        Deque<Integer> stack = new LinkedList<>();
+        for (int i = 0; i < nums2.length; i++) {
+            while (!stack.isEmpty() && nums2[stack.peek()] < nums2[i]) {
+                int index = stack.pop();
+                right[index] = nums2[i];
+            }
+            stack.push(i);
+        }
+
+        int[] result = new int[nums1.length];
+        for (int i = 0; i < nums1.length; i++) {
+            for (int j = 0; j < nums2.length; j++) {
+                if (nums1[i] == nums2[j]) {
+                    result[i] = right[j];
+                }
+            }
         }
         return result;
     }

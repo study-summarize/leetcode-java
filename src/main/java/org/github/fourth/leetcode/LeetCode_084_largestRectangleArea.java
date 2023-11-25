@@ -89,7 +89,7 @@ public class LeetCode_084_largestRectangleArea {
         }
 
         // 最固定高度下的最大面积
-        int result = -1;
+        int result = Integer.MIN_VALUE;
         for (int i = 0; i < heights.length; i++) {
             result = Math.max(result, (right[i] - left[i] - 1) * heights[i]);
         }

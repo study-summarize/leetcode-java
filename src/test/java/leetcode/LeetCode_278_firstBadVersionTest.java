@@ -13,11 +13,10 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("第一个错误的版本")
 public class LeetCode_278_firstBadVersionTest {
 
-    private final LeetCode_278_firstBadVersion leetCode278FirstBadVersion = new LeetCode_278_firstBadVersion();
-
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int n, int expectedResult) {
+        LeetCode_278_firstBadVersion leetCode278FirstBadVersion = new LeetCode_278_firstBadVersion(expectedResult);
         int actResult = leetCode278FirstBadVersion.firstBadVersion(n);
         Assertions.assertEquals(expectedResult, actResult);
     }

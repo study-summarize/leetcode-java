@@ -11,6 +11,7 @@ import java.util.LinkedList;
 public class LeetCode_503_nextGreaterElements {
 
     /**
+     * 一次单调栈 + 转换法
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
