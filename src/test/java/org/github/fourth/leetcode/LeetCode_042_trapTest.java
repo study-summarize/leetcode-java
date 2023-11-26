@@ -15,25 +15,30 @@ public class LeetCode_042_trapTest {
 
     private final LeetCode_042_trap trapTest = new LeetCode_042_trap();
 
+    @DisplayName("三次遍历")
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] height, int waterCount) {
         Assertions.assertEquals(waterCount, trapTest.trap1(height));
     }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01Refine(int[] height, int waterCount) {
+        Assertions.assertEquals(waterCount, trapTest.trap1Refine(height));
+    }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(int[] height, int waterCount) {
         Assertions.assertEquals(waterCount, trapTest.trap2(height));
     }
+
+    @DisplayName("单调栈")
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test03(int[] height, int waterCount) {
         Assertions.assertEquals(waterCount, trapTest.trap3(height));
-    }
-    @ParameterizedTest
-    @MethodSource("generateRightCase")
-    public void test01Refine(int[] height, int waterCount) {
-        Assertions.assertEquals(waterCount, trapTest.trap1Refine(height));
     }
 
     public static Stream<Arguments> generateRightCase() {

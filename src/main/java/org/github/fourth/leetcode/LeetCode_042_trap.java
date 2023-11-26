@@ -10,9 +10,9 @@ import java.util.Deque;
 public class LeetCode_042_trap {
 
     /**
-     * 方法一：三次遍历
-     * 时间复杂度：
-     * 空间复杂度：
+     * 三次遍历
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
      */
     public int trap1(int[] height) {
         int result = 0;
@@ -39,6 +39,7 @@ public class LeetCode_042_trap {
         // 计算总灌水量
         for (int i = 0; i < height.length; i++) {
             int minHeight = Math.min(left[i], right[i]);
+            // 只有左右边界都存在，且比最小边界大时；才能接雨水
             if (minHeight > height[i]) {
                 result += (minHeight - height[i]);
             }
@@ -115,9 +116,9 @@ public class LeetCode_042_trap {
 
 
     /**
-     * 方法三：单调栈解决
-     * 时间复杂度：
-     * 空间复杂度：
+     * 单调栈
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
      */
     public int trap3(int[] height) {
         int area = 0;
@@ -126,14 +127,19 @@ public class LeetCode_042_trap {
         }
 
         Deque<Integer> stack = new ArrayDeque<>();
+        // 从左到右，递减栈。弹栈时，就是比栈中元素大的时候
         for (int i = 0; i < height.length; i++) {
             while (!stack.isEmpty() && height[i] > height[stack.peek()]) {
+                // 比index元素大的值出现了。此时求index元素左右边界的值
                 int index = stack.pop();
+                // 弹出后，此时栈元素可能为空
                 if (!stack.isEmpty()) {
-                    int right = i;
+                    // 左边界都是放在栈上的
                     int left = stack.peek();
-                    int currentArea = (Math.min(height[left], height[right]) - height[index]) * (right - left - 1);
-                    area += currentArea;
+                    int right = i;
+                    // 求出左右边界的最小值。
+                    int minHigh = Math.min(height[left], height[right]);
+                    area = area + (minHigh - height[index]) * (right - left - 1);
                 }
             }
             stack.push(i);
