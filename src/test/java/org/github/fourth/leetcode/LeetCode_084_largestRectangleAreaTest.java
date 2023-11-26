@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Arrays;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -18,13 +19,23 @@ public class LeetCode_084_largestRectangleAreaTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] heights, int expectedResult) {
-        int actResult1 = largestRectangleArea.largestRectangleArea01(Arrays.copyOf(heights, heights.length));
-        int actResult2 = largestRectangleArea.largestRectangleArea02(Arrays.copyOf(heights, heights.length));
-        int actResult3 = largestRectangleArea.largestRectangleArea03(Arrays.copyOf(heights, heights.length));
-        Assertions.assertEquals(expectedResult, actResult1);
-        Assertions.assertEquals(expectedResult, actResult2);
-        Assertions.assertEquals(expectedResult, actResult3);
+    public void test01(int[] heights, int expectedResult) {
+        commonTest(expectedResult, x -> x.largestRectangleArea01(heights));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] heights, int expectedResult) {
+        commonTest(expectedResult, x -> x.largestRectangleArea02(heights));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] heights, int expectedResult) {
+        commonTest(expectedResult, x -> x.largestRectangleArea03(heights));
+    }
+
+    private void commonTest(int expectedResult, Function<LeetCode_084_largestRectangleArea, Integer> function) {
+        int actResult = function.apply(largestRectangleArea);
+        Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -20,37 +21,25 @@ public class LeetCode_001_twoSumTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int target, int[] expectedResults) {
-        int[] actResult = test001TwoSum.twoSum01(nums, target);
-        Assertions.assertEquals(expectedResults.length, actResult.length);
-        Assertions.assertEquals(2, actResult.length);
-        if (expectedResults[0] == actResult[0]) {
-            Assertions.assertEquals(expectedResults[1], actResult[1]);
-        } else {
-            Assertions.assertEquals(expectedResults[0], actResult[1]);
-            Assertions.assertEquals(expectedResults[1], actResult[0]);
-        }
+        commonTest(expectedResults, x -> x.twoSum01(nums, target));
     }
 
     @DisplayName("排序+双指针")
     @ParameterizedTest
     @MethodSource("generateRight02Case")
     public void two02(int[] nums, int target, int[] expectedResults) {
-        int[] actResult = test001TwoSum.twoSum02(nums, target);
-        Assertions.assertEquals(expectedResults.length, actResult.length);
-        Assertions.assertEquals(2, actResult.length);
-        if (expectedResults[0] == actResult[0]) {
-            Assertions.assertEquals(expectedResults[1], actResult[1]);
-        } else {
-            Assertions.assertEquals(expectedResults[0], actResult[1]);
-            Assertions.assertEquals(expectedResults[1], actResult[0]);
-        }
+        commonTest(expectedResults, x -> x.twoSum02(nums, target));
     }
 
     @DisplayName("哈希表")
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test03(int[] nums, int target, int[] expectedResults) {
-        int[] actResult = test001TwoSum.twoSum03(nums, target);
+        commonTest(expectedResults, x -> x.twoSum03(nums, target));
+    }
+
+    private void commonTest(int[] expectedResults, Function<LeetCode_001_twoSum, int[]> function) {
+        int[] actResult = function.apply(test001TwoSum);
         Assertions.assertEquals(expectedResults.length, actResult.length);
         Assertions.assertEquals(2, actResult.length);
         if (expectedResults[0] == actResult[0]) {
@@ -59,6 +48,7 @@ public class LeetCode_001_twoSumTest {
             Assertions.assertEquals(expectedResults[0], actResult[1]);
             Assertions.assertEquals(expectedResults[1], actResult[0]);
         }
+
     }
 
 

@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Arrays;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -19,14 +20,19 @@ public class LeetCode_1480_runningSumTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int[] expectedResults) {
-        int[] actResult01 = leetCode1480.runningSum(Arrays.copyOf(nums, nums.length));
-        int[] actResultExample = leetCode1480.runningSumExample(Arrays.copyOf(nums, nums.length));
+        commonTest(expectedResults, x -> x.runningSum(nums));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[] nums, int[] expectedResults) {
+        commonTest(expectedResults, x -> x.runningSumExample(nums));
+    }
 
-        Assertions.assertEquals(expectedResults.length, actResult01.length);
-        Assertions.assertEquals(expectedResults.length, actResultExample.length);
+    private void commonTest(int[] expectedResults, Function<LeetCode_1480_runningSum, int[]> function) {
+        int[] actResult = function.apply(leetCode1480);
+        Assertions.assertEquals(expectedResults.length, actResult.length);
         for (int i = 0; i < expectedResults.length; i++) {
-            Assertions.assertEquals(expectedResults[i], actResult01[i]);
-            Assertions.assertEquals(expectedResults[i], actResultExample[i]);
+            Assertions.assertEquals(expectedResults[i], actResult[i]);
         }
     }
 

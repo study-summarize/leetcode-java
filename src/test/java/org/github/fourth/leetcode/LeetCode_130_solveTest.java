@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -18,17 +19,24 @@ class LeetCode_130_solveTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(char[][] board, char[][] expectedResult) {
-        char[][] board1 = board.clone();
-        solve.solve(board1);
-        Assertions.assertArrayEquals(expectedResult, board1);
+        commonTest(expectedResult, x -> {
+            solve.solve(board);
+            return board;
+        });
     }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(char[][] board, char[][] expectedResult) {
-        char[][] board2 = board.clone();
-        solve.solveWithDfs(board2);
-        Assertions.assertArrayEquals(expectedResult, board2);
+        commonTest(expectedResult, x -> {
+            solve.solveWithDfs(board);
+            return board;
+        });
+    }
+
+    private void commonTest(char[][] expectedResult, Function<LeetCode_130_solve, char[][]> function) {
+        char[][] actResult = function.apply(solve);
+        Assertions.assertArrayEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

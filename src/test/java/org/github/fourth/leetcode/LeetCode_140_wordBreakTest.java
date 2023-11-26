@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -19,18 +20,22 @@ class LeetCode_140_wordBreakTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test01(String s, List<String> wordDict, List<String> expectedResult) {
+        commonTest(expectedResult, x -> x.wordBreak(s, wordDict));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test(String s, List<String> wordDict, List<String> expectedResult) {
+        commonTest(expectedResult, x -> x.wordBreak01(s, wordDict));
+    }
+
+    private void commonTest(List<String> expectedResult, Function<LeetCode_140_wordBreak, List<String>> function) {
         Set<String> finalExpectedResult = new HashSet<>(expectedResult);
 
-        Set<String> actResult1 = new HashSet<>(wordBreak.wordBreak(s, wordDict));
-        Assertions.assertEquals(expectedResult.size(), actResult1.size());
-        actResult1.removeAll(finalExpectedResult);
-        Assertions.assertEquals(0, actResult1.size());
-
-        Set<String> actResult2 = new HashSet<>(wordBreak.wordBreak01(s, wordDict));
-        Assertions.assertEquals(expectedResult.size(), actResult2.size());
-        actResult2.removeAll(finalExpectedResult);
-        Assertions.assertEquals(0, actResult2.size());
+        Set<String> actResult = new HashSet<>(function.apply(wordBreak));
+        Assertions.assertEquals(expectedResult.size(), actResult.size());
+        actResult.removeAll(finalExpectedResult);
+        Assertions.assertEquals(0, actResult.size());
     }
 
     public static Stream<Arguments> generateRightCase() {

@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Arrays;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -19,13 +20,21 @@ public class LeetCode_1588_sumOddLengthSubarraysTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] arr, int expectedResults) {
-        int actResult01 = leetCode1588.sumOddLengthSubarrays(Arrays.copyOf(arr, arr.length));
-        int actResult02 = leetCode1588.sumOddLengthSubarrays02(Arrays.copyOf(arr, arr.length));
-        int actResultExample = leetCode1588.sumOddLengthSubarraysExample(Arrays.copyOf(arr, arr.length));
+        commonTest(expectedResults, x -> x.sumOddLengthSubarrays(arr));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] arr, int expectedResults) {
+        commonTest(expectedResults, x -> x.sumOddLengthSubarrays02(arr));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[] arr, int expectedResults) {
+        commonTest(expectedResults, x -> x.sumOddLengthSubarraysExample(arr));
+    }
 
-        Assertions.assertEquals(expectedResults, actResult01);
-        Assertions.assertEquals(expectedResults, actResult02);
-        Assertions.assertEquals(expectedResults, actResultExample);
+    private void commonTest(int expectedResults, Function<LeetCode_1588_sumOddLengthSubarrays, Integer> function) {
+        Assertions.assertEquals(expectedResults, function.apply(leetCode1588));
     }
 
     public static Stream<Arguments> generateRightCase() {

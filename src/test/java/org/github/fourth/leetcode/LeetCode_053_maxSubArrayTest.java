@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -18,16 +19,18 @@ class LeetCode_053_maxSubArrayTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int expectedResult) {
-        int actResult1 = maxSubArray.maxSubArray(nums);
-        Assertions.assertEquals(expectedResult, actResult1);
-
+        testCommon(expectedResult, x -> x.maxSubArray(nums));
     }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testRefine(int[] nums, int expectedResult) {
-        int actResult2 = maxSubArray.maxSubArrayRefine(nums);
-        Assertions.assertEquals(expectedResult, actResult2);
+        testCommon(expectedResult, x -> x.maxSubArrayRefine(nums));
+    }
+
+    private void testCommon(int expectedResult, Function<LeetCode_053_maxSubArray, Integer> function) {
+        int actResult = function.apply(maxSubArray);
+        Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

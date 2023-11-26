@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,21 +23,20 @@ class LeetCode_049_groupAnagrensTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(String[] strs, List<List<String>> expectedResult) {
-        Set<Set<String>> finalExpectResult = expectedResult.stream().map(HashSet::new).collect(Collectors.toSet());
-
-        Set<Set<String>> actResult1 = groupAnagrens.groupAnagrams(strs).stream().map(HashSet::new).collect(Collectors.toSet());
-        actResult1.removeAll(finalExpectResult);
-        Assertions.assertEquals(0, actResult1.size());
-
+        commonTest(expectedResult, x -> x.groupAnagrams(strs));
     }
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(String[] strs, List<List<String>> expectedResult) {
-        Set<Set<String>> finalExpectResult = expectedResult.stream().map(HashSet::new).collect(Collectors.toSet());
+        commonTest(expectedResult, x -> x.groupAnagrams2(strs));
+    }
 
-        Set<Set<String>> actResult2 = groupAnagrens.groupAnagrams2(strs).stream().map(HashSet::new).collect(Collectors.toSet());
-        actResult2.removeAll(finalExpectResult);
-        Assertions.assertEquals(0, actResult2.size());
+    private void commonTest(List<List<String>> expectedResult, Function<LeetCode_049_groupAnagrens, List<List<String>>> function) {
+        Set<Set<String>> finalExpectResult = expectedResult.stream().map(HashSet::new).collect(Collectors.toSet());
+        Set<Set<String>> actResult = function.apply(groupAnagrens).stream().map(HashSet::new).collect(Collectors.toSet());
+        actResult.removeAll(finalExpectResult);
+        Assertions.assertEquals(0, actResult.size());
+
     }
 
     public static Stream<Arguments> generateRightCase() {

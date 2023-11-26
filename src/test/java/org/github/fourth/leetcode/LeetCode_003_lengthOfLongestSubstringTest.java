@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -18,16 +19,19 @@ public class LeetCode_003_lengthOfLongestSubstringTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(String s, int expectedResults) {
-        int actResult1 = lengthOfLongestSubstring.lengthOfLongestSubstring1(s);
-        Assertions.assertEquals(expectedResults, actResult1);
+        commonTest(expectedResults, x -> x.lengthOfLongestSubstring1(s));
     }
 
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(String s, int expectedResults) {
-        int actResult2 = lengthOfLongestSubstring.lengthOfLongestSubstring1Refine(s);
-        Assertions.assertEquals(expectedResults, actResult2);
+        commonTest(expectedResults, x -> x.lengthOfLongestSubstring1Refine(s));
+    }
+
+    private void commonTest(int expectedResults, Function<LeetCode_003_lengthOfLongestSubstring, Integer> function) {
+        Integer actResult = function.apply(lengthOfLongestSubstring);
+        Assertions.assertEquals(expectedResults, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

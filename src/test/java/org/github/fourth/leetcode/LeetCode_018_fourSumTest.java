@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -20,28 +21,32 @@ public class LeetCode_018_fourSumTest {
     @ParameterizedTest
     @MethodSource("generateOriginRightCase")
     public void test(int[] nums, int target, List<List<Integer>> expectedResults) {
+        commonTest(expectedResults, x -> x.fourSum(nums, target));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateOriginRightCase")
+    public void testExample(int[] nums, int target, List<List<Integer>> expectedResults) {
+        commonTest(expectedResults, x -> x.fourSumExample(nums, target));
+    }
+
+    private void commonTest(List<List<Integer>> expectedResults, Function<LeetCode_018_fourSum, List<List<Integer>>> function) {
         expectedResults.forEach(x -> x.sort(Integer::compareTo));
 
-        List<List<Integer>> actResultList = test018FourSum.fourSumExample(Arrays.copyOf(nums, nums.length), target);
-        List<List<Integer>> actResultList01 = test018FourSum.fourSum(Arrays.copyOf(nums, nums.length), target);
+        List<List<Integer>> actResultList = function.apply(test018FourSum);
         Assertions.assertEquals(expectedResults.size(), actResultList.size());
-        Assertions.assertEquals(expectedResults.size(), actResultList01.size());
         actResultList.forEach(x -> x.sort(Integer::compareTo));
-        actResultList01.forEach(x -> x.sort(Integer::compareTo));
 
         for (int i = 0; i < expectedResults.size(); i++) {
             Assertions.assertEquals(expectedResults.get(i).size(), actResultList.get(i).size());
-            Assertions.assertEquals(expectedResults.get(i).size(), actResultList01.get(i).size());
         }
 
         for (int i = 0; i < expectedResults.size(); i++) {
             for (int j = 0; j < expectedResults.get(i).size(); j++) {
                 Assertions.assertEquals(expectedResults.get(i).get(j), actResultList.get(i).get(j));
-                Assertions.assertEquals(expectedResults.get(i).get(j), actResultList01.get(i).get(j));
             }
         }
     }
-
 
     public static Stream<Arguments> generateOriginRightCase() {
         return Stream.of(
