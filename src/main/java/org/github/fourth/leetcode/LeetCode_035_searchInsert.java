@@ -6,10 +6,40 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_035_searchInsert {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
      */
     public int searchInsert(int[] nums, int target) {
-        return 0;
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = nums.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] > target) {
+                end = mid;
+            } else if (nums[mid] < target) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+
+        if (nums[start] == target) {
+            return start;
+        }
+        if (nums[end] == target) {
+            return end;
+        }
+        // 找不到元素时，target可能在的三个位置
+        if (target < nums[start]) {
+            return --start;
+        }
+        if (target > nums[start] && target < nums[end]) {
+            return ++start;
+        }
+        return ++end;
     }
 }
