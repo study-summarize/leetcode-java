@@ -12,20 +12,42 @@ public class LeetCode_278_firstBadVersion extends VersionControl {
     }
 
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
      */
     public int firstBadVersion(int n) {
+        if (n <= 0) {
+            return 0;
+        }
+
+        int start = 1;
+        int end = n;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (super.isBadVersion(mid)) {
+                end = mid;
+            } else {
+                start = mid;
+            }
+        }
+
+        if (isBadVersion(start)) {
+            return start;
+        }
+        if (isBadVersion(end)) {
+            return end;
+        }
         return 0;
     }
 
 
 }
+
 class VersionControl {
     public int badVersion;
 
     public boolean isBadVersion(int version) {
-        return version == badVersion;
+        return version >= badVersion;
     }
 
 }
