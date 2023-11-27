@@ -2,9 +2,11 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -13,10 +15,25 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class LeetCode_240_searchMatrixTest {
     private final LeetCode_240_searchMatrix leetCode240SearchMatrix = new LeetCode_240_searchMatrix();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] matrix, int target, boolean expectedResult) {
-        boolean actResult = leetCode240SearchMatrix.searchMatrix(matrix, target);
+    public void test00(int[][] matrix, int target, boolean expectedResult) {
+        commonTest(expectedResult, x -> x.searchMatrix00(matrix, target));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01(int[][] matrix, int target, boolean expectedResult) {
+        commonTest(expectedResult, x -> x.searchMatrix01(matrix, target));
+    }
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[][] matrix, int target, boolean expectedResult) {
+        commonTest(expectedResult, x -> x.searchMatrix02(matrix, target));
+    }
+
+    private void commonTest(boolean expectedResult, Function<LeetCode_240_searchMatrix, Boolean> function) {
+        Boolean actResult = function.apply(leetCode240SearchMatrix);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
