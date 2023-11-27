@@ -5,10 +5,38 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_704_search {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
      */
     public int search(int[] nums, int target) {
-        return 0;
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = nums.length - 1;
+        // 防止出现 start == end的死循环
+        while (start + 1 < end) {
+            // 防止溢出
+            int mid = start + (end - start) / 2;
+            if (nums[mid] > target) {
+                end = mid;
+            } else if (nums[mid] < target) {
+                start = mid;
+            } else {
+                // 为了找出第一个符合和第二个符合的元素
+                end = mid;
+            }
+        }
+
+        // 第一个符合的元素
+        if (nums[start] == target) {
+            return start;
+        }
+        // 第二个符合的元素
+        if (nums[end] == target) {
+            return end;
+        }
+        return -1;
     }
 }

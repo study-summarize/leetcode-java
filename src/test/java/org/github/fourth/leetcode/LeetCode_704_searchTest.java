@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +16,7 @@ public class LeetCode_704_searchTest {
 
     private final LeetCode_704_search leetCode704Search = new LeetCode_704_search();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int target, int expectedResult) {
         int actResult = this.leetCode704Search.search(Arrays.copyOf(nums, nums.length), target);
