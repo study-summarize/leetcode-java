@@ -35,7 +35,7 @@ public class LeetCode_035_searchInsert {
         }
         // 找不到元素时，target可能在的三个位置
         if (target < nums[start]) {
-            return --start;
+            return start == 0 ? 0 : --start;
         }
         if (target > nums[start] && target < nums[end]) {
             return ++start;
