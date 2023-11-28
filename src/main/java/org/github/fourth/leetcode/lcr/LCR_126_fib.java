@@ -10,10 +10,23 @@ package org.github.fourth.leetcode.lcr;
  */
 public class LCR_126_fib {
     /**
-     * 时间复杂度：
+     * todo:时间复杂度：T(n) = 2T(n/n-1) + f(n)
      * 空间复杂度：
      */
     public int fib(int n) {
-        return 0;
+        return fibHelper(n);
+    }
+
+    private static int fibHelper(int n) {
+        // 最小子问题；递归终止条件
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+
+        // 递归公式
+        return fibHelper(n - 1) + fibHelper(n - 2);
     }
 }
