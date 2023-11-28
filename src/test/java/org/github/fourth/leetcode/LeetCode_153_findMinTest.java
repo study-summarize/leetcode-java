@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +16,7 @@ public class LeetCode_153_findMinTest {
 
     private final LeetCode_153_findMin leetCode153FindMin = new LeetCode_153_findMin();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int expectedResult) {
         int actResult = leetCode153FindMin.findMin(Arrays.copyOf(nums, nums.length));

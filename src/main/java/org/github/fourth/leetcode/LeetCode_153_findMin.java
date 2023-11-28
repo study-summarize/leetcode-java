@@ -10,10 +10,32 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_153_findMin {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
      */
     public int findMin(int[] nums) {
-        return 0;
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = nums.length - 1;
+        while (start + 1 < end) {
+            // 此时没有扭转，处于有序性中
+            if (nums[start] < nums[end]) {
+                return nums[start];
+            }
+
+            // 此时有扭转，不断的往中间最低点靠近
+            int mid = start + (end - start) / 2;
+            if (nums[mid] < nums[start]) {
+                end = mid;
+            } else {
+                start = mid;
+            }
+        }
+
+        // 可能出现临近情况：start、end都没法确定最靠近的低值
+        return Math.min(nums[start], nums[end]);
     }
 }
