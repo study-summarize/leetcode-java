@@ -23,23 +23,23 @@ public class LeetCode_069_mySqrt {
         int end = x;
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (mid * mid > x) {
-                end = mid;
-            } else if (mid * mid < x) {
+            // note: 要用除法，防止溢出
+            if (x / mid > mid) {
                 start = mid;
+            } else if (x / mid < mid) {
+                end = mid;
             } else {
                 return mid;
             }
         }
-        int lastEnd = end * end;
-        int lastStart = start * start;
-        // 无论如何，start 永远小于 end
-        if (lastEnd < x) {
-            return end;
-        }
-        if (lastStart < x) {
+
+        // 为了防止溢出
+        if (start <= x / start) {
             return start;
         }
-        return start - 1;
+        if (end <= x / end) {
+            return end;
+        }
+        return - 1;
     }
 }

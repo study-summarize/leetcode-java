@@ -25,6 +25,7 @@ public class LeetCode_069_mySqrtTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(4, 2),
+                arguments(2147395599, 46339),
                 arguments(8, 2)
         );
     }
