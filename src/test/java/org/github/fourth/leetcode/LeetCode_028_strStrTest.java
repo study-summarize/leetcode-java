@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -17,10 +18,20 @@ class LeetCode_028_strStrTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String haystack, String needle, int expectedResult) {
-        int actResult1 = strStr.strStr01(haystack, needle);
-        Assertions.assertEquals(expectedResult, actResult1);
+    public void test01(String haystack, String needle, int expectedResult) {
+        commonTest(expectedResult, x -> x.strStr01(haystack, needle));
     }
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(String haystack, String needle, int expectedResult) {
+        commonTest(expectedResult, x -> x.strStr02(haystack, needle));
+    }
+
+    private void commonTest(int expectedResult, Function<LeetCode_028_strStr, Integer> function) {
+        Integer actResult = function.apply(strStr);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
