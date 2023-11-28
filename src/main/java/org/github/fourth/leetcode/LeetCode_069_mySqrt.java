@@ -8,10 +8,38 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_069_mySqrt {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
      */
     public int mySqrt(int x) {
-        return 0;
+        if (x < 0) {
+            return -1;
+        }
+        if (x == 0 || x == 1) {
+            return x;
+        }
+
+        int start = 1;
+        int end = x;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (mid * mid > x) {
+                end = mid;
+            } else if (mid * mid < x) {
+                start = mid;
+            } else {
+                return mid;
+            }
+        }
+        int lastEnd = end * end;
+        int lastStart = start * start;
+        // 无论如何，start 永远小于 end
+        if (lastEnd < x) {
+            return end;
+        }
+        if (lastStart < x) {
+            return start;
+        }
+        return start - 1;
     }
 }
