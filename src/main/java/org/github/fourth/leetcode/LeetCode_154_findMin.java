@@ -10,10 +10,35 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_154_findMin {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(logn)
+     * 空间复杂度：O(1)
      */
     public int findMin(int[] nums) {
-        return 0;
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        int start = 0;
+        int end = nums.length - 1;
+        while (start + 1 < end) {
+            // 此时数组是一段有序性
+            if (nums[start] < nums[end]) {
+                return nums[start];
+            }
+
+            // 此时数组一定是俩段有序性
+            int mid = start + (end - start) / 2;
+            if (nums[mid] < nums[start]) {
+                // mid落在第二段中
+                end = mid;
+            } else if (nums[mid] > nums[start]) {
+                // mid落在第一段中
+                start = mid;
+            } else {
+                // mid可能在第一段中，也有可能在第二段中
+                start++;
+            }
+        }
+        return Math.min(nums[start], nums[end]);
     }
 }
