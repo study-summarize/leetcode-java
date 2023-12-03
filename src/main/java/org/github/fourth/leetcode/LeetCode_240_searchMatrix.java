@@ -8,13 +8,32 @@ package org.github.fourth.leetcode;
 public class LeetCode_240_searchMatrix {
 
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(log(m*n))
+     * 空间复杂度：O(1)
      */
     public boolean searchMatrix02(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0
                 || matrix[0] == null || matrix[0].length == 0) {
             return false;
+        }
+        // 从右上角开始。向下递增，向左递减
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int x = 0;
+        int y = n - 1;
+
+        // note: 注意=0的边界条件
+        while (x < m && y >= 0) {
+            int current = matrix[x][y];
+            if (current == target) {
+                return true;
+            }
+            else if (current > target) {
+                y--;
+            }
+            else {
+                x++;
+            }
         }
 
         return false;

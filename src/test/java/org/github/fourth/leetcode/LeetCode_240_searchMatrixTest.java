@@ -26,7 +26,8 @@ public class LeetCode_240_searchMatrixTest {
     public void test01(int[][] matrix, int target, boolean expectedResult) {
         commonTest(expectedResult, x -> x.searchMatrix01(matrix, target));
     }
-//    @ParameterizedTest
+
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(int[][] matrix, int target, boolean expectedResult) {
         commonTest(expectedResult, x -> x.searchMatrix02(matrix, target));
