@@ -1,5 +1,7 @@
 package struct.linkedlist;
 
+import org.github.fourth.struct.linkedlist.LinkedList;
+import org.github.fourth.struct.linkedlist.ListNode;
 import org.github.fourth.struct.linkedlist.MyLinkedList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -74,6 +76,67 @@ public class MyLinkedListTest {
         // 99 1 6 1000 100 null
         list.removeByIndexWithDummyNode(1);
         Assertions.assertEquals(1, list.get(1));
+    }
+
+    /**
+     * todo: 待实现
+     */
+    private static class TestLinkedList implements LinkedList {
+
+        @Override
+        public void add(int index, int value) {
+
+        }
+
+        @Override
+        public void addWithDummyNode(int index, int value) {
+
+        }
+
+        @Override
+        public void append(int value) {
+
+        }
+
+        @Override
+        public void removeByIndex(int index) {
+
+        }
+
+        @Override
+        public void removeByIndexWithDummyNode(int index) {
+
+        }
+
+        @Override
+        public void removeByValue(int value) {
+
+        }
+
+        @Override
+        public void set(int index, int value) {
+
+        }
+
+        @Override
+        public int get(int index) {
+            return 0;
+        }
+
+        @Override
+        public ListNode getNode(int index) {
+            return null;
+        }
+
+        @Override
+        public int getLength() {
+            return 0;
+        }
+
+        @Override
+        public int getLengthByTraverse() {
+            return 0;
+        }
     }
 
 }

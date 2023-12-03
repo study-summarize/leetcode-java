@@ -7,31 +7,9 @@ package org.github.fourth.struct.linkedlist;
  * (1)DummyNode
  * (2)头插法
  * (3)将俩个相邻节点旋转
- * <p>
- * 2、相关题目
- * （1）与计数或位置相关的问题
- * - 876-链表的中间结点：https://leetcode.cn/problems/middle-of-the-linked-list/
- * - 剑指Offer22-链表中倒数第k个节点：https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
- * - 141-环形链表：https://leetcode.cn/problems/linked-list-cycle/
- * - 142-环形链表II：https://leetcode.cn/problems/linked-list-cycle-ii/
- * （2）与链表结构变化相关的问题
- * - 021-合并两个有序链表：https://leetcode.cn/problems/merge-two-sorted-lists/
- * - 002-两数相加：https://leetcode.cn/problems/add-two-numbers/
- * - 019-删除链表的倒数第N个结点：https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
- * - 083-删除排序链表中的重复元素：https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
- * - 082-删除排序链表中的重复元素II：https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/
- * - 206-反转链表：https://leetcode.cn/problems/reverse-linked-list/
- * - 092-反转链表II：https://leetcode.cn/problems/reverse-linked-list-ii/
- * - 025-K个一组翻转链表：https://leetcode.cn/problems/reverse-nodes-in-k-group/
- * - 024-两两交换链表中的节点：https://leetcode.cn/problems/swap-nodes-in-pairs/
- * - 445-两数相加II：https://leetcode.cn/problems/add-two-numbers-ii/
- * - 143-重排链表：https://leetcode.cn/problems/reorder-list/
- * - 234-回文链表：https://leetcode.cn/problems/palindrome-linked-list/
- * - 061-旋转链表：https://leetcode.cn/problems/rotate-list/
- *
- * @author jwang55
+* @author jwang55
  */
-public class MyLinkedList {
+public class MyLinkedList implements LinkedList {
     // field
     public ListNode head;
     public int length;
