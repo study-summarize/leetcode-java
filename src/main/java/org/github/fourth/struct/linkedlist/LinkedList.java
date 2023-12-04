@@ -41,7 +41,7 @@ public interface LinkedList {
      * 判断链表是否有环
      */
     default boolean hasCycle() {
-        return false;
+        throw new UnsupportedOperationException();
     }
     /**
      * 获取链表中倒数第K个的结点
