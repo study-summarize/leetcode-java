@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -16,8 +18,8 @@ public class LeetCode_089_GrayCodeTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int n, List<Integer> expectedResult) {
-        // todo: 如何验证？？？
         List<Integer> actResult = leetCode089GrayCode.grayCode(n);
+        Assertions.assertTrue(VerifyUtils.assertListIntegerEquals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {

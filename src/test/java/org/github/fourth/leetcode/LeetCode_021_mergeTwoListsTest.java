@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,8 +20,8 @@ class LeetCode_021_mergeTwoListsTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode list1, ListNode list2, ListNode expectedResult) {
-        // todo: 如何验证？？？
         ListNode actResult = leetCode021MergeTwoLists.mergeTwoLists(list1, list2);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {

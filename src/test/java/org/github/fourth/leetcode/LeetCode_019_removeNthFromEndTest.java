@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,8 +20,8 @@ class LeetCode_019_removeNthFromEndTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int n, ListNode expectedResult) {
-        // todo: 如何验证？？？
         ListNode actResult = leetCode019RemoveNthFromEnd.removeNthFromEnd(head, n);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {
