@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -34,8 +35,7 @@ class LeetCode_876_middleNodeTest {
 
     private void commonTest(ListNode expectedResult, Function<LeetCode_876_middleNode, ListNode> function) {
         ListNode result = function.apply(leetCode876MiddleNode);
-        // todo: 如何验证？？？
-        Assertions.assertEquals(expectedResult.val, result.val);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, result));
     }
 
     public static Stream<Arguments> generateRightCase() {
