@@ -9,10 +9,28 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 public class LeetCode_141_hasCycle {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 快慢指针
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public boolean hasCycle(ListNode head) {
+        if (head == null) {
+            return false;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+
+        // 快慢指针
+        ListNode fast = dummyNode;
+        ListNode slow = dummyNode;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
         return false;
     }
 }
