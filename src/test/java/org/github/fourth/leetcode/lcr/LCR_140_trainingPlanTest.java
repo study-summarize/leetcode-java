@@ -36,7 +36,10 @@ class LCR_140_trainingPlanTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
-                arguments(build(new int[]{2, 4, 7, 8}), 1, build(8))
+                arguments(build(2, 4, 7, 8), 1, build(8)),
+                arguments(build(2, 4, 7, 8, 10, 62, 48, 99), 8, build(2, 4, 7, 8, 10, 62, 48, 99)),
+                arguments(build(2, 4, 7, 8, 10, 62, 48, 99), 7, build(4, 7, 8, 10, 62, 48, 99)),
+                arguments(build(2, 4, 7, 8), 2, build(7, 8))
         );
     }
 }
