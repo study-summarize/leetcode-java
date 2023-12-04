@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -16,8 +18,11 @@ class LeetCode_040_combinationSum2Test {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] candidates, int target, List<List<Integer>> expectedResult) {
-        // todo: 如何验证？？？
         List<List<Integer>> actResult = leetCode040CombinationSum2.combinationSum2(candidates, target);
+        Assertions.assertEquals(expectedResult.size(), actResult.size());
+        for (int i = 0; i < expectedResult.size(); i++) {
+            Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult.get(i), actResult.get(i)));
+        }
     }
 
     public static Stream<Arguments> generateRightCase() {

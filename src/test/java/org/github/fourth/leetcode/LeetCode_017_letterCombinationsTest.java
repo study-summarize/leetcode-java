@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -16,8 +18,8 @@ class LeetCode_017_letterCombinationsTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(String digits, List<String> expectedResult) {
-        // todo: 如何验证？？？
         List<String> actResult = leetCode017LetterCombinations.letterCombinations(digits);
+        Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {

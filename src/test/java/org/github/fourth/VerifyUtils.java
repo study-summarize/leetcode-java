@@ -3,11 +3,11 @@ package org.github.fourth;
 
 import org.apache.commons.collections4.CollectionUtils;
 
-import java.util.List;
+import java.util.Collection;
 
 public class VerifyUtils {
 
-    public static boolean assertListIntegerEquals(List<Integer> a, List<Integer> b) {
+    public static boolean assertListEquals(Collection<?> a, Collection<?> b) {
         if (a == null && b == null) {
             return true;
         }

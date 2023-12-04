@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,7 +20,7 @@ class LeetCode_142_detectCycleTest {
     @MethodSource("generateRightCase")
     public void test01(ListNode head, ListNode expectedResult) {
         ListNode actResult = leetCode142DetectCycle.detectCycle(head);
-        // todo: 如何验证？？？
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {

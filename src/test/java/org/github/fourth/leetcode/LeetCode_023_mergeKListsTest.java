@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -18,10 +19,8 @@ class LeetCode_023_mergeKListsTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(ListNode[] lists, ListNode expectedResult) {
-
         ListNode actResult = mergeKLists.mergeKLists(lists);
-        // todo: 如何比较两个链表是否相等？
-        Assertions.assertEquals(expectedResult, actResult);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {
