@@ -21,7 +21,15 @@ class LCR_140_trainingPlanTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int cnt, ListNode expectedResult) {
-        ListNode actResult = lcr140TrainingPlan.trainingPlan(head, cnt);
+        ListNode actResult = lcr140TrainingPlan.trainingPlan01(head, cnt);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(actResult, expectedResult));
+    }
+
+    @DisplayName("快慢指针")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(ListNode head, int cnt, ListNode expectedResult) {
+        ListNode actResult = lcr140TrainingPlan.trainingPlan02(head, cnt);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(actResult, expectedResult));
     }
 
