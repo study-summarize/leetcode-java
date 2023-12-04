@@ -137,6 +137,11 @@ public class MyLinkedListTest {
         public int getLengthByTraverse() {
             return 0;
         }
+
+        @Override
+        public ListNode findMiddleNode() {
+            return null;
+        }
     }
 
 }

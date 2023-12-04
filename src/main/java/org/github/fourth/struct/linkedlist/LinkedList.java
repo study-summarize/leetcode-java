@@ -9,7 +9,6 @@ public interface LinkedList {
      * @param value 具体值
      */
     void add(int index, int value);
-
     void addWithDummyNode(int index, int value);
 
     /**
@@ -31,4 +30,17 @@ public interface LinkedList {
     ListNode getNode(int index);
     int getLength();
     int getLengthByTraverse();
+
+    /**
+     * 获取链表中倒数第K个的结点
+     */
+    default ListNode getKthFromEnd(int k) {
+        throw new UnsupportedOperationException();
+    }
+    /**
+     * 根据双指针的方法找到链表的中间结点
+     * note：如果链表长度为偶数，则返回中间最大的结点
+     * DummyNode结点技巧
+     */
+    ListNode findMiddleNode();
 }

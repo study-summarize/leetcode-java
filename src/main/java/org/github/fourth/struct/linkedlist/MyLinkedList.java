@@ -153,4 +153,9 @@ public class MyLinkedList implements LinkedList {
         }
         return length;
     }
+
+    @Override
+    public ListNode findMiddleNode() {
+        return null;
+    }
 }
