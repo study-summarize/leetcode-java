@@ -7,10 +7,28 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 public class LeetCode_083_deleteDuplicates {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     * note:
+     * 1. dummyNode技巧
      */
     public ListNode deleteDuplicates(ListNode head) {
-        return null;
+        if (head == null) {
+            return null;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+        while (head != null) {
+            if (head.next == null) {
+                break;
+            }
+            if (head.val == head.next.val) {
+                head.next = head.next.next;
+            }
+            head = head.next;
+        }
+
+        return dummyNode.next;
     }
 }
