@@ -4,6 +4,7 @@ import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,7 +17,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_082_deleteDuplicatesTest {
     private final LeetCode_082_deleteDuplicates leetCode082DeleteDuplicates = new LeetCode_082_deleteDuplicates();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, ListNode expectedResult) {
         ListNode actResult = leetCode082DeleteDuplicates.deleteDuplicates(head);
