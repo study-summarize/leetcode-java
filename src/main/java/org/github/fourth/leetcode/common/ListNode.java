@@ -19,6 +19,9 @@ public class ListNode {
         return build(nums, -1);
     }
     public static ListNode build(Integer... nums) {
+        if (nums.length == 0) {
+            return null;
+        }
         int[] result = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             result[i] = nums[i];

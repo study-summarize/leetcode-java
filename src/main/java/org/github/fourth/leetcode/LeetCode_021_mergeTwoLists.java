@@ -7,10 +7,42 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 public class LeetCode_021_mergeTwoLists {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     *
+     * note
+     * 1. dummyNode技巧
      */
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        return null;
+        if (list1 == null && list2 == null) {
+            return null;
+        }
+        if (list1 == null || list2 == null) {
+            return list1 == null ? list2 : list1;
+        }
+
+        ListNode dummyNode = new ListNode();
+        ListNode point = dummyNode;
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                point.next = new ListNode(list1.val);
+                list1 = list1.next;
+            } else {
+                point.next = new ListNode(list2.val);
+                list2 = list2.next;
+            }
+            point = point.next;
+        }
+        // l1 还有数据时
+        while (list1 != null) {
+            point.next = list1;
+            list1 = list1.next;
+        }
+        // l2 还有数据时
+        while (list2 != null) {
+            point.next = list2;
+            list2 = list2.next;
+        }
+        return dummyNode.next;
     }
 }
