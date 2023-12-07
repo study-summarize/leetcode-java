@@ -9,10 +9,33 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 public class LeetCode_142_detectCycle {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 只能根据公式计算得出规律
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public ListNode detectCycle(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode secondSlow = head;
+        ListNode fast = head;
+        ListNode slow = head;
+
+        // 先让快慢指针第一次相遇
+        // 快慢指针的经典判断
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                while (slow != secondSlow) {
+                    slow = slow.next;
+                    secondSlow = secondSlow.next;
+                }
+                // 得写在外面，因为有些完成环是直接slow == secondSlow
+                return secondSlow;
+            }
+        }
         return null;
     }
 }

@@ -36,10 +36,10 @@ public class ListNode {
         ListNode cycleNode = (lastToIndex == 0) ? result : null;
         for (int i = 1; i < nums.length; i++) {
             temp.next = new ListNode(nums[i]);
+            temp = temp.next;
             if (i == lastToIndex) {
                 cycleNode = temp;
             }
-            temp = temp.next;
             if (lastToIndex >= 0 && i == nums.length - 1) {
                 temp.next = cycleNode;
             }

@@ -32,6 +32,12 @@ public interface LinkedList {
     int getLengthByTraverse();
 
     /**
+     * 判断链表是否有环
+     */
+    default boolean hasCycle() {
+        return false;
+    }
+    /**
      * 获取链表中倒数第K个的结点
      */
     default ListNode getKthFromEnd(int k) {

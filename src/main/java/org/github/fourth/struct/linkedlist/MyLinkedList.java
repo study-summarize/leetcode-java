@@ -7,6 +7,7 @@ package org.github.fourth.struct.linkedlist;
  * (1)DummyNode
  * (2)头插法
  * (3)将俩个相邻节点旋转
+ * (4)快慢指针
 * @author jwang55
  */
 public class MyLinkedList implements LinkedList {
