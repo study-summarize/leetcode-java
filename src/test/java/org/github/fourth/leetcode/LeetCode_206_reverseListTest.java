@@ -4,6 +4,7 @@ import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,7 +18,7 @@ class LeetCode_206_reverseListTest {
     private final LeetCode_206_reverseList leetCode206ReverseList = new LeetCode_206_reverseList();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, ListNode expectedResult) {
         ListNode actResult = leetCode206ReverseList.reverseList(head);

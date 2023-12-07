@@ -25,6 +25,12 @@ public interface LinkedList {
     // 改：
     void set(int index, int value);
 
+    /**
+     * 翻转链表，适用头插法
+     */
+    default ListNode reverseList() {
+        return null;
+    }
     // 查：
     int get(int index);
     ListNode getNode(int index);

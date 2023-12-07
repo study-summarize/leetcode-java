@@ -5,7 +5,7 @@ package org.github.fourth.struct.linkedlist;
  * <p>
  * 1、相关技巧
  * (1)DummyNode
- * (2)头插法
+ * (2)头插法：翻转链表
  * (3)将俩个相邻节点旋转
  * (4)快慢指针
 * @author jwang55
