@@ -37,11 +37,13 @@ public class LeetCode_021_mergeTwoLists {
         while (list1 != null) {
             point.next = list1;
             list1 = list1.next;
+            point = point.next;
         }
         // l2 还有数据时
         while (list2 != null) {
             point.next = list2;
             list2 = list2.next;
+            point = point.next;
         }
         return dummyNode.next;
     }

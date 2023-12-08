@@ -27,6 +27,7 @@ class LeetCode_021_mergeTwoListsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(build(-9, 3), build(5, 7), build(-9, 3, 5, 7)),
                 arguments(build(1, 2, 4), build(1, 3, 4), build(1, 1, 2, 3, 4, 4)),
                 arguments(build(), build(), build()),
                 arguments(build(), build(0), build(0))
