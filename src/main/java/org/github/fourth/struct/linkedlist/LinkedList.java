@@ -45,9 +45,38 @@ public interface LinkedList {
     }
     /**
      * 获取链表中倒数第K个的结点
+     * note:
+     * 1. 要注意俩个临界情况。n可能超过链表的长度，以及n正好是链表的长度
      */
-    default ListNode getKthFromEnd(int k) {
-        throw new UnsupportedOperationException();
+    default ListNode getKthFromEnd(int n) {
+        ListNode head = getHead();
+        if (head == null) {
+            return null;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+
+        ListNode fast = dummyNode;
+        ListNode slow = dummyNode;
+
+        // 先让快指针走n+1步
+        while(n != -1 && fast != null) {
+            fast = fast.next;
+            n--;
+        }
+        // 如果快指针没走到n步就结束了，说明参数有问题
+        if (n > 0 && fast == null) {
+            return null;
+        }
+
+        // 快慢指针一起走，让慢指针在倒数第n个位置停下
+        while(fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
+        return dummyNode.next;
     }
     /**
      * 根据双指针的方法找到链表的中间结点
@@ -55,4 +84,9 @@ public interface LinkedList {
      * DummyNode结点技巧
      */
     ListNode findMiddleNode();
+
+
+    default ListNode getHead() {
+        return null;
+    }
 }

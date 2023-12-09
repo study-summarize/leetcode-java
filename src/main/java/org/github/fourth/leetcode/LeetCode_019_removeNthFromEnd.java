@@ -8,37 +8,73 @@ import org.github.fourth.leetcode.common.ListNode;
 public class LeetCode_019_removeNthFromEnd {
     /**
      * 前后指针
-     *
+     * <p>
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      */
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        if (head == null || n <= 0) {
-            return head;
+    public ListNode removeNthFromEnd01(ListNode head, int n) {
+        if (head == null) {
+            return null;
         }
 
         ListNode dummyNode = new ListNode();
         dummyNode.next = head;
-        // 找到倒数第n + 1个
-        ListNode fast = dummyNode;
-        ListNode last = dummyNode;
-        int moveCount = 0;
-        while (fast.next != null) {
-            if (++moveCount >= (n + 1)) {
-                // 找到第n + 1个节点
-                last = last.next;
-            }
-            fast = fast.next;
-        }
 
-        // 如果没找到n+1个节点
-        if (last == dummyNode) {
+        ListNode fast = dummyNode;
+        ListNode slow = dummyNode;
+
+        // 先让快指针走n + 1步 (加的1是因为从虚拟节点出发的)
+        while (n != -1 && fast != null) {
+            fast = fast.next;
+            n--;
+        }
+        // 如果快指针没走到n步就结束了，说明参数有问题
+        if (n > 0 && fast == null) {
             return null;
         }
 
-        if (last.next != null) {
-            last.next = last.next.next;
+        // 快慢指针一起走，让慢指针在倒数第n个位置停下
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
         }
+        slow.next = slow.next.next;
+        return dummyNode.next;
+    }
+
+    /**
+     * 前后指针，前指针不走dummyNode结点
+     * <p>
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     */
+    public ListNode removeNthFromEnd02(ListNode head, int n) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+
+        ListNode fast = head;
+        ListNode slow = dummyNode;
+
+        // 先让快指针走n步
+        while (n != 0 && fast != null) {
+            fast = fast.next;
+            n--;
+        }
+        // 如果快指针没走到n步就结束了，说明参数有问题
+        if (n > 0 && fast == null) {
+            return null;
+        }
+
+        // 快慢指针一起走，让慢指针在倒数第n个位置停下
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        slow.next = slow.next.next;
         return dummyNode.next;
     }
 }

@@ -21,12 +21,20 @@ class LeetCode_019_removeNthFromEndTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int n, ListNode expectedResult) {
-        ListNode actResult = leetCode019RemoveNthFromEnd.removeNthFromEnd(head, n);
+        ListNode actResult = leetCode019RemoveNthFromEnd.removeNthFromEnd01(head, n);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(ListNode head, int n, ListNode expectedResult) {
+        ListNode actResult = leetCode019RemoveNthFromEnd.removeNthFromEnd02(head, n);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(build(1, 2), 2, build(2)),
                 arguments(build(1, 2, 3, 4, 5), 2, build(1, 2, 3, 5)),
                 arguments(build(1, 2, 3, 4, 5), 1, build(1, 2, 3, 4)),
                 arguments(build(1, 2, 3, 4, 5), 3, build(1, 2, 4, 5)),
