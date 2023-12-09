@@ -2,6 +2,7 @@ package org.github.fourth.struct.linkedlist;
 
 public interface LinkedList {
     // 增：
+
     /**
      * 在指定位置新增一个值为value的结点
      *
@@ -9,6 +10,7 @@ public interface LinkedList {
      * @param value 具体值
      */
     void add(int index, int value);
+
     void addWithDummyNode(int index, int value);
 
     /**
@@ -19,7 +21,9 @@ public interface LinkedList {
     // 删：
 
     void removeByIndex(int index);
+
     void removeByIndexWithDummyNode(int index);
+
     void removeByValue(int value);
 
     // 改：
@@ -31,10 +35,14 @@ public interface LinkedList {
     default ListNode reverseList() {
         return null;
     }
+
     // 查：
     int get(int index);
+
     ListNode getNode(int index);
+
     int getLength();
+
     int getLengthByTraverse();
 
     /**
@@ -43,6 +51,7 @@ public interface LinkedList {
     default boolean hasCycle() {
         throw new UnsupportedOperationException();
     }
+
     /**
      * 获取链表中倒数第K个的结点
      * note:
@@ -61,7 +70,7 @@ public interface LinkedList {
         ListNode slow = dummyNode;
 
         // 先让快指针走n+1步
-        while(n != -1 && fast != null) {
+        while (n != -1 && fast != null) {
             fast = fast.next;
             n--;
         }
@@ -71,13 +80,14 @@ public interface LinkedList {
         }
 
         // 快慢指针一起走，让慢指针在倒数第n个位置停下
-        while(fast != null) {
+        while (fast != null) {
             fast = fast.next;
             slow = slow.next;
         }
         slow.next = slow.next.next;
         return dummyNode.next;
     }
+
     /**
      * 根据双指针的方法找到链表的中间结点
      * note：如果链表长度为偶数，则返回中间最大的结点
