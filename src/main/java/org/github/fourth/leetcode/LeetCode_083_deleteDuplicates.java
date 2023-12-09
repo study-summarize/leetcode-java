@@ -19,14 +19,12 @@ public class LeetCode_083_deleteDuplicates {
 
         ListNode dummyNode = new ListNode();
         dummyNode.next = head;
-        while (head != null) {
-            if (head.next == null) {
-                break;
-            }
+        while (head.next != null) {
             if (head.val == head.next.val) {
                 head.next = head.next.next;
+            } else {
+                head = head.next;
             }
-            head = head.next;
         }
 
         return dummyNode.next;

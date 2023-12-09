@@ -27,6 +27,7 @@ class LeetCode_083_deleteDuplicatesTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(build(1, 1, 1), build(1)),
                 arguments(build(1, 1, 2), build(1, 2)),
                 arguments(build(1, 1, 2, 3, 4, 5), build(1, 2, 3, 4, 5)),
                 arguments(build(1), build(1)),
