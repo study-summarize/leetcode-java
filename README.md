@@ -137,6 +137,18 @@ for (int i = length - 1; i >= 0; i--) {
 2、dummyNode
 （1）适用场景
 - 改变链表结构
+3、头插法
+
+```groovy
+ListNode preNode = new ListNode()
+ListNode head = preNode.next
+while (head != null) {
+    ListNode temp = head.next
+    head.next = temp.next
+    temp.next = preNode.next
+    preNode.next = temp
+}
+```
 
 ## 二分搜索：
 1、二分搜索的模板

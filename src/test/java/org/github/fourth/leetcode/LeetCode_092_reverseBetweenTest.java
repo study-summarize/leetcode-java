@@ -4,6 +4,7 @@ import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,7 +18,7 @@ class LeetCode_092_reverseBetweenTest {
     private final LeetCode_092_reverseBetween leetCode092ReverseBetween = new LeetCode_092_reverseBetween();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int left, int right, ListNode expectedResult) {
         ListNode actResult = leetCode092ReverseBetween.reverseBetween(head, left, right);
