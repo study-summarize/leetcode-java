@@ -7,10 +7,35 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 public class LeetCode_024_swapPairs {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     * note: 头插法、dummyNode技巧
      */
     public ListNode swapPairs(ListNode head) {
-        return null;
+        if (head == null) {
+            return null;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+        ListNode node = dummyNode;
+
+        while (node != null && node.next != null) {
+            // 判断够不够2
+            if (node.next.next == null) {
+                return dummyNode.next;
+            }
+
+            ListNode prev = node;
+            ListNode curr = prev.next;
+            // 反转一次
+            ListNode temp = curr.next;
+            curr.next = temp.next;
+            temp.next = prev.next;
+            prev.next = temp;
+            // node移动到 curr
+            node = curr;
+        }
+        return dummyNode.next;
     }
 }
