@@ -11,6 +11,41 @@ public class LeetCode_061_rotateRight {
      * 空间复杂度：
      */
     public ListNode rotateRight(ListNode head, int k) {
-        return null;
+        if (head == null) {
+            return null;
+        }
+
+        // 求实际旋转次数
+        int length = getLength(head);
+        k = k % length;
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+        ListNode cur = dummyNode;
+        // 倒数第k+1个节点
+        ListNode fast = dummyNode;
+        ListNode slow = dummyNode;
+        for (int i = 0; i < k; i++) {
+            fast = fast.next;
+        }
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        fast.next = dummyNode.next;
+        dummyNode.next = slow.next;
+        slow.next = null;
+
+        return dummyNode.next;
+    }
+
+    public int getLength(ListNode head) {
+        int length = 0;
+        while(head != null) {
+            head = head.next;
+            length++;
+        }
+        return length;
     }
 }

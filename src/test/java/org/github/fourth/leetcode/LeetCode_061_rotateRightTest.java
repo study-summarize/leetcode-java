@@ -4,6 +4,7 @@ import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,7 +17,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_061_rotateRightTest {
     private final LeetCode_061_rotateRight leetCode061RotateRight = new LeetCode_061_rotateRight();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int k, ListNode expectedResult) {
         ListNode actResult = leetCode061RotateRight.rotateRight(head, k);
