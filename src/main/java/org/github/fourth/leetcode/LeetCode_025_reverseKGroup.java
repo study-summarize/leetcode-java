@@ -9,10 +9,40 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 public class LeetCode_025_reverseKGroup {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     * note: 头插法、dummyNode技巧
      */
     public ListNode reverseKGroup(ListNode head, int k) {
-        return null;
+        if (head == null) {
+            return null;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+        ListNode node = dummyNode;
+        while (node.next != null) {
+            ListNode check = node;
+            // 判断够不够k个
+            for(int i = 0; i < k; i++) {
+                if (check.next == null) {
+                    return dummyNode.next;
+                }
+                check = check.next;
+            }
+
+            // 反转k-1次
+            ListNode preNode = node;
+            ListNode currentNode = preNode.next;
+            for(int i = 0; i < k - 1; i++) {
+                ListNode temp = currentNode.next;
+                currentNode.next = temp.next;
+                temp.next = preNode.next;
+                preNode.next = temp;
+            }
+            // node 需要移动到 currentNode
+            node = currentNode;
+        }
+        return dummyNode.next;
     }
 }
