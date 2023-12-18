@@ -78,6 +78,8 @@ public class LeetCode_015_threeSumTest {
 
     public static Stream<Arguments> generateOriginRightCase() {
         return Stream.of(
+                arguments(new int[]{-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6}, List.of(Arrays.asList(-4, -2, 6), Arrays.asList(-4, 0, 4),
+                        Arrays.asList(-4, 1, 3), Arrays.asList(-4, 2, 2), Arrays.asList(-2, -2, 4), Arrays.asList(-2, 0, 2))),
                 arguments(new int[]{-1, 0, 1, 2, -1, -4}, List.of(Arrays.asList(-1, -1, 2), Arrays.asList(-1, 0, 1))),
                 arguments(new int[]{-1, 0, 1, 2, -4}, List.of(Arrays.asList(-1, 0, 1))),
                 arguments(new int[]{0, 0, 0, 0, 0}, List.of(Arrays.asList(0, 0, 0))),

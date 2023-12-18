@@ -40,13 +40,11 @@ public class LeetCode_015_threeSum {
                     start++;
                     end--;
                     // 去除重复元素。这里也是可以想特殊案例：0,0,0,0,0,0
-                    if (start > 1 && nums[start] == nums[start - 1]) {
+                    while (start > 1 && nums[start] == nums[start - 1] && start < nums.length - 1) {
                         start++;
-                        continue;
                     }
-                    if (end < nums.length - 1 && nums[end] == nums[end + 1]) {
+                    while (end < nums.length - 1 && nums[end] == nums[end + 1] && end > 0) {
                         end--;
-                        continue;
                     }
                 } else if (sum > 0) {
                     end--;
