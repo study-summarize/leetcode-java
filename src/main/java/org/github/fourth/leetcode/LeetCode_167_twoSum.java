@@ -8,8 +8,9 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_167_twoSum {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 相遇型双指针
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public int[] twoSum(int[] numbers, int target) {
         if (numbers == null || numbers.length == 0) {
