@@ -7,8 +7,9 @@ import java.util.Arrays;
  */
 public class LeetCode_1099_twoSumLessThanK {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 相遇型双指针
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public int twoSumLessThanK(int[] nums, int k) {
         if (nums == null || nums.length == 0) {
