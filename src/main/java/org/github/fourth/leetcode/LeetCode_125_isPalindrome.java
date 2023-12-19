@@ -7,10 +7,40 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_125_isPalindrome {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 相遇型双指针
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public boolean isPalindrome(String s) {
-        return false;
+        if (s == null || s.length() == 0) {
+            return true;
+        }
+
+        char[] charArray = s.toCharArray();
+        int start = 0;
+        int end = charArray.length - 1;
+        while (start < end) {
+            if (!isSatisfyChar(charArray[start])) {
+                start++;
+                continue;
+            }
+            if (!isSatisfyChar(charArray[end])) {
+                end--;
+                continue;
+            }
+            char startChar = Character.toLowerCase(charArray[start]);
+            char endChar = Character.toLowerCase(charArray[end]);
+            if (startChar != endChar) {
+                return false;
+            } else {
+                start++;
+                end--;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isSatisfyChar(char c) {
+        return (c >= 48 && c <= 57) ||  (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
     }
 }

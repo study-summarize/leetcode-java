@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -12,10 +14,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_125_isPalindromeTest {
     private final LeetCode_125_isPalindrome leetCode125IsPalindrome = new LeetCode_125_isPalindrome();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(String s, boolean expectedResult) {
         boolean actResult = leetCode125IsPalindrome.isPalindrome(s);
+        Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
