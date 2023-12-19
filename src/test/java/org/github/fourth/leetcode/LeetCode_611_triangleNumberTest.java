@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,10 +14,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_611_triangleNumberTest {
     private final LeetCode_611_triangleNumber triangleNumber = new LeetCode_611_triangleNumber();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01(int[] nums, int expectedResult) {
+        int actResult = triangleNumber.triangleNumber(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int expectedResult) {
-        int actResult = triangleNumber.triangleNumber(nums);
+        int actResult = triangleNumber.triangleNumberExample(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
