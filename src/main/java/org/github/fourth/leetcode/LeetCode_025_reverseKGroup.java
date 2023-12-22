@@ -24,7 +24,7 @@ public class LeetCode_025_reverseKGroup {
         while (node.next != null) {
             ListNode check = node;
             // 判断够不够k个
-            for(int i = 0; i < k; i++) {
+            for (int i = 0; i < k; i++) {
                 if (check.next == null) {
                     return dummyNode.next;
                 }
@@ -34,7 +34,7 @@ public class LeetCode_025_reverseKGroup {
             // 反转k-1次
             ListNode preNode = node;
             ListNode currentNode = preNode.next;
-            for(int i = 0; i < k - 1; i++) {
+            for (int i = 0; i < k - 1; i++) {
                 ListNode temp = currentNode.next;
                 currentNode.next = temp.next;
                 temp.next = preNode.next;

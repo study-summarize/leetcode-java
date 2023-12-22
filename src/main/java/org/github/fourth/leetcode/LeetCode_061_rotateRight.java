@@ -1,10 +1,12 @@
 package org.github.fourth.leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.github.fourth.leetcode.common.ListNode;
 
 /**
  * 给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。
  */
+@SuppressFBWarnings({"NP_NULL_ON_SOME_PATH", "SA_FIELD_SELF_ASSIGNMENT"})
 public class LeetCode_061_rotateRight {
     /**
      * 时间复杂度：
@@ -21,7 +23,6 @@ public class LeetCode_061_rotateRight {
 
         ListNode dummyNode = new ListNode();
         dummyNode.next = head;
-        ListNode cur = dummyNode;
         // 倒数第k+1个节点
         ListNode fast = dummyNode;
         ListNode slow = dummyNode;
@@ -42,7 +43,7 @@ public class LeetCode_061_rotateRight {
 
     public int getLength(ListNode head) {
         int length = 0;
-        while(head != null) {
+        while (head != null) {
             head = head.next;
             length++;
         }

@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.github.fourth.leetcode.common.ListNode;
 
 /**
@@ -9,6 +10,7 @@ import org.github.fourth.leetcode.common.ListNode;
  * L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
  * 不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
  */
+@SuppressFBWarnings("UC_USELESS_OBJECT")
 public class LeetCode_143_reorderList {
     /**
      * 时间复杂度：O(n)

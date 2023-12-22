@@ -41,6 +41,6 @@ public class LeetCode_125_isPalindrome {
     }
 
     private static boolean isSatisfyChar(char c) {
-        return (c >= 48 && c <= 57) ||  (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
+        return (c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
     }
 }
