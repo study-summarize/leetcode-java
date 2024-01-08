@@ -9,10 +9,64 @@ import java.util.Arrays;
  */
 public class LeetCode_016_threeSumClosest {
     /**
+     * 时间复杂度：O(nlogn)
+     * 空间复杂度：O(1)
+     * note: 去重属于优化，写不出来可以不写
+     */
+    public int threeSumClosest(int[] nums, int target) {
+        if (nums == null || nums.length < 3) {
+            return -1;
+        }
+
+        // 先排序
+        Arrays.sort(nums);
+
+        int abs = Integer.MAX_VALUE;
+        int result = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length - 2; i++) {
+            // 去重1：这里为啥不能while。1,1,1,1 => 0
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+
+
+            int start = i + 1;
+            int end = nums.length - 1;
+            while (start < end) {
+                int sum = nums[i] + nums[start] + nums[end];
+                if (sum == target) {
+                    return sum;
+                } else if (sum > target) {
+                    if (Math.abs(sum - target) < abs) {
+                        abs = Math.abs(sum - target);
+                        result = sum;
+                    }
+                    end--;
+                    // 去重2：
+                    while (start < end && nums[end] == nums[end + 1]) {
+                        end--;
+                    }
+                } else {
+                    if (Math.abs(sum - target) < abs) {
+                        abs = Math.abs(sum - target);
+                        result = sum;
+                    }
+                    start++;
+                    // 去重3：
+                    while (start < end && nums[start] == nums[start - 1]) {
+                        start++;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int threeSumClosest(int[] nums, int target) {
+    public int threeSumClosestExample(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return -1;
         }

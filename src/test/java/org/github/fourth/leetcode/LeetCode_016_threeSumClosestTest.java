@@ -16,6 +16,13 @@ class LeetCode_016_threeSumClosestTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void testExample(int[] nums, int target, int expectedResult) {
+        int actResult = threeSumClosest.threeSumClosestExample(nums, target);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test(int[] nums, int target, int expectedResult) {
         int actResult = threeSumClosest.threeSumClosest(nums, target);
         Assertions.assertEquals(expectedResult, actResult);
