@@ -9,6 +9,22 @@ public class LCR_139_trainingPlan {
      * 空间复杂度：
      */
     public int[] trainingPlan(int[] actions) {
-        return null;
+        if (actions == null || actions.length == 0) {
+            return null;
+        }
+
+        int evenPos = actions.length;
+        for (int i = 0; i < evenPos; i++) {
+            if (actions[i] % 2 == 0) {
+                swap(actions, i, --evenPos);
+            }
+        }
+        return actions;
+    }
+
+    private static void swap(int[] nums, int pos, int targetPos) {
+        int temp = nums[pos];
+        nums[pos] = nums[targetPos];
+        nums[targetPos] = temp;
     }
 }
