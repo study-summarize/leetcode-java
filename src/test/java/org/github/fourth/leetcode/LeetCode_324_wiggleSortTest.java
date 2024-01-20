@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,10 +15,11 @@ class LeetCode_324_wiggleSortTest {
     private final LeetCode_324_wiggleSort leetCode324WiggleSort = new LeetCode_324_wiggleSort();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int[] expectedResult) {
         leetCode324WiggleSort.wiggleSort(nums);
+        Assertions.assertArrayEquals(expectedResult, nums);
     }
 
     public static Stream<Arguments> generateRightCase() {
