@@ -5,19 +5,17 @@ package org.github.fourth.leetcode.lcr;
  */
 public class LCR_139_trainingPlan {
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public int[] trainingPlan(int[] actions) {
-        if (actions == null || actions.length == 0) {
-            return null;
-        }
-
-        int evenPos = actions.length;
-        for (int i = 0; i < evenPos; i++) {
-            if (actions[i] % 2 == 0) {
-                swap(actions, i, --evenPos);
-            }
+        int i = 0, j = actions.length - 1, tmp;
+        while(i < j) {
+            while(i < j && (actions[i] & 1) == 1) i++;
+            while(i < j && (actions[j] & 1) == 0) j--;
+            tmp = actions[i];
+            actions[i] = actions[j];
+            actions[j] = tmp;
         }
         return actions;
     }
