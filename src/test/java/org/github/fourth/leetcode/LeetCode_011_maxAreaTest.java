@@ -22,6 +22,13 @@ public class LeetCode_011_maxAreaTest {
         Assertions.assertEquals(expectedResult, actResult);
     }
 
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[] height, int expectedResult) {
+        int actResult = maxArea.maxAreaExample(height);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49),

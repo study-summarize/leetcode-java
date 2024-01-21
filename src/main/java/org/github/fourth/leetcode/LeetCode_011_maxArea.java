@@ -7,12 +7,30 @@ package org.github.fourth.leetcode;
  * 说明：你不能倾斜容器。
  */
 public class LeetCode_011_maxArea {
-
     /**
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public int maxArea(int[] height) {
+        if (height == null || height.length == 0) {
+            return 0;
+        }
+        int result = Integer.MIN_VALUE;
+        int start = 0;
+        int end = height.length - 1;
+        while (start < end) {
+            int currentResult = (end - start) * Math.min(height[start], height[end]);
+            result = Math.max(result, currentResult);
+            if (height[start] < height[end]) {
+                start++;
+            } else {
+                end--;
+            }
+        }
+        return result;
+    }
+
+    public int maxAreaExample(int[] height) {
         if (height == null || height.length == 0) {
             return 0;
         }
