@@ -5,11 +5,59 @@ package org.github.fourth.leetcode;
  * 返回 滑动窗口中的最大值 。
  */
 public class LeetCode_239_maxSlidingWindow {
+
+
     /**
+     * 暴力方法：双层for循环
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(n)
+     */
+    public int[] maxSlidingWindow01(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k < 0) {
+            return null;
+        }
+        int[] result = new int[nums.length - k + 1];
+        int resultIndex = 0;
+
+        for (int i = 0; i < nums.length - k + 1; i++) {
+            int currentMax = Integer.MIN_VALUE;
+            for (int j = i; j - i < k; j++) {
+                currentMax = Math.max(currentMax, nums[j]);
+            }
+            result[resultIndex++] = currentMax;
+        }
+        return result;
+    }
+
+    /**
+     * todo: 同向型双指针-滑动窗口
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int[] maxSlidingWindow(int[] nums, int k) {
+    public int[] maxSlidingWindow02(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k <= 0) {
+            return null;
+        }
+        int[] result = new int[nums.length - k + 1];
+        int resultIndex = 0;
+        int start = 0;
+        int end = 0;
+        int currentMax = Integer.MIN_VALUE;
+        for (; start < nums.length; start++) {
+            while (end < nums.length) {
+                // 不符合条件时，右边界继续扩张
+                if (end - start < k) {
+                    currentMax = Math.max(currentMax, nums[end]);
+                    end++;
+                } else {
+                    break;
+                }
+            }
+            // 符合条件，开始收缩值
+            result[resultIndex++] = currentMax;
+//            currentMax =
+        }
+
         return null;
     }
 }

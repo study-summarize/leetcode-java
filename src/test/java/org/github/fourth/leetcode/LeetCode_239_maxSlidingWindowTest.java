@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -12,11 +14,18 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_239_maxSlidingWindowTest {
     private final LeetCode_239_maxSlidingWindow leetCode239MaxSlidingWindow = new LeetCode_239_maxSlidingWindow();
 
-
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int k, int[] expectedResult) {
-        int[] actResult = leetCode239MaxSlidingWindow.maxSlidingWindow(nums, k);
+        int[] actResult = leetCode239MaxSlidingWindow.maxSlidingWindow01(nums, k);
+        Assertions.assertArrayEquals(expectedResult, actResult);
+    }
+
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int k, int[] expectedResult) {
+        int[] actResult = leetCode239MaxSlidingWindow.maxSlidingWindow02(nums, k);
+        Assertions.assertArrayEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
