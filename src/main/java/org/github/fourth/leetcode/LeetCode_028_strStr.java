@@ -8,11 +8,11 @@ public class LeetCode_028_strStr {
 
     /**
      * 方法一：暴力解法
-     * 时间复杂度：
-     * 空间复杂度：
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(1)
      */
     public int strStr01(String haystack, String needle) {
-        if (haystack == null || haystack.length() == 0 || needle == null || needle.length() == 0) {
+        if (haystack == null || haystack.isEmpty() || needle == null || needle.isEmpty()) {
             return -1;
         }
 
@@ -42,5 +42,40 @@ public class LeetCode_028_strStr {
      */
     public int strStr02(String haystack, String needle) {
         return -1;
+    }
+
+    /**
+     * 方法三：同向型双指针-滑动窗口
+     * 时间复杂度：
+     * 空间复杂度：
+     */
+    public int strStr03(String haystack, String needle) {
+        if (haystack == null || haystack.isEmpty()
+                || needle == null || needle.isEmpty()
+                || haystack.length() < needle.length()) {
+            return -1;
+        }
+
+        int start = 0;
+        int end;
+        int result = -1;
+        for (; start < haystack.length(); ) {
+            end = 0;
+            while (end < needle.length()) {
+                // 符合条件时，向右滑动
+                if (haystack.charAt(start + end) == needle.charAt(end)) {
+                    end++;
+                } else {
+                    break;
+                }
+            }
+            // 不符合条件，开始收缩
+            if (end == needle.length()) {
+                result = start;
+                break;
+            }
+            start++;
+        }
+        return result;
     }
 }

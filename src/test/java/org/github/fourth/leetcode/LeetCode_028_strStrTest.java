@@ -27,6 +27,12 @@ class LeetCode_028_strStrTest {
         commonTest(expectedResult, x -> x.strStr02(haystack, needle));
     }
 
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(String haystack, String needle, int expectedResult) {
+        commonTest(expectedResult, x -> x.strStr03(haystack, needle));
+    }
+
     private void commonTest(int expectedResult, Function<LeetCode_028_strStr, Integer> function) {
         Integer actResult = function.apply(strStr);
         Assertions.assertEquals(expectedResult, actResult);
