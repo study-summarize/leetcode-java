@@ -7,13 +7,23 @@ package org.github.fourth.leetcode;
  * - 如果 s 中存在这样的子串，我们保证它是唯一的答案。
  */
 public class LeetCode_076_minWindow {
+
     /**
+     * 滑动窗口
      * 时间复杂度：
      * 空间复杂度：
      */
     public String minWindow(String s, String t) {
-        if (s == null || s.length() == 0
-                || t == null || t.length() == 0) {
+        if (s.isEmpty() || t.isEmpty() || t.length() > s.length()) {
+            return "";
+        }
+
+        return null;
+    }
+
+    public String minWindowExample(String s, String t) {
+        if (s == null || s.isEmpty()
+                || t == null || t.isEmpty()) {
             return "";
         }
 
@@ -28,7 +38,7 @@ public class LeetCode_076_minWindow {
         int i = 0;
         int j = 0;
 
-        for (i = 0; i < s.length(); i++) {
+        for (; i < s.length(); i++) {
             while (j < s.length()) {
                 if (!allFound(hash)) {
                     hash[s.charAt(j)]--;
