@@ -165,6 +165,23 @@ while (head != null) {
 2、同向型双指针
 - 快慢类
 - 窗口类
+```groovy
+int[] nums = new int[k];
+int start = 0;
+int end = 0;
+for (; start < nums.length; start++) {
+    while (end < nums.length) {
+        // 窗口继续向右扩张
+        if (satisfy) {
+            end++;
+        } else {
+            break;
+        }
+    }
+    // 窗口收缩条件
+    // 更新i的状态，窗口内数据更新
+}
+```
 
 ## 树：
 
