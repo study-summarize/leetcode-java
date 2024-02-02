@@ -16,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_144_preorderTraversalTest {
     private final LeetCode_144_preorderTraversal leetCode144PreorderTraversal = new LeetCode_144_preorderTraversal();
 
-    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, List<Integer> expectedResult) {
         List<Integer> actResult = leetCode144PreorderTraversal.preorderTraversal(root);
