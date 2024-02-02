@@ -32,6 +32,7 @@ class LeetCode_340_lengthOfLongestSubstringKDistinctCharactersTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments("eceba", 2, 3),
+                arguments("aa", 0, 0),
                 arguments("aa", 1, 2)
         );
     }
