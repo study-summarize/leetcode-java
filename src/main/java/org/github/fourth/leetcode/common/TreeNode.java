@@ -25,13 +25,28 @@ public class TreeNode {
     }
 
     /**
-     * 左边序列
+     * 层序遍历
+     * 根据节点i(i>=0)的左节点是2*i + 1, 2*i + 2
      */
-    // todo: 如何构建？？？
     public static TreeNode build(List<Integer> list) {
-        TreeNode result = new TreeNode(list.get(0));
-        return result;
+        if (list == null) {
+            return null;
+        }
+        return new TreeNode().buildTree(list, 0, list.size());
     }
+
+    private TreeNode buildTree(List<Integer> list, int i, int n) {
+        if (i >= n || list.get(i) == null) {
+            return null;
+        }
+        TreeNode root = new TreeNode(list.get(i));
+
+        root.left = buildTree(list, 2 * i + 1, n);
+        root.right = buildTree(list, 2 * i + 2, n);
+
+        return root;
+    }
+
     public static TreeNode build(Integer... list) {
         return build(Arrays.stream(list).toList());
     }
