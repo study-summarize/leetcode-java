@@ -20,6 +20,14 @@ class LeetCode_076_minWindowTest {
         Assertions.assertEquals(expectedResult, actResult);
     }
 
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(String s, String t, String expectedResult) {
+        String actResult = minWindow.minWindowExample(s, t);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments("ADOBECODEBANC", "ABC", "BANC"),

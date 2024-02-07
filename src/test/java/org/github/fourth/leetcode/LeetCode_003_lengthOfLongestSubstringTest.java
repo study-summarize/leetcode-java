@@ -21,14 +21,23 @@ public class LeetCode_003_lengthOfLongestSubstringTest {
     public void test01(String s, int expectedResults) {
         commonTest(expectedResults, x -> x.lengthOfLongestSubstring1(s));
     }
-
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01Refine(String s, int expectedResults) {
+        commonTest(expectedResults, x -> x.lengthOfLongestSubstring1Refine(s));
+    }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(String s, int expectedResults) {
-        commonTest(expectedResults, x -> x.lengthOfLongestSubstring1Refine(s));
+        commonTest(expectedResults, x -> x.lengthOfLongestSubstring2(s));
     }
 
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02Refine(String s, int expectedResults) {
+        commonTest(expectedResults, x -> x.lengthOfLongestSubstring2Refine(s));
+    }
     private void commonTest(int expectedResults, Function<LeetCode_003_lengthOfLongestSubstring, Integer> function) {
         Integer actResult = function.apply(lengthOfLongestSubstring);
         Assertions.assertEquals(expectedResults, actResult);

@@ -42,6 +42,7 @@ class LeetCode_028_strStrTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments("sadbutsad", "sad", 0),
+//                arguments("mississippi", "issipi", 0),
                 arguments("leetcode", "leeto", -1)
         );
     }

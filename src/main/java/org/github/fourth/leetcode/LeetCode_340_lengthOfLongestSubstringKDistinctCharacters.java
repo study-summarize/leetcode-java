@@ -14,7 +14,7 @@ public class LeetCode_340_lengthOfLongestSubstringKDistinctCharacters {
      * 空间复杂度：
      */
     public int lengthOfLongestSubstringKDistinctCharacters(String s, int k) {
-        if (s == null || s.isEmpty() || k < 0) {
+        if (s == null || s.isEmpty() || k == 0) {
             return 0;
         }
         int result = Integer.MIN_VALUE;
