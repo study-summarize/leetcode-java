@@ -2,6 +2,7 @@ package org.github.fourth.leetcode.common;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,6 +23,21 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    public List<Integer> preIntegerList() {
+        List<Integer> result = new ArrayList<>();
+        preIntegerListHelper(result, this);
+        return result;
+    }
+
+    private void preIntegerListHelper(List<Integer> result, TreeNode treeNode) {
+        if (treeNode == null) {
+            return;
+        }
+        result.add(treeNode.val);
+        preIntegerListHelper(result, treeNode.left);
+        preIntegerListHelper(result, treeNode.right);
     }
 
     /**
