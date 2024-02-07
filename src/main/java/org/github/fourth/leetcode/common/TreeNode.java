@@ -1,6 +1,7 @@
 package org.github.fourth.leetcode.common;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,7 +46,7 @@ public class TreeNode {
      * 根据节点i(i>=0)的左节点是2*i + 1, 2*i + 2
      */
     public static TreeNode build(List<Integer> list) {
-        if (list == null) {
+        if (CollectionUtils.isEmpty(list)) {
             return null;
         }
         return new TreeNode().buildTree(list, 0, list.size());
