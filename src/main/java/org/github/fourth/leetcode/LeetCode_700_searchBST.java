@@ -11,7 +11,7 @@ public class LeetCode_700_searchBST {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public TreeNode searchBST(TreeNode root, int val) {
+    public TreeNode searchBST01(TreeNode root, int val) {
         if (root == null) {
             return null;
         }

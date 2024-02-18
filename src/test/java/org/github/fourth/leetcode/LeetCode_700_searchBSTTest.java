@@ -20,7 +20,7 @@ class LeetCode_700_searchBSTTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int val, TreeNode expectedResult) {
-        TreeNode actResult = leetCode700SearchBST.searchBST(root, val);
+        TreeNode actResult = leetCode700SearchBST.searchBST01(root, val);
         if (expectedResult == null) {
             Assertions.assertNull(actResult);
         } else {
