@@ -14,6 +14,11 @@ public class LeetCode_450_deleteNode {
      * 空间复杂度：
      */
     public TreeNode deleteNode(TreeNode root, int key) {
-        return null;
+        if (root == null) {
+            return null;
+        }
+        TreeNode current = root;
+
+        return root;
     }
 }
