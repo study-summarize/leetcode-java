@@ -38,9 +38,7 @@ public class BinarySearchTree {
 
     /**
      * 添加节点
-     *
-     * @param value
-     * @return
+     * note：二叉搜索树的插入，不会涉及到二叉搜索树的重新变化
      */
     public boolean add(int value) {
         if (root == null) {
@@ -50,6 +48,7 @@ public class BinarySearchTree {
         TreeNode node = root;
         while (node != null) {
             if (node.getVal() == value) {
+                // 节点已经存在，无法插入
                 return false;
             } else if (node.getVal() > value) {
                 if (node.getLeft() == null) {

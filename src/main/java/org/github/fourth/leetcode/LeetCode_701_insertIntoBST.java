@@ -12,6 +12,27 @@ public class LeetCode_701_insertIntoBST {
      * 空间复杂度：
      */
     public TreeNode insertIntoBST(TreeNode root, int val) {
-        return null;
+        if (root == null) {
+            return null;
+        }
+        TreeNode currentNode = root;
+        while (currentNode != null) {
+            if (currentNode.val == val) {
+                return root;
+            } else if (currentNode.val > val) {
+                if (currentNode.left == null) {
+                    currentNode.left = new TreeNode(val);
+                    return root;
+                }
+                currentNode = currentNode.left;
+            } else {
+                if (currentNode.right == null) {
+                    currentNode.right = new TreeNode(val);
+                    return root;
+                }
+                currentNode = currentNode.right;
+            }
+        }
+        return root;
     }
 }

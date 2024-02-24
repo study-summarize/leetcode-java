@@ -1,7 +1,9 @@
 package org.github.fourth.leetcode;
 
 import org.github.fourth.leetcode.common.TreeNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,11 +18,11 @@ class LeetCode_701_insertIntoBSTTest {
     private final LeetCode_701_insertIntoBST leetCode701InsertIntoBST = new LeetCode_701_insertIntoBST();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int val, TreeNode expectedResult) {
         TreeNode actResult = leetCode701InsertIntoBST.insertIntoBST(root, val);
-
+        Assertions.assertArrayEquals(expectedResult.preIntegerList().toArray(), actResult.preIntegerList().toArray());
     }
 
     public static Stream<Arguments> generateRightCase() {
