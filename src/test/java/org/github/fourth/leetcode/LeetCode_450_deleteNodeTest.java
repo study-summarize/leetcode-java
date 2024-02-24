@@ -1,7 +1,9 @@
 package org.github.fourth.leetcode;
 
 import org.github.fourth.leetcode.common.TreeNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,11 +17,15 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_450_deleteNodeTest {
     private final LeetCode_450_deleteNode leetCode450DeleteNode = new LeetCode_450_deleteNode();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int key, TreeNode expectedResult) {
         TreeNode actResult = leetCode450DeleteNode.deleteNode(root, key);
-
+        if (actResult == null) {
+            Assertions.assertNull(expectedResult);
+        } else {
+            Assertions.assertArrayEquals(expectedResult.preIntegerList().toArray(), actResult.preIntegerList().toArray());
+        }
     }
 
     public static Stream<Arguments> generateRightCase() {
