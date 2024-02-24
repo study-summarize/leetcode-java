@@ -19,10 +19,7 @@ class LeetCode_040_combinationSum2Test {
     @MethodSource("generateRightCase")
     public void test01(int[] candidates, int target, List<List<Integer>> expectedResult) {
         List<List<Integer>> actResult = leetCode040CombinationSum2.combinationSum2(candidates, target);
-        Assertions.assertEquals(expectedResult.size(), actResult.size());
-        for (int i = 0; i < expectedResult.size(); i++) {
-            Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult.get(i), actResult.get(i)));
-        }
+        VerifyUtils.assertListInListEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

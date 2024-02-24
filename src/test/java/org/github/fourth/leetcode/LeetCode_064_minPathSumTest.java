@@ -17,7 +17,6 @@ class LeetCode_064_minPathSumTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[][] grid, int expectedResult) {
-
         int actResult = minPathSum.minPathSum(grid);
         Assertions.assertEquals(expectedResult, actResult);
     }

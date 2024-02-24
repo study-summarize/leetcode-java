@@ -22,10 +22,7 @@ public class Code_0806_hanotaTest {
     @MethodSource("generateRightCase")
     public void test(List<Integer> A, List<Integer> B, List<Integer> C, List<Integer> expectedResult) {
         code0806Hanota.hanota(A, B, C);
-        Assertions.assertEquals(expectedResult.size(), C.size());
-        for (int i = 0; i < expectedResult.size(); i++) {
-            Assertions.assertEquals(expectedResult.get(i), C.get(i));
-        }
+        Assertions.assertArrayEquals(expectedResult.toArray(), C.toArray());
     }
 
     public static Stream<Arguments> generateRightCase() {

@@ -19,7 +19,7 @@ public class LeetCode_089_GrayCodeTest {
     @MethodSource("generateRightCase")
     public void test01(int n, List<Integer> expectedResult) {
         List<Integer> actResult = leetCode089GrayCode.grayCode(n);
-        Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult, actResult));
+        Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }
 
     public static Stream<Arguments> generateRightCase() {

@@ -6,6 +6,7 @@ import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.Collection;
+import java.util.List;
 
 public class VerifyUtils {
 
@@ -28,4 +29,16 @@ public class VerifyUtils {
         return CollectionUtils.isEqualCollection(a, b);
     }
 
+    public static void assertListInListEquals(List<List<Integer>> expectedResult, List<List<Integer>> actResult) {
+        if (expectedResult == null && actResult == null) {
+            return;
+        }
+        if (expectedResult == null || actResult == null) {
+            Assertions.fail();
+        }
+        Assertions.assertEquals(expectedResult.size(), actResult.size());
+        for (int i = 0; i < expectedResult.size(); i++) {
+            Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult.get(i), actResult.get(i)));
+        }
+    }
 }

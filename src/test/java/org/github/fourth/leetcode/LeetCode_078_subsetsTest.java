@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -17,6 +18,7 @@ class LeetCode_078_subsetsTest {
     @MethodSource("generateRightCase")
     public void test01(int[] nums, List<List<Integer>> expectedResult) {
         List<List<Integer>> actResult = leetCode078Subsets.subsets(nums);
+        VerifyUtils.assertListInListEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
