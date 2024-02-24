@@ -15,7 +15,7 @@ public class LeetCode_701_insertIntoBST {
     @SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")// note: 这里的检查很奇怪；下方明明有变化的
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
-            return null;
+            return new TreeNode(val);
         }
         TreeNode currentNode = root;
         while (currentNode != null) {

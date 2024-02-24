@@ -28,6 +28,7 @@ class LeetCode_701_insertIntoBSTTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(TreeNode.build(List.of()), 5, TreeNode.build(List.of(5))),
                 arguments(TreeNode.build(List.of(4, 2, 7, 1, 3)), 5, TreeNode.build(Arrays.asList(4, 2, 7, 1, 3, 5))),
                 arguments(TreeNode.build(List.of(40, 20, 60, 10, 30, 50, 70)), 25, TreeNode.build(Arrays.asList(40, 20, 60, 10, 30, 50, 70, null, null, 25))),
                 arguments(TreeNode.build(Arrays.asList(4, 2, 7, 1, 3, null, null, null, null, null, null)), 5, TreeNode.build(Arrays.asList(4, 2, 7, 1, 3, 5)))
