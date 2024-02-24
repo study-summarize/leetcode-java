@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.github.fourth.leetcode.common.TreeNode;
 
 /**
@@ -11,6 +12,7 @@ public class LeetCode_701_insertIntoBST {
      * 时间复杂度：
      * 空间复杂度：
      */
+    @SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE")// note: 这里的检查很奇怪；下方明明有变化的
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
             return null;

@@ -12,7 +12,11 @@ public class LeetCode_110_isBalanced {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalanced01(TreeNode root) {
+        return false;
+    }
+
+    public boolean isBalanced02(TreeNode root) {
         return false;
     }
 }

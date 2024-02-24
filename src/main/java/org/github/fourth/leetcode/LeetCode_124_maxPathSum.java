@@ -12,7 +12,11 @@ public class LeetCode_124_maxPathSum {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxPathSum(TreeNode root) {
+    public int maxPathSum01(TreeNode root) {
+        return 0;
+    }
+
+    public int maxPathSum02(TreeNode root) {
         return 0;
     }
 }

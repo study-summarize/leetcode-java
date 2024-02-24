@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -22,7 +23,7 @@ class LeetCode_106_buildTreeTest {
     @MethodSource("generateRightCase")
     public void testExample(int[] inorder, int[] postorder, TreeNode expectedResult) {
         TreeNode actResult = leetCode106BuildTree.buildTreeExample(inorder, postorder);
-        Assertions.assertArrayEquals(expectedResult.preIntegerList().toArray(), actResult.preIntegerList().toArray());
+        VerifyUtils.assertTreeEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

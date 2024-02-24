@@ -11,7 +11,11 @@ public class LeetCode_100_isSameTree {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree01(TreeNode p, TreeNode q) {
+        return false;
+    }
+
+    public boolean isSameTree02(TreeNode p, TreeNode q) {
         return false;
     }
 }

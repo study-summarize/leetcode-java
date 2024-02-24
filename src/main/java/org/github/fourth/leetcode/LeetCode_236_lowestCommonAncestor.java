@@ -11,7 +11,11 @@ public class LeetCode_236_lowestCommonAncestor {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode lowestCommonAncestor01(TreeNode root, TreeNode p, TreeNode q) {
+        return null;
+    }
+
+    public TreeNode lowestCommonAncestor02(TreeNode root, TreeNode p, TreeNode q) {
         return null;
     }
 }

@@ -12,11 +12,26 @@ import java.util.Queue;
  * 说明：叶子节点是指没有子节点的节点。
  */
 public class LeetCode_111_minDepth {
+
     /**
+     * 分治法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int minDepth(TreeNode root) {
+    public int minDepth01(TreeNode root) {
+        return 0;
+    }
+    /**
+     * 遍历法
+     * 时间复杂度：
+     * 空间复杂度：
+     */
+    public int minDepth02(TreeNode root) {
+        return 0;
+    }
+
+
+    public int minDepthExample(TreeNode root) {
         if (root == null) {
             return 0;
         }

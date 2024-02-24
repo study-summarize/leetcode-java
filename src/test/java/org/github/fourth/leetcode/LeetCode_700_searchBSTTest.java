@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -21,11 +22,7 @@ class LeetCode_700_searchBSTTest {
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int val, TreeNode expectedResult) {
         TreeNode actResult = leetCode700SearchBST.searchBST01(root, val);
-        if (expectedResult == null) {
-            Assertions.assertNull(actResult);
-        } else {
-            Assertions.assertArrayEquals(expectedResult.preIntegerList().toArray(), actResult.preIntegerList().toArray());
-        }
+        VerifyUtils.assertTreeEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

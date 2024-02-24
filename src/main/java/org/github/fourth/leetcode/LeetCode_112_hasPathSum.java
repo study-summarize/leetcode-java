@@ -11,7 +11,11 @@ public class LeetCode_112_hasPathSum {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean hasPathSum(TreeNode root, int targetSum) {
+    public boolean hasPathSum01(TreeNode root, int targetSum) {
+        return false;
+    }
+
+    public boolean hasPathSum02(TreeNode root, int targetSum) {
         return false;
     }
 }

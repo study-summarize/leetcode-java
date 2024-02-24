@@ -1,6 +1,7 @@
 package org.github.fourth.leetcode;
 
 import org.github.fourth.leetcode.common.TreeNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,7 +19,15 @@ class LeetCode_124_maxPathSumTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int expectedResult) {
-        int actResult = leetCode124MaxPathSum.maxPathSum(root);
+        int actResult = leetCode124MaxPathSum.maxPathSum01(root);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(TreeNode root, int expectedResult) {
+        int actResult = leetCode124MaxPathSum.maxPathSum02(root);
+        Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

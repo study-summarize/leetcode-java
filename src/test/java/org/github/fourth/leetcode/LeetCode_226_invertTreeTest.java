@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
@@ -18,7 +19,14 @@ class LeetCode_226_invertTreeTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, TreeNode expectedResult) {
-        TreeNode actResult = leetCode226InvertTree.invertTree(root);
+        TreeNode actResult = leetCode226InvertTree.invertTree01(root);
+        VerifyUtils.assertTreeEquals(expectedResult, actResult);
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(TreeNode root, TreeNode expectedResult) {
+        TreeNode actResult = leetCode226InvertTree.invertTree02(root);
+        VerifyUtils.assertTreeEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

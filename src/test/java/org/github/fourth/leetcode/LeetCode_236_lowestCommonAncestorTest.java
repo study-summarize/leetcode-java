@@ -18,7 +18,13 @@ class LeetCode_236_lowestCommonAncestorTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, TreeNode p, TreeNode q, int expectedResult) {
-        TreeNode actResult = leetCode236LowestCommonAncestor.lowestCommonAncestor(root, p, q);
+        TreeNode actResult = leetCode236LowestCommonAncestor.lowestCommonAncestor01(root, p, q);
+    }
+
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(TreeNode root, TreeNode p, TreeNode q, int expectedResult) {
+        TreeNode actResult = leetCode236LowestCommonAncestor.lowestCommonAncestor02(root, p, q);
     }
 
     public static Stream<Arguments> generateRightCase() {

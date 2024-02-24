@@ -18,8 +18,19 @@ class LeetCode_111_minDepthTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int expectedResult) {
-
-        int actResult = minDepth.minDepth(root);
+        int actResult = minDepth.minDepth01(root);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(TreeNode root, int expectedResult) {
+        int actResult = minDepth.minDepth02(root);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test(TreeNode root, int expectedResult) {
+        int actResult = minDepth.minDepthExample(root);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

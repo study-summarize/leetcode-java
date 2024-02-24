@@ -8,10 +8,24 @@ import org.github.fourth.leetcode.common.TreeNode;
  */
 public class LeetCode_104_maxDepth {
     /**
+     * 分治法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxDepth(TreeNode root) {
+    public int maxDepth01(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+
+
+        return 0;
+    }
+
+    /**
+     * 遍历法
+     */
+    public int maxDepth02(TreeNode root) {
         return 0;
     }
 }

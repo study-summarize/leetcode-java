@@ -10,7 +10,11 @@ public class LeetCode_101_isSymmetric {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean isSymmetric(TreeNode root) {
+    public boolean isSymmetric01(TreeNode root) {
+        return false;
+    }
+
+    public boolean isSymmetric02(TreeNode root) {
         return false;
     }
 }
