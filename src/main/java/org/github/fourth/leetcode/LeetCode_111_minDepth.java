@@ -53,7 +53,7 @@ public class LeetCode_111_minDepth {
             return;
         }
         // 在叶子节点时，更新最低深度
-        if(root.left == null && root.right == null && currentDepth < result) {
+        if (root.left == null && root.right == null && currentDepth < result) {
             result = currentDepth;
         }
 
