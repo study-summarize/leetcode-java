@@ -15,19 +15,50 @@ public class LeetCode_111_minDepth {
 
     /**
      * 分治法
-     * 时间复杂度：
-     * 空间复杂度：
      */
     public int minDepth01(TreeNode root) {
-        return 0;
+        if (root == null) {
+            return 0;
+        }
+        // Divide
+        int leftMinHigh = minDepth01(root.left);
+        int rightMinHigh = minDepth01(root.right);
+
+        // Combine
+        if (leftMinHigh == 0) {
+            return rightMinHigh + 1;
+        } else if (rightMinHigh == 0) {
+            return leftMinHigh + 1;
+        } else {
+            return Math.min(leftMinHigh, rightMinHigh) + 1;
+        }
     }
+
     /**
      * 遍历法
-     * 时间复杂度：
-     * 空间复杂度：
      */
     public int minDepth02(TreeNode root) {
-        return 0;
+        if (root == null) {
+            return 0;
+        }
+
+        helper(root, 1);
+        return result;
+    }
+
+    private int result = Integer.MAX_VALUE;
+
+    private void helper(TreeNode root, int currentDepth) {
+        if (root == null) {
+            return;
+        }
+        // 在叶子节点时，更新最低深度
+        if(root.left == null && root.right == null && currentDepth < result) {
+            result = currentDepth;
+        }
+
+        helper(root.left, currentDepth + 1);
+        helper(root.right, currentDepth + 1);
     }
 
 
