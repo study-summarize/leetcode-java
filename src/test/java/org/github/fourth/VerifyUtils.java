@@ -14,7 +14,7 @@ public class VerifyUtils {
         if (expectNode == null) {
             Assertions.assertNull(actualNode);
         } else {
-            Assertions.assertArrayEquals(actualNode.preIntegerList().toArray(), expectNode.preIntegerList().toArray());
+            Assertions.assertArrayEquals(expectNode.preIntegerList().toArray(), actualNode.preIntegerList().toArray());
         }
     }
 

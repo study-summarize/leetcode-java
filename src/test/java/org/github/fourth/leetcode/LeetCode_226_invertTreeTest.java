@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.VerifyUtils;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,13 +17,14 @@ class LeetCode_226_invertTreeTest {
     private final LeetCode_226_invertTree leetCode226InvertTree = new LeetCode_226_invertTree();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, TreeNode expectedResult) {
         TreeNode actResult = leetCode226InvertTree.invertTree01(root);
         VerifyUtils.assertTreeEquals(expectedResult, actResult);
     }
-    //    @ParameterizedTest
+
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(TreeNode root, TreeNode expectedResult) {
         TreeNode actResult = leetCode226InvertTree.invertTree02(root);
