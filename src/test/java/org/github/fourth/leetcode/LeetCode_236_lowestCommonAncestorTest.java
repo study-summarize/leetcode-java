@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -30,14 +31,14 @@ class LeetCode_236_lowestCommonAncestorTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(
-                        TreeNode.build(List.of(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4)),
-                        TreeNode.build(List.of(5, 6, 2, null, null, 7, 4)),
+                        TreeNode.build(Arrays.asList(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4)),
+                        TreeNode.build(Arrays.asList(5, 6, 2, null, null, 7, 4)),
                         TreeNode.build(List.of(1, 0, 8)),
                         3
                 ),
                 arguments(
-                        TreeNode.build(List.of(3,5,1,6,2,0,8,null,null,7,4)),
-                        TreeNode.build(List.of(5, 6, 2, null, null, 7, 4)),
+                        TreeNode.build(Arrays.asList(3,5,1,6,2,0,8,null,null,7,4)),
+                        TreeNode.build(Arrays.asList(5, 6, 2, null, null, 7, 4)),
                         TreeNode.build(List.of(4)),
                         5
                 ),
