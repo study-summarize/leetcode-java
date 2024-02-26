@@ -17,7 +17,7 @@ public class LeetCode_112_hasPathSum {
             return false;
         }
         // 叶子节点直接在这里结束。因为传入null，一定就是false，那整颗树就一定是false
-        if(root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) {
             return targetSum == root.val;
         }
 

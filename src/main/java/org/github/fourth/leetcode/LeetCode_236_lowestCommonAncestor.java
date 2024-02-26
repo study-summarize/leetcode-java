@@ -17,7 +17,7 @@ public class LeetCode_236_lowestCommonAncestor {
             return null;
         }
         // 防止一开始就找到p或者q
-        if(root == p || root == q) {
+        if (root == p || root == q) {
             return root;
         }
 

@@ -43,7 +43,7 @@ public class LeetCode_110_isBalanced {
 
         int leftMaxHeight = getMaxHeight(root.left);
         int rightMaxHeight = getMaxHeight(root.right);
-        if(Math.abs(leftMaxHeight - rightMaxHeight) >1 ) {
+        if (Math.abs(leftMaxHeight - rightMaxHeight) > 1) {
             return false;
         }
 
@@ -66,14 +66,14 @@ public class LeetCode_110_isBalanced {
     }
 
     public int getHeight(TreeNode root) {
-        if(root == null) {
+        if (root == null) {
             return 0;
         }
 
         int leftHeight = getHeight(root.left);
         int rightHeight = getHeight(root.right);
         // 一直让其递归到叶子节点，然后从叶子节点判断其是否为高度平衡二叉树
-        if(leftHeight == -1 || rightHeight == -1 || Math.abs(leftHeight - rightHeight) > 1) {
+        if (leftHeight == -1 || rightHeight == -1 || Math.abs(leftHeight - rightHeight) > 1) {
             return -1;
         }
         return Math.max(leftHeight, rightHeight) + 1;
