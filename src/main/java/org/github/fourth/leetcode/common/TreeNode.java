@@ -26,6 +26,21 @@ public class TreeNode {
         this.right = right;
     }
 
+    // 需要掌握的一些方法
+
+    /**
+     * 获取二叉树的最大高度
+     */
+    public int computeMaxHeight() {
+        return computeMaxHeight(this);
+    }
+    private static int computeMaxHeight(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return Math.max(computeMaxHeight(root.left), computeMaxHeight(root.right)) + 1;
+    }
+
     public List<Integer> preIntegerList() {
         List<Integer> result = new ArrayList<>();
         preIntegerListHelper(result, this);
