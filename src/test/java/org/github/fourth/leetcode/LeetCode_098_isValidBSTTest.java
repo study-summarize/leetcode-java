@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,7 +18,7 @@ class LeetCode_098_isValidBSTTest {
     private final LeetCode_098_isValidBST leetCode098IsValidBST = new LeetCode_098_isValidBST();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, boolean expectedResult) {
         boolean actResult = leetCode098IsValidBST.isValidBST01(root);

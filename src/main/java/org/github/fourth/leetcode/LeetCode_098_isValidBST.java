@@ -11,11 +11,27 @@ import org.github.fourth.leetcode.common.TreeNode;
  */
 public class LeetCode_098_isValidBST {
     /**
+     * 分治法
      * 时间复杂度：
      * 空间复杂度：
      */
     public boolean isValidBST01(TreeNode root) {
-        return false;
+        if (root == null) {
+            return true;
+        }
+
+        // Divide
+        boolean leftIsValidBST = isValidBST01(root.left);
+        boolean rightIsValidBST = isValidBST01(root.right);
+
+        // Combine
+        if (root.left != null && root.left.val >= root.val) {
+            return false;
+        }
+        if (root.right != null && root.right.val <= root.val) {
+            return false;
+        }
+        return leftIsValidBST && rightIsValidBST;
     }
 
     public boolean isValidBST02(TreeNode root) {
