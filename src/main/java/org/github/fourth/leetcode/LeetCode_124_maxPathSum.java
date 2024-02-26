@@ -13,7 +13,16 @@ public class LeetCode_124_maxPathSum {
      * 空间复杂度：
      */
     public int maxPathSum01(TreeNode root) {
-        return 0;
+        if (root == null) {
+            return 0;
+        }
+
+        // Divide
+        int leftMaxPath = maxPathSum01(root.left);
+        int rightMaxPath = maxPathSum01(root.right);
+
+        // Combine
+        return leftMaxPath + rightMaxPath + root.val;
     }
 
     public int maxPathSum02(TreeNode root) {
