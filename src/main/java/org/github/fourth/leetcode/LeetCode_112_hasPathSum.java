@@ -8,11 +8,24 @@ import org.github.fourth.leetcode.common.TreeNode;
  */
 public class LeetCode_112_hasPathSum {
     /**
+     * 分治法
      * 时间复杂度：
      * 空间复杂度：
      */
     public boolean hasPathSum01(TreeNode root, int targetSum) {
-        return false;
+        if (root == null) {
+            return false;
+        }
+        // 叶子节点直接在这里结束。因为传入null，一定就是false，那整颗树就一定是false
+        if(root.left == null && root.right == null) {
+            return targetSum == root.val;
+        }
+
+        int newTargetSum = targetSum - root.val;
+        boolean leftHasPathSum = hasPathSum01(root.left, newTargetSum);
+        boolean rightHasPathSum = hasPathSum01(root.right, newTargetSum);
+
+        return leftHasPathSum || rightHasPathSum;
     }
 
     public boolean hasPathSum02(TreeNode root, int targetSum) {

@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,7 +18,7 @@ class LeetCode_112_hasPathSumTest {
     private final LeetCode_112_hasPathSum leetCode112HasPathSum = new LeetCode_112_hasPathSum();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int targetSum, boolean expectedResult) {
         boolean actResult = leetCode112HasPathSum.hasPathSum01(root, targetSum);
