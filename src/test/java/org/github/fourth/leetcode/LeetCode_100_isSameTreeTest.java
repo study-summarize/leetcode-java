@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -17,7 +18,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_100_isSameTreeTest {
     private final LeetCode_100_isSameTree leetCode100IsSameTree = new LeetCode_100_isSameTree();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode p, TreeNode q, boolean expectedResult) {
         boolean actResult = leetCode100IsSameTree.isSameTree01(p, q);

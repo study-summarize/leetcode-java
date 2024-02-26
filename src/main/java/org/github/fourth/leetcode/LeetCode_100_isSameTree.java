@@ -8,11 +8,24 @@ import org.github.fourth.leetcode.common.TreeNode;
  */
 public class LeetCode_100_isSameTree {
     /**
+     * 分治法
      * 时间复杂度：
      * 空间复杂度：
      */
     public boolean isSameTree01(TreeNode p, TreeNode q) {
-        return false;
+        if (p == null && q == null) {
+            return true;
+        }
+        if (p == null || q == null) {
+            return false;
+        }
+
+        // Divide
+        boolean leftSameTree = isSameTree01(p.left, q.left);
+        boolean rightSameTree = isSameTree01(p.right, q.right);
+
+        // Combine
+        return leftSameTree && rightSameTree && p.val == q.val;
     }
 
     public boolean isSameTree02(TreeNode p, TreeNode q) {
