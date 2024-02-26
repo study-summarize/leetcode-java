@@ -1,7 +1,9 @@
 package org.github.fourth.leetcode;
 
 import org.github.fourth.leetcode.common.TreeNode;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,10 +18,11 @@ class LeetCode_236_lowestCommonAncestorTest {
     private final LeetCode_236_lowestCommonAncestor leetCode236LowestCommonAncestor = new LeetCode_236_lowestCommonAncestor();
 
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, TreeNode p, TreeNode q, int expectedResult) {
         TreeNode actResult = leetCode236LowestCommonAncestor.lowestCommonAncestor01(root, p, q);
+        Assertions.assertEquals(expectedResult, actResult.val);
     }
 
     //    @ParameterizedTest
@@ -37,13 +40,13 @@ class LeetCode_236_lowestCommonAncestorTest {
                         3
                 ),
                 arguments(
-                        TreeNode.build(Arrays.asList(3,5,1,6,2,0,8,null,null,7,4)),
+                        TreeNode.build(Arrays.asList(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4)),
                         TreeNode.build(Arrays.asList(5, 6, 2, null, null, 7, 4)),
                         TreeNode.build(List.of(4)),
                         5
                 ),
                 arguments(
-                        TreeNode.build(List.of(1,2)),
+                        TreeNode.build(List.of(1, 2)),
                         TreeNode.build(List.of(1)),
                         TreeNode.build(List.of(2)),
                         1

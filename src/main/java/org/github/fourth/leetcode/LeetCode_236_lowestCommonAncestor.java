@@ -8,11 +8,33 @@ import org.github.fourth.leetcode.common.TreeNode;
  */
 public class LeetCode_236_lowestCommonAncestor {
     /**
+     * 分治法
      * 时间复杂度：
      * 空间复杂度：
      */
     public TreeNode lowestCommonAncestor01(TreeNode root, TreeNode p, TreeNode q) {
-        return null;
+        if (root == null) {
+            return null;
+        }
+        // 防止一开始就找到p或者q
+        if(root == p || root == q) {
+            return root;
+        }
+
+        // Divide
+        TreeNode leftExist = lowestCommonAncestor01(root.left, p, q);
+        TreeNode rightExits = lowestCommonAncestor01(root.right, p, q);
+
+        // Combine
+        if (leftExist != null && rightExits != null) {
+            // 这种只可能是p、q、root是同一个节点
+            return root;
+        } else if (leftExist == null || rightExits == null) {
+            return leftExist == null ? rightExits : leftExist;
+        } else {
+            // 为什么这里返回root节点？
+            return root;
+        }
     }
 
     public TreeNode lowestCommonAncestor02(TreeNode root, TreeNode p, TreeNode q) {
