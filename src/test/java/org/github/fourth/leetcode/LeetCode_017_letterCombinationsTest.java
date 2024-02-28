@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.VerifyUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,10 +16,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_017_letterCombinationsTest {
     private final LeetCode_017_letterCombinations leetCode017LetterCombinations = new LeetCode_017_letterCombinations();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(String digits, List<String> expectedResult) {
-        List<String> actResult = leetCode017LetterCombinations.letterCombinations(digits);
+        List<String> actResult = leetCode017LetterCombinations.letterCombinations01(digits);
+        Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult, actResult));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(String digits, List<String> expectedResult) {
+        List<String> actResult = leetCode017LetterCombinations.letterCombinationsExample(digits);
         Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult, actResult));
     }
 
