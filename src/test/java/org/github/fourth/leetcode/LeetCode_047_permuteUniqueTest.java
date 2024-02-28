@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.github.fourth.VerifyUtils;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +16,7 @@ class LeetCode_047_permuteUniqueTest {
     private final LeetCode_047_permuteUnique leetCode047PermuteUnique = new LeetCode_047_permuteUnique();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, List<List<Integer>> expectedResult) {
         List<List<Integer>> actResult = leetCode047PermuteUnique.permuteUnique(nums);
