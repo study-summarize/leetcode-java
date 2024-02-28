@@ -1,7 +1,6 @@
 package org.github.fourth.leetcode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -48,7 +47,7 @@ public class LeetCode_047_permuteUnique {
             }
             // note: 很难想到
             // 横向比较时，如果当前元素和左边一个元素相等时，算出来的子集都是重复的
-            if (i != 0 && nums[i] == nums[i-1] && visited[i - 1]) {
+            if (i != 0 && nums[i] == nums[i - 1] && visited[i - 1]) {
                 continue;
             }
             // 3.1 扩展单一解集
