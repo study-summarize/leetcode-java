@@ -1,12 +1,15 @@
 package org.github.fourth;
 
 
+import com.google.common.collect.Sets;
 import org.apache.commons.collections4.CollectionUtils;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class VerifyUtils {
 
@@ -37,8 +40,7 @@ public class VerifyUtils {
             Assertions.fail();
         }
         Assertions.assertEquals(expectedResult.size(), actResult.size());
-        for (int i = 0; i < expectedResult.size(); i++) {
-            Assertions.assertTrue(VerifyUtils.assertListEquals(expectedResult.get(i), actResult.get(i)));
-        }
+        Set<List<Integer>> collect = new HashSet<>(Sets.union(new HashSet<>(expectedResult), new HashSet<>(actResult)));
+        Assertions.assertEquals(expectedResult.size(), collect.size());
     }
 }
