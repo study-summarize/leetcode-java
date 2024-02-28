@@ -1,6 +1,7 @@
 package org.github.fourth.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class LeetCode_047_permuteUnique {
         if (nums == null) {
             return result;
         }
-
+        Arrays.sort(nums);
         // 想象着，一直DFS的时候，元素是为true的
         boolean[] visited = new boolean[nums.length];
 
