@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.github.fourth.VerifyUtils;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,10 +16,10 @@ class LeetCode_090_subsetsWithDupTest {
     private final LeetCode_090_subsetsWithDup leetCode090SubsetsWithDup = new LeetCode_090_subsetsWithDup();
 
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, List<List<Integer>> expectedResult) {
-        List<List<Integer>> actResult = leetCode090SubsetsWithDup.subsetsWithDup(nums);
+        List<List<Integer>> actResult = leetCode090SubsetsWithDup.subsetsWithDup01(nums);
         VerifyUtils.assertListInListEquals(expectedResult, actResult);
     }
 
