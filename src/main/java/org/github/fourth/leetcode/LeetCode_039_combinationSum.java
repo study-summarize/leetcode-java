@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -9,10 +11,46 @@ import java.util.List;
  */
 public class LeetCode_039_combinationSum {
     /**
+     * 回溯法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        return null;
+    public List<List<Integer>> combinationSum01(int[] candidates, int target) {
+        // 解集
+        List<List<Integer>> result = new ArrayList<>();
+        if (candidates == null) {
+            return result;
+        }
+
+        Arrays.sort(candidates);
+        // 单一解集
+        List<Integer> list = new ArrayList<>();
+        // 递归函数解集问题
+        // note: 为什么需要pos?
+        // 需要过滤一些重复的元素，例如前面算过了，后面没必要再把这个元素再算一遍
+        helper(result, list, candidates, target, 0);
+        return result;
+    }
+
+    private void helper(List<List<Integer>> result, List<Integer> list, int[] candidates, int target, int pos) {
+        // 1. 递归什么时候退出？target 小于 0时
+        if (target < 0) {
+            return;
+        }
+        // 2. 单一解集什么时候加入解集
+        if (target == 0) {
+            result.add(new ArrayList<>(list));
+            return;
+        }
+
+        // 3. 递归拆分问题
+        for (int i = pos; i < candidates.length; i++) {
+            // 3.1 扩展单一子集
+            list.add(candidates[i]);
+            // 3.2 递归求解问题
+            helper(result, list, candidates, target - candidates[i], i);
+            // 3.3 回溯
+            list.remove(list.size() - 1);
+        }
     }
 }
