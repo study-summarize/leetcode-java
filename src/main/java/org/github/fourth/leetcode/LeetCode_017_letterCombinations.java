@@ -27,7 +27,7 @@ public class LeetCode_017_letterCombinations {
         map.put(6, Arrays.asList("m", "n", "o"));
         map.put(7, Arrays.asList("p", "q", "r", "s"));
         map.put(8, Arrays.asList("t", "u", "v"));
-        map.put(9, Arrays.asList("w", "y", "x", "y", "z"));
+        map.put(9, Arrays.asList("w", "x", "y", "z"));
 
 
         // 单一解集
