@@ -30,7 +30,7 @@ public class LeetCode_093_restoreIpAddresses {
 
     private void helper(List<String> result, List<String> list, String s, int pos) {
         // 1. 递归什么时候结束？list的size大于4
-        if(list.size() == 4 && pos != s.length()) {
+        if (list.size() == 4 && pos != s.length()) {
             return;
         }
         // 2. 单一解集什么时候加入解集？list的size等于4，且 pos 为 nums的长度
@@ -45,7 +45,7 @@ public class LeetCode_093_restoreIpAddresses {
             String itemStr = s.substring(pos, i + 1);
             int item = Integer.parseInt(itemStr);
             // 3.0 减枝
-            if (item < 0 || item > 255 || (itemStr.charAt(0) == '0' && !itemStr.equals("0"))) {
+            if (item < 0 || item > 255 || (itemStr.charAt(0) == '0' && !"0".equals(itemStr))) {
                 break;
             }
 

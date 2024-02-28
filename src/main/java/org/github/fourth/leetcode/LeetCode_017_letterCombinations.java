@@ -60,7 +60,7 @@ public class LeetCode_017_letterCombinations {
         }
     }
 
-    public static final Map<Character, char[]> digitsToCharsMap = new HashMap<Character, char[]>(){{
+    private static final Map<Character, char[]> DIGITS_TO_CHARS_MAP = new HashMap<Character, char[]>() {{
         put('2', new char[]{'a', 'b', 'c'});
         put('3', new char[]{'d', 'e', 'f'});
         put('4', new char[]{'g', 'h', 'i'});
@@ -73,7 +73,7 @@ public class LeetCode_017_letterCombinations {
 
     public List<String> letterCombinationsExample(String digits) {
         List<String> result = new ArrayList<>();
-        if(digits == null || digits.isEmpty()) {
+        if (digits == null || digits.isEmpty()) {
             return result;
         }
 
@@ -85,13 +85,13 @@ public class LeetCode_017_letterCombinations {
     private void helperExample(List<String> result, StringBuffer sb, String digits) {
         // 1. 递归什么时候结束
         // 2. 单一解集什么时候加入解集中
-        if(sb.length() == digits.length()) {
+        if (sb.length() == digits.length()) {
             result.add(sb.toString());
             return;
         }
 
         // 3. 拆分问题，递归求解
-        for(char item : digitsToCharsMap.get(digits.charAt(sb.length()))) {
+        for (char item : DIGITS_TO_CHARS_MAP.get(digits.charAt(sb.length()))) {
             // 4. 有无剪枝
             // 5. 完善单一解集，递归解决
             sb.append(item);

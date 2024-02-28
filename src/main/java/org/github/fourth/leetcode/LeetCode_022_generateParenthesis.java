@@ -20,7 +20,6 @@ public class LeetCode_022_generateParenthesis {
         }
 
         StringBuffer sb = new StringBuffer();
-        char[] list = new char[2 * n];
         helper(result, sb, n, n);
         return result;
     }
@@ -28,20 +27,20 @@ public class LeetCode_022_generateParenthesis {
     public void helper(List<String> result, StringBuffer sb, int leftRemain, int rightRemain) {
         // 1. 递归什么时候退出
         // 2. 单一解集什么时候加入解集中
-        if(leftRemain == 0 && rightRemain == 0) {
+        if (leftRemain == 0 && rightRemain == 0) {
             result.add(sb.toString());
             return;
         }
 
         // 3. 递归解决问题
         // 3a. 左括号有空余时，可以加左括号
-        if(leftRemain > 0) {
+        if (leftRemain > 0) {
             sb.append("(");
             helper(result, sb, leftRemain - 1, rightRemain);
             sb.deleteCharAt(sb.length() - 1);
         }
         // 3b. 右括号个数大于剩余的左括号个数
-        if(rightRemain > leftRemain) {
+        if (rightRemain > leftRemain) {
             sb.append(")");
             helper(result, sb, leftRemain, rightRemain - 1);
             sb.deleteCharAt(sb.length() - 1);
