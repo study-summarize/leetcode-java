@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -12,10 +14,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_132_minCutTest {
     private final LeetCode_132_minCut leetCode132MinCut = new LeetCode_132_minCut();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String s, int expectedResult) {
-        int actResult = leetCode132MinCut.minCut(s);
+    public void test01(String s, int expectedResult) {
+        int actResult = leetCode132MinCut.minCut01(s);
+        Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {
