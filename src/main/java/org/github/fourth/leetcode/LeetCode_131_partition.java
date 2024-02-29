@@ -10,14 +10,77 @@ import java.util.Map;
  * 回文串 是正着读和反着读都一样的字符串。
  */
 public class LeetCode_131_partition {
-
-    private boolean[][] isPalindrome;
     /**
+     * 回溯法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public List<List<String>> partition(String s) {
-        if (s == null || s.length() == 0) {
+    public List<List<String>> partition01(String s) {
+        // 解集
+        List<List<String>> result = new ArrayList<>();
+        if (s == null || s.isEmpty()) {
+            return result;
+        }
+
+        // 单一解集
+        List<String> list = new ArrayList<>();
+        // 递归遍历解空间树
+        helper(result, list, s, 0);
+        return result;
+    }
+
+    private void helper(List<List<String>> result, List<String> list, String s, int pos) {
+        // 1. 递归什么时候结束？ pos为s的长度时
+        // 2. 单一解集什么时候加入解集？
+        if (pos == s.length()) {
+            result.add(new ArrayList<>(list));
+            return;
+        }
+
+        // 3. 分解解空间树的条件
+        for (int i = pos; i < s.length(); i++) {
+            // 如果当前字符不是对称的话，就不需要递归求解了
+            String currentItem = s.substring(pos, i + 1);
+            if (!judgeIsPartition(currentItem)) {
+                continue;
+            }
+            // 3.1 扩展当前解集
+            list.add(currentItem);
+            // 3.2 递归求解解集
+            helper(result, list, s, i + 1);
+            // 3.3 回溯
+            list.remove(list.size() - 1);
+        }
+    }
+
+    private boolean judgeIsPartition(String currentItem) {
+        if (currentItem == null || currentItem.isEmpty()) {
+            return false;
+        }
+        char[] charArray = currentItem.toCharArray();
+        if (charArray.length == 1) {
+            return true;
+        }
+        for (int i = 0; i < charArray.length / 2; i++) {
+            if (charArray[i] != charArray[charArray.length - i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    private boolean[][] isPalindrome;
+
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     * note:
+     * 1. 记忆化搜索
+     * 2. 直接返回解集
+     */
+    public List<List<String>> partitionExample(String s) {
+        if (s == null || s.isEmpty()) {
             return null;
         }
         calculateIsPalindrome(s);
@@ -29,10 +92,10 @@ public class LeetCode_131_partition {
         // 单一解集
         List<String> list = new ArrayList<>();
 
-        return helper(memo, list, s, 0);
+        return helperExample(memo, list, s, 0);
     }
 
-    private List<List<String>> helper(Map<Integer, List<List<String>>> memo, List<String> list, String s, int pos) {
+    private List<List<String>> helperExample(Map<Integer, List<List<String>>> memo, List<String> list, String s, int pos) {
         // 递归何时退出？单一解集何时加入解集中？pos位于最后的值
         if (pos == s.length()) {
             List<List<String>> result = new ArrayList<>();
@@ -56,7 +119,7 @@ public class LeetCode_131_partition {
             }
             list.add(substring);
 
-            List<List<String>> next = helper(memo, list, s, i + 1);
+            List<List<String>> next = helperExample(memo, list, s, i + 1);
             for (List<String> item : next) {
                 List<String> singleResult = new ArrayList<>();
                 singleResult.add(substring);
