@@ -13,28 +13,26 @@ import java.util.List;
  * 给你一个整数 n ，返回任一有效的 n 位格雷码序列 。
  */
 public class LeetCode_089_GrayCode {
-    /**
-     *
-     */
-    public List<Integer> grayCode01(int n) {
-        return null;
-    }
 
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public List<Integer> grayCodeExample01(int n) {
+    public List<Integer> grayCode01(int n) {
+        return null;
+    }
+
+    public List<Integer> grayCodeExample(int n) {
         // 解集
         List<Integer> result = new ArrayList<>();
         // 单一解
         StringBuffer sb = new StringBuffer();
 
-        helper(result, sb, n, new int[]{0, 1});
+        helperExample(result, sb, n, new int[]{0, 1});
         return result;
     }
 
-    public void helper(List<Integer> result, StringBuffer sb, int n, int[] nums) {
+    public void helperExample(List<Integer> result, StringBuffer sb, int n, int[] nums) {
         // 递归何时退出
         if (sb.length() == n) {
             // 转换成10进制
@@ -45,12 +43,12 @@ public class LeetCode_089_GrayCode {
 
         // 递归到下一层，如何取值？取0还是取1
         sb.append(nums[0]);
-        helper(result, sb, n, new int[]{0, 1});
+        helperExample(result, sb, n, new int[]{0, 1});
         // 回溯
         sb.deleteCharAt(sb.length() - 1);
 
         sb.append(nums[1]);
-        helper(result, sb, n, new int[]{1, 0});
+        helperExample(result, sb, n, new int[]{1, 0});
         sb.deleteCharAt(sb.length() - 1);
     }
 

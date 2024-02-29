@@ -24,8 +24,8 @@ public class LeetCode_089_GrayCodeTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void testExample01(int n, List<Integer> expectedResult) {
-        List<Integer> actResult = leetCode089GrayCode.grayCodeExample01(n);
+    public void testExample(int n, List<Integer> expectedResult) {
+        List<Integer> actResult = leetCode089GrayCode.grayCodeExample(n);
         Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }
 
