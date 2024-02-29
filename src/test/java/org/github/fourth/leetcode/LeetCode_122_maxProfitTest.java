@@ -15,7 +15,7 @@ class LeetCode_122_maxProfitTest {
 
     private final LeetCode_122_maxProfit maxProfit = new LeetCode_122_maxProfit();
 
-    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] prices, int expectedResult) {
         int actResult = maxProfit.maxProfit01(prices.clone());
@@ -23,8 +23,14 @@ class LeetCode_122_maxProfitTest {
     }
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test02(int[] prices, int expectedResult) {
-        int actResult2 = maxProfit.maxProfit02(prices.clone());
+    public void testExample01(int[] prices, int expectedResult) {
+        int actResult = maxProfit.maxProfitExample01(prices.clone());
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample02(int[] prices, int expectedResult) {
+        int actResult2 = maxProfit.maxProfitExample02(prices.clone());
         Assertions.assertEquals(expectedResult, actResult2);
     }
 

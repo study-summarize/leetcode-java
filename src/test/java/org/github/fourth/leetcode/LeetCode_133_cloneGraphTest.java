@@ -15,16 +15,24 @@ class LeetCode_133_cloneGraphTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(Node node, Node expectedResult) {
-        Node actResult = cloneGraph.cloneGraph(node);
+    public void test01(Node node, Node expectedResult) {
+        Node actResult = cloneGraph.cloneGraph01(node);
         // todo: 如何比较两个图是否相等？
         Assertions.assertEquals(expectedResult, actResult);
     }
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void testUseDFS(Node node, Node expectedResult) {
-        Node actResult = cloneGraph.cloneGraphWithDfs(node);
+    public void testExample01(Node node, Node expectedResult) {
+        Node actResult = cloneGraph.cloneGraphExample01(node);
+        // todo: 如何比较两个图是否相等？
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    //    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testUseDFSExample02(Node node, Node expectedResult) {
+        Node actResult = cloneGraph.cloneGraphWithDfsExample02(node);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

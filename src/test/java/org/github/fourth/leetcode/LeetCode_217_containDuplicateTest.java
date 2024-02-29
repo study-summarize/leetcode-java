@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,11 +14,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_217_containDuplicateTest {
     private final LeetCode_217_containDuplicate containDuplicate = new LeetCode_217_containDuplicate();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, boolean expectedResult) {
+    public void test01(int[] nums, boolean expectedResult) {
+        boolean actResult = containDuplicate.containsDuplicate01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
 
-        boolean actResult = containDuplicate.containsDuplicate(nums);
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[] nums, boolean expectedResult) {
+        boolean actResult = containDuplicate.containsDuplicateExample(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,10 +17,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_103_zigzagLevelOrderTest {
     private final LeetCode_103_zigzagLevelOrder zigzagLevelOrder = new LeetCode_103_zigzagLevelOrder();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, List<List<Integer>> expectedResult) {
-        List<List<Integer>> actResult = zigzagLevelOrder.zigzagLevelOrder(root);
+        List<List<Integer>> actResult = zigzagLevelOrder.zigzagLevelOrder01(root);
+        Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(TreeNode root, List<List<Integer>> expectedResult) {
+        List<List<Integer>> actResult = zigzagLevelOrder.zigzagLevelOrderExample(root);
         Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }
 

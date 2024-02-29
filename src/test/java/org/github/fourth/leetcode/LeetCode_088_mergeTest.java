@@ -23,7 +23,7 @@ public class LeetCode_088_mergeTest {
         int[] actResult = Arrays.copyOf(nums1, nums1.length);
         int[] actResultExample = Arrays.copyOf(nums1, nums1.length);
 
-        leetCode_088_merge.merge(actResult, m, Arrays.copyOf(nums2, nums2.length), nums2.length);
+        leetCode_088_merge.merge01(actResult, m, Arrays.copyOf(nums2, nums2.length), nums2.length);
         leetCode_088_merge.mergeExample(actResultExample, m, Arrays.copyOf(nums2, nums2.length), nums2.length);
 
         Assertions.assertEquals(expectedResults.length, actResult.length);

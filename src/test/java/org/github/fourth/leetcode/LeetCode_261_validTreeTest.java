@@ -13,11 +13,21 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_261_validTreeTest {
     private final LeetCode_261_validTree validTree = new LeetCode_261_validTree();
 
-    //    @ParameterizedTest
+
+    //        @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int n, int[][] edges, boolean expectedResult) {
-        boolean actResult = validTree.validTree(n, edges);
+        boolean actResult = validTree.validTree01(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
+    }
+
+//        @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int n, int[][] edges, boolean expectedResult) {
+        boolean actResult = validTree.validTreeExample(n, edges);
+        Assertions.assertEquals(expectedResult, actResult);
+        boolean actResult02 = validTree.validTreeWithDfsExample(n, edges);
+        Assertions.assertEquals(expectedResult, actResult02);
     }
 
     public static Stream<Arguments> generateRightCase() {

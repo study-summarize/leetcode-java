@@ -11,7 +11,7 @@ public class LeetCode_069_mySqrt {
      * 时间复杂度：O(logn)
      * 空间复杂度：O(1)
      */
-    public int mySqrt(int x) {
+    public int mySqrt01(int x) {
         if (x < 0) {
             return -1;
         }

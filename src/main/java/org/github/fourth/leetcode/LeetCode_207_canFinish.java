@@ -9,11 +9,19 @@ import java.util.*;
  * 请你判断是否可能完成所有课程的学习？如果可以，返回 true ；否则，返回 false 。
  */
 public class LeetCode_207_canFinish {
+
+    /**
+     *
+     */
+    public boolean canFinish01(int numCourses, int[][] prerequisites) {
+        return false;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public boolean canFinishExample(int numCourses, int[][] prerequisites) {
         if (numCourses < 0 || prerequisites == null) {
             return false;
         }

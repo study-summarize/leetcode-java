@@ -11,7 +11,7 @@ public class LeetCode_120_minimumTotal {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int minimumTotal(List<List<Integer>> triangle) {
+    public int minimumTotal01(List<List<Integer>> triangle) {
         return 0;
     }
 }

@@ -12,7 +12,7 @@ public class LeetCode_072_minDistance {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int minDistance(String word1, String word2) {
+    public int minDistance01(String word1, String word2) {
         return 0;
     }
 }

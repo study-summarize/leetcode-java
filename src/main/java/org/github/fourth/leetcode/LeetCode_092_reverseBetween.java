@@ -13,7 +13,7 @@ public class LeetCode_092_reverseBetween {
      * 空间复杂度：O(1)
      * note: 头插法、找到第i个结点的写法
      */
-    public ListNode reverseBetween(ListNode head, int left, int right) {
+    public ListNode reverseBetween01(ListNode head, int left, int right) {
         if (head == null || left > right || left <= 0) {
             return head;
         }

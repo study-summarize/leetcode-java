@@ -20,7 +20,7 @@ class LeetCode_061_rotateRightTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int k, ListNode expectedResult) {
-        ListNode actResult = leetCode061RotateRight.rotateRight(head, k);
+        ListNode actResult = leetCode061RotateRight.rotateRight01(head, k);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 

@@ -11,7 +11,7 @@ public class LeetCode_063_uniquePathsWithObstacles {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+    public int uniquePathsWithObstacles01(int[][] obstacleGrid) {
         return 0;
     }
 }

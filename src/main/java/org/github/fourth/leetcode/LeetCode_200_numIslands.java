@@ -14,6 +14,13 @@ public class LeetCode_200_numIslands {
     int[] dx = {0, 1, 0, -1};
     int[] dy = {1, 0, -1, 0};
 
+    /**
+     *
+     */
+    public int numIslands01(char[][] grid) {
+        return 0;
+    }
+
     private static class Point {
         int x;
         int y;
@@ -29,7 +36,7 @@ public class LeetCode_200_numIslands {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int numIslands(char[][] grid) {
+    public int numIslandsExample01(char[][] grid) {
         if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
             return 0;
         }
@@ -42,7 +49,7 @@ public class LeetCode_200_numIslands {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1' && !visited[i][j]) {
-                    bfs(grid, visited, new Point(i, j));
+                    bfsExample(grid, visited, new Point(i, j));
                     count++;
                 }
             }
@@ -50,7 +57,7 @@ public class LeetCode_200_numIslands {
         return count;
     }
 
-    private void bfs(char[][] grid, boolean[][] visited, Point point) {
+    private void bfsExample(char[][] grid, boolean[][] visited, Point point) {
         // 1、创建队列
         Queue<Point> queue = new LinkedList<>();
         // 2、加入初始节点，并标记
@@ -75,7 +82,7 @@ public class LeetCode_200_numIslands {
     /**
      * DFS解法
      */
-    public int numIslandsWithDfs(char[][] grid) {
+    public int numIslandsWithDfsExample(char[][] grid) {
         if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
             return 0;
         }
@@ -89,14 +96,14 @@ public class LeetCode_200_numIslands {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1' && !visited[i][j]) {
                     count++;
-                    dfs(grid, visited, i, j);
+                    dfsExample(grid, visited, i, j);
                 }
             }
         }
         return count;
     }
 
-    private void dfs(char[][] grid, boolean[][] visited, int x, int y) {
+    private void dfsExample(char[][] grid, boolean[][] visited, int x, int y) {
 
         // 标价访问
         visited[x][y] = true;
@@ -108,7 +115,7 @@ public class LeetCode_200_numIslands {
             if (checkRange(grid, newX, newY)
                     && grid[newX][newY] == '1'
                     && !visited[newX][newY]) {
-                dfs(grid, visited, newX, newY);
+                dfsExample(grid, visited, newX, newY);
             }
         }
     }

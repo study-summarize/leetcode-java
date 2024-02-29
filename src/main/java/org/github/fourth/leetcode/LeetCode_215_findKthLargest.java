@@ -11,11 +11,18 @@ import java.util.Queue;
 public class LeetCode_215_findKthLargest {
 
     /**
+     *
+     */
+    public int findKthLargest01(int[] nums, int k) {
+        return 0;
+    }
+
+    /**
      * 方法一：快速选择
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int findKthLargest(int[] nums, int k) {
+    public int findKthLargestExample01(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k <= 0) {
             return 0;
         }
@@ -29,7 +36,7 @@ public class LeetCode_215_findKthLargest {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int findKthLargest2(int[] nums, int k) {
+    public int findKthLargestExample02(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k <= 0) {
             return -1;
         }
@@ -48,7 +55,7 @@ public class LeetCode_215_findKthLargest {
     /**
      * 手写堆排序
      */
-    public int findKthLargest3(int[] nums, int k) {
+    public int findKthLargestExample03(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k <= 0) {
             return -1;
         }

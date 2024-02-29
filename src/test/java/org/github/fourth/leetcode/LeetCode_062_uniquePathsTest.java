@@ -18,8 +18,7 @@ class LeetCode_062_uniquePathsTest {
 //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int m, int n, int expectedResult) {
-
-        int actResult = uniquePaths.uniquePaths(m, n);
+        int actResult = uniquePaths.uniquePaths01(m, n);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

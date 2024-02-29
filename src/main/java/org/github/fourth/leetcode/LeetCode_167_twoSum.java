@@ -12,7 +12,7 @@ public class LeetCode_167_twoSum {
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      */
-    public int[] twoSum(int[] numbers, int target) {
+    public int[] twoSum01(int[] numbers, int target) {
         if (numbers == null || numbers.length == 0) {
             return new int[]{-1, -1};
         }

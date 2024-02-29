@@ -6,12 +6,20 @@ package org.github.fourth.leetcode;
  * 返回 你能获得的 最大 利润 。
  */
 public class LeetCode_122_maxProfit {
+
+    /**
+     *
+     */
+    public int maxProfit01(int[] clone) {
+        return 0;
+    }
+
     /**
      * 贪心法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxProfit01(int[] prices) {
+    public int maxProfitExample01(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }
@@ -31,7 +39,7 @@ public class LeetCode_122_maxProfit {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxProfit02(int[] prices) {
+    public int maxProfitExample02(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }

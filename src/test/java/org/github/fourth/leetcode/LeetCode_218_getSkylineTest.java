@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -8,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("天际线问题")
@@ -19,7 +19,8 @@ class LeetCode_218_getSkylineTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] buildings, List<List<Integer>> expectedResult) {
-        List<List<Integer>> actResult = leetCode218GetSkyline.getSkyline(buildings);
+        List<List<Integer>> actResult = leetCode218GetSkyline.getSkyline01(buildings);
+        VerifyUtils.assertListInListEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

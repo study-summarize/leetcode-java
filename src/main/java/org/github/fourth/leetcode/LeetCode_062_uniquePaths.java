@@ -10,7 +10,7 @@ public class LeetCode_062_uniquePaths {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int uniquePaths(int m, int n) {
+    public int uniquePaths01(int m, int n) {
         return 0;
     }
 }

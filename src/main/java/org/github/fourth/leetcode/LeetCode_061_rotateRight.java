@@ -12,7 +12,7 @@ public class LeetCode_061_rotateRight {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public ListNode rotateRight(ListNode head, int k) {
+    public ListNode rotateRight01(ListNode head, int k) {
         if (head == null) {
             return null;
         }

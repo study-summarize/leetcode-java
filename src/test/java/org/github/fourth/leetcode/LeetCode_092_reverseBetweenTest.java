@@ -21,7 +21,7 @@ class LeetCode_092_reverseBetweenTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int left, int right, ListNode expectedResult) {
-        ListNode actResult = leetCode092ReverseBetween.reverseBetween(head, left, right);
+        ListNode actResult = leetCode092ReverseBetween.reverseBetween01(head, left, right);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 

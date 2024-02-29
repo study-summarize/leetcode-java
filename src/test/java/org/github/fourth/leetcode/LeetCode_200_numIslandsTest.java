@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,17 +14,24 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_200_numIslandsTest {
     private final LeetCode_200_numIslands numIslands = new LeetCode_200_numIslands();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(char[][] grid, int expectedResult) {
-        int actResult1 = numIslands.numIslands(grid);
+        int actResult1 = numIslands.numIslands01(grid);
         Assertions.assertEquals(expectedResult, actResult1);
     }
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test02(char[][] grid, int expectedResult) {
-        int actResult2 = numIslands.numIslandsWithDfs(grid);
+    public void testExample01(char[][] grid, int expectedResult) {
+        int actResult1 = numIslands.numIslandsExample01(grid);
+        Assertions.assertEquals(expectedResult, actResult1);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample02(char[][] grid, int expectedResult) {
+        int actResult2 = numIslands.numIslandsWithDfsExample(grid);
         Assertions.assertEquals(expectedResult, actResult2);
     }
 

@@ -14,11 +14,17 @@ import java.util.Queue;
 public class LeetCode_023_mergeKLists {
 
     /**
+     *
+     */
+    public ListNode mergeKLists01(ListNode[] lists) {
+        return null;
+    }
+    /**
      * 方法：使用堆方法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeKListsExample(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
             return null;
         }

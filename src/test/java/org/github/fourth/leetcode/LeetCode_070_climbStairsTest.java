@@ -17,8 +17,15 @@ class LeetCode_070_climbStairsTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int n, int expectedResult) {
-        int actResult = climbStairs.climbStairs(n);
+    public void test01(int n, int expectedResult) {
+        int actResult = climbStairs.climbStairs01(n);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int n, int expectedResult) {
+        int actResult = climbStairs.climbStairsExample(n);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

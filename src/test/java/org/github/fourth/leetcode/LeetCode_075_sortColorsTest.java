@@ -15,10 +15,16 @@ class LeetCode_075_sortColorsTest {
 
     private final LeetCode_075_sortColors sortColors = new LeetCode_075_sortColors();
 
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01(int[] nums, int[] expectedResult) {
+        sortColors.sortColors01(nums);
+        Assertions.assertArrayEquals(expectedResult, nums);
+    }
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, int[] expectedResult) {
-        sortColors.sortColors(nums);
+    public void testExample(int[] nums, int[] expectedResult) {
+        sortColors.sortColorsExample(nums);
         Assertions.assertArrayEquals(expectedResult, nums);
     }
 

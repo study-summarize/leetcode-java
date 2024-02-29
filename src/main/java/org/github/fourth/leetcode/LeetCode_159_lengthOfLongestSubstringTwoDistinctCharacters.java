@@ -6,11 +6,19 @@ import java.util.Map;
  * 给你一个字符串 s ，请你找出 至多 包含 两个不同字符 的最长子串，并返回该子串的长度。
  */
 public class LeetCode_159_lengthOfLongestSubstringTwoDistinctCharacters {
+
+    /**
+     *
+     */
+    public int lengthOfLongestSubstringTwoDistinctCharacters01(String s) {
+        return 0;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int lengthOfLongestSubstringTwoDistinctCharacters(String s) {
+    public int lengthOfLongestSubstringTwoDistinctCharactersExample(String s) {
         int result = 0;
         if (s == null || s.length() == 0) {
             return result;

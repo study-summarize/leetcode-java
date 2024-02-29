@@ -13,10 +13,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_210_findOrderTest {
     private final LeetCode_210_findOrder findOrder = new LeetCode_210_findOrder();
 
-    //    @ParameterizedTest
+    //        @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int numCourses, int[][] prerequisites, int[] expectedResult) {
-        int[] actResult = findOrder.findOrder(numCourses, prerequisites);
+    public void test01(int numCourses, int[][] prerequisites, int[] expectedResult) {
+        int[] actResult = findOrder.findOrder01(numCourses, prerequisites);
+        Assertions.assertArrayEquals(expectedResult, actResult);
+    }
+
+//        @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int numCourses, int[][] prerequisites, int[] expectedResult) {
+        int[] actResult = findOrder.findOrderExample(numCourses, prerequisites);
         Assertions.assertArrayEquals(expectedResult, actResult);
     }
 

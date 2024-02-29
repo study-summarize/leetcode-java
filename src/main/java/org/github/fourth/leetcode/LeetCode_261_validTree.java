@@ -7,11 +7,19 @@ import java.util.*;
  * 如果这些边能够形成一个合法有效的树结构，则返回 true ，否则返回 false 。
  */
 public class LeetCode_261_validTree {
+
+    /**
+     *
+     */
+    public boolean validTree01(int n, int[][] edges) {
+        return false;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean validTree(int n, int[][] edges) {
+    public boolean validTreeExample(int n, int[][] edges) {
         if (n == 0 || edges == null || edges.length == 0
                 || edges[0] == null || edges[0].length == 0) {
             return false;
@@ -61,7 +69,7 @@ public class LeetCode_261_validTree {
     /**
      * 通过DFS方式计算
      */
-    public boolean validTreeWithDfs(int n, int[][] edges) {
+    public boolean validTreeWithDfsExample(int n, int[][] edges) {
         if (n == 0) {
             return false;
         }

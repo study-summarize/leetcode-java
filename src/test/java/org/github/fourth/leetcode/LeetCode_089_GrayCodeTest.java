@@ -1,8 +1,8 @@
 package org.github.fourth.leetcode;
 
-import org.github.fourth.VerifyUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,10 +15,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class LeetCode_089_GrayCodeTest {
     private final LeetCode_089_GrayCode leetCode089GrayCode = new LeetCode_089_GrayCode();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int n, List<Integer> expectedResult) {
-        List<Integer> actResult = leetCode089GrayCode.grayCode(n);
+        List<Integer> actResult = leetCode089GrayCode.grayCode01(n);
+        Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample01(int n, List<Integer> expectedResult) {
+        List<Integer> actResult = leetCode089GrayCode.grayCodeExample01(n);
         Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }
 

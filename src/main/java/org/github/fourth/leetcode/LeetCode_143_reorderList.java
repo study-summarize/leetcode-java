@@ -16,7 +16,7 @@ public class LeetCode_143_reorderList {
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      */
-    public void reorderList(ListNode head) {
+    public void reorderList01(ListNode head) {
         if (head == null) {
             return;
         }

@@ -14,10 +14,17 @@ import java.util.List;
  */
 public class LeetCode_089_GrayCode {
     /**
+     *
+     */
+    public List<Integer> grayCode01(int n) {
+        return null;
+    }
+
+    /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public List<Integer> grayCode(int n) {
+    public List<Integer> grayCodeExample01(int n) {
         // 解集
         List<Integer> result = new ArrayList<>();
         // 单一解

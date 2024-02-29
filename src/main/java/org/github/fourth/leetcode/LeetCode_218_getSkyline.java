@@ -20,7 +20,7 @@ public class LeetCode_218_getSkyline {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public List<List<Integer>> getSkyline(int[][] buildings) {
+    public List<List<Integer>> getSkyline01(int[][] buildings) {
         return null;
     }
 }

@@ -18,7 +18,7 @@ class LeetCode_063_uniquePathsWithObstaclesTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[][] obstacleGrid, int expectedResult) {
-        int actResult = uniquePathsWithObstacles.uniquePathsWithObstacles(obstacleGrid);
+        int actResult = uniquePathsWithObstacles.uniquePathsWithObstacles01(obstacleGrid);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

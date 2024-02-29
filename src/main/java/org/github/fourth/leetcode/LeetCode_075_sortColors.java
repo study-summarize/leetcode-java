@@ -6,11 +6,19 @@ package org.github.fourth.leetcode;
  * 必须在不使用库内置的 sort 函数的情况下解决这个问题。
  */
 public class LeetCode_075_sortColors {
+
+    /**
+     *
+     */
+    public void sortColors01(int[] nums) {
+
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public void sortColors(int[] nums) {
+    public void sortColorsExample(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;
         }

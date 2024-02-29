@@ -13,7 +13,7 @@ public class LeetCode_174_calculateMinimumHP {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int calculateMinimumHP(int[][] dungeon) {
+    public int calculateMinimumHP01(int[][] dungeon) {
         return 0;
     }
 }

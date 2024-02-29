@@ -16,8 +16,8 @@ class LeetCode_072_minDistanceTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String word1, String word2, int expectedResult) {
-        int actResult = minDistance.minDistance(word1, word2);
+    public void test01(String word1, String word2, int expectedResult) {
+        int actResult = minDistance.minDistance01(word1, word2);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

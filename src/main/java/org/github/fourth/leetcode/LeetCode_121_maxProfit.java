@@ -8,11 +8,17 @@ package org.github.fourth.leetcode;
 public class LeetCode_121_maxProfit {
 
     /**
+     *
+     */
+    public int maxProfit01(int[] prices) {
+        return 0;
+    }
+    /**
      * 贪心法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxProfit(int[] prices) {
+    public int maxProfitExample(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }

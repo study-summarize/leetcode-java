@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,17 +14,24 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_265_minCostIITest {
     private final LeetCode_265_minCostII minCostII = new LeetCode_265_minCostII();
 
-    //    @ParameterizedTest
+    //        @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] costs, int expectedResult) {
-        int actResult1 = minCostII.minCostII(costs);
+    public void test01(int[][] costs, int expectedResult) {
+        int actResult1 = minCostII.minCostII01(costs);
         Assertions.assertEquals(expectedResult, actResult1);
     }
 
-    //    @ParameterizedTest
+    //        @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void testRefine(int[][] costs, int expectedResult) {
-        int actResult2 = minCostII.minCostIIRefine(costs);
+    public void testExample(int[][] costs, int expectedResult) {
+        int actResult1 = minCostII.minCostIIExample(costs);
+        Assertions.assertEquals(expectedResult, actResult1);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testRefineExample(int[][] costs, int expectedResult) {
+        int actResult2 = minCostII.minCostIIRefineExample(costs);
         Assertions.assertEquals(expectedResult, actResult2);
     }
 

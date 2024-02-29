@@ -5,13 +5,19 @@ package org.github.fourth.leetcode;
  * 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
  */
 public class LeetCode_070_climbStairs {
+    /**
+     *
+     */
+    public int climbStairs01(int n) {
+        return 0;
+    }
 
     /**
      * 滚动数组优化、动态规划
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int climbStairs(int n) {
+    public int climbStairsExample(int n) {
         if (n == 0) {
             return 0;
         }

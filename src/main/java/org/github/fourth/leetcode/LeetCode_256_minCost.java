@@ -10,10 +10,17 @@ import java.util.Arrays;
  */
 public class LeetCode_256_minCost {
     /**
+     *
+     */
+    public int minCost01(int[][] costs) {
+        return 0;
+    }
+
+    /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int minCost(int[][] costs) {
+    public int minCostExample(int[][] costs) {
         if (costs == null || costs.length == 0
                 || costs[0] == null || costs[0].length == 0) {
             return 0;

@@ -12,6 +12,6 @@ public class LeetCode_123_maxProfit {
      */
     public int maxProfit(int[] prices) {
         return new LeetCode_188_maxProfit()
-                .maxProfit(2, prices);
+                .maxProfitExample(2, prices);
     }
 }

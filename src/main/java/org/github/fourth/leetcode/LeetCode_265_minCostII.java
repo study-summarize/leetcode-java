@@ -7,12 +7,20 @@ package org.github.fourth.leetcode;
  * 返回 粉刷完所有房子的最低成本 。
  */
 public class LeetCode_265_minCostII {
+
+    /**
+     *
+     */
+    public int minCostII01(int[][] costs) {
+        return 0;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
     @SuppressWarnings("LocalVariableName")
-    public int minCostII(int[][] costs) {
+    public int minCostIIExample(int[][] costs) {
         if (costs == null || costs.length == 0
                 || costs[0] == null || costs[0].length == 0) {
             return 0;
@@ -48,7 +56,7 @@ public class LeetCode_265_minCostII {
     }
 
     @SuppressWarnings("LocalVariableName")
-    public int minCostIIRefine(int[][] costs) {
+    public int minCostIIRefineExample(int[][] costs) {
         if (costs == null || costs.length == 0
                 || costs[0] == null || costs[0].length == 0) {
             return 0;

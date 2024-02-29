@@ -9,7 +9,7 @@ public class LeetCode_064_minPathSum {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int minPathSum(int[][] grid) {
+    public int minPathSum01(int[][] grid) {
         return 0;
     }
 }

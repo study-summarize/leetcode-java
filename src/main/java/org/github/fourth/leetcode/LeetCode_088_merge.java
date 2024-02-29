@@ -12,7 +12,7 @@ public class LeetCode_088_merge {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    public void merge01(int[] nums1, int m, int[] nums2, int n) {
         if (nums1 == null || nums1.length == 0) {
             return;
         }
@@ -54,6 +54,6 @@ public class LeetCode_088_merge {
      * 空间复杂度：
      */
     public void mergeExample(int[] nums1, int m, int[] nums2, int n) {
-        merge(nums1, m, nums2, n);
+        merge01(nums1, m, nums2, n);
     }
 }

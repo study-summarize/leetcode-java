@@ -17,8 +17,8 @@ class LeetCode_120_minimumTotalTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(List<List<Integer>> triangle, int expectedResult) {
-        int actResult = minimumTotal.minimumTotal(triangle);
+    public void test01(List<List<Integer>> triangle, int expectedResult) {
+        int actResult = minimumTotal.minimumTotal01(triangle);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

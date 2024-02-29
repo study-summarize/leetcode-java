@@ -13,7 +13,7 @@ public class LeetCode_141_hasCycle {
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      */
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle01(ListNode head) {
         if (head == null) {
             return false;
         }

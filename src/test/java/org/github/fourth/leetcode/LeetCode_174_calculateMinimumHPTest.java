@@ -15,8 +15,8 @@ class LeetCode_174_calculateMinimumHPTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] dungeon, int expectedResult) {
-        int actResult = calculateMinimumHP.calculateMinimumHP(dungeon);
+    public void test01(int[][] dungeon, int expectedResult) {
+        int actResult = calculateMinimumHP.calculateMinimumHP01(dungeon);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

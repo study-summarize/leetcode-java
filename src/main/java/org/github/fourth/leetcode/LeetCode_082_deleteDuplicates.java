@@ -8,7 +8,6 @@ import org.github.fourth.leetcode.common.ListNode;
 public class LeetCode_082_deleteDuplicates {
     /**
      * 太多点要注意了。。。。
-     *
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      * note：

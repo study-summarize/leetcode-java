@@ -11,11 +11,19 @@ import java.util.*;
  * }
  */
 public class LeetCode_133_cloneGraph {
+
+    /**
+     *
+     */
+    public Node cloneGraph01(Node node) {
+        return null;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public Node cloneGraph(Node node) {
+    public Node cloneGraphExample01(Node node) {
         if (node == null) {
             return null;
         }
@@ -51,7 +59,7 @@ public class LeetCode_133_cloneGraph {
     /**
      * 使用DFS方法
      */
-    public Node cloneGraphWithDfs(Node node) {
+    public Node cloneGraphWithDfsExample02(Node node) {
         if (node == null) {
             return null;
         }

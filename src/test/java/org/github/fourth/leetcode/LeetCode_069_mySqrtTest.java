@@ -18,7 +18,7 @@ public class LeetCode_069_mySqrtTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int x, int expectedResult) {
-        int actResult = leetCode069MySqrt.mySqrt(x);
+        int actResult = leetCode069MySqrt.mySqrt01(x);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

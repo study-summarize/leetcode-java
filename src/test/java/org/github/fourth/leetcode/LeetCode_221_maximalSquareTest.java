@@ -13,10 +13,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_221_maximalSquareTest {
     private final LeetCode_221_maximalSquare maximalSquare = new LeetCode_221_maximalSquare();
 
-    //    @ParameterizedTest
+
+    //        @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(char[][] matrix, int expectedResult) {
-        int actResult = maximalSquare.maximalSquare(matrix);
+    public void test01(char[][] matrix, int expectedResult) {
+        int actResult = maximalSquare.maximalSquare01(matrix);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

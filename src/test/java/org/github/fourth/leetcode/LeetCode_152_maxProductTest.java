@@ -14,10 +14,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_152_maxProductTest {
     private final LeetCode_152_maxProduct maxProduct = new LeetCode_152_maxProduct();
 
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01(int[] nums, int expectedResult) {
+        int actResult = maxProduct.maxProduct01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, int expectedResult) {
-        int actResult = maxProduct.maxProduct(nums);
+    public void testExample(int[] nums, int expectedResult) {
+        int actResult = maxProduct.maxProductExample(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

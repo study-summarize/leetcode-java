@@ -14,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_147_insertionSortListTest {
     private final LeetCode_147_insertionSortList insertionSortList = new LeetCode_147_insertionSortList();
 
-    //    @ParameterizedTest
+//        @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(ListNode head, ListNode expectedResult) {
         ListNode actResult = insertionSortList.insertionSortList(head);

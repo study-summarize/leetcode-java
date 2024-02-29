@@ -19,7 +19,7 @@ class LeetCode_141_hasCycleTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, boolean expectedResult) {
-        boolean actResult = leetCode141HasCycle.hasCycle(head);
+        boolean actResult = leetCode141HasCycle.hasCycle01(head);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

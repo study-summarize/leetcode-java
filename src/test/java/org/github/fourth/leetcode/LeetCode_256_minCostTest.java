@@ -13,10 +13,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_256_minCostTest {
     private final LeetCode_256_minCost minCost = new LeetCode_256_minCost();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] costs, int expectedResult) {
-        int actResult = minCost.minCost(costs);
+    public void test01(int[][] costs, int expectedResult) {
+        int actResult = minCost.minCost01(costs);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[][] costs, int expectedResult) {
+        int actResult = minCost.minCostExample(costs);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

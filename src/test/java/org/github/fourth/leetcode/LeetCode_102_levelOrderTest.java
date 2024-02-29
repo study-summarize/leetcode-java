@@ -1,8 +1,10 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.VerifyUtils;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,12 +17,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("二叉树的层序遍历")
 class LeetCode_102_levelOrderTest {
     private final LeetCode_102_levelOrder levelOrder = new LeetCode_102_levelOrder();
-
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(TreeNode root, List<List<Integer>> expectedResult) {
-        List<List<Integer>> actResult = levelOrder.levelOrder(root);
-        Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
+    public void test01(TreeNode root, List<List<Integer>> expectedResult) {
+        List<List<Integer>> actResult = levelOrder.levelOrder01(root);
+        VerifyUtils.assertListInListEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(TreeNode root, List<List<Integer>> expectedResult) {
+        List<List<Integer>> actResult = levelOrder.levelOrderExample(root);
+        VerifyUtils.assertListInListEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

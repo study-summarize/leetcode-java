@@ -20,7 +20,7 @@ class LeetCode_143_reorderListTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, ListNode expectedResult) {
-        leetCode143ReorderList.reorderList(head);
+        leetCode143ReorderList.reorderList01(head);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, head));
     }
 

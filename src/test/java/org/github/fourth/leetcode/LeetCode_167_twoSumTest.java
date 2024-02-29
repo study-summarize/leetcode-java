@@ -16,8 +16,8 @@ class LeetCode_167_twoSumTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] numbers, int target, int[] expectedResult) {
-        int[] actResult = twoSum.twoSum(numbers, target);
+    public void test01(int[] numbers, int target, int[] expectedResult) {
+        int[] actResult = twoSum.twoSum01(numbers, target);
         Assertions.assertArrayEquals(expectedResult, actResult);
     }
 

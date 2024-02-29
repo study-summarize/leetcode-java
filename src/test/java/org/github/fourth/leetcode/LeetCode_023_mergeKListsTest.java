@@ -4,6 +4,7 @@ import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,11 +16,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_023_mergeKListsTest {
 
     private final LeetCode_023_mergeKLists mergeKLists = new LeetCode_023_mergeKLists();
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test01(ListNode[] lists, ListNode expectedResult) {
+        ListNode actResult = mergeKLists.mergeKLists01(lists);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(ListNode[] lists, ListNode expectedResult) {
-        ListNode actResult = mergeKLists.mergeKLists(lists);
+        ListNode actResult = mergeKLists.mergeKListsExample(lists);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 

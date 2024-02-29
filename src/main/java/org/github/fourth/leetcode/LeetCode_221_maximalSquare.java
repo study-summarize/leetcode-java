@@ -8,7 +8,7 @@ public class LeetCode_221_maximalSquare {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maximalSquare(char[][] matrix) {
+    public int maximalSquare01(char[][] matrix) {
         return 0;
     }
 }
