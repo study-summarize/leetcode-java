@@ -14,10 +14,57 @@ import java.util.List;
  */
 public class LeetCode_129_sumNumbers {
     /**
+     * 回溯法：
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int sumNumbers(TreeNode root) {
+    public int sumNumbers01(TreeNode root) {
+        // 解集
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return 0;
+        }
+        // 单一解集
+        StringBuffer sb = new StringBuffer();
+        sb.append(root.val);
+        // 递归遍历解空间树
+        helper(result, sb, root);
+        // 计算出结果
+        return result.stream().reduce(Integer::sum).orElse(0);
+    }
+
+    private void helper(List<Integer> result, StringBuffer sb, TreeNode root) {
+        // 1. 递归什么时候结束？
+        // 2. 单一解集什么时候加入解集？root为叶子节点时
+        if (root.left == null && root.right == null) {
+            result.add(Integer.valueOf(sb.toString()));
+            return;
+        }
+
+        // 3. 递归解空间树
+        if (root.left != null) {
+            // 扩展当前解集
+            sb.append(root.left.val);
+            // 递归找解空间树
+            helper(result, sb, root.left);
+            // 回溯
+            sb.deleteCharAt(sb.length() - 1);
+        }
+        if (root.right != null) {
+            // 扩展当前解集
+            sb.append(root.right.val);
+            // 递归找解空间树
+            helper(result, sb, root.right);
+            // 回溯
+            sb.deleteCharAt(sb.length() - 1);
+        }
+    }
+
+    /**
+     * 时间复杂度：
+     * 空间复杂度：
+     */
+    public int sumNumbersExample(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -26,13 +73,13 @@ public class LeetCode_129_sumNumbers {
         // 单一解集
         StringBuffer sb = new StringBuffer();
 
-        helper(result, sb, root);
+        helperExample(result, sb, root);
 
         // 计算结果
         return result.stream().map(Integer::valueOf).reduce(0, Integer::sum);
     }
 
-    private void helper(List<String> result, StringBuffer sb, TreeNode root) {
+    private void helperExample(List<String> result, StringBuffer sb, TreeNode root) {
         if (root == null) {
             return;
         }
@@ -44,12 +91,12 @@ public class LeetCode_129_sumNumbers {
         }
 
         if (root.left != null) {
-            helper(result, sb, root.left);
+            helperExample(result, sb, root.left);
             sb.deleteCharAt(sb.length() - 1);
         }
 
         if (root.right != null) {
-            helper(result, sb, root.right);
+            helperExample(result, sb, root.right);
             // 回溯
             sb.deleteCharAt(sb.length() - 1);
         }

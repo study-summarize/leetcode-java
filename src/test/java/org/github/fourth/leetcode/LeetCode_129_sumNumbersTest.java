@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -14,11 +15,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_129_sumNumbersTest {
     private final LeetCode_129_sumNumbers sumNumbers = new LeetCode_129_sumNumbers();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(TreeNode root, int expectedResult) {
+    public void test01(TreeNode root, int expectedResult) {
+        int actResult = sumNumbers.sumNumbers01(root);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
 
-        int actResult = sumNumbers.sumNumbers(root);
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(TreeNode root, int expectedResult) {
+        int actResult = sumNumbers.sumNumbersExample(root);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
