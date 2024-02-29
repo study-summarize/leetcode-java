@@ -63,7 +63,7 @@ public class LeetCode_113_pathSum {
      */
     public List<List<Integer>> pathSumExample(TreeNode root, int targetSum) {
         if (root == null) {
-            return null;
+            return new ArrayList<>();
         }
         // 解集
         List<List<Integer>> result = new ArrayList<>();
