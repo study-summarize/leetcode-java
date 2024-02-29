@@ -21,12 +21,18 @@ class LeetCode_140_wordBreakTest {
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(String s, List<String> wordDict, List<String> expectedResult) {
-        commonTest(expectedResult, x -> x.wordBreak(s, wordDict));
+        commonTest(expectedResult, x -> x.wordBreak01(s, wordDict));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample01(String s, List<String> wordDict, List<String> expectedResult) {
+        commonTest(expectedResult, x -> x.wordBreakExample01(s, wordDict));
     }
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String s, List<String> wordDict, List<String> expectedResult) {
-        commonTest(expectedResult, x -> x.wordBreak01(s, wordDict));
+    public void testExample02(String s, List<String> wordDict, List<String> expectedResult) {
+        commonTest(expectedResult, x -> x.wordBreakExample02(s, wordDict));
     }
 
     private void commonTest(List<String> expectedResult, Function<LeetCode_140_wordBreak, List<String>> function) {
