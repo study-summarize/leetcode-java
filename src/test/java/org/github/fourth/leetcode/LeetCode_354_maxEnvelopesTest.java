@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,11 +14,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_354_maxEnvelopesTest {
     private final LeetCode_354_maxEnvelopes maxEnvelopes = new LeetCode_354_maxEnvelopes();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] envelopes, int expectedResult) {
-
-        int actResult = maxEnvelopes.maxEnvelopes(envelopes);
+    public void test01(int[][] envelopes, int expectedResult) {
+        int actResult = maxEnvelopes.maxEnvelopes01(envelopes);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[][] envelopes, int expectedResult) {
+        int actResult = maxEnvelopes.maxEnvelopesExample(envelopes);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

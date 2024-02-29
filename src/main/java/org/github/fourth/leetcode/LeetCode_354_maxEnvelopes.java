@@ -9,11 +9,19 @@ import java.util.Arrays;
  * 注意：不允许旋转信封。
  */
 public class LeetCode_354_maxEnvelopes {
+
+    /**
+     *
+     */
+    public int maxEnvelopes01(int[][] envelopes) {
+        return 0;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxEnvelopes(int[][] envelopes) {
+    public int maxEnvelopesExample(int[][] envelopes) {
         if (envelopes == null || envelopes.length == 0 || envelopes[0] == null
                 || envelopes[0].length == 0) {
             return 0;

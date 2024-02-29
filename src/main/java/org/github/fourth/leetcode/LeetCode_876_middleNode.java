@@ -10,7 +10,6 @@ public class LeetCode_876_middleNode {
 
     /**
      * 快慢指针
-     *
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      * note：dummyNode
@@ -35,7 +34,6 @@ public class LeetCode_876_middleNode {
 
     /**
      * 暴力解法：先求长度，再求中间结点位置
-     *
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      * note：dummyNode

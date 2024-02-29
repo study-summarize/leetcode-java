@@ -8,7 +8,7 @@ public class LeetCode_712_minimumDeleteSum {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int minimumDeleteSum(String s1, String s2) {
+    public int minimumDeleteSum01(String s1, String s2) {
         return 0;
     }
 }

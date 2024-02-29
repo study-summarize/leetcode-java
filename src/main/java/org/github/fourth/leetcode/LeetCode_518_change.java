@@ -11,7 +11,7 @@ public class LeetCode_518_change {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int change(int amount, int[] coins) {
+    public int change01(int amount, int[] coins) {
         return 0;
     }
 }

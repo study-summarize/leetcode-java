@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,10 +14,18 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_323_countComponentsTest {
     private final LeetCode_323_countComponents countComponents = new LeetCode_323_countComponents();
 
-    //    @ParameterizedTest
+
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int n, int[][] edges, int expectedResult) {
-        int actResult = countComponents.countComponents(n, edges);
+    public void test01(int n, int[][] edges, int expectedResult) {
+        int actResult = countComponents.countComponents01(n, edges);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int n, int[][] edges, int expectedResult) {
+        int actResult = countComponents.countComponentsExample(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

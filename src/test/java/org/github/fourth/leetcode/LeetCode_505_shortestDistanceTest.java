@@ -13,7 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_505_shortestDistanceTest {
     private final LeetCode_505_shortestDistance shortestDistance = new LeetCode_505_shortestDistance();
 
-    //    @ParameterizedTest
+//        @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[][] maze, int[] start, int[] destination, int expectedResult) {
         int actResult = shortestDistance.shortestDistance(maze, start, destination);

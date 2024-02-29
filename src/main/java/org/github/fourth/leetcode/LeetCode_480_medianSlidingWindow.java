@@ -12,7 +12,7 @@ public class LeetCode_480_medianSlidingWindow {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public double[] medianSlidingWindow(int[] nums, int k) {
+    public double[] medianSlidingWindow01(int[] nums, int k) {
         return null;
     }
 }

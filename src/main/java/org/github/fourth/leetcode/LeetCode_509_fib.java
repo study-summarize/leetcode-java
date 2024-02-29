@@ -10,20 +10,26 @@ import java.util.Arrays;
  */
 public class LeetCode_509_fib {
 
+    /**
+     *
+     */
+    public int fib01(int n) {
+        return 0;
+    }
 
     /**
      * 方法一：递归法
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int fib1(int n) {
+    public int fib1Example(int n) {
         if (n == 0) {
             return 0;
         }
         if (n == 1) {
             return 1;
         }
-        return fib1(n - 1) + fib1(n - 2);
+        return fib1Example(n - 1) + fib1Example(n - 2);
     }
 
     /**
@@ -31,7 +37,7 @@ public class LeetCode_509_fib {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int fib2(int n) {
+    public int fib2Example(int n) {
         int[] memo = new int[n + 1];
         Arrays.fill(memo, -1);
 
@@ -43,7 +49,7 @@ public class LeetCode_509_fib {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int fib3(int n) {
+    public int fib3Example(int n) {
         if (n == 0 || n == 1) {
             return n;
         }
@@ -63,7 +69,7 @@ public class LeetCode_509_fib {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int fib4(int n) {
+    public int fib4Example(int n) {
         if (n == 0 || n == 1) {
             return n;
         }

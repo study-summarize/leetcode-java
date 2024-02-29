@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,11 +14,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_329_longestIncreasingPathTest {
     private final LeetCode_329_longestIncreasingPath longestIncreasingPath = new LeetCode_329_longestIncreasingPath();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] matrix, int expectedResult) {
-
-        int actResult = longestIncreasingPath.longestIncreasingPath(matrix);
+    public void test01(int[][] matrix, int expectedResult) {
+        int actResult = longestIncreasingPath.longestIncreasingPath01(matrix);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[][] matrix, int expectedResult) {
+        int actResult = longestIncreasingPath.longestIncreasingPathExample(matrix);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

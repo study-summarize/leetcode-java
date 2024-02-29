@@ -15,8 +15,8 @@ class LeetCode_712_minimumDeleteSumTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String s1, String s2, int expectedResult) {
-        int actResult = minimumDeleteSum.minimumDeleteSum(s1, s2);
+    public void test01(String s1, String s2, int expectedResult) {
+        int actResult = minimumDeleteSum.minimumDeleteSum01(s1, s2);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

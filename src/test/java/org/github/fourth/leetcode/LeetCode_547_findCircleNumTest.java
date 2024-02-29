@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,13 +14,20 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_547_findCircleNumTest {
     private final LeetCode_547_findCircleNum findCircleNum = new LeetCode_547_findCircleNum();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[][] isConnected, int expectedResult) {
-        int actResult = findCircleNum.findCircleNum(isConnected);
+    public void test01(int[][] isConnected, int expectedResult) {
+        int actResult = findCircleNum.findCircleNum01(isConnected);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[][] isConnected, int expectedResult) {
+        int actResult = findCircleNum.findCircleNumExample(isConnected);
         Assertions.assertEquals(expectedResult, actResult);
 
-        int actResult2 = findCircleNum.findCircleNumWithDfs(isConnected);
+        int actResult2 = findCircleNum.findCircleNumWithDfsExample(isConnected);
         Assertions.assertEquals(expectedResult, actResult2);
     }
 

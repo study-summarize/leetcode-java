@@ -8,7 +8,7 @@ public class LeetCode_407_trapRainWater {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int trapRainWater(int[][] heightMap) {
+    public int trapRainWater01(int[][] heightMap) {
         return 0;
     }
 }

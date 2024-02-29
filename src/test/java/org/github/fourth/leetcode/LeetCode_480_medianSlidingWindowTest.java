@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -15,7 +16,8 @@ class LeetCode_480_medianSlidingWindowTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int k, double[] expectedResult) {
-        double[] actResult = leetCode480MedianSlidingWindow.medianSlidingWindow(nums, k);
+        double[] actResult = leetCode480MedianSlidingWindow.medianSlidingWindow01(nums, k);
+        Assertions.assertArrayEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

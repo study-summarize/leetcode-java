@@ -7,12 +7,20 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_740_deleteAndEarn {
 
+
+    /**
+     *
+     */
+    public int deleteAndEarn01(int[] nums) {
+        return 0;
+    }
+
     /**
      * 打家劫舍、滚动数组、动态规划
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int deleteAndEarn(int[] nums) {
+    public int deleteAndEarnExample(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }

@@ -9,7 +9,7 @@ public class LeetCode_377_combinationSum4 {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int combinationSum4(int[] nums, int target) {
+    public int combinationSum401(int[] nums, int target) {
         return 0;
     }
 }

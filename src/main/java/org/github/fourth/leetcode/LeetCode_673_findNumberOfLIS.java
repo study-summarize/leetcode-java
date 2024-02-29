@@ -9,12 +9,19 @@ import java.util.Arrays;
 public class LeetCode_673_findNumberOfLIS {
 
     /**
+     *
+     */
+    public int findNumberOfLIS01(int[] nums) {
+        return 0;
+    }
+
+    /**
      * 动态规划、制表法找function
      * 时间复杂度：
      * 空间复杂度：
      */
     @SuppressWarnings("EmptyBlock")
-    public int findNumberOfLIS(int[] nums) {
+    public int findNumberOfLISExample(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }

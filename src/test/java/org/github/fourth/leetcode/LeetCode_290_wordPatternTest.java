@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,10 +14,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_290_wordPatternTest {
     private final LeetCode_290_wordPattern wordPattern = new LeetCode_290_wordPattern();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String pattern, String s, boolean expectedResult) {
-        boolean actResult = wordPattern.wordPattern(pattern, s);
+    public void test01(String pattern, String s, boolean expectedResult) {
+        boolean actResult = wordPattern.wordPattern01(pattern, s);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(String pattern, String s, boolean expectedResult) {
+        boolean actResult = wordPattern.wordPatternExample(pattern, s);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

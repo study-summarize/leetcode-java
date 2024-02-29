@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,10 +14,11 @@ class LeetCode_407_trapRainWaterTest {
     private final LeetCode_407_trapRainWater leetCode407TrapRainWater = new LeetCode_407_trapRainWater();
 
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] heightMap, int expectedResult) {
-        int actResult = leetCode407TrapRainWater.trapRainWater(heightMap);
+        int actResult = leetCode407TrapRainWater.trapRainWater01(heightMap);
+        Assertions.assertEquals(expectedResult, actResult);
     }
 
     public static Stream<Arguments> generateRightCase() {

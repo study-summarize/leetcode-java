@@ -6,23 +6,30 @@ package org.github.fourth.leetcode;
  */
 public class LeetCode_493_reversePairs {
     /**
+     *
+     */
+    public int reversePairs01(int[] nums) {
+        return 0;
+    }
+
+    /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int reversePairs(int[] nums) {
+    public int reversePairsExample(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }
 
-        return countPairs(nums, 0, nums.length - 1);
+        return countPairsExample(nums, 0, nums.length - 1);
     }
 
-    private int countPairs(int[] nums, int start, int end) {
+    private int countPairsExample(int[] nums, int start, int end) {
         if (start < end) {
             int mid = start + (end - start) / 2;
 
-            int leftCount = countPairs(nums, start, mid);
-            int rightCount = countPairs(nums, mid + 1, end);
+            int leftCount = countPairsExample(nums, start, mid);
+            int rightCount = countPairsExample(nums, mid + 1, end);
             return leftCount + rightCount + merge(nums, start, mid, end);
         }
         return 0;

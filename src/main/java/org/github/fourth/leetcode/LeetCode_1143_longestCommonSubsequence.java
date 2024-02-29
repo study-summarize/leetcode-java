@@ -12,7 +12,7 @@ public class LeetCode_1143_longestCommonSubsequence {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int longestCommonSubsequence(String text1, String text2) {
+    public int longestCommonSubsequence01(String text1, String text2) {
         return 0;
     }
 }

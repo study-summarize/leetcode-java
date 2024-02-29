@@ -11,7 +11,7 @@ public class LeetCode_324_wiggleSort {
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
-    public void wiggleSort(int[] nums) {
+    public void wiggleSort01(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;
         }

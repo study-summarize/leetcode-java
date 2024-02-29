@@ -7,11 +7,19 @@ package org.github.fourth.leetcode;
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  */
 public class LeetCode_309_maxProfit {
+
+    /**
+     *
+     */
+    public int maxProfit01(int[] prices) {
+        return 0;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxProfit(int[] prices) {
+    public int maxProfitExample(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }
@@ -33,7 +41,7 @@ public class LeetCode_309_maxProfit {
     /**
      * 滚动数组优化
      */
-    public int maxProfitRefine(int[] prices) {
+    public int maxProfitRefineExample(int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }

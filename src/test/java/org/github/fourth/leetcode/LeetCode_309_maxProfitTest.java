@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,14 +14,20 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_309_maxProfitTest {
     private final LeetCode_309_maxProfit maxProfit = new LeetCode_309_maxProfit();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] prices, int expectedResult) {
+    public void test01(int[] prices, int expectedResult) {
+        int actResult1 = maxProfit.maxProfit01(prices);
+        Assertions.assertEquals(expectedResult, actResult1);
+    }
 
-        int actResult1 = maxProfit.maxProfit(prices);
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[] prices, int expectedResult) {
+        int actResult1 = maxProfit.maxProfitExample(prices);
         Assertions.assertEquals(expectedResult, actResult1);
 
-        int actResult2 = maxProfit.maxProfitRefine(prices);
+        int actResult2 = maxProfit.maxProfitRefineExample(prices);
         Assertions.assertEquals(expectedResult, actResult2);
     }
 

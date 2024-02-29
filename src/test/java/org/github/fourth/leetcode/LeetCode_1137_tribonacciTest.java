@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -14,11 +15,16 @@ class LeetCode_1137_tribonacciTest {
 
     private final LeetCode_1137_tribonacci tribonacci = new LeetCode_1137_tribonacci();
 
-
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int n, int expectedResult) {
-        int actResult = tribonacci.tribonacci(n);
+    public void test01(int n, int expectedResult) {
+        int actResult = tribonacci.tribonacci01(n);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int n, int expectedResult) {
+        int actResult = tribonacci.tribonacciExample(n);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

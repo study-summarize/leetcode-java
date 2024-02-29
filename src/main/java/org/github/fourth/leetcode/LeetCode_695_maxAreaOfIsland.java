@@ -7,6 +7,12 @@ package org.github.fourth.leetcode;
  * 计算并返回 grid 中最大的岛屿面积。如果没有岛屿，则返回面积为 0 。
  */
 public class LeetCode_695_maxAreaOfIsland {
+    /**
+     *
+     */
+    public int maxAreaOfIsland01(int[][] grid) {
+        return 0;
+    }
 
     int[] dx = {1, 0, -1, 0};
     int[] dy = {0, 1, 0, -1};
@@ -14,7 +20,7 @@ public class LeetCode_695_maxAreaOfIsland {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int maxAreaOfIsland(int[][] grid) {
+    public int maxAreaOfIslandExample(int[][] grid) {
         if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
             return 0;
         }

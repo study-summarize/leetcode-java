@@ -6,13 +6,19 @@ package org.github.fourth.leetcode;
  * 给你整数 n，请返回第 n 个泰波那契数 Tn 的值。
  */
 public class LeetCode_1137_tribonacci {
+    /**
+     *
+     */
+    public int tribonacci01(int n) {
+        return 0;
+    }
 
     /**
      * 滚动数组、动态规划
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int tribonacci(int n) {
+    public int tribonacciExample(int n) {
         if (n < 0) {
             return 0;
         }

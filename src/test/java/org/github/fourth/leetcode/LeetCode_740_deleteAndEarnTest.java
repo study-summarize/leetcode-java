@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,10 +14,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_740_deleteAndEarnTest {
     private final LeetCode_740_deleteAndEarn deleteAndEarn = new LeetCode_740_deleteAndEarn();
 
-    //    @ParameterizedTest
+
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, int expectedResult) {
-        int actResult = deleteAndEarn.deleteAndEarn(nums);
+    public void test01(int[] nums, int expectedResult) {
+        int actResult = deleteAndEarn.deleteAndEarn01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(int[] nums, int expectedResult) {
+        int actResult = deleteAndEarn.deleteAndEarnExample(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

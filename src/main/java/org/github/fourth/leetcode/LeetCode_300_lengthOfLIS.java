@@ -9,11 +9,18 @@ import java.util.Arrays;
 public class LeetCode_300_lengthOfLIS {
 
     /**
+     *
+     */
+    public int lengthOfLIS01(int[] nums) {
+        return 0;
+    }
+
+    /**
      * 动态规划、制表法找function
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int lengthOfLIS(int[] nums) {
+    public int lengthOfLISExample(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }

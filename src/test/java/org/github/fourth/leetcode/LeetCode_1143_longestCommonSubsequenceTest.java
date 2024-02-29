@@ -15,8 +15,8 @@ class LeetCode_1143_longestCommonSubsequenceTest {
 
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String text1, String text2, int expectedResult) {
-        int actResult = longestCommonSubsequence.longestCommonSubsequence(text1, text2);
+    public void test01(String text1, String text2, int expectedResult) {
+        int actResult = longestCommonSubsequence.longestCommonSubsequence01(text1, text2);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

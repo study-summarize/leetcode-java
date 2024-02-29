@@ -14,11 +14,10 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_324_wiggleSortTest {
     private final LeetCode_324_wiggleSort leetCode324WiggleSort = new LeetCode_324_wiggleSort();
 
-
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int[] expectedResult) {
-        leetCode324WiggleSort.wiggleSort(nums);
+        leetCode324WiggleSort.wiggleSort01(nums);
         Assertions.assertArrayEquals(expectedResult, nums);
     }
 

@@ -13,10 +13,10 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_377_combinationSum4Test {
     private final LeetCode_377_combinationSum4 combinationSum4 = new LeetCode_377_combinationSum4();
 
-    //    @ParameterizedTest
+//        @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, int target, int expectedResult) {
-        int actResult = combinationSum4.combinationSum4(nums, target);
+    public void test01(int[] nums, int target, int expectedResult) {
+        int actResult = combinationSum4.combinationSum401(nums, target);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

@@ -12,11 +12,18 @@ import java.util.Queue;
 public class LeetCode_547_findCircleNum {
 
     /**
+     *
+     */
+    public int findCircleNum01(int[][] isConnected) {
+        return 0;
+    }
+
+    /**
      * 使用BFS方式
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int findCircleNum(int[][] isConnected) {
+    public int findCircleNumExample(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0
                 || isConnected[0] == null || isConnected[0].length == 0) {
             return 0;
@@ -62,7 +69,7 @@ public class LeetCode_547_findCircleNum {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int findCircleNumWithDfs(int[][] isConnected) {
+    public int findCircleNumWithDfsExample(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0) {
             return 0;
         }

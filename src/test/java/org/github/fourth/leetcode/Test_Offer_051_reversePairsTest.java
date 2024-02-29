@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 class Test_Offer_051_reversePairsTest {
     private final Test_Offer_051_reversePairs reversePairs = new Test_Offer_051_reversePairs();
 
-    //    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[] nums, int expectedResult) {
         int actResult = reversePairs.reversePairs(nums);

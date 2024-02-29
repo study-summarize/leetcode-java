@@ -10,7 +10,7 @@ public class LeetCode_322_coinChange {
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int coinChange(int[] coins, int amount) {
+    public int coinChange01(int[] coins, int amount) {
         return 0;
     }
 }

@@ -16,7 +16,7 @@ class LeetCode_518_changeTest {
     //    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int amount, int[] coins, int expectedResult) {
-        int actResult = this.change.change(amount, coins);
+        int actResult = this.change.change01(amount, coins);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

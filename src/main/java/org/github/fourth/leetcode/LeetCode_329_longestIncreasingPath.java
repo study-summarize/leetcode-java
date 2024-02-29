@@ -5,13 +5,21 @@ package org.github.fourth.leetcode;
  * 对于每个单元格，你可以往上，下，左，右四个方向移动。 你 不能 在 对角线 方向上移动或移动到 边界外（即不允许环绕）。
  */
 public class LeetCode_329_longestIncreasingPath {
-    int[] dx = {1, 0, -1, 0};
-    int[] dy = {0, 1, 0, -1};
+
+    /**
+     *
+     */
+    public int longestIncreasingPath01(int[][] matrix) {
+        return 0;
+    }
+
+    int[] dxExample = {1, 0, -1, 0};
+    int[] dyExample = {0, 1, 0, -1};
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public int longestIncreasingPath(int[][] matrix) {
+    public int longestIncreasingPathExample(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
             return 0;
         }
@@ -26,14 +34,14 @@ public class LeetCode_329_longestIncreasingPath {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (!visited[i][j]) {
-                    longestPath = Math.max(dfs(matrix, visited, memo, i, j), longestPath);
+                    longestPath = Math.max(dfsExample(matrix, visited, memo, i, j), longestPath);
                 }
             }
         }
         return longestPath;
     }
 
-    private int dfs(int[][] matrix, boolean[][] visited, int[][] memo, int curX, int curY) {
+    private int dfsExample(int[][] matrix, boolean[][] visited, int[][] memo, int curX, int curY) {
         // 记忆化搜索
         if (visited[curX][curY]) {
             return memo[curX][curY];
@@ -42,24 +50,24 @@ public class LeetCode_329_longestIncreasingPath {
         int result = 1;
         visited[curX][curY] = true;
         for (int i = 0; i < 4; i++) {
-            int newX = curX + dx[i];
-            int newY = curY + dy[i];
+            int newX = curX + dxExample[i];
+            int newY = curY + dyExample[i];
             /*
              * 减枝：
              * (1)新节点要在范围内
              * (2)新节点要大于当前节点
              * (3)新节点未被访问过
              */
-            if (checkRange(matrix, newX, newY)
+            if (checkRangeExample(matrix, newX, newY)
                     && matrix[newX][newY] > matrix[curX][curY]) {
-                result = Math.max(result, dfs(matrix, visited, memo, newX, newY) + 1);
+                result = Math.max(result, dfsExample(matrix, visited, memo, newX, newY) + 1);
             }
         }
         memo[curX][curY] = result;
         return result;
     }
 
-    private boolean checkRange(int[][] matrix, int x, int y) {
+    private boolean checkRangeExample(int[][] matrix, int x, int y) {
         return x >= 0
                 && x < matrix.length
                 && y >= 0
