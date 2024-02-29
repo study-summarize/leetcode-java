@@ -3,6 +3,7 @@ package org.github.fourth.leetcode;
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,10 +16,17 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_257_BinaryTreePathsTest {
     private final LeetCode_257_BinaryTreePaths binaryTreePaths = new LeetCode_257_BinaryTreePaths();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(TreeNode root, List<String> expectedResult) {
-        List<String> actResult = binaryTreePaths.binaryTreePaths(root);
+    public void test01(TreeNode root, List<String> expectedResult) {
+        List<String> actResult = binaryTreePaths.binaryTreePaths01(root);
+        Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(TreeNode root, List<String> expectedResult) {
+        List<String> actResult = binaryTreePaths.binaryTreePathsExample(root);
         Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }
 

@@ -11,11 +11,56 @@ import java.util.List;
  * 叶子节点 是指没有子节点的节点。
  */
 public class LeetCode_257_BinaryTreePaths {
+
+    /**
+     * 回溯法
+     * 时间复杂度：
+     * 空间复杂度：
+     */
+    public List<String> binaryTreePaths01(TreeNode root) {
+        // 解集
+        List<String> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        // 单一解集
+        List<String> list = new ArrayList<>();
+        list.add(String.valueOf(root.val));
+
+        // 递归求解问题
+        helper(result, list, root);
+        return result;
+    }
+
+    private void helper(List<String> result, List<String> list, TreeNode root) {
+        // 1. 递归什么时候结束？root为叶子节点时
+        // 2. 单一解集什么时候加入解集？
+        if (root.left == null && root.right == null) {
+            result.add(String.join("->", list));
+            return;
+        }
+
+        // 3. 拆分问题
+        if (root.left != null) {
+            list.add(String.valueOf(root.left.val));
+            helper(result, list, root.left);
+            // 回朔
+            list.remove(list.size() - 1);
+        }
+
+        if (root.right != null) {
+            list.add(String.valueOf(root.right.val));
+            helper(result, list, root.right);
+            list.remove(list.size() - 1);
+        }
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public List<String> binaryTreePaths(TreeNode root) {
+    public List<String> binaryTreePathsExample(TreeNode root) {
         // 解集
         List<String> result = new ArrayList<>();
         if (root == null) {
@@ -25,12 +70,12 @@ public class LeetCode_257_BinaryTreePaths {
         List<String> list = new ArrayList<>();
         list.add(String.valueOf(root.val));
 
-        helper(result, list, root);
+        helperExample(result, list, root);
 
         return result;
     }
 
-    public void helper(List<String> result, List<String> sb, TreeNode root) {
+    public void helperExample(List<String> result, List<String> sb, TreeNode root) {
         // 递归何时退出：到达叶子节点
         if (root == null || (root.left == null && root.right == null)) {
             result.add(String.join("->", sb));
@@ -39,14 +84,14 @@ public class LeetCode_257_BinaryTreePaths {
 
         if (root.left != null) {
             sb.add(String.valueOf(root.left.val));
-            helper(result, sb, root.left);
+            helperExample(result, sb, root.left);
             // 回朔
             sb.remove(sb.size() - 1);
         }
 
         if (root.right != null) {
             sb.add(String.valueOf(root.right.val));
-            helper(result, sb, root.right);
+            helperExample(result, sb, root.right);
             sb.remove(sb.size() - 1);
         }
     }
