@@ -17,8 +17,15 @@ class LeetCode_139_wordBreakTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(String s, List<String> wordDict, boolean expectedResult) {
-        boolean actResult = wordBreak.wordBreak(s, wordDict);
+    public void test01(String s, List<String> wordDict, boolean expectedResult) {
+        boolean actResult = wordBreak.wordBreak01(s, wordDict);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(String s, List<String> wordDict, boolean expectedResult) {
+        boolean actResult = wordBreak.wordBreakExample(s, wordDict);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
