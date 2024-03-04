@@ -24,6 +24,21 @@ public class Node {
         this.neighbors = neighbors;
     }
 
+    // 需要掌握的一些方法
+
+    /**
+     * 求的图的联通分量
+     * 连接表
+     * 二维矩阵
+     * edge表示
+     */
+    public int countComponents() {
+        return 0;
+    }
+
+    //
+
+
     public static Node build(int[][] graph) {
         if (graph == null || graph.length == 0) {
             return new Node();

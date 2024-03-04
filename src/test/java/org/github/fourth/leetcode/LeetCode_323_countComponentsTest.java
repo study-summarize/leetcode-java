@@ -15,7 +15,7 @@ class LeetCode_323_countComponentsTest {
     private final LeetCode_323_countComponents countComponents = new LeetCode_323_countComponents();
 
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int n, int[][] edges, int expectedResult) {
         int actResult = countComponents.countComponents01(n, edges);
@@ -26,6 +26,12 @@ class LeetCode_323_countComponentsTest {
     @MethodSource("generateRightCase")
     public void testExample(int n, int[][] edges, int expectedResult) {
         int actResult = countComponents.countComponentsExample(n, edges);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample02(int n, int[][] edges, int expectedResult) {
+        int actResult = countComponents.countComponentsWithDFS(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
     }
 

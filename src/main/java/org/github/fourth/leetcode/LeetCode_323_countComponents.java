@@ -9,10 +9,45 @@ import java.util.*;
 public class LeetCode_323_countComponents {
 
     /**
-     *
+     * 使用DFS方法
      */
     public int countComponents01(int n, int[][] edges) {
-        return 0;
+        if (n <= 0 || edges == null || edges.length == 0) {
+            return 0;
+        }
+
+        // 先生成二维矩阵
+        int[][] graph = new int[n][n];
+        for (int i = 0; i < edges.length; i++) {
+            graph[i][i] = 1;
+            int[] edge = edges[i];
+            graph[edge[0]][edge[1]] = 1;
+            graph[edge[1]][edge[0]] = 1;
+        }
+
+        int result = 0;
+        boolean[] visited = new boolean[n];
+        // DFS 遍历所有节点
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                dfs(graph, visited, i);
+                ++result;
+            }
+        }
+        return result;
+    }
+
+    private void dfs(int[][] graph, boolean[] visited, int nodeNum) {
+        if (visited[nodeNum]) {
+            return;
+        }
+        visited[nodeNum] = true;
+        int[] values = graph[nodeNum];
+        for (int i = 0; i < values.length; i++) {
+            if (!visited[i] && graph[nodeNum][i] == 1) {
+                dfs(graph, visited, i);
+            }
+        }
     }
 
     /**
@@ -39,14 +74,14 @@ public class LeetCode_323_countComponents {
         boolean[] marked = new boolean[n];
         for (int i = 0; i < n; i++) {
             if (!marked[i]) {
-                bfs(adj, i, marked);
+                bfsExample(adj, i, marked);
                 result++;
             }
         }
         return result;
     }
 
-    private void bfs(Map<Integer, List<Integer>> adj, int nodeNum, boolean[] marked) {
+    private void bfsExample(Map<Integer, List<Integer>> adj, int nodeNum, boolean[] marked) {
         // 1、构建队列
         Queue<Integer> queue = new LinkedList<>();
         // 2、加入初始节点，并标记
@@ -94,7 +129,7 @@ public class LeetCode_323_countComponents {
         boolean[] marked = new boolean[n];
         for (int i = 0; i < n; i++) {
             if (!marked[i]) {
-                dfs(adj, i, marked);
+                dfsExample(adj, i, marked);
                 count++;
             }
         }
@@ -102,11 +137,11 @@ public class LeetCode_323_countComponents {
         return count;
     }
 
-    private void dfs(Map<Integer, List<Integer>> adj, int nodeNum, boolean[] marked) {
+    private void dfsExample(Map<Integer, List<Integer>> adj, int nodeNum, boolean[] marked) {
         marked[nodeNum] = true;
         for (Integer adjNode : adj.get(nodeNum)) {
             if (!marked[adjNode]) {
-                dfs(adj, adjNode, marked);
+                dfsExample(adj, adjNode, marked);
             }
         }
     }

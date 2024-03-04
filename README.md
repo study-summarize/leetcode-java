@@ -209,6 +209,9 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
 ```
 2、需要掌握的方法
 - 图中求联通分量
+3、图的表示
+- 二维矩阵
+- 邻接表
 
 
 ## 搜索
