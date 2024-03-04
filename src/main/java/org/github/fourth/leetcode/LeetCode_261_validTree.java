@@ -9,17 +9,58 @@ import java.util.*;
 public class LeetCode_261_validTree {
 
     /**
-     *
+     * 使用DFS计算联通分量
      */
     public boolean validTree01(int n, int[][] edges) {
-        return false;
+        if (n <= 0 || edges == null || edges.length == 0) {
+            return false;
+        }
+
+        // 1. 边数 = 节点数 - 1
+        if (edges.length != n - 1) {
+            return false;
+        }
+
+        // 2. 求联通分量 --> 转换成链接表
+        Map<Integer, List<Integer>> adj = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            adj.put(i, new ArrayList<>());
+        }
+        for (int i = 0; i < edges.length; i++) {
+            int[] edge = edges[i];
+            adj.get(edge[0]).add(edge[1]);
+            adj.get(edge[1]).add(edge[0]);
+        }
+        //
+        int count = 0;
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                dfs(adj, visited, i);
+                ++count;
+            }
+        }
+        return count == 1;
+    }
+
+    private void dfs(Map<Integer, List<Integer>> adj, boolean[] visited, int nodeNum) {
+        if (visited[nodeNum]) {
+            return;
+        }
+        visited[nodeNum] = true;
+        List<Integer> values = adj.get(nodeNum);
+        for (Integer node : values) {
+            if (!visited[node]) {
+                dfs(adj, visited, node);
+            }
+        }
     }
 
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public boolean validTreeExample(int n, int[][] edges) {
+    public boolean validTreeBfsExample(int n, int[][] edges) {
         if (n == 0 || edges == null || edges.length == 0
                 || edges[0] == null || edges[0].length == 0) {
             return false;
@@ -37,14 +78,14 @@ public class LeetCode_261_validTree {
         for (int i = 0; i < n; i++) {
             // 防止重复访问
             if (!visited[i]) {
-                bfs(edges, visited, i);
+                bfsExample(edges, visited, i);
                 count++;
             }
         }
         return count == 1;
     }
 
-    private void bfs(int[][] edges, boolean[] visited, int node) {
+    private void bfsExample(int[][] edges, boolean[] visited, int node) {
         // 1、构建队列
         Queue<Integer> queue = new LinkedList<>();
         // 2、将初始节点加入队列，并标记
@@ -98,18 +139,18 @@ public class LeetCode_261_validTree {
         boolean[] marked = new boolean[n];
         for (int i = 0; i < n; i++) {
             if (!marked[i]) {
-                dfs(adj, i, marked);
+                dfsExample(adj, i, marked);
                 count++;
             }
         }
         return count == 1;
     }
 
-    private void dfs(Map<Integer, List<Integer>> adj, int nodeNum, boolean[] marked) {
+    private void dfsExample(Map<Integer, List<Integer>> adj, int nodeNum, boolean[] marked) {
         marked[nodeNum] = true;
         for (Integer adjNode : adj.get(nodeNum)) {
             if (!marked[adjNode]) {
-                dfs(adj, adjNode, marked);
+                dfsExample(adj, adjNode, marked);
             }
         }
     }

@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -14,18 +15,23 @@ class LeetCode_261_validTreeTest {
     private final LeetCode_261_validTree validTree = new LeetCode_261_validTree();
 
 
-    //        @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int n, int[][] edges, boolean expectedResult) {
         boolean actResult = validTree.validTree01(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
-//        @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void testExample(int n, int[][] edges, boolean expectedResult) {
-        boolean actResult = validTree.validTreeExample(n, edges);
+    public void testExample01(int n, int[][] edges, boolean expectedResult) {
+        boolean actResult = validTree.validTreeBfsExample(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample02(int n, int[][] edges, boolean expectedResult) {
         boolean actResult02 = validTree.validTreeWithDfsExample(n, edges);
         Assertions.assertEquals(expectedResult, actResult02);
     }
