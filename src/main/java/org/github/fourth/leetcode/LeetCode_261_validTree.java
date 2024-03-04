@@ -12,6 +12,9 @@ public class LeetCode_261_validTree {
      * 使用DFS计算联通分量
      */
     public boolean validTree01(int n, int[][] edges) {
+        if (n == 1 && (edges == null || edges.length == 0)) {
+            return true;
+        }
         if (n <= 0 || edges == null || edges.length == 0) {
             return false;
         }
