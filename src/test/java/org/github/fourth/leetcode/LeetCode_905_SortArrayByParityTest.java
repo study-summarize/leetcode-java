@@ -1,4 +1,5 @@
-import org.github.fourth.leetcode.LeetCode_905_SortArrayByParity;
+package org.github.fourth.leetcode;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

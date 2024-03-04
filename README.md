@@ -188,6 +188,28 @@ for (; start < nums.length; start++) {
 - 获取二叉树的最大高度
 
 ## 图与二维矩阵：
+1、DFS的模板
+```groovy
+int[][] root = new int[5][5];
+boolean[] visited = new boolean[root.length];
+
+public void dfs(int[][] root, boolean[] visited, int currentNode) {
+    // 将当前节点置为已访问
+    visited[currentNode] = true;
+    // 以当前节点为跟节点，对其他节点进行访问
+    int[] values = root[currentNode];
+    // 开始递归遍历
+    for (int i = 0; i < root.length; i++) {
+        // currentNode -> i 有边时，且i还未被访问
+        if (root[currentNode][i] == 1 && !visited[i]) {
+            dfs(root, visited, i);
+        }
+    }
+}
+```
+2、需要掌握的方法
+- 图中求联通分量
+
 
 ## 搜索
 ### DFS

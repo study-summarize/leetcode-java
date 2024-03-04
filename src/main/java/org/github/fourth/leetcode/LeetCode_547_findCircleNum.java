@@ -12,10 +12,36 @@ import java.util.Queue;
 public class LeetCode_547_findCircleNum {
 
     /**
-     *
+     * 使用DFS的方式
      */
     public int findCircleNum01(int[][] isConnected) {
-        return 0;
+        if (isConnected == null || isConnected.length == 0) {
+            return 0;
+        }
+        int result = 0;
+
+        // 无向图的标记只需要用到一维？
+        boolean[] visited = new boolean[isConnected.length];
+        for (int i = 0; i < isConnected.length; i++) {
+            // 依次遍历节点，但只遍历未经过的节点
+            if (!visited[i]) {
+                dfs(isConnected, visited, i);
+                ++result;
+            }
+        }
+        return result;
+    }
+
+    private void dfs(int[][] isConnected, boolean[] visited, int cityNum) {
+        // 把当前节点置为以访问
+        visited[cityNum] = true;
+        // 以该行，依次对各个节点进行标记
+        int[] value = isConnected[cityNum];
+        for (int i = 0; i < value.length; i++) {
+            if (value[i] == 1 && !visited[i]) {
+                dfs(isConnected, visited, i);
+            }
+        }
     }
 
     /**
@@ -33,14 +59,14 @@ public class LeetCode_547_findCircleNum {
         boolean[] visited = new boolean[isConnected.length];
         for (int i = 0; i < isConnected.length; i++) {
             if (!visited[i]) {
-                bfs(isConnected, visited, i);
+                bfsExample(isConnected, visited, i);
                 count++;
             }
         }
         return count;
     }
 
-    private void bfs(int[][] isConnected, boolean[] visited, int cityNum) {
+    private void bfsExample(int[][] isConnected, boolean[] visited, int cityNum) {
         // 1、构建队列
         Queue<Integer> queue = new LinkedList<>();
         // 2、加入初始节点，并标记
@@ -79,19 +105,19 @@ public class LeetCode_547_findCircleNum {
         boolean[] visited = new boolean[isConnected.length];
         for (int i = 0; i < isConnected.length; i++) {
             if (!visited[i]) {
-                dfs(isConnected, visited, i);
+                dfsExample(isConnected, visited, i);
                 count++;
             }
         }
         return count;
     }
 
-    private void dfs(int[][] isConnected, boolean[] visited, int cityNum) {
+    private void dfsExample(int[][] isConnected, boolean[] visited, int cityNum) {
         visited[cityNum] = true;
         int[] values = isConnected[cityNum];
         for (int i = 0; i < values.length; i++) {
             if (values[i] == 1 && !visited[i]) {
-                dfs(isConnected, visited, i);
+                dfsExample(isConnected, visited, i);
             }
         }
     }

@@ -14,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_547_findCircleNumTest {
     private final LeetCode_547_findCircleNum findCircleNum = new LeetCode_547_findCircleNum();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] isConnected, int expectedResult) {
         int actResult = findCircleNum.findCircleNum01(isConnected);
