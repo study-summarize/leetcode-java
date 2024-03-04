@@ -18,8 +18,10 @@ public class LeetCode_323_countComponents {
 
         // 先生成二维矩阵
         int[][] graph = new int[n][n];
-        for (int i = 0; i < edges.length; i++) {
+        for (int i = 0; i < n; i++) {
             graph[i][i] = 1;
+        }
+        for (int i = 0; i < edges.length; i++) {
             int[] edge = edges[i];
             graph[edge[0]][edge[1]] = 1;
             graph[edge[1]][edge[0]] = 1;
@@ -44,7 +46,7 @@ public class LeetCode_323_countComponents {
         visited[nodeNum] = true;
         int[] values = graph[nodeNum];
         for (int i = 0; i < values.length; i++) {
-            if (!visited[i] && graph[nodeNum][i] == 1) {
+            if (!visited[i] && values[i] == 1) {
                 dfs(graph, visited, i);
             }
         }
