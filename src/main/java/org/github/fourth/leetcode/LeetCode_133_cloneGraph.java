@@ -1,22 +1,41 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.leetcode.common.graph.Node;
+
 import java.util.*;
 
 /**
  * 给你无向 连通 图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
  * 图中的每个节点都包含它的值 val（int） 和其邻居的列表（list[Node]）。
  * class Node {
- *     public int val;
- *     public List<Node> neighbors;
+ * public int val;
+ * public List<Node> neighbors;
  * }
  */
 public class LeetCode_133_cloneGraph {
 
     /**
-     *
+     * 使用DFS
      */
     public Node cloneGraph01(Node node) {
-        return null;
+        if (node == null) {
+            return null;
+        }
+        Map<Integer, Node> map = new HashMap<>();
+        return dfs(map, node);
+    }
+
+    private Node dfs(Map<Integer, Node> map, Node node) {
+        if (map.containsKey(node.val)) {
+            return map.get(node.val);
+        }
+        Node newNode = new Node(node.val);
+        map.put(newNode.val, newNode);
+        for (Node neighbor : node.neighbors) {
+            Node newNeighborNode = dfs(map, neighbor);
+            newNode.neighbors.add(newNeighborNode);
+        }
+        return newNode;
     }
 
     /**
@@ -49,10 +68,8 @@ public class LeetCode_133_cloneGraph {
                 Node cloneCurNode = map.get(curNode);
                 List<Node> neighborsOfcloneCurNode = cloneCurNode.neighbors;
                 neighborsOfcloneCurNode.add(map.get(neighborNode));
-
             }
         }
-
         return copyNode;
     }
 
@@ -67,11 +84,11 @@ public class LeetCode_133_cloneGraph {
         // key是原图节点，value是新图节点
         Map<Node, Node> map = new HashMap<>();
 
-        return dfs(map, node);
+        return dfsExample(map, node);
     }
 
     // 对 startNode 进行克隆
-    private Node dfs(Map<Node, Node> map, Node node) {
+    private Node dfsExample(Map<Node, Node> map, Node node) {
         if (map.containsKey(node)) {
             return map.get(node);
         }
@@ -79,29 +96,10 @@ public class LeetCode_133_cloneGraph {
         map.put(node, node);
         // 求 newNode 的连接表
         for (Node neighbor : node.neighbors) {
-            Node newNeighbor = dfs(map, neighbor);
+            Node newNeighbor = dfsExample(map, neighbor);
             newNode.neighbors.add(newNeighbor);
         }
         return newNode;
     }
-
-    public static class Node {
-        public int val;
-        public List<Node> neighbors;
-
-        public Node() {
-        }
-
-        public Node(int val) {
-            this.val = val;
-            this.neighbors = new ArrayList<>();
-        }
-
-        public Node(int val, List<Node> neighbors) {
-            this.val = val;
-            this.neighbors = neighbors;
-        }
-    }
-
 }
 
