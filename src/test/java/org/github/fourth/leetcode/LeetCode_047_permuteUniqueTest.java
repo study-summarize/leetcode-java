@@ -26,6 +26,7 @@ class LeetCode_047_permuteUniqueTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(new int[]{1, 1, 2}, List.of(List.of(1, 1, 2), List.of(1, 2, 1), List.of(2, 1, 1))),
+                arguments(new int[]{3, 3, 0, 3}, List.of(List.of(0, 3, 3, 3), List.of(3, 0, 3, 3), List.of(3, 3, 0, 3), List.of(3, 3, 3, 0))),
                 arguments(new int[]{1, 2, 3}, List.of(List.of(1, 2, 3), List.of(1, 3, 2), List.of(2, 1, 3), List.of(2, 3, 1), List.of(3, 1, 2), List.of(3, 2, 1)))
         );
     }

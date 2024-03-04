@@ -32,6 +32,7 @@ class LeetCode_017_letterCombinationsTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments("9", List.of("w", "x", "y", "z")),
                 arguments("23", List.of("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf")),
                 arguments("", List.of()),
                 arguments("2", List.of("a", "b", "c"))
