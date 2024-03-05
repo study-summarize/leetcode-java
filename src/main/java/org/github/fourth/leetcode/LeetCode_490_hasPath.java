@@ -8,14 +8,63 @@ package org.github.fourth.leetcode;
 public class LeetCode_490_hasPath {
 
     /**
-     *
+     * 二维DFS
      */
     public boolean hasPath01(int[][] maze, int[] start, int[] destination) {
-        return false;
+        if (maze == null || maze.length == 0
+                || start == null || start.length == 0
+                || destination == null || destination.length == 0) {
+            return false;
+        }
+        int m = maze.length;
+        int n = maze[0].length;
+        // 记录一次有效的尝试时，节点的访问情况
+        boolean[][] visited = new boolean[m][n];
+        // 1. 有固定的起点，所以不需要遍历整个二维数组
+        return dfs(maze, start, destination, visited);
     }
 
-    int[] dx = {1, 0, -1, 0};
-    int[] dy = {0, 1, 0, -1};
+    private boolean dfs(int[][] maze, int[] position, int[] destination, boolean[][] visited) {
+        // 递归什么时候结束？
+        if (position[0] == destination[0] && position[1] == destination[1]) {
+            return true;
+        }
+
+        // 减枝 ==> 异常情况: 撞墙了
+        if (maze[position[0]][position[1]] == 1) {
+            return false;
+        }
+
+
+        visited[position[0]][position[1]] = true;
+        // 移动
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, 1, 0, -1};
+        boolean hasPath = false;
+        for (int i = 0; i < 4; i++) {
+            int newX = position[0] + dx[i];
+            int newY = position[1] + dy[i];
+            // 不撞到墙，停不下来
+            while (checkRangeExample(maze, newX, newY) && maze[newX][newY] != 1) {
+                newX = newX + dx[i];
+                newY = newY + dy[i];
+            }
+            // while结束时，已经在墙上了
+            newX -= dx[i];
+            newY -= dy[i];
+
+            if (checkRangeExample(maze, newX, newY) && !visited[newX][newY]) {
+                hasPath = hasPath || dfs(maze, new int[]{newX, newY}, destination, visited);
+            }
+        }
+        // note: 在只需要有没有解的时候，其实是不需要置回的
+        visited[position[0]][position[1]] = false;
+        return hasPath;
+    }
+
+    int[] dxExample = {1, 0, -1, 0};
+    int[] dyExample = {0, 1, 0, -1};
+
     /**
      * 时间复杂度：
      * 空间复杂度：
@@ -48,22 +97,22 @@ public class LeetCode_490_hasPath {
         // 移动
         boolean hasPath = false;
         for (int i = 0; i < 4; i++) {
-            int newX = x + dx[i];
-            int newY = y + dy[i];
+            int newX = x + dxExample[i];
+            int newY = y + dyExample[i];
             while (checkRangeExample(maze, newX, newY) && maze[newX][newY] != 1) {
-                newX = newX + dx[i];
-                newY = newY + dy[i];
+                newX = newX + dxExample[i];
+                newY = newY + dyExample[i];
             }
             // while结束时，已经在墙上了
-            newX -= dx[i];
-            newY -= dy[i];
+            newX -= dxExample[i];
+            newY -= dyExample[i];
 
             if (checkRangeExample(maze, newX, newY) && !visited[newX][newY]) {
                 hasPath = hasPath || dfsExample(maze, visited, newX, newY, destinationX, destinationY);
             }
         }
         // note: 在只需要有没有解的时候，其实是不需要置回的
-        // visited[x][y] = false;
+        visited[x][y] = false;
         return hasPath;
     }
 

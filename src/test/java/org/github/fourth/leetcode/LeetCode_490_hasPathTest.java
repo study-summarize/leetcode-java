@@ -14,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_490_hasPathTest {
     private final LeetCode_490_hasPath hasPath = new LeetCode_490_hasPath();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] maze, int[] start, int[] destination, boolean expectedResult) {
         boolean actResult = hasPath.hasPath01(maze, start, destination);
