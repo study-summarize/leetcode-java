@@ -17,8 +17,15 @@ class LeetCode_079_existTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(char[][] board, String word, boolean expectedResult) {
-        boolean actResult = exist.exist(board, word);
+    public void test01(char[][] board, String word, boolean expectedResult) {
+        boolean actResult = exist.exist01(board, word);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(char[][] board, String word, boolean expectedResult) {
+        boolean actResult = exist.existExample(board, word);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
