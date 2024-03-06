@@ -15,21 +15,29 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_130_solveTest {
 
     private final LeetCode_130_solve solve = new LeetCode_130_solve();
-
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(char[][] board, char[][] expectedResult) {
         commonTest(expectedResult, x -> {
-            solve.solve(board);
+            solve.solve01(board);
             return board;
         });
     }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test02(char[][] board, char[][] expectedResult) {
+    public void testExample01(char[][] board, char[][] expectedResult) {
         commonTest(expectedResult, x -> {
-            solve.solveWithDfs(board);
+            solve.solveExample01(board);
+            return board;
+        });
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample02(char[][] board, char[][] expectedResult) {
+        commonTest(expectedResult, x -> {
+            solve.solveWithDfsExample02(board);
             return board;
         });
     }
