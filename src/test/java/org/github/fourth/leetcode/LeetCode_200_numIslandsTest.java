@@ -14,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_200_numIslandsTest {
     private final LeetCode_200_numIslands numIslands = new LeetCode_200_numIslands();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(char[][] grid, int expectedResult) {
         int actResult1 = numIslands.numIslands01(grid);
