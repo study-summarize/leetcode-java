@@ -15,7 +15,7 @@ class LeetCode_695_maxAreaOfIslandTest {
 
     private final LeetCode_695_maxAreaOfIsland maxAreaOfIsland = new LeetCode_695_maxAreaOfIsland();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] grid, int expectedResult) {
         int actResult = maxAreaOfIsland.maxAreaOfIsland01(grid);
