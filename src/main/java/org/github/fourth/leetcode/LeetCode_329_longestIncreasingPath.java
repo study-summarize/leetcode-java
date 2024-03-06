@@ -7,14 +7,58 @@ package org.github.fourth.leetcode;
 public class LeetCode_329_longestIncreasingPath {
 
     /**
-     *
+     * 二维DFS
      */
     public int longestIncreasingPath01(int[][] matrix) {
-        return 0;
+        if (matrix == null || matrix.length == 0) {
+            return 0;
+        }
+        // 构建单次访问标记数组
+        boolean[][] visited = new boolean[matrix.length][matrix[0].length];
+        // 以二维数组的各个点作为起点
+        int maxPath = Integer.MIN_VALUE;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                maxPath = Math.max(dfs(matrix, visited, i, j, 1), maxPath);
+            }
+        }
+        return maxPath;
+    }
+
+    private int dfs(int[][] matrix, boolean[][] visited, int currX, int currY, int path) {
+        // 递归什么时候退出？ ==> 到达边界，当前点已经被访问过
+        // 减枝
+        if (visited[currX][currY] || !checkRange(matrix, currX, currY)) {
+            return path;
+        }
+        // 当前节点置为已标记
+        visited[currX][currY] = true;
+        // 构建访问方向数组
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, 1, 0, -1};
+        // 遍历所有的方向
+        int newPath = path;
+        for (int i = 0; i < 4; i++) {
+            int newX = currX + dx[i];
+            int newY = currY + dy[i];
+            if (!checkRange(matrix, newX, newY) || visited[newX][newY] || matrix[newX][newY] <= matrix[currX][currY]) {
+                continue;
+            }
+            newPath = Math.max(newPath, dfs(matrix, visited, newX, newY, path + 1));
+        }
+        // 抹除标记
+        visited[currX][currY] = false;
+        return newPath;
+    }
+
+    private boolean checkRange(int[][] matrix, int currX, int currY) {
+        return currX >= 0 && currX < matrix.length
+                && currY >= 0 && currY < matrix[0].length;
     }
 
     int[] dxExample = {1, 0, -1, 0};
     int[] dyExample = {0, 1, 0, -1};
+
     /**
      * 时间复杂度：
      * 空间复杂度：
@@ -33,9 +77,9 @@ public class LeetCode_329_longestIncreasingPath {
         int longestPath = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (!visited[i][j]) {
-                    longestPath = Math.max(dfsExample(matrix, visited, memo, i, j), longestPath);
-                }
+//                if (!visited[i][j]) {
+                longestPath = Math.max(dfsExample(matrix, visited, memo, i, j), longestPath);
+//                }
             }
         }
         return longestPath;
