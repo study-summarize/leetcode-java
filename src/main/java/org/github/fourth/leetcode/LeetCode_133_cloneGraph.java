@@ -93,7 +93,7 @@ public class LeetCode_133_cloneGraph {
             return map.get(node);
         }
         Node newNode = new Node(node.val);
-        map.put(node, node);
+        map.put(node, newNode);
         // 求 newNode 的连接表
         for (Node neighbor : node.neighbors) {
             Node newNeighbor = dfsExample(map, neighbor);

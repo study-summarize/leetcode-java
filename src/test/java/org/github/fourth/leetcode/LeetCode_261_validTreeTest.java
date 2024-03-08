@@ -44,6 +44,8 @@ class LeetCode_261_validTreeTest {
                         {0, 3},
                         {1, 4}
                 }, true),
+                arguments(1, new int[][]{
+                }, true),
                 arguments(5, new int[][]{
                         {0, 1},
                         {1, 2},
