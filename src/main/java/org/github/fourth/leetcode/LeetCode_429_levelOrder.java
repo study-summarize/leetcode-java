@@ -15,11 +15,33 @@ import java.util.Queue;
 public class LeetCode_429_levelOrder {
 
     /**
+     * BFS
      * 时间复杂度：
      * 空间复杂度：
      */
     public List<List<Integer>> levelOrder01(TreeNode2 root) {
-        return null;
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        // 1、创建队列，放入根结点
+        Queue<TreeNode2> queue = new LinkedList<>();
+        queue.add(root);
+
+        // 2、层序遍历
+        while (!queue.isEmpty()) {
+            int breadthSize = queue.size();
+            List<Integer> list = new ArrayList<>();
+            for (int i = 0; i < breadthSize; i++) {
+                TreeNode2 node = queue.poll();
+                list.add(node.val);
+                for (TreeNode2 childNode : node.children) {
+                    queue.add(childNode);
+                }
+            }
+            result.add(list);
+        }
+        return result;
     }
 
     /**

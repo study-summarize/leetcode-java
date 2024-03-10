@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 class LeetCode_429_levelOrderTest {
     private final LeetCode_429_levelOrder levelOrder = new LeetCode_429_levelOrder();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(TreeNode2 root, List<List<Integer>> expectedResult) {
         List<List<Integer>> actResult = levelOrder.levelOrder01(root);
