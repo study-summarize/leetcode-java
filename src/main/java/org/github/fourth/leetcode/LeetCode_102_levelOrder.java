@@ -13,9 +13,38 @@ import java.util.Queue;
  */
 public class LeetCode_102_levelOrder {
 
+    /**
+     * BFS
+     */
     public List<List<Integer>> levelOrder01(TreeNode root) {
-        return null;
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        // 1. 创建队列
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        // 2. 根据队列，bfs扩散遍历
+        while (!queue.isEmpty()) {
+            int breadth = queue.size();
+            List<Integer> list = new ArrayList<>();
+            for (int i = 0; i < breadth; i++) {
+                TreeNode currentNode = queue.poll();
+                list.add(currentNode.val);
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right);
+                }
+            }
+            result.add(list);
+        }
+        return result;
     }
+
+
     /**
      * 时间复杂度：
      * 空间复杂度：

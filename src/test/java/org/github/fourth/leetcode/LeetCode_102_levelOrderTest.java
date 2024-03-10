@@ -17,7 +17,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("二叉树的层序遍历")
 class LeetCode_102_levelOrderTest {
     private final LeetCode_102_levelOrder levelOrder = new LeetCode_102_levelOrder();
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, List<List<Integer>> expectedResult) {
         List<List<Integer>> actResult = levelOrder.levelOrder01(root);
