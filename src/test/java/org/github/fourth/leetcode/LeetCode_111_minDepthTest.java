@@ -33,6 +33,13 @@ class LeetCode_111_minDepthTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test03(TreeNode root, int expectedResult) {
+        int actResult = minDepth.minDepth03(root);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test(TreeNode root, int expectedResult) {
         int actResult = minDepth.minDepthExample(root);
         Assertions.assertEquals(expectedResult, actResult);

@@ -61,6 +61,38 @@ public class LeetCode_111_minDepth {
         helper(root.right, currentDepth + 1);
     }
 
+    /**
+     * BFS
+     */
+    public int minDepth03(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        // 1、创建队列，并将跟结点放入队列中
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        // 2、层序遍历
+        int result = 0;
+        while (!queue.isEmpty()) {
+            ++result;
+            int breadthSize = queue.size();
+            for (int i = 0; i < breadthSize; i++) {
+                TreeNode node = queue.poll();
+                if (node.left == null && node.right == null) {
+                    return result;
+                }
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+        }
+        return result;
+    }
+
 
     public int minDepthExample(TreeNode root) {
         if (root == null) {
