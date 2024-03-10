@@ -116,6 +116,5 @@ public class LeetCode_329_longestIncreasingPath {
                 && x < matrix.length
                 && y >= 0
                 && y < matrix[0].length;
-
     }
 }
