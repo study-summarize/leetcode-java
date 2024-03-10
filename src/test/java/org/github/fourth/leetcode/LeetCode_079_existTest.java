@@ -32,6 +32,9 @@ class LeetCode_079_existTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(new char[][]{
+                        new char[]{'a'}
+                }, "a", true),
+                arguments(new char[][]{
                         new char[]{'A', 'B', 'C', 'E'},
                         new char[]{'S', 'F', 'C', 'S'},
                         new char[]{'A', 'D', 'E', 'E'},

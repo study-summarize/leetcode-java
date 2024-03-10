@@ -29,7 +29,8 @@ public class LeetCode_079_exist {
 
     private boolean dfs(char[][] board, boolean[][] visited, int currX, int currY, String word, int pos) {
         // 递归什么时候结束？ pos == word的长度
-        if (pos == word.length()) {
+        // 防止 'a' -> "a" 的特例
+        if (pos == word.length() - 1 && board[currX][currY] == word.charAt(pos)) {
             return true;
         }
         // 减枝？当前节点不满足word的当前位置
