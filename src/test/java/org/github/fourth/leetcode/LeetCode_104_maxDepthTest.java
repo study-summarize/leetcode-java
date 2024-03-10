@@ -30,6 +30,13 @@ class LeetCode_104_maxDepthTest {
         Assertions.assertEquals(expectedResult, actResult);
     }
 
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(TreeNode root, int expectedResult) {
+        int actResult = leetCode104MaxDepth.maxDepth03(root);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(TreeNode.build(Arrays.asList(3, 9, 20, null, null, 15, 7)), 3),
