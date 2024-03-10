@@ -13,10 +13,34 @@ import java.util.Queue;
  */
 public class LeetCode_107_levelOrderBottom {
     /**
-     *
+     * BFS
      */
     public List<List<Integer>> levelOrderBottom01(TreeNode root) {
-        return null;
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        // 1、
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        // 2
+        while (!queue.isEmpty()) {
+            int breadth = queue.size();
+            List<Integer> list = new ArrayList<>();
+            for (int i = 0; i < breadth; i++) {
+                TreeNode currentNode = queue.poll();
+                list.add(currentNode.val);
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right);
+                }
+            }
+            result.add(0, list);
+        }
+        return result;
     }
 
     /**
