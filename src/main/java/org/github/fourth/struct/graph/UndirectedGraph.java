@@ -57,6 +57,7 @@ public class UndirectedGraph {
         }
     }
 
+    // DFS 模板：全图
     public void dfsInGraph() {
         Arrays.fill(marked, false);
         connectComponentCount = 0;
@@ -68,6 +69,7 @@ public class UndirectedGraph {
         }
     }
 
+    // DFS 模板：以start节点为起点在某一连通分量上DFS
     public void dfsInComponent(Node start) {
         Arrays.fill(marked, false);
         this.dfs(start);

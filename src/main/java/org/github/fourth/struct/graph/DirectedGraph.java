@@ -4,6 +4,9 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.util.*;
 
+/**
+ * 有向图
+ */
 public class DirectedGraph {
 
     private final List<DirectedGraphNode> graphNodes;
