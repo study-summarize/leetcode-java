@@ -23,6 +23,13 @@ class LeetCode_133_cloneGraphTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test02(int[][] graph, int nodeNumbers) {
+        Node actResult = cloneGraph.cloneGraph02(Node.build(graph));
+        Assertions.assertArrayEquals(graph, actResult.convert(nodeNumbers));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void testExample01(int[][] graph, int nodeNumbers) {
         Node actResult = cloneGraph.cloneGraphExample01(Node.build(graph));
         Assertions.assertArrayEquals(graph, actResult.convert(nodeNumbers));

@@ -11,6 +11,9 @@ import java.util.*;
  * public int val;
  * public List<Node> neighbors;
  * }
+ * 解题方法：
+ * - 图的DFS
+ * - 图的BFS
  */
 public class LeetCode_133_cloneGraph {
 
@@ -36,6 +39,16 @@ public class LeetCode_133_cloneGraph {
             newNode.neighbors.add(newNeighborNode);
         }
         return newNode;
+    }
+
+    /**
+     * 图的BFS
+     */
+    public Node cloneGraph02(Node node) {
+        if (node == null) {
+            return null;
+        }
+        return cloneGraphExample01(node);
     }
 
     /**
