@@ -13,16 +13,21 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("261. 以图判树")
 class LeetCode_261_validTreeTest {
     private final LeetCode_261_validTree validTree = new LeetCode_261_validTree();
-
-
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int n, int[][] edges, boolean expectedResult) {
+    public void test01(int n, int[][] edges, boolean expectedResult) {
         boolean actResult = validTree.validTree01(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
-//    @ParameterizedTest
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int n, int[][] edges, boolean expectedResult) {
+        boolean actResult = validTree.validTree02(n, edges);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testExample01(int n, int[][] edges, boolean expectedResult) {
         boolean actResult = validTree.validTreeBfsExample(n, edges);

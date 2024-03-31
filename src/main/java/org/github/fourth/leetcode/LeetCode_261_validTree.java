@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * 给定编号从 0 到 n - 1 的 n 个结点。给定一个整数 n 和一个 edges 列表，其中 edges[i] = [ai, bi] 表示图中节点 ai 和 bi 之间存在一条无向边。
  * 如果这些边能够形成一个合法有效的树结构，则返回 true ，否则返回 false 。
+ * 解题方法：
+ * - 图的DFS
+ * - 图的BFS
  */
 public class LeetCode_261_validTree {
 
@@ -59,13 +62,69 @@ public class LeetCode_261_validTree {
         }
     }
 
+
+    /**
+     * 图的BFS
+     * 思路：边=节点数-1；联通分量为1
+     */
+    public boolean validTree02(int n, int[][] edges) {
+        if (n <= 0 || edges == null) {
+            return false;
+        }
+        // 边 = 节点数 - 1
+        if (edges.length != n - 1) {
+            return false;
+        }
+        // 求图的联通分量
+        // 先转换成邻接表
+        Map<Integer, List<Integer>> adjMap = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            adjMap.put(i, new ArrayList<>());
+        }
+        for (int[] edge : edges) {
+            adjMap.get(edge[0]).add(edge[1]);
+            adjMap.get(edge[1]).add(edge[0]);
+        }
+        // 利用BFS求图的联通分量
+        int result = 0;
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                ++result;
+                bfs(adjMap, i, visited);
+            }
+        }
+        return result == 1;
+    }
+
+    private void bfs(Map<Integer, List<Integer>> adjMap, int node, boolean[] visited) {
+        // 1、创建队列，并放入根节点
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(node);
+        // 2、节点置为已访问
+        visited[node] = true;
+        // 3、BFS遍历节点
+        while (!queue.isEmpty()) {
+            int breadthSize = queue.size();
+            for (int i = 0; i < breadthSize; i++) {
+                Integer currentNode = queue.poll();
+                List<Integer> childNodeList = adjMap.get(currentNode);
+                for (Integer childNode : childNodeList) {
+                    if (!visited[childNode]) {
+                        queue.add(childNode);
+                        visited[childNode] = true;
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
     public boolean validTreeBfsExample(int n, int[][] edges) {
-        if (n == 0 || edges == null || edges.length == 0
-                || edges[0] == null || edges[0].length == 0) {
+        if (n == 0 || edges == null) {
             return false;
         }
         // 满足是树的条件
