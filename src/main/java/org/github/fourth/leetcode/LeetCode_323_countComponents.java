@@ -5,6 +5,9 @@ import java.util.*;
 /**
  * 你有一个包含 n 个节点的图。给定一个整数 n 和一个数组 edges ，其中 edges[i] = [ai, bi] 表示图中 ai 和 bi 之间有一条边。
  * 返回 图中已连接分量的数目 。
+ * 解题方法：
+ * - 图的DFS
+ * - 图的BFS
  */
 public class LeetCode_323_countComponents {
 
@@ -48,6 +51,59 @@ public class LeetCode_323_countComponents {
         for (int i = 0; i < values.length; i++) {
             if (!visited[i] && values[i] == 1) {
                 dfs(graph, visited, i);
+            }
+        }
+    }
+
+
+    /**
+     * 图的BFS
+     */
+    public int countComponents02(int n, int[][] edges) {
+        if (n <= 0 || edges == null) {
+            return 0;
+        }
+        // 先创建邻接表
+        Map<Integer, List<Integer>> adj = new HashMap<>();
+        for (int i = 0; i< n; i++) {
+            adj.put(i, new ArrayList<>());
+        }
+        for (int[] edge : edges) {
+            adj.get(edge[0]).add(edge[1]);
+            adj.get(edge[1]).add(edge[0]);
+        }
+
+        int result = 0;
+        // 按照图的节点依次BFS遍历
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                bfs(adj, i, visited);
+                ++result;
+            }
+        }
+        return result;
+    }
+
+    private void bfs(Map<Integer, List<Integer>> adj, int node, boolean[] visited) {
+        // 1、创建队列，并加入根节点
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(node);
+        // 2、节点置为已访问
+        visited[node] = true;
+        // 3、BFS访问
+        while (!queue.isEmpty()) {
+            int breadthSize = queue.size();
+            for (int i = 0; i < breadthSize; i++) {
+                Integer currentNode = queue.poll();
+                visited[currentNode] = true;
+                List<Integer> adjAroundNodeList = adj.get(currentNode);
+                for (Integer aroundNode : adjAroundNodeList) {
+                    if (!visited[aroundNode]) {
+                        queue.add(aroundNode);
+                        visited[aroundNode] = true;
+                    }
+                }
             }
         }
     }

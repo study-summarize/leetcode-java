@@ -21,6 +21,12 @@ class LeetCode_323_countComponentsTest {
         int actResult = countComponents.countComponents01(n, edges);
         Assertions.assertEquals(expectedResult, actResult);
     }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int n, int[][] edges, int expectedResult) {
+        int actResult = countComponents.countComponents02(n, edges);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

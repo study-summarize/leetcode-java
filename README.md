@@ -212,6 +212,10 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
 3、图的表示
 - 二维矩阵
 - 邻接表
+4、思考
+一般都是将图转换成二维矩阵、邻接表来处理。
+- DFS：二维矩阵
+- BFS：邻接表（使用队列，一般就不用去除访问标记）
 
 
 ## 搜索
