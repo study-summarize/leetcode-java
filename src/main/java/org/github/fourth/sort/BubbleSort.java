@@ -1,20 +1,18 @@
-package org.github.fourth.leetcode.other.sort;
+package org.github.fourth.sort;
 
 /**
- * @author jwang55
+ * 冒泡排序
  */
 public class BubbleSort {
-
     public void sort(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;
         }
 
-        // 最右边有序数字是多少
+        // 每轮确定一个最大值
         for (int i = 0; i < nums.length; i++) {
-            // 开始每轮冒泡：
             for (int j = 1; j < nums.length - i; j++) {
-                if (nums[j] < nums[j - 1]) {
+                if (nums[j - 1] > nums[j]) {
                     int temp = nums[j - 1];
                     nums[j - 1] = nums[j];
                     nums[j] = temp;
@@ -22,7 +20,6 @@ public class BubbleSort {
             }
         }
     }
-
     public void betterSort(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;

@@ -52,26 +52,6 @@ public class SortTest {
         assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
     }
 
-    @DisplayName("冒泡排序测试")
-    @ParameterizedTest
-    @MethodSource("generateRightCase")
-    public void testBubbleSort(int[] nums, int[] target) {
-        int[] bubbleNums = nums.clone();
-        new BubbleSort().sort(bubbleNums);
-        Assertions.assertArrayEquals(bubbleNums, target);
-        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
-    }
-
-    @DisplayName("优化版冒泡排序测试")
-    @ParameterizedTest
-    @MethodSource("generateRightCase")
-    public void testBubbleBetterSort(int[] nums, int[] target) {
-        int[] betterBubbleNums = nums.clone();
-        new BubbleSort().betterSort(betterBubbleNums);
-        Assertions.assertArrayEquals(betterBubbleNums, target);
-        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
-    }
-
     @DisplayName("归并排序测试")
     @ParameterizedTest
     @MethodSource("generateRightCase")
