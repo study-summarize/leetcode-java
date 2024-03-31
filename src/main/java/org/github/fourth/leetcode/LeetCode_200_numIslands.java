@@ -7,11 +7,14 @@ import java.util.Queue;
  * 给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。
  * 岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。
  * 此外，你可以假设该网格的四条边均被水包围。
+ * 解题方法：
+ * - 二维矩阵DFS
+ * - 二维矩阵BFS
  */
 public class LeetCode_200_numIslands {
 
     /**
-     * 二维DFS
+     * 二维矩阵DFS
      */
     public int numIslands01(char[][] grid) {
         if (grid == null || grid[0] == null || grid[0].length == 0) {
@@ -51,6 +54,57 @@ public class LeetCode_200_numIslands {
                 continue;
             }
             dfs(grid, visited, newX, newY);
+        }
+    }
+
+    /**
+     * 二维矩阵的BFS
+     */
+    public int numIslands02(char[][] grid) {
+        int result = 0;
+        if (grid == null || grid.length == 0
+                || grid[0] == null || grid[0].length == 0) {
+            return result;
+        }
+        // 1、创建访问标记数组
+        boolean[][] visited = new boolean[grid.length][grid[0].length];
+        // 2、遍历可选的节点
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == '1' && !visited[i][j]) {
+                    bfs(grid, visited, new Point(i, j));
+                    ++result;
+                }
+            }
+        }
+        return result;
+    }
+
+    private void bfs(char[][] grid, boolean[][] visited, Point node) {
+        // 1、创建队列，并放入当前节点
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(node);
+        // 2、将当前节点置为已标记
+        visited[node.x][node.y] = true;
+        // 3、已当前节点为初始节点，开始BFS访问
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, -1, 0, 1};
+        while (!queue.isEmpty()) {
+            int breadthSize = queue.size();
+            for (int i = 0; i < breadthSize; i++) {
+                Point currentNode = queue.poll();
+                // 访问当前节点的邻接节点
+                for (int j = 0; j < 4; j++) {
+                    Point newNode = new Point(currentNode.x + dx[j], currentNode.y + dy[j]);
+                    if (!checkRangeExample(grid, newNode.x, newNode.y)
+                            || visited[newNode.x][newNode.y]
+                            || grid[newNode.x][newNode.y] != '1') {
+                        continue;
+                    }
+                    queue.add(newNode);
+                    visited[newNode.x][newNode.y] = true;
+                }
+            }
         }
     }
 

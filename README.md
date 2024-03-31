@@ -218,6 +218,7 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
 - BFS：邻接表（使用队列，一般就不用去除访问标记）
   - 图的二维矩阵，也可以认为是邻接表？？？547
 
+note：二维矩阵也是一种特殊的数据结构
 
 ## 搜索
 ### DFS

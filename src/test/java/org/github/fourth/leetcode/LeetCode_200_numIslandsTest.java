@@ -23,6 +23,13 @@ class LeetCode_200_numIslandsTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test02(char[][] grid, int expectedResult) {
+        int actResult1 = numIslands.numIslands02(grid);
+        Assertions.assertEquals(expectedResult, actResult1);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void testExample01(char[][] grid, int expectedResult) {
         int actResult1 = numIslands.numIslandsExample01(grid);
         Assertions.assertEquals(expectedResult, actResult1);
