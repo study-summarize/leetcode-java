@@ -11,10 +11,57 @@ import java.util.*;
 public class LeetCode_207_canFinish {
 
     /**
-     *
+     * BFS：拓扑排序
      */
     public boolean canFinish01(int numCourses, int[][] prerequisites) {
-        return false;
+        if (numCourses <= 0 || prerequisites == null || prerequisites[0].length == 0) {
+            return false;
+        }
+        // 1、先转换成邻接表，并统计每个节点的入度
+        List<List<Integer>> graphNodes = new ArrayList<>();
+        for (int i = 0; i < numCourses; i++) {
+            graphNodes.add(new ArrayList<>());
+        }
+        for (int[] preRequest: prerequisites) {
+            int start = preRequest[1];
+            int end = preRequest[0];
+            graphNodes.get(end).add(start);
+        }
+        // 1、计算每个节点的入度
+        Map<Integer, Integer> indegreeMap = new HashMap<>();
+        for (List<Integer> adjNodes : graphNodes) {
+            for (Integer adjNode : adjNodes) {
+                if (indegreeMap.containsKey(adjNode)) {
+                    indegreeMap.put(adjNode, indegreeMap.get(adjNode) + 1);
+                } else {
+                    indegreeMap.put(adjNode, 1);
+                }
+            }
+        }
+        // 2、将入度为0的节点放入队列中
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < numCourses; i++) {
+            if (!indegreeMap.containsKey(i)) {
+                queue.offer(i);
+            }
+        }
+        // 3、BFS遍历
+        List<Integer> result = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            Integer curNode = queue.poll();
+            result.add(curNode);
+            List<Integer> adjNodes = graphNodes.get(curNode);
+            for (Integer adjNode : adjNodes) {
+                // 邻接节点入度减1
+                int updatedIndegree = indegreeMap.get(adjNode) - 1;
+                indegreeMap.put(adjNode, updatedIndegree);
+                // 如果更新后节点入度为0，则入队
+                if (updatedIndegree == 0) {
+                    queue.offer(adjNode);
+                }
+            }
+        }
+        return result.size() == numCourses;
     }
 
     /**

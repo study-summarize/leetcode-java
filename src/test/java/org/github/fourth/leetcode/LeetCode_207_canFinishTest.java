@@ -14,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_207_canFinishTest {
     private final LeetCode_207_canFinish canFinish = new LeetCode_207_canFinish();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int numCourses, int[][] prerequisites, boolean expectedResult) {
         boolean actResult = canFinish.canFinish01(numCourses, prerequisites);
