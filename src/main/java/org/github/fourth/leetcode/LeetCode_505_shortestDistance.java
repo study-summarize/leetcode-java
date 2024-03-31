@@ -12,10 +12,23 @@ import java.util.Queue;
  */
 public class LeetCode_505_shortestDistance {
     /**
+     * 最短路径BFS
+     */
+    public int shortestDistance01(int[][] maze, int[] start, int[] destination) {
+        if (maze == null || maze.length == 0 || start == null || start.length != 2
+                || destination == null || destination.length != 2) {
+            return -1;
+        }
+
+        return 0;
+    }
+
+    /**
      * 时间复杂度：
      * 空间复杂度：
+     * 记忆化搜索
      */
-    public int shortestDistance(int[][] maze, int[] start, int[] destination) {
+    public int shortestDistanceExample(int[][] maze, int[] start, int[] destination) {
         if (maze == null || maze.length == 0 || maze[0] == null || maze[0].length == 0) {
             return -1;
         }
@@ -42,7 +55,7 @@ public class LeetCode_505_shortestDistance {
                 int newX = point[0] + dx[i];
                 int newY = point[1] + dy[i];
                 int steps = 0;
-                while (checkRange(maze, newX, newY)
+                while (checkRangeExample(maze, newX, newY)
                         && maze[newX][newY] == 0) {
                     newX += dx[i];
                     newY += dy[i];
@@ -62,7 +75,7 @@ public class LeetCode_505_shortestDistance {
         return memo[destination[0]][destination[1]] == Integer.MAX_VALUE ? -1 : memo[destination[0]][destination[1]];
     }
 
-    private boolean checkRange(int[][] maze, int x, int y) {
+    private boolean checkRangeExample(int[][] maze, int x, int y) {
         return x >= 0
                 && x < maze.length
                 && y >= 0
