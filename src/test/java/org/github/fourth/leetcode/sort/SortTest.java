@@ -1,7 +1,6 @@
 package org.github.fourth.leetcode.sort;
 
 import org.github.fourth.leetcode.other.sort.*;
-import org.github.fourth.sort.InsertionSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -42,15 +41,7 @@ public class SortTest {
         Assertions.assertEquals(6, _9th);
     }
 
-    @DisplayName("插入排序测试")
-    @ParameterizedTest
-    @MethodSource("generateRightCase")
-    public void testInsertionSort(int[] nums, int[] target) {
-        int[] insertionNums = nums.clone();
-        new InsertionSort().sort(insertionNums);
-        Assertions.assertArrayEquals(insertionNums, target);
-        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
-    }
+
     @DisplayName("快速排序测试")
     @ParameterizedTest
     @MethodSource("generateRightCase")

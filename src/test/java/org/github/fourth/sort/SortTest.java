@@ -16,6 +16,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("排序测试")
 public class SortTest {
 
+    @DisplayName("插入排序测试")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testInsertionSort(int[] nums, int[] target) {
+        int[] insertionNums = nums.clone();
+        new InsertionSort().sort(insertionNums);
+        Assertions.assertArrayEquals(insertionNums, target);
+        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+    }
+
     @DisplayName("归并排序测试")
     @ParameterizedTest
     @MethodSource("generateRightCase")
