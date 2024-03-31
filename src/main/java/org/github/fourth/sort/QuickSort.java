@@ -1,7 +1,7 @@
-package org.github.fourth.leetcode.other.sort;
+package org.github.fourth.sort;
 
 /**
- * @author jwang55
+ * 快速排序
  */
 public class QuickSort {
 
@@ -9,6 +9,7 @@ public class QuickSort {
         if (nums == null || nums.length == 0) {
             return;
         }
+
         quickSort(nums, 0, nums.length - 1);
     }
 
@@ -17,19 +18,24 @@ public class QuickSort {
             return;
         }
 
-        int pivot = partition(nums, start, end); // x = value
-        quickSort(nums, start, pivot - 1); // x < value
-        quickSort(nums, pivot + 1, end);  // x > value
+        // 新的中间值下标
+        int pivot = partition(nums, start, end);
+        quickSort(nums, start, pivot - 1);
+        quickSort(nums, pivot + 1, end);
+
     }
 
-    // 算法导论的方法
+    /**
+     * 算法导论的实现
+     */
     private int partition(int[] nums, int start, int end) {
         int pivotValue = nums[end];
 
-        // 左边部分
+        // j 是左右排好序的最后一个值的下标
         int j = start - 1;
-        for (int i = start; i <= end; i++) {
-            // note：不能含有等号
+        // 先排好左边
+        for (int i = start; i < end; i++) {
+            // 只有在符合左边条件时，才交互位置
             if (nums[i] < pivotValue) {
                 j = j + 1;
                 // 说明i之前一定有元素大于pivotValue，需要交换
@@ -64,7 +70,7 @@ public class QuickSort {
             return;
         }
 
-        int pivot = partition2(nums, start, end); // x = value
+        int pivot = partition2(nums, start, end);// x = value
         quickSort(nums, start, pivot - 1); // x < value
         quickSort(nums, pivot + 1, end);  // x > value
     }

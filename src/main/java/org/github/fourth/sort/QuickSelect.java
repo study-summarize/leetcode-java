@@ -1,4 +1,4 @@
-package org.github.fourth.leetcode.other.sort;
+package org.github.fourth.sort;
 
 /**
  * @author jwang55
