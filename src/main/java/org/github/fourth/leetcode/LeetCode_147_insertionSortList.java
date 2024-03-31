@@ -13,11 +13,37 @@ import org.github.fourth.leetcode.common.ListNode;
  * 对链表进行插入排序。
  */
 public class LeetCode_147_insertionSortList {
+
+    public ListNode insertionSortList01(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        // 修改链表结构，就新增一个dummyNode节点
+        ListNode dummyNode = new ListNode(Integer.MIN_VALUE);
+
+        // 依次进行排序
+        while (head != null) {
+            ListNode node = dummyNode;
+
+            // 如果后续依然有序的话，直接往下走
+            while (node.next != null && node.next.val < head.val) {
+                node = node.next;
+            }
+
+            // 拆入此时head的节点
+            ListNode temp = head.next;
+            head.next = node.next;
+            node.next = head;
+            head = temp;
+        }
+        return dummyNode.next;
+    }
+
     /**
      * 时间复杂度：
      * 空间复杂度：
      */
-    public ListNode insertionSortList(ListNode head) {
+    public ListNode insertionSortListExample(ListNode head) {
         if (head == null) {
             return null;
         }

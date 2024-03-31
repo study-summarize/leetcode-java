@@ -1,8 +1,10 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.ListNodeVerifyUtil;
 import org.github.fourth.leetcode.common.ListNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -14,11 +16,18 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_147_insertionSortListTest {
     private final LeetCode_147_insertionSortList insertionSortList = new LeetCode_147_insertionSortList();
 
-//        @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(ListNode head, ListNode expectedResult) {
-        ListNode actResult = insertionSortList.insertionSortList(head);
-        Assertions.assertEquals(expectedResult, actResult);
+    public void test01(ListNode head, ListNode expectedResult) {
+        ListNode actResult = insertionSortList.insertionSortList01(head);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExample(ListNode head, ListNode expectedResult) {
+        ListNode actResult = insertionSortList.insertionSortListExample(head);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
     }
 
     public static Stream<Arguments> generateRightCase() {
