@@ -23,7 +23,14 @@ class LeetCode_130_solveTest {
             return board;
         });
     }
-
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(char[][] board, char[][] expectedResult) {
+        commonTest(expectedResult, x -> {
+            solve.solve02(board);
+            return board;
+        });
+    }
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testExample01(char[][] board, char[][] expectedResult) {

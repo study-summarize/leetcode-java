@@ -219,6 +219,7 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
   - 图的二维矩阵，也可以认为是邻接表？？？547
 
 note：二维矩阵也是一种特殊的数据结构
+二维矩阵BFS 很多都需要转换point
 
 ## 搜索
 ### DFS

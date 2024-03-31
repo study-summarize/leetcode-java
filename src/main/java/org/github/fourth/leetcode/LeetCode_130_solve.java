@@ -5,6 +5,9 @@ import java.util.Queue;
 
 /**
  * 给你一个 m x n 的矩阵 board ，由若干字符 'X' 和 'O' ，找到所有被 'X' 围绕的区域，并将这些区域里所有的 'O' 用 'X' 填充。
+ * 解题方法：
+ * - 二维矩阵的DFS
+ * - 二维矩阵的BFS
  */
 public class LeetCode_130_solve {
 
@@ -55,6 +58,68 @@ public class LeetCode_130_solve {
                 continue;
             }
             dfs(board, visited, newX, newY);
+        }
+    }
+
+    /**
+     * 二维矩阵的BFS
+     * 以边缘的O节点为起点，将邻接节点全部换成B；后续将B再换成O，将O换成X
+     */
+    public void solve02(char[][] board) {
+        if (board == null || board.length == 0
+                || board[0] == null || board[0].length == 0) {
+            return;
+        }
+        boolean[][] visited = new boolean[board.length][board[0].length];
+        // 以边缘节点为起点
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (isEdge(i, j, board.length, board[0].length)
+                        && board[i][j] == 'O'
+                        && !visited[i][j]) {
+                    bfs(board, visited, new Point(i, j));
+                }
+            }
+        }
+        //
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == 'O') {
+                    board[i][j] = 'X';
+                } else if (board[i][j] == 'B') {
+                    board[i][j] = 'O';
+                }
+            }
+        }
+
+    }
+
+    private void bfs(char[][] board, boolean[][] visited, Point node) {
+        // 1、创建队列，并将当前节点放入
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(node);
+        // 2、将当前节点置为已访问
+        visited[node.x][node.y] = true;
+        board[node.x][node.y] = 'B';
+        // 3、开始BFS遍历
+        int[] dx = {-1, 0, 1, 0};
+        int[] dy = {0, 1, 0, -1};
+        while (!queue.isEmpty()) {
+            int breadthSize = queue.size();
+            for (int i = 0; i < breadthSize; i++) {
+                Point currentNode = queue.poll();
+                for (int j = 0; j < 4; j++) {
+                    Point newNode = new Point(currentNode.x + dx[j], currentNode.y + dy[j]);
+                    if (!checkRangeExample(board, newNode.x, newNode.y)
+                            || board[newNode.x][newNode.y] != 'O'
+                            || visited[newNode.x][newNode.y]) {
+                        continue;
+                    }
+                    queue.add(newNode);
+                    visited[newNode.x][newNode.y] = true;
+                    board[newNode.x][newNode.y] = 'B';
+                }
+            }
         }
     }
 
