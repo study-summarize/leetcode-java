@@ -51,24 +51,6 @@ public class SortTest {
         Assertions.assertArrayEquals(insertionNums, target);
         assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
     }
-
-    @DisplayName("归并排序测试")
-    @ParameterizedTest
-    @MethodSource("generateRightCase")
-    public void testMergeSort(int[] nums, int[] target) {
-        // 归并排序1测试
-        int[] mergeSort1Nums = nums.clone();
-        new MergeSort().sort(mergeSort1Nums);
-        Assertions.assertArrayEquals(mergeSort1Nums, target);
-        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
-
-        // 归并排序2测试
-        int[] mergeSort2Nums = nums.clone();
-        new MergeSort().sort2(mergeSort2Nums);
-        Assertions.assertArrayEquals(mergeSort2Nums, target);
-        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
-    }
-
     @DisplayName("快速排序测试")
     @ParameterizedTest
     @MethodSource("generateRightCase")

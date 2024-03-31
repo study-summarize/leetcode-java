@@ -1,10 +1,9 @@
-package org.github.fourth.leetcode.other.sort;
+package org.github.fourth.sort;
 
 /**
- * @author jwang55
+ * 归并排序
  */
 public class MergeSort {
-
     public void sort(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;
@@ -14,8 +13,9 @@ public class MergeSort {
 
     private void mergeSort(int[] nums, int start, int end) {
         if (start < end) {
+            // 求中间数的严谨写法
             int mid = start + (end - start) / 2;
-            mergeSort(nums, start, mid);
+            mergeSort(nums, 0, mid);
             mergeSort(nums, mid + 1, end);
 
             merge(nums, start, mid, end);

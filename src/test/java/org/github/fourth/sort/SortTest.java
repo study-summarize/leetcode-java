@@ -1,5 +1,6 @@
 package org.github.fourth.sort;
 
+import org.github.fourth.sort.MergeSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,6 +15,24 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("排序测试")
 public class SortTest {
+
+    @DisplayName("归并排序测试")
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testMergeSort(int[] nums, int[] target) {
+        // 归并排序1测试
+        int[] mergeSort1Nums = nums.clone();
+        new MergeSort().sort(mergeSort1Nums);
+        Assertions.assertArrayEquals(mergeSort1Nums, target);
+        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+
+        // 归并排序2测试
+        int[] mergeSort2Nums = nums.clone();
+        new MergeSort().sort2(mergeSort2Nums);
+        Assertions.assertArrayEquals(mergeSort2Nums, target);
+        assertFalse(Arrays.equals(nums, target)); // 保证原生数组顺序未被打乱
+    }
+
     @DisplayName("冒泡排序")
     @ParameterizedTest
     @MethodSource("generateRightCase")
