@@ -10,10 +10,10 @@ import java.util.*;
 public class LeetCode_210_findOrder {
 
     /**
-     *
+     * 拓扑排序
      */
     public int[] findOrder01(int numCourses, int[][] prerequisites) {
-        return new int[0];
+        return findOrderExample(numCourses, prerequisites);
     }
 
     /**
