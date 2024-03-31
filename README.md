@@ -216,6 +216,7 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
 一般都是将图转换成二维矩阵、邻接表来处理。
 - DFS：二维矩阵
 - BFS：邻接表（使用队列，一般就不用去除访问标记）
+  - 图的二维矩阵，也可以认为是邻接表？？？547
 
 
 ## 搜索

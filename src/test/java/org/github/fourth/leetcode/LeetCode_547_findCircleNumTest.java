@@ -20,6 +20,12 @@ class LeetCode_547_findCircleNumTest {
         int actResult = findCircleNum.findCircleNum01(isConnected);
         Assertions.assertEquals(expectedResult, actResult);
     }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[][] isConnected, int expectedResult) {
+        int actResult = findCircleNum.findCircleNum02(isConnected);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")

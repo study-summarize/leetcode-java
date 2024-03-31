@@ -8,6 +8,9 @@ import java.util.Queue;
  * 省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。
  * 给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] = 1 表示第 i 个城市和第 j 个城市直接相连，而 isConnected[i][j] = 0 表示二者不直接相连。
  * 返回矩阵中 省份 的数量。
+ * 解题方法：
+ * - 图的DFS
+ * - 图的BFS
  */
 public class LeetCode_547_findCircleNum {
 
@@ -40,6 +43,53 @@ public class LeetCode_547_findCircleNum {
         for (int i = 0; i < value.length; i++) {
             if (value[i] == 1 && !visited[i]) {
                 dfs(isConnected, visited, i);
+            }
+        }
+    }
+
+
+    /**
+     * 图的BFS
+     * todo: 图的二维矩阵，也可以认为是邻接表？？？是的，图的[i,j]是表示i -> j有一条边
+     */
+    public int findCircleNum02(int[][] isConnected) {
+        int result = 0;
+        if (isConnected == null || isConnected.length == 0) {
+            return result;
+        }
+        // n个城市，相当于n个节点
+        boolean[] visited = new boolean[isConnected.length];
+        for (int i = 0; i < isConnected.length; i++) {
+            if (!visited[i]) {
+                bfs(isConnected, visited, i);
+                ++result;
+            }
+        }
+        return result;
+    }
+
+    private void bfs(int[][] isConnected, boolean[] visited, int node) {
+        // 1、创建队列，并放入根节点
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(node);
+        // 2、节点置为已访问
+        visited[node] = true;
+        // 3、BFS遍历
+        while (!queue.isEmpty()) {
+            int breadthSize = queue.size();
+            for (int i = 0; i < breadthSize; i++) {
+                Integer currentNode = queue.poll();
+                int[] adjArrays = isConnected[currentNode];
+                // 遍历邻接节点
+                for (int j = 0; j < adjArrays.length; j++) {
+                    // 有边才进行访问
+                    if (adjArrays[j] == 1) {
+                        if (!visited[j]) {
+                            visited[j] = true;
+                            queue.add(j);
+                        }
+                    }
+                }
             }
         }
     }
