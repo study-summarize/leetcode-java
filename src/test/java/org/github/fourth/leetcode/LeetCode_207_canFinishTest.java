@@ -29,6 +29,7 @@ class LeetCode_207_canFinishTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(1, new int[][]{{}}, true),
                 arguments(2, new int[][]{{1, 0}}, true),
                 arguments(2, new int[][]{{1, 0}, {0, 1}}, false)
         );

@@ -14,8 +14,11 @@ public class LeetCode_207_canFinish {
      * BFS：拓扑排序
      */
     public boolean canFinish01(int numCourses, int[][] prerequisites) {
-        if (numCourses <= 0 || prerequisites == null || prerequisites[0].length == 0) {
+        if (numCourses <= 0 || prerequisites == null || prerequisites.length == 0) {
             return false;
+        }
+        if (prerequisites[0].length == 0) {
+            return true;
         }
         // 1、先转换成邻接表，并统计每个节点的入度
         List<List<Integer>> graphNodes = new ArrayList<>();
@@ -69,8 +72,11 @@ public class LeetCode_207_canFinish {
      * 空间复杂度：
      */
     public boolean canFinishExample(int numCourses, int[][] prerequisites) {
-        if (numCourses < 0 || prerequisites == null) {
+        if (numCourses < 0 || prerequisites == null || prerequisites.length == 0) {
             return false;
+        }
+        if (prerequisites[0].length == 0) {
+            return true;
         }
         List<Integer> result = new ArrayList<>();
         // 转换成邻接表
