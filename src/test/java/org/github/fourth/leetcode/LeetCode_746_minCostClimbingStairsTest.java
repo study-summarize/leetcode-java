@@ -13,10 +13,22 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("使用最小花费爬楼梯")
 class LeetCode_746_minCostClimbingStairsTest {
     private final LeetCode_746_minCostClimbingStairs minCostClimbingStairs = new LeetCode_746_minCostClimbingStairs();
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] cost, int expectedResult) {
+    public void test01(int[] cost, int expectedResult) {
         int actResult = minCostClimbingStairs.minCostClimbingStairs01(cost);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] cost, int expectedResult) {
+        int actResult = minCostClimbingStairs.minCostClimbingStairs02(cost);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] cost, int expectedResult) {
+        int actResult = minCostClimbingStairs.minCostClimbingStairs03(cost);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
