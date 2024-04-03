@@ -235,6 +235,13 @@ DFS -> 回溯法 -> 记忆化搜索
 ## 思路：
 - 分治法
 
+## 动态规划
+1、四步骤设计
+- 定义状态：dp[n]：
+- 状态转移：dp[n] = dp[n-1] + ...
+- 初始条件：dp[0]
+- 求最优解：
+
 相关资料：
 - 一个YouTuber分享的解题思路：https://www.youtube.com/playlist?list=PLwdV8xC1EWHrtgsYCcDTXIMVaHSlsnLzL
 
