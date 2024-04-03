@@ -9,12 +9,76 @@ import java.util.Arrays;
  * 给定 n ，请计算 F(n) 。
  */
 public class LeetCode_509_fib {
-
     /**
-     *
+     * 方法一：递归法
      */
     public int fib01(int n) {
-        return 0;
+        if (n == 1 || n == 0) {
+            return n;
+        }
+        return fib01(n - 1) + fib01(n - 2);
+    }
+
+    /**
+     * 方法二：自顶向下的动态规划
+     */
+    public int fib02(int n) {
+        if (n < 0) {
+            return -1;
+        }
+        int[] memo = new int[n + 1];
+        Arrays.fill(memo, -1);
+
+        return fib01Helper(memo, n);
+    }
+
+    private int fib01Helper(int[] memo, int n) {
+        if (memo[n] != -1) {
+            return memo[n];
+        }
+        if (n == 0 || n == 1) {
+            return n;
+        }
+
+        int result = fib01Helper(memo, n - 1) + fib01Helper(memo, n - 2);
+        memo[n] = result;
+        return result;
+    }
+
+    /**
+     * 自底向上的动态规划
+     */
+    public int fib03(int n) {
+        if (n < 0) {
+            return -1;
+        }
+        int[] memo = new int[n + 1];
+        memo[0] = 0;
+        memo[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int result = memo[i - 1] + memo[i - 2];
+            memo[i] = result;
+        }
+        return memo[n];
+    }
+
+    /**
+     * 自底向上的动态规划 + 滚动数组
+     */
+    public int fib04(int n) {
+        if (n < 0) {
+            return -1;
+        }
+        int[] memo = new int[2];
+        memo[0] = 0;
+        memo[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int result = memo[(i - 1) % 2] + memo[(i - 2) % 2];
+            memo[i % 2] = result;
+        }
+        return memo[n % 2];
     }
 
     /**

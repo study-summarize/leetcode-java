@@ -14,11 +14,20 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_509_fibTest {
     private final LeetCode_509_fib fib = new LeetCode_509_fib();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int n, int expectedResult) {
         int actResult1 = fib.fib01(n);
         Assertions.assertEquals(expectedResult, actResult1);
+
+        int actResult2 = fib.fib02(n);
+        Assertions.assertEquals(expectedResult, actResult2);
+
+        int actResult3 = fib.fib03(n);
+        Assertions.assertEquals(expectedResult, actResult3);
+
+        int actResult4 = fib.fib04(n);
+        Assertions.assertEquals(expectedResult, actResult4);
     }
 
     @ParameterizedTest
