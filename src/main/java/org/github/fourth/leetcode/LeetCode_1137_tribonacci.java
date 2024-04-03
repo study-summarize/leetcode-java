@@ -20,6 +20,9 @@ public class LeetCode_1137_tribonacci {
         if (n < 0) {
             return -1;
         }
+        if (n <= 1) {
+            return n;
+        }
         // 记忆数组记录状态
         int[] dp = new int[n + 1];
         Arrays.fill(dp, -1);
@@ -47,6 +50,9 @@ public class LeetCode_1137_tribonacci {
         if (n < 0) {
             return -1;
         }
+        if (n <= 1) {
+            return n;
+        }
         // 状态数组的初始值
         int[] dp = new int[n + 1];
         dp[0] = 0;
@@ -65,6 +71,9 @@ public class LeetCode_1137_tribonacci {
     public int tribonacci03(int n) {
         if (n < 0) {
             return -1;
+        }
+        if (n <= 1) {
+            return n;
         }
         // 记录数组的基本状态
         int[] dp = new int[3];
