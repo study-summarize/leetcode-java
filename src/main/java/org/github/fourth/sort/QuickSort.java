@@ -70,7 +70,7 @@ public class QuickSort {
             return;
         }
 
-        int pivot = partition2(nums, start, end);// x = value
+        int pivot = partition2(nums, start, end); // x = value
         quickSort(nums, start, pivot - 1); // x < value
         quickSort(nums, pivot + 1, end);  // x > value
     }

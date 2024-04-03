@@ -65,7 +65,7 @@ public class LeetCode_323_countComponents {
         }
         // 先创建邻接表
         Map<Integer, List<Integer>> adj = new HashMap<>();
-        for (int i = 0; i< n; i++) {
+        for (int i = 0; i < n; i++) {
             adj.put(i, new ArrayList<>());
         }
         for (int[] edge : edges) {

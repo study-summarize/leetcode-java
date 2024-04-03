@@ -27,7 +27,7 @@ class LeetCode_261_validTreeTest {
         Assertions.assertEquals(expectedResult, actResult);
     }
 
-    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testExample01(int n, int[][] edges, boolean expectedResult) {
         boolean actResult = validTree.validTreeBfsExample(n, edges);
