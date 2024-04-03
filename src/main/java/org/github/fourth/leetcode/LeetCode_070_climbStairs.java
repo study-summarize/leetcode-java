@@ -58,6 +58,9 @@ public class LeetCode_070_climbStairs {
         if (n < 0) {
             return -1;
         }
+        if (n <= 2) {
+            return n;
+        }
         // 记录初始状态数组
         int[] memo = new int[n + 1];
         memo[0] = 0;
@@ -77,6 +80,9 @@ public class LeetCode_070_climbStairs {
     public int climbStairs04(int n) {
         if (n < 0) {
             return -1;
+        }
+        if (n <= 2) {
+            return n;
         }
         // 记录初始状态数组
         int[] dp = new int[3];
