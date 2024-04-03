@@ -20,6 +20,12 @@ public class LeetCode_198_rob {
         if (nums == null || nums.length == 0) {
             return -1;
         }
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        if (nums.length == 2) {
+            return Math.max(nums[0], nums[1]);
+        }
         // 存储各个状态数组
         int[] dp = new int[nums.length + 1];
         Arrays.fill(dp, -1);
