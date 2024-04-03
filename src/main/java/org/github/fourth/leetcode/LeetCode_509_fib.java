@@ -52,6 +52,10 @@ public class LeetCode_509_fib {
         if (n < 0) {
             return -1;
         }
+        if (n <= 1) {
+            return n;
+        }
+
         int[] memo = new int[n + 1];
         memo[0] = 0;
         memo[1] = 1;
@@ -69,6 +73,9 @@ public class LeetCode_509_fib {
     public int fib04(int n) {
         if (n < 0) {
             return -1;
+        }
+        if (n <= 1) {
+            return n;
         }
         int[] memo = new int[2];
         memo[0] = 0;
