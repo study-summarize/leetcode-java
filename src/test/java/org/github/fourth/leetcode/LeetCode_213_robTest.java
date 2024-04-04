@@ -13,10 +13,22 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @DisplayName("打家劫舍 II")
 class LeetCode_213_robTest {
     private final LeetCode_213_rob rob = new LeetCode_213_rob();
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int expectedResult) {
         int actResult = rob.rob01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int expectedResult) {
+        int actResult = rob.rob02(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] nums, int expectedResult) {
+        int actResult = rob.rob03(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
