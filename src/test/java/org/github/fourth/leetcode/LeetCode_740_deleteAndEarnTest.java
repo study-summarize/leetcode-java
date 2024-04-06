@@ -15,10 +15,22 @@ class LeetCode_740_deleteAndEarnTest {
     private final LeetCode_740_deleteAndEarn deleteAndEarn = new LeetCode_740_deleteAndEarn();
 
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int expectedResult) {
         int actResult = deleteAndEarn.deleteAndEarn01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int expectedResult) {
+        int actResult = deleteAndEarn.deleteAndEarn02(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] nums, int expectedResult) {
+        int actResult = deleteAndEarn.deleteAndEarn03(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
     @ParameterizedTest
