@@ -15,17 +15,32 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_053_maxSubArrayTest {
 
     private final LeetCode_053_maxSubArray maxSubArray = new LeetCode_053_maxSubArray();
-
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, int expectedResult) {
-        testCommon(expectedResult, x -> x.maxSubArray(nums));
+    public void test01(int[] nums, int expectedResult) {
+        testCommon(expectedResult, x -> x.maxSubArray01(nums));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int expectedResult) {
+        testCommon(expectedResult, x -> x.maxSubArray02(nums));
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] nums, int expectedResult) {
+        testCommon(expectedResult, x -> x.maxSubArray03(nums));
     }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void testRefine(int[] nums, int expectedResult) {
-        testCommon(expectedResult, x -> x.maxSubArrayRefine(nums));
+    public void testExample(int[] nums, int expectedResult) {
+        testCommon(expectedResult, x -> x.maxSubArrayExample(nums));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void testExampleRefine(int[] nums, int expectedResult) {
+        testCommon(expectedResult, x -> x.maxSubArrayExampleRefine(nums));
     }
 
     private void testCommon(int expectedResult, Function<LeetCode_053_maxSubArray, Integer> function) {
