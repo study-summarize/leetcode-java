@@ -14,10 +14,22 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_673_findNumberOfLISTest {
     private final LeetCode_673_findNumberOfLIS findNumberOfLIS = new LeetCode_673_findNumberOfLIS();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int expectedResult) {
         int actResult = findNumberOfLIS.findNumberOfLIS01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int expectedResult) {
+        int actResult = findNumberOfLIS.findNumberOfLIS02(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] nums, int expectedResult) {
+        int actResult = findNumberOfLIS.findNumberOfLIS03(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
     @ParameterizedTest

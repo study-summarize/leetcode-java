@@ -5,14 +5,63 @@ import java.util.Arrays;
 /**
  * 给定一个未排序的整数数组 nums ， 返回最长递增子序列的个数 。
  * 注意 这个数列必须是 严格 递增的。
+ * 4步设计动态规划：
+ * （1）定义状态：dp[n]，nums[n]下的最长递增子序列个数
+ * （2）状态转移：dp[n] = nums[n] > nums[n - 1] ? dp[n - 1] : dp[n - 1] + 1
+ * （3）初始状态：dp[0] = 1
+ * （4）求最优解
  */
 public class LeetCode_673_findNumberOfLIS {
 
     /**
-     *
+     * 方法一：自顶向下的动态规划
      */
     public int findNumberOfLIS01(int[] nums) {
-        return 0;
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp, -1);
+        dp[0] = 1;
+        return findNumberOfLIS01Helper(nums, dp, nums.length - 1);
+    }
+
+    private int findNumberOfLIS01Helper(int[] nums, int[] dp, int i) {
+        if (dp[i] != -1) {
+            return dp[i];
+        }
+        dp[i] = nums[i] > nums[i - 1] ? findNumberOfLIS01Helper(nums, dp, i - 1)
+                : findNumberOfLIS01Helper(nums, dp, i - 1) + 1;
+        return dp[i];
+    }
+
+    /**
+     * 方法二：自底向上的动态规划
+     */
+    public int findNumberOfLIS02(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int[] dp = new int[nums.length];
+        dp[0] = 1;
+        for (int i = 1; i < nums.length; i++) {
+            dp[i] = nums[i] > nums[i - 1] ? dp[i - 1] : dp[i - 1] + 1;
+        }
+        return dp[nums.length - 1];
+    }
+
+    /**
+     * 方法三：自底向上的动态规划 + 滚动数组
+     */
+    public int findNumberOfLIS03(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int dp = 1;
+        for (int i = 1; i < nums.length; i++) {
+            dp = nums[i] > nums[i - 1] ? dp : dp + 1;
+        }
+        return dp;
     }
 
     /**
