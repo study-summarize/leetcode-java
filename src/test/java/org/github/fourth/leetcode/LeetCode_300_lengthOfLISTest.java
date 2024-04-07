@@ -14,10 +14,22 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_300_lengthOfLISTest {
     private final LeetCode_300_lengthOfLIS lengthOfLIS = new LeetCode_300_lengthOfLIS();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
-    public void test(int[] nums, int expectedResult) {
+    public void test01(int[] nums, int expectedResult) {
         int actResult = lengthOfLIS.lengthOfLIS01(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test02(int[] nums, int expectedResult) {
+        int actResult = lengthOfLIS.lengthOfLIS02(nums);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test03(int[] nums, int expectedResult) {
+        int actResult = lengthOfLIS.lengthOfLIS03(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
     @ParameterizedTest
