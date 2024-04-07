@@ -14,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_152_maxProductTest {
     private final LeetCode_152_maxProduct maxProduct = new LeetCode_152_maxProduct();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int expectedResult) {
         int actResult = maxProduct.maxProduct01(nums);
@@ -31,6 +31,7 @@ class LeetCode_152_maxProductTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(new int[]{2, 3, -2, 4}, 6),
+                arguments(new int[]{-2, 2, 3, -2, 4}, 96),
                 arguments(new int[]{-2, 0, -1}, 0)
         );
     }
