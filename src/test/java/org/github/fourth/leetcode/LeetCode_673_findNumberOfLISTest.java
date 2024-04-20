@@ -20,18 +20,21 @@ class LeetCode_673_findNumberOfLISTest {
         int actResult = findNumberOfLIS.findNumberOfLIS01(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(int[] nums, int expectedResult) {
         int actResult = findNumberOfLIS.findNumberOfLIS02(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test03(int[] nums, int expectedResult) {
         int actResult = findNumberOfLIS.findNumberOfLIS03(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testExample(int[] nums, int expectedResult) {
@@ -41,6 +44,7 @@ class LeetCode_673_findNumberOfLISTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(new int[]{1, 2, 4, 3, 5, 4, 7, 2}, 3),
                 arguments(new int[]{1, 3, 5, 4, 7}, 2),
                 arguments(new int[]{2, 2, 2, 2, 2}, 5)
         );
