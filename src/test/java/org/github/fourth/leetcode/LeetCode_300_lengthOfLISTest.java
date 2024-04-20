@@ -20,18 +20,21 @@ class LeetCode_300_lengthOfLISTest {
         int actResult = lengthOfLIS.lengthOfLIS01(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(int[] nums, int expectedResult) {
         int actResult = lengthOfLIS.lengthOfLIS02(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test03(int[] nums, int expectedResult) {
         int actResult = lengthOfLIS.lengthOfLIS03(nums);
         Assertions.assertEquals(expectedResult, actResult);
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void testExample(int[] nums, int expectedResult) {
@@ -41,6 +44,7 @@ class LeetCode_300_lengthOfLISTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(new int[]{4, 10, 4, 3, 8, 9}, 3), // todo fix
                 arguments(new int[]{10, 9, 2, 5, 3, 7, 101, 18}, 4),
                 arguments(new int[]{0, 1, 0, 3, 2, 3}, 4),
                 arguments(new int[]{7, 7, 7, 7, 7, 7, 7}, 1)
