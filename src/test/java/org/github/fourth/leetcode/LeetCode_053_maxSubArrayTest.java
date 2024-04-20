@@ -15,16 +15,19 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_053_maxSubArrayTest {
 
     private final LeetCode_053_maxSubArray maxSubArray = new LeetCode_053_maxSubArray();
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[] nums, int expectedResult) {
         testCommon(expectedResult, x -> x.maxSubArray01(nums));
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(int[] nums, int expectedResult) {
         testCommon(expectedResult, x -> x.maxSubArray02(nums));
     }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test03(int[] nums, int expectedResult) {
@@ -50,6 +53,7 @@ class LeetCode_053_maxSubArrayTest {
 
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
+                arguments(new int[]{-1}, -1),
                 arguments(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}, 6),
                 arguments(new int[]{5, 4, -1, 7, 8}, 23),
                 arguments(new int[]{1}, 1)
