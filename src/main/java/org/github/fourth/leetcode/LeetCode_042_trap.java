@@ -1,12 +1,15 @@
 package org.github.fourth.leetcode;
 
 
+import org.github.fourth.Top100;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
  * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
  */
+@Top100
 public class LeetCode_042_trap {
 
     /**

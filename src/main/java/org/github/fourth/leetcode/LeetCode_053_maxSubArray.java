@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
+
 import java.util.Arrays;
 
 /**
@@ -11,6 +13,7 @@ import java.util.Arrays;
  * （3）初始状态：dp[0] = nums[0] > 0 ? nums[0] : 0;
  * （4）求最优解：dp[n]
  */
+@Top100
 public class LeetCode_053_maxSubArray {
 
     /**

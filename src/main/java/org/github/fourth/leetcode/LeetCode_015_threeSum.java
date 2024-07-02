@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.List;
  * Change:
  * 给定一个包含n个整数的数组（无重复元素）nums和一个目标值target，找出数组中和为目标值的三个数。可以假设每个输入只对应一种答案。
  */
+@Top100
 public class LeetCode_015_threeSum {
 
     /**
