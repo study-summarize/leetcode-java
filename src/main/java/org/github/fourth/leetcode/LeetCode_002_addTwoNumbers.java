@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
 import org.github.fourth.leetcode.common.ListNode;
 
 /**
@@ -7,6 +8,7 @@ import org.github.fourth.leetcode.common.ListNode;
  * 请你将两个数相加，并以相同形式返回一个表示和的链表。
  * 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
  */
+@Top100
 public class LeetCode_002_addTwoNumbers {
 
     /**

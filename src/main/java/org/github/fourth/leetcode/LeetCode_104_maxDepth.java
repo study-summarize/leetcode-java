@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
 import org.github.fourth.leetcode.common.TreeNode;
 
 import java.util.LinkedList;
@@ -13,6 +14,7 @@ import java.util.Queue;
  * - 遍历法
  * - BFS
  */
+@Top100
 public class LeetCode_104_maxDepth {
     /**
      * 分治法

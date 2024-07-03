@@ -1,10 +1,12 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
 import org.github.fourth.leetcode.common.ListNode;
 
 /**
  * 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
  */
+@Top100
 public class LeetCode_206_reverseList {
     /**
      *

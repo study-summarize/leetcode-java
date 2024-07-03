@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,6 +14,7 @@ import java.util.Map;
  * - void put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value ；如果不存在，则向缓存中插入该组 key-value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐出 最久未使用的关键字。
  * 函数 get 和 put 必须以 O(1) 的平均时间复杂度运行。
  */
+@Top100
 public class LeetCode_146_LRUCache extends LinkedHashMap<Integer, Integer> {
     private int capacity;
 
