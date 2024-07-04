@@ -2,9 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.github.fourth.Top100;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
@@ -16,6 +14,11 @@ import java.util.Map;
  */
 @Top100
 public class LeetCode_001_twoSum {
+
+    public int[] test(int[] nums, int target) {
+        return null;
+    }
+
 
     /**
      * 暴力解法1：双层for循环

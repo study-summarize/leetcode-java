@@ -2,14 +2,56 @@ package org.github.fourth.leetcode;
 
 import org.github.fourth.Top100;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+ * 解法：
+ * - 双层for循环减去重复运算
+ * - 双指针 + 滑动窗口
+ *
  */
 @Top100
 public class LeetCode_003_lengthOfLongestSubstring {
+
+    public int test(String s) {
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+        char[] charArray = s.toCharArray();
+
+        int result = 1;
+        int preIndex = 0;
+        Map<Character, Integer> charMap = new HashMap<>();
+        for (int i = 0; i < charArray.length; i++) {
+            char item = charArray[i];
+            if (!charMap.containsKey(item)) {
+                charMap.put(item, i);
+                // 如果到达最终点
+                if (i == charArray.length - 1) {
+                    result = Math.max(result, charArray.length - preIndex);
+                }
+            }
+            else {
+                Integer starIndex = charMap.get(item);
+                result = Math.max(result, i - starIndex);
+                // 删除前面的元素
+                List<Character> needRemoveCharList = new ArrayList<>();
+                for (Character charItem : charMap.keySet()) {
+                    Integer charIndex = charMap.get(charItem);
+                    if (charIndex < i) {
+                        needRemoveCharList.add(charItem);
+                    }
+                }
+                for (Character charItem : needRemoveCharList) {
+                    charMap.remove(charItem);
+                }
+                // 再把当前元素加入进去
+                charMap.put(item, i);
+            }
+        }
+        return result;
+    }
     /**
      * 双指针，滑动窗口
      * 时间复杂度：O(n^2)
@@ -96,6 +138,10 @@ public class LeetCode_003_lengthOfLongestSubstring {
                     break;
                 }
             }
+            /*
+             * 当重复元素不再最前方，为什么这里不删除重复元素之前的元素？
+             * 因为内部for循环判断的时候，还是会判断成有重复元素，从而再执行到这里减去重复元素
+             */
             // 更新i的起始点
             set.remove(s.charAt(i));
         }

@@ -20,6 +20,7 @@ public class LeetCode_003_lengthOfLongestSubstringTest {
     @MethodSource("generateRightCase")
     public void test01(String s, int expectedResults) {
         commonTest(expectedResults, x -> x.lengthOfLongestSubstring1(s));
+        commonTest(expectedResults, x -> x.test(s));
     }
     @ParameterizedTest
     @MethodSource("generateRightCase")

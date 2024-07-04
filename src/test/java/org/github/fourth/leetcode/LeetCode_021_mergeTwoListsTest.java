@@ -17,6 +17,12 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_021_mergeTwoListsTest {
     private final LeetCode_021_mergeTwoLists leetCode021MergeTwoLists = new LeetCode_021_mergeTwoLists();
 
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test(ListNode list1, ListNode list2, ListNode expectedResult) {
+        ListNode actResult = leetCode021MergeTwoLists.test(list1, list2);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
