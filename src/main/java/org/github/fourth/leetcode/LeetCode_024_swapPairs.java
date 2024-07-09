@@ -8,6 +8,17 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 @Top100
 public class LeetCode_024_swapPairs {
+
+    public ListNode test(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+
+        ListNode dummyNode = new ListNode();
+
+        return dummyNode.next;
+    }
+
     /**
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)

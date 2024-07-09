@@ -18,6 +18,13 @@ public class LeetCode_015_threeSumTest {
 
     private static final LeetCode_015_threeSum test015ThreeSum = new LeetCode_015_threeSum();
 
+
+//    @ParameterizedTest
+    @MethodSource("generateOriginRightCase")
+    public void test(int[] nums, List<List<Integer>> expectedResults) {
+        commonTestOrigin(expectedResults, x -> x.test(nums));
+    }
+
     @DisplayName("原版题目解法")
     @ParameterizedTest
     @MethodSource("generateOriginRightCase")

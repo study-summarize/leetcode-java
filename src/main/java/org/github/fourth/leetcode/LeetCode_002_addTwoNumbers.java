@@ -11,6 +11,66 @@ import org.github.fourth.leetcode.common.ListNode;
 @Top100
 public class LeetCode_002_addTwoNumbers {
 
+    public ListNode test(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) {
+            return l1 == null ? l2 : l1;
+        }
+
+        ListNode dummyNode = new ListNode();
+        ListNode currentNode = dummyNode;
+        boolean up = false;
+        while (l1 != null && l2 != null) {
+            int sum = l1.val + l2.val;
+            if (up) {
+                sum += 1;
+            }
+
+            ListNode newNode = new ListNode(sum % 10);
+            currentNode.next = newNode;
+            currentNode = newNode;
+
+            up = sum / 10 > 0;
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+        // 此时可能还会进1
+
+        while (l1 != null) {
+            int sum = l1.val;
+            if (up) {
+                sum += 1;
+            }
+
+            ListNode newNode = new ListNode(sum % 10);
+            currentNode.next = newNode;
+            currentNode = newNode;
+
+            up = sum / 10 > 0;
+            l1 = l1.next;
+        }
+
+        while (l2 != null) {
+            int sum = l2.val;
+            if (up) {
+                sum += 1;
+            }
+
+            ListNode newNode = new ListNode(sum % 10);
+            currentNode.next = newNode;
+            currentNode = newNode;
+
+            up = sum / 10 > 0;
+            l2 = l2.next;
+        }
+
+        if (up) {
+            ListNode newNode = new ListNode(1);
+            currentNode.next = newNode;
+        }
+
+        return dummyNode.next;
+
+    }
     /**
      * 想清楚各种情况就行，感觉没啥考察点
      * 时间复杂度：O(n)

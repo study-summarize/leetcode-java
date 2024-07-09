@@ -18,6 +18,13 @@ class LeetCode_025_reverseKGroupTest {
     private final LeetCode_025_reverseKGroup leetCode025ReverseKGroup = new LeetCode_025_reverseKGroup();
 
 
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test(ListNode head, int k, ListNode expectedResult) {
+        ListNode actResult = leetCode025ReverseKGroup.test(head, k);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, int k, ListNode expectedResult) {

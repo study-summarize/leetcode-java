@@ -18,6 +18,13 @@ class LeetCode_024_swapPairsTest {
     private final LeetCode_024_swapPairs leetCode024SwapPairs = new LeetCode_024_swapPairs();
 
 
+//    @ParameterizedTest
+    @MethodSource("generateRightCase")
+    public void test(ListNode head, ListNode expectedResult) {
+        ListNode actResult = leetCode024SwapPairs.test(head);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
+
     @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode head, ListNode expectedResult) {

@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,6 +10,7 @@ import java.util.Map;
  * 在构造过程中，请注意 区分大小写 。比如 "Aa" 不能当做一个回文字符串。
  */
 public class LeetCode_409_longestPalindrome {
+    @SuppressFBWarnings("WMI_WRONG_MAP_ITERATOR")
     public int longestPalindrome(String s) {
         if (s == null || s.isEmpty()) {
             return 0;

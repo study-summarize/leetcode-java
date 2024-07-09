@@ -16,6 +16,12 @@ import java.util.List;
 @Top100
 public class LeetCode_015_threeSum {
 
+
+    public List<List<Integer>> test(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        return result;
+    }
+
     /**
      * 消元：转换成俩数之和
      * 时间复杂度：O(nlogn) + nO(n) = O(n^2);
@@ -32,7 +38,10 @@ public class LeetCode_015_threeSum {
         for (int i = 0; i < nums.length - 2; i++) {
             int start = i + 1;
             int end = nums.length - 1;
-            // 前后数值相同时，后面的排序其实就是重复操作。这里可以想特殊案例：0,0,0,0
+            /*
+             * 去除重复计算: num[i] == nums[i + 1]，那么nums[i + 1]所有的计算都是nums[i]进行过的
+             * 这里可以想特殊案例：0,0,0,0
+             */
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -42,7 +51,10 @@ public class LeetCode_015_threeSum {
                     result.add(Arrays.asList(nums[i], nums[start], nums[end]));
                     start++;
                     end--;
-                    // 去除重复元素。这里也是可以想特殊案例：0,0,0,0,0,0
+                    /*
+                     * 在nums[i]不变的情况下，如果nums[start]和nums[start++]、nums[end]和nums[end--]一样的话，那结果必然一样
+                     * 去除重复元素。这里也是可以想特殊案例：0,0,0,0,0,0
+                     */
                     while (start > 1 && nums[start] == nums[start - 1] && start < nums.length - 1) {
                         start++;
                     }

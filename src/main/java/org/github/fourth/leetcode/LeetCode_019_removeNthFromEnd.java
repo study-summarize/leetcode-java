@@ -8,6 +8,35 @@ import org.github.fourth.leetcode.common.ListNode;
  */
 @Top100
 public class LeetCode_019_removeNthFromEnd {
+
+    public ListNode test(ListNode head, int n) {
+        if (head == null || n <= 0) {
+            return head;
+        }
+
+        ListNode dummyNode = new ListNode();
+        dummyNode.next = head;
+        ListNode point = dummyNode;
+        ListNode preNode = null;
+        while (point.next != null) {
+            n--;
+            if (n == 0) {
+                preNode = dummyNode;
+            } else if (n < 0) {
+                preNode = preNode.next;
+            }
+            point = point.next;
+        }
+        // 说明这个链表没有倒数第n个节点
+        if (n > 0) {
+            return head;
+        }
+        // 删除
+        preNode.next = preNode.next.next;
+
+        return dummyNode.next;
+    }
+
     /**
      * 前后指针
      * <p>

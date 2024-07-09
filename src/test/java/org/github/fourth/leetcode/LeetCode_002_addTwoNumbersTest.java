@@ -19,6 +19,13 @@ class LeetCode_002_addTwoNumbersTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test(ListNode l1, ListNode l2, ListNode expectedResult) {
+        ListNode actResult = leetCode002AddTwoNumbers.test(l1, l2);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test01(ListNode l1, ListNode l2, ListNode expectedResult) {
         ListNode actResult = leetCode002AddTwoNumbers.addTwoNumbers(l1, l2);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));

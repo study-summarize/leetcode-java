@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.github.fourth.Top100;
 
 import java.util.*;
@@ -14,6 +15,7 @@ import java.util.*;
 @Top100
 public class LeetCode_003_lengthOfLongestSubstring {
 
+    @SuppressFBWarnings("WMI_WRONG_MAP_ITERATOR")
     public int test(String s) {
         if (s == null || s.isEmpty()) {
             return 0;

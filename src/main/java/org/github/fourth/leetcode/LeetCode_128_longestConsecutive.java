@@ -26,9 +26,9 @@ public class LeetCode_128_longestConsecutive {
 
         int result = 1;
         for (int num : sets) {
-            if (!sets.contains(num -1)) {
+            if (!sets.contains(num - 1)) {
                 int subLen = 1;
-                while(sets.contains(++num)) {
+                while (sets.contains(++num)) {
                     subLen++;
                 }
                 result = Math.max(result, subLen);

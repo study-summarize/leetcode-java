@@ -20,6 +20,13 @@ class LeetCode_019_removeNthFromEndTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test(ListNode head, int n, ListNode expectedResult) {
+        ListNode actResult = leetCode019RemoveNthFromEnd.test(head, n);
+        Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test01(ListNode head, int n, ListNode expectedResult) {
         ListNode actResult = leetCode019RemoveNthFromEnd.removeNthFromEnd01(head, n);
         Assertions.assertTrue(ListNodeVerifyUtil.equals(expectedResult, actResult));
