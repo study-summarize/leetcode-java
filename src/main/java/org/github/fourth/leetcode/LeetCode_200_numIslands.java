@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,6 +13,7 @@ import java.util.Queue;
  * - 二维矩阵DFS
  * - 二维矩阵BFS
  */
+@Top100
 public class LeetCode_200_numIslands {
 
     /**

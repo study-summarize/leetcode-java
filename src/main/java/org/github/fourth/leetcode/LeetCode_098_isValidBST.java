@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
 import org.github.fourth.leetcode.common.TreeNode;
 
 /**
@@ -9,6 +10,7 @@ import org.github.fourth.leetcode.common.TreeNode;
  * - 节点的右子树只包含 大于 当前节点的数。
  * - 所有左子树和右子树自身必须也是二叉搜索树。
  */
+@Top100
 public class LeetCode_098_isValidBST {
     /**
      * 分治法

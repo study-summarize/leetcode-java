@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import org.github.fourth.Top100;
 import org.github.fourth.leetcode.common.TreeNode;
 
 /**
@@ -7,6 +8,7 @@ import org.github.fourth.leetcode.common.TreeNode;
  * 路径和 是路径中各节点值的总和。
  * 给你一个二叉树的根节点 root ，返回其 最大路径和 。
  */
+@Top100
 public class LeetCode_124_maxPathSum {
     /**
      * 时间复杂度：

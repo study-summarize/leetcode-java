@@ -1,6 +1,7 @@
 package org.github.fourth.leetcode;
 
 
+import org.github.fourth.Top100;
 import org.github.fourth.leetcode.common.TreeNode;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.Queue;
 /**
  * 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
  */
+@Top100
 public class LeetCode_102_levelOrder {
 
     /**
