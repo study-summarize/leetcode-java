@@ -242,6 +242,15 @@ DFS -> 回溯法 -> 记忆化搜索
 - 初始条件：dp[0]
 - 求最优解：
 
+# 排序
+- 一般排序算法    
+  - 插入排序、冒泡排序、快速排序、归并排序、堆排序
+- 特殊排序算法
+  - 计数排序、桶排序
+> 最常考：快速排序、归并排序、插入排序、冒泡排序
+
+
+
 相关资料：
 - 一个YouTuber分享的解题思路：https://www.youtube.com/playlist?list=PLwdV8xC1EWHrtgsYCcDTXIMVaHSlsnLzL
 
