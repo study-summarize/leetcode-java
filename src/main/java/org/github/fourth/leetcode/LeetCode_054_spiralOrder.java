@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.github.fourth.Top100;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,18 @@ import java.util.List;
  */
 @Top100
 public class LeetCode_054_spiralOrder {
+    /**
+     * 二维数组 => 方向数组模版
+     */
     public List<Integer> spiralOrder(int[][] matrix) {
+        if (matrix == null || matrix.length == 0
+                || matrix[0] == null || matrix[0].length == 0) {
+            return null;
+        }
+        List<Integer> result = new ArrayList<>();
+
+
+
         return null;
     }
 }

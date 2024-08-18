@@ -1,7 +1,9 @@
 package org.github.fourth.leetcode;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -16,10 +18,11 @@ class LeetCode_054_spiralOrderTest {
     private final LeetCode_054_spiralOrder instance = new LeetCode_054_spiralOrder();
 
 
-    //    @ParameterizedTest
-    @MethodSource("generateRightCase")
+//    @ParameterizedTest
+//    @MethodSource("generateRightCase")
     public void test01(int[][] matrix, List<Integer> expectedResult) {
         List<Integer> actResult = instance.spiralOrder(matrix);
+        Assertions.assertArrayEquals(expectedResult.toArray(), actResult.toArray());
     }
 
     public static Stream<Arguments> generateRightCase() {
