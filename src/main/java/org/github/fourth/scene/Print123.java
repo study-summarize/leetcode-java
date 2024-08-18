@@ -1,9 +1,12 @@
 package org.github.fourth.scene;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
+@SuppressFBWarnings("REC_CATCH_EXCEPTION")
 public class Print123 {
-    private static final Object lock1 = new Object();
-    private static final Object lock2 = new Object();
-    private static final Object lock3 = new Object();
+    private static final Object LOCK_1 = new Object();
+    private static final Object LOCK_2 = new Object();
+    private static final Object LOCK_3 = new Object();
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -12,14 +15,14 @@ public class Print123 {
             public void run() {
                 while (true) {
                     try {
-                        synchronized (lock3) {
+                        synchronized (LOCK_3) {
                             // 只有获取lock1才输出
-                            synchronized (lock1) {
+                            synchronized (LOCK_1) {
                                 System.out.print("1");
-                                lock1.notifyAll();
+                                LOCK_1.notifyAll();
                             }
                             // 禁止第二个打印
-                            lock3.wait();
+                            LOCK_3.wait();
                         }
                     } catch (Exception ignore) {
 
@@ -31,15 +34,15 @@ public class Print123 {
         new Thread(new Runnable() {
             public void run() {
                 while (true) {
-                    synchronized (lock1) {
-                        synchronized (lock2) {
+                    synchronized (LOCK_1) {
+                        synchronized (LOCK_2) {
                             // 只有获取lock2才输出
                             System.out.print("2");
-                            lock2.notifyAll();
+                            LOCK_2.notifyAll();
                         }
 
                         try {
-                            lock1.wait();
+                            LOCK_1.wait();
                         } catch (InterruptedException e) {
                             throw new RuntimeException(e);
                         }
@@ -52,13 +55,13 @@ public class Print123 {
             public void run() {
                 while (true) {
                     try {
-                        synchronized (lock2) {
+                        synchronized (LOCK_2) {
                             // 只有获取lock3才输出
-                            synchronized (lock3) {
+                            synchronized (LOCK_3) {
                                 System.out.println("3");
-                                lock3.notifyAll();
+                                LOCK_3.notifyAll();
                             }
-                            lock2.wait();
+                            LOCK_2.wait();
                         }
                     } catch (Exception ignore) {
 

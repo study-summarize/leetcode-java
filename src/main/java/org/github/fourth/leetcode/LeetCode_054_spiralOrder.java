@@ -1,5 +1,6 @@
 package org.github.fourth.leetcode;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.github.fourth.Top100;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。
  */
+@SuppressFBWarnings("DLS_DEAD_LOCAL_STORE")
 @Top100
 public class LeetCode_054_spiralOrder {
     /**
