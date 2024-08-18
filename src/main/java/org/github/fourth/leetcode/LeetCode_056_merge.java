@@ -8,6 +8,10 @@ import org.github.fourth.Top100;
 @Top100
 public class LeetCode_056_merge {
 
+    /**
+     * 通过start-i排序来减少计算
+     * - 暴力计算：
+     */
     public int[][] merge(int[][] intervals) {
         return null;
     }
