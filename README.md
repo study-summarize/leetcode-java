@@ -1,5 +1,4 @@
 <a href="https://app.codecov.io/github/study-summarize/leetcode-java/"><img src="https://codecov.io/github/study-summarize/leetcode-java/coverage.svg?branch=main" alt="Coverage Status"></a>
-
 <a href="https://github.com/study-summarize/leetcode-java/actions/workflows/build_and_test.yaml">
     <img src="https://img.shields.io/github/actions/workflow/status/study-summarize/leetcode-java/build_and_test.yaml?branch=main&logo=github&logoColor=white&label=fast ci" alt="Github Workflow Build Status">
 </a>
