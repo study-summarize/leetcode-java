@@ -1,12 +1,13 @@
-<a href="https://codecov.io/gh/wangjie-fourth/leetcode-java/branch/main"><img src="https://img.shields.io/codecov/c/github/wangjie-fourth/leetcode-java/main?logo=codecov&logoColor=white" alt="Coverage Status"></a>
-<a href="https://github.com/wangjie-fourth/leetcode-java/actions/workflows/build_and_test.yaml">
-    <img src="https://img.shields.io/github/actions/workflow/status/wangjie-fourth/leetcode-java/build_and_test.yaml?branch=main&logo=github&logoColor=white&label=fast ci" alt="Github Workflow Build Status">
+<a href="https://app.codecov.io/github/study-summarize/leetcode-java/"><img src="https://codecov.io/github/study-summarize/leetcode-java/coverage.svg?branch=main" alt="Coverage Status"></a>
+
+<a href="https://github.com/study-summarize/leetcode-java/actions/workflows/build_and_test.yaml">
+    <img src="https://img.shields.io/github/actions/workflow/status/study-summarize/leetcode-java/build_and_test.yaml?branch=main&logo=github&logoColor=white&label=fast ci" alt="Github Workflow Build Status">
 </a>
-<a href="https://github.com/wangjie-fourth/leetcode-java"><img src="https://img.shields.io/github/repo-size/wangjie-fourth/leetcode-java" alt="GitHub repo size"></a>
-<a href="https://github.com/wangjie-fourth/leetcode-java/issues"><img src="https://img.shields.io/github/issues/wangjie-fourth/leetcode-java" alt="GitHub issues"></a>
-<a href="https://github.com/wangjie-fourth/leetcode-java/graphs/contributors"><img src="https://img.shields.io/github/contributors/wangjie-fourth/leetcode-java" alt="GitHub Contributors"></a>
-<a href="https://github.com/wangjie-fourth/leetcode-java/stargazers"><img src="https://img.shields.io/github/stars/wangjie-fourth/leetcode-java" alt="GitHub Stars"></a>
-<a href="https://github.com/wangjie-fourth/leetcode-java/fork"><img src="https://img.shields.io/github/forks/wangjie-fourth/leetcode-java" alt="GitHub Forks"></a>
+<a href="https://github.com/study-summarize/leetcode-java"><img src="https://img.shields.io/github/repo-size/study-summarize/leetcode-java" alt="GitHub repo size"></a>
+<a href="https://github.com/study-summarize/leetcode-java/issues"><img src="https://img.shields.io/github/issues/study-summarize/leetcode-java" alt="GitHub issues"></a>
+<a href="https://github.com/study-summarize/leetcode-java/graphs/contributors"><img src="https://img.shields.io/github/contributors/study-summarize/leetcode-java" alt="GitHub Contributors"></a>
+<a href="https://github.com/study-summarize/leetcode-java/stargazers"><img src="https://img.shields.io/github/stars/study-summarize/leetcode-java" alt="GitHub Stars"></a>
+<a href="https://github.com/study-summarize/leetcode-java/fork"><img src="https://img.shields.io/github/forks/study-summarize/leetcode-java" alt="GitHub Forks"></a>
 
 
 # leetcode-java
