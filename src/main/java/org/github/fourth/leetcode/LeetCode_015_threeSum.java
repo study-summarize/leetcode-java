@@ -24,6 +24,8 @@ public class LeetCode_015_threeSum {
 
     /**
      * 消元：转换成俩数之和
+     * 注意点：
+     * 1、三个数字变化导致的重复解集
      * 时间复杂度：O(nlogn) + nO(n) = O(n^2);
      * 空间复杂度：O（1）
      */
@@ -32,6 +34,7 @@ public class LeetCode_015_threeSum {
         if (nums == null || nums.length == 0) {
             return result;
         }
+
         // 返回值不是下标，这里其实可以无脑排序一下
         Arrays.sort(nums);
 
@@ -55,9 +58,11 @@ public class LeetCode_015_threeSum {
                      * 在nums[i]不变的情况下，如果nums[start]和nums[start++]、nums[end]和nums[end--]一样的话，那结果必然一样
                      * 去除重复元素。这里也是可以想特殊案例：0,0,0,0,0,0
                      */
+                    // 其实就是如果start变化前后数据一致的话，相当于后面的解集都是重复的
                     while (start > 1 && nums[start] == nums[start - 1] && start < nums.length - 1) {
                         start++;
                     }
+                    // 同理，如果end变化前后数据一致的话，相当于后面的解集都是重复的
                     while (end < nums.length - 1 && nums[end] == nums[end + 1] && end > 0) {
                         end--;
                     }

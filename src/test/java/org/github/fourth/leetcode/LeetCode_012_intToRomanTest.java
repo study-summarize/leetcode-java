@@ -17,6 +17,13 @@ public class LeetCode_012_intToRomanTest {
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
+    public void test01(int num, String expectedResult) {
+        String actResult = intToRoman.intToRoman01(num);
+        Assertions.assertEquals(expectedResult, actResult);
+    }
+
+    @ParameterizedTest
+    @MethodSource("generateRightCase")
     public void test(int num, String expectedResult) {
         String actResult = intToRoman.intToRoman(num);
         Assertions.assertEquals(expectedResult, actResult);

@@ -8,6 +8,46 @@ import java.util.Arrays;
  * 假定每组输入只存在恰好一个解。
  */
 public class LeetCode_016_threeSumClosest {
+
+    /**
+     * 思路：
+     * 这里其实就相当于全部计算一遍，找出最合适的解。
+     * 优化点：
+     * 1、可以参考15去除重复计算
+     */
+    public int threeSumClosest01(int[] nums, int target) {
+        int result = Integer.MAX_VALUE;
+        if (nums == null || nums.length < 3) {
+            return -1;
+        }
+
+        Arrays.sort(nums);
+
+        int currentAbs = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length - 2; i++) {
+            int startIndex = i + 1;
+            int endIndex = nums.length - 1;
+            while (startIndex < endIndex) {
+                int currentSum = nums[i] + nums[startIndex] + nums[endIndex];
+                if (currentAbs > Math.abs(currentSum - target)) {
+                    currentAbs = Math.abs(currentSum - target);
+                    result = currentSum;
+                }
+
+                if (currentSum - target > 0) {
+                    endIndex--;
+                }
+                else if (currentSum - target < 0) {
+                    startIndex++;
+                }
+                else {
+                    return result;
+                }
+            }
+        }
+        return result;
+    }
+
     /**
      * 时间复杂度：O(nlogn)
      * 空间复杂度：O(1)

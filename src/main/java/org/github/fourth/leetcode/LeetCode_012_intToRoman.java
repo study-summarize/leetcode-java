@@ -21,6 +21,84 @@ package org.github.fourth.leetcode;
 public class LeetCode_012_intToRoman {
 
     /**
+     * 思路：暴力方法
+     * 从千位数依次向下解决，遇见4、9就特殊处理
+     */
+    public String intToRoman01(int num) {
+        StringBuilder result = new StringBuilder();
+        if (num <= 0) {
+            return result.toString();
+        }
+
+        // 先从最高位开始
+        int mCount = num / 1000;
+        for (int i = 0; i < mCount; i++) {
+            result.append("M");
+        }
+        num = num % 1000;
+
+        // D
+        int dCount = num / 100;
+        if (dCount > 0 && dCount < 4) {
+            for (int i = 0; i < dCount; i++) {
+                result.append("C");
+            }
+        } else if (dCount == 4) {
+            result.append("CD");
+        } else if (dCount > 4 && dCount < 9) {
+            result.append("D");
+            for (int i = 0; i < dCount - 5; i++) {
+                result.append("C");
+            }
+        }
+        if (dCount == 9) {
+            result.append("CM");
+        }
+        num = num % 100;
+
+        // L
+        int lCount = num / 10;
+        if (lCount > 0 && lCount < 4) {
+            for (int i = 0; i < lCount; i++) {
+                result.append("X");
+            }
+        } else if (lCount == 4) {
+            result.append("XL");
+        } else if (lCount > 4 && lCount < 9) {
+            result.append("L");
+            for (int i = 0; i < lCount - 5; i++) {
+                result.append("X");
+            }
+        }
+        if (lCount == 9) {
+            result.append("XC");
+        }
+        num = num % 10;
+
+        // I
+        int iCount = num;
+        if (iCount > 0 && iCount < 4) {
+            for (int i = 0; i < iCount; i++) {
+                result.append("I");
+            }
+        } else if (iCount == 4) {
+            result.append("IV");
+        } else if (iCount > 4 && iCount < 9) {
+            result.append("V");
+            for (int i = 0; i < iCount - 5; i++) {
+                result.append("I");
+            }
+        }
+        if (iCount == 9) {
+            result.append("IX");
+        }
+        return result.toString();
+    }
+
+    /**
+     * 思路：
+     * 其实上次的计算就是从最大的数向最小的数，不断相减来满足。我们可以把所有罗马数据都整合到一个Map，然后按照阿拉伯数据从大到小依次相减
+     * <br/>
      * 时间复杂度：
      * 空间复杂度：
      */
@@ -32,6 +110,7 @@ public class LeetCode_012_intToRoman {
         String[] romans = new String[]{
                 "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
+        // 从大到小来计算
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 13; i++) {
             while (num >= nums[i]) {

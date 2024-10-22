@@ -1,6 +1,8 @@
 package org.github.fourth.leetcode;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -12,10 +14,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_056_mergeTest {
     private final LeetCode_056_merge instance = new LeetCode_056_merge();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] intervals, int[][] expectedResult) {
         int[][] actResult = instance.merge(intervals);
+
     }
 
     public static Stream<Arguments> generateRightCase() {
