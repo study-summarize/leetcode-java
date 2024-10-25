@@ -7,6 +7,8 @@ import java.util.LinkedList;
 /**
  * 给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
  * 求在该柱状图中，能够勾勒出来的矩形的最大面积。
+ * 思路：
+ * 求heights[i]距离左边、右边第一个比它小的值，然后就能计算出每个矩形的最大面积
  */
 public class LeetCode_084_largestRectangleArea {
 
