@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.github.fourth.leetcode.common.TreeNode;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_114_flattenTest {
     private final LeetCode_114_flatten instance = new LeetCode_114_flatten();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, TreeNode expectedResult) {
         instance.flatten(root);

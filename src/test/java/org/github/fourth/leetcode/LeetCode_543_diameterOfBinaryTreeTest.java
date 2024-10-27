@@ -17,7 +17,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_543_diameterOfBinaryTreeTest {
     private final LeetCode_543_diameterOfBinaryTree instance = new LeetCode_543_diameterOfBinaryTree();
 
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, int expectedResult) {
         int actResult = instance.diameterOfBinaryTree(root);

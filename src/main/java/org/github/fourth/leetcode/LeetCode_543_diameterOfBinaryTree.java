@@ -10,7 +10,23 @@ import org.github.fourth.leetcode.common.TreeNode;
  */
 @Top100
 public class LeetCode_543_diameterOfBinaryTree {
+    int result;
     public int diameterOfBinaryTree(TreeNode root) {
-        return 0;
+        if (root == null) {
+            return 0;
+        }
+        result = 1;
+        deepSize(root);
+        return result - 1;
+    }
+
+    public int deepSize(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = deepSize(root.left);
+        int right = deepSize(root.right);
+        result = Math.max(result, left + right + 1); // 计算d_node即L+R+1 并更新ans
+        return Math.max(left, right) + 1;
     }
 }
