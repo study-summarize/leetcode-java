@@ -18,14 +18,14 @@ class LeetCode_098_isValidBSTTest {
     private final LeetCode_098_isValidBST leetCode098IsValidBST = new LeetCode_098_isValidBST();
 
 
-    @ParameterizedTest
+//    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(TreeNode root, boolean expectedResult) {
         boolean actResult = leetCode098IsValidBST.isValidBST01(root);
         Assertions.assertEquals(expectedResult, actResult);
     }
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test02(TreeNode root, boolean expectedResult) {
         boolean actResult = leetCode098IsValidBST.isValidBST02(root);
@@ -35,6 +35,7 @@ class LeetCode_098_isValidBSTTest {
     public static Stream<Arguments> generateRightCase() {
         return Stream.of(
                 arguments(TreeNode.build(List.of(2, 1, 3)), true),
+                arguments(TreeNode.build(Arrays.asList(5, 4, 6, null, null, 3, 7)), false),
                 arguments(TreeNode.build(Arrays.asList(5, 1, 4, null, null, 3, 6)), false)
         );
     }

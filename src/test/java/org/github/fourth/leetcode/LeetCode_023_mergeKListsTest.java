@@ -16,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_023_mergeKListsTest {
 
     private final LeetCode_023_mergeKLists mergeKLists = new LeetCode_023_mergeKLists();
-//    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(ListNode[] lists, ListNode expectedResult) {
         ListNode actResult = mergeKLists.mergeKLists01(lists);

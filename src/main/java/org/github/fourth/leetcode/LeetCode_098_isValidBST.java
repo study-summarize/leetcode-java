@@ -37,6 +37,22 @@ public class LeetCode_098_isValidBST {
     }
 
     public boolean isValidBST02(TreeNode root) {
-        return false;
+        if (root == null) {
+            return true;
+        }
+
+        return judgeIsBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+
+    private boolean judgeIsBST(TreeNode root, long min,  long max) {
+        if (root == null) {
+            return true;
+        }
+        int val = root.val;
+        if (val <= min || val >= max) {
+            return false;
+        }
+        return judgeIsBST(root.left, min, root.val)
+                && judgeIsBST(root.right, root.val, max);
     }
 }
