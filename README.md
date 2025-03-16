@@ -63,9 +63,15 @@ for (int i = 0; i < length; i++) {
 ```
 
 ## 栈和队列：
-- 单调栈
-  - 适合的问题
-  - 解题的思路
+1、定义
+```java
+Deque<Integer> stack = new LinkedList<>();
+Queue<Integer> queue = new LinkedList<>();
+```
+2、 单调栈
+- 适合的问题
+- 解题的思路       
+
 （1）从左往右，递增栈
 ```groovy
 int[] nums = new int[length];
