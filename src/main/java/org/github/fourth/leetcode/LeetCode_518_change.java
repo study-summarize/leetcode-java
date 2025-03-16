@@ -12,6 +12,20 @@ public class LeetCode_518_change {
      * 空间复杂度：
      */
     public int change01(int amount, int[] coins) {
-        return 0;
+        if (amount < 0 || coins == null || coins.length == 0) {
+            return 0;
+        }
+
+        // dp[i]：总金额达到i，一共有多少种方式
+        int[] dp = new int[amount + 1];
+        dp[0] = 1;
+
+        // 防止硬币重复
+        for (int coin : coins) {
+            for (int j = coin; j <= amount; j++) {
+                dp[j] += dp[j - coin];
+            }
+        }
+        return dp[amount];
     }
 }
