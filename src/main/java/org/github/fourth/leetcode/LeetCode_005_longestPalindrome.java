@@ -12,13 +12,14 @@ public class LeetCode_005_longestPalindrome {
             dp[i][i] = true;
         }
 
-        int maxLen = 1; int begin = 0;
+        int maxLen = 1;
+        int begin = 0;
         // dp[]
         // 先长度为2的字符串开始
-        for (int L = 2; L <= s.length(); L++) {
+        for (int l = 2; l <= s.length(); l++) {
             // 从左边界开始
             for (int i = 0; i < s.length(); i++) {
-                int j = i + L - 1;
+                int j = i + l - 1;
                 // 数组越界了
                 if (j >= s.length()) {
                     break;

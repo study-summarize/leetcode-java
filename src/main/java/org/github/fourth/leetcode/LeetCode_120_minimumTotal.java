@@ -24,7 +24,7 @@ public class LeetCode_120_minimumTotal {
 
         for (int i = 1; i < m; i++) {
             dp[i][0] = dp[i - 1][0] + triangle.get(i).get(0);
-            for (int j = 1; j < triangle.get(i).size() ; j++) {
+            for (int j = 1; j < triangle.get(i).size(); j++) {
                 if (j == triangle.get(i).size() - 1) {
                     dp[i][j] = dp[i - 1][j - 1] + triangle.get(i).get(j);
                 } else {
