@@ -1,5 +1,7 @@
 package org.github.fourth.leetcode;
 
+import java.util.Arrays;
+
 /**
  * 恶魔们抓住了公主并将她关在了地下城 dungeon 的 右下角 。地下城是由 m x n 个房间组成的二维网格。我们英勇的骑士最初被安置在 左上角 的房间里，他必须穿过地下城并通过对抗恶魔来拯救公主。
  * 骑士的初始健康点数为一个正整数。如果他的健康点数在某一时刻降至 0 或以下，他会立即死亡。
@@ -14,6 +16,30 @@ public class LeetCode_174_calculateMinimumHP {
      * 空间复杂度：
      */
     public int calculateMinimumHP01(int[][] dungeon) {
-        return 0;
+        if (dungeon == null || dungeon.length == 0
+                || dungeon[0] == null || dungeon[0].length == 0) {
+            return 0;
+        }
+        int m = dungeon.length;
+        int n = dungeon[0].length;
+
+        // dp[i,j] :（i，j）到终点所需要的最小hp；这样就可以避免对路径和的记录，因为这样是保证路径和是正数
+        int[][] dp = new int[m + 1][n + 1];
+        // 因为新增的一列一行都是无效的
+        for (int[] array : dp) {
+            Arrays.fill(array, Integer.MAX_VALUE);
+        }
+        dp[m - 1][n] = 1;
+        dp[m][n - 1] = 1;
+
+
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                // 骑士血量要大于0
+                int hp = Math.min(dp[i + 1][j], dp[i][j + 1]) - dungeon[i][j];
+                dp[i][j] = Math.max(hp, 1);
+            }
+        }
+        return dp[0][0];
     }
 }

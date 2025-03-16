@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -13,7 +14,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 class LeetCode_174_calculateMinimumHPTest {
     private final LeetCode_174_calculateMinimumHP calculateMinimumHP = new LeetCode_174_calculateMinimumHP();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test01(int[][] dungeon, int expectedResult) {
         int actResult = calculateMinimumHP.calculateMinimumHP01(dungeon);

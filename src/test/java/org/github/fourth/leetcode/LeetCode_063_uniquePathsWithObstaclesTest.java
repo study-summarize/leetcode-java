@@ -2,6 +2,7 @@ package org.github.fourth.leetcode;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -15,7 +16,7 @@ class LeetCode_063_uniquePathsWithObstaclesTest {
 
     private final LeetCode_063_uniquePathsWithObstacles uniquePathsWithObstacles = new LeetCode_063_uniquePathsWithObstacles();
 
-    //    @ParameterizedTest
+    @ParameterizedTest
     @MethodSource("generateRightCase")
     public void test(int[][] obstacleGrid, int expectedResult) {
         int actResult = uniquePathsWithObstacles.uniquePathsWithObstacles01(obstacleGrid);
@@ -28,7 +29,7 @@ class LeetCode_063_uniquePathsWithObstaclesTest {
                         {0, 0, 0},
                         {0, 1, 0},
                         {0, 0, 0}
-                }, 5),
+                }, 2),
                 arguments(new int[][]{
                         {0, 1},
                         {0, 0}
