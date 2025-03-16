@@ -17,7 +17,7 @@ public class LeetCode_377_combinationSum4 {
         // dp[j]：总和为j的元素组合个数
         int[] dp = new int[target + 1];
         dp[0] = 1;
-
+        // 顺序不同的序列视作不同的组合 => 先遍历金额
         for (int i = 1; i <= target; i++) {
             for (int num : nums) {
                 if (i - num >= 0) {
