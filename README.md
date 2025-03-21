@@ -11,10 +11,13 @@
 
 # leetcode-java
 ## 数组：
-- 数组中swap俩个位置的数字（为了省空间）
-- 字符串中字符统计技巧？？？
-- 前缀和模板
-(1)一维数组动态和
+### swap技巧
+数组中swap俩个位置的数字，为了省空间
+
+### 前缀和模板
+1、一维数组动态和
+
+适合求连续区间的数组之和。
 ```groovy
 int[] prefixSum = new int[nums.length + 1];
 for(int i = 0; i < nums.length ; i++) {
@@ -24,7 +27,7 @@ for(int i = 0; i < nums.length ; i++) {
 // 求nums中下标2～5的值
 interval[2, 5] = prefixSum[6] - prefixSum[2];
 ```
-(2)二维数组动态和
+2、二维数组动态和
 ```groovy
 int m = nums.length;
 int n = nums[0].length;
@@ -39,7 +42,7 @@ for (int i = 0; i < m; i++) {
 // 求nums(5, 1, 9,2)
 sumRange = prefixSum[10][3] - prefixSum[10][1] - prefixSum[5][3] + prefixSum[5][1];
 ```
-(3)一维数组动态积
+3、一维数组动态积
 ```groovy
 int[] nums = new int[length];
 
@@ -63,16 +66,15 @@ for (int i = 0; i < length; i++) {
 ```
 
 ## 栈和队列：
-1、定义
 ```java
 Deque<Integer> stack = new LinkedList<>();
 Queue<Integer> queue = new LinkedList<>();
 ```
-2、 单调栈
+### 单调栈
 - 适合的问题
 - 解题的思路       
 
-（1）从左往右，递增栈
+1、从左往右，递增栈
 ```groovy
 int[] nums = new int[length];
 
@@ -88,7 +90,7 @@ for (int i = 0; i < length; i++) {
     stack.push(i);
 }
 ```
-（2）从右往左，递增栈
+2、从右往左，递增栈
 ```groovy
 int[] nums = new int[length];
 
@@ -104,7 +106,7 @@ for (int i = length - 1; i >= 0; i--) {
     stack.push(i);
 }
 ```
-（3）从左到右，递减栈
+3、从左到右，递减栈
 ```groovy
 int[] nums = new int[length];
 
@@ -120,7 +122,7 @@ for (int i = 0; i < length; i++) {
     stack.push(i);
 }
 ```
-（4）从右到左，递减栈
+4、从右到左，递减栈
 ```groovy
 int[] nums = new int[length];
 
@@ -140,9 +142,11 @@ for (int i = length - 1; i >= 0; i--) {
 ## 链表：
 1、定义以及实现
 - 中间结点
-2、dummyNode
+
+2、dummyNode     
 （1）适用场景
 - 改变链表结构
+
 3、头插法
 
 ```groovy
@@ -158,6 +162,7 @@ while (head != null) {
 
 ## 二分搜索：
 1、二分搜索的模板
+
 时间复杂度：
 ```groovy
 
@@ -168,6 +173,7 @@ while (head != null) {
 - Two-sum类
 - 划分类
 - 灌水类
+
 2、同向型双指针
 - 快慢类
 - 窗口类
@@ -189,9 +195,10 @@ for (; start < nums.length; start++) {
 }
 ```
 
-## 树：
-### 二叉树
+## 树
+## 二叉树
 - 获取二叉树的最大高度
+- 105
 
 ## 图与二维矩阵：
 1、DFS的模板
@@ -215,10 +222,13 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
 ```
 2、需要掌握的方法
 - 图中求联通分量
+
 3、图的表示
 - 二维矩阵
 - 邻接表
+
 4、思考
+
 一般都是将图转换成二维矩阵、邻接表来处理。
 - DFS：二维矩阵
 - BFS：邻接表（使用队列，一般就不用去除访问标记）
@@ -227,15 +237,14 @@ public void dfs(int[][] root, boolean[] visited, int currentNode) {
 note：二维矩阵也是一种特殊的数据结构
 二维矩阵BFS 很多都需要转换point
 
-## 搜索
-### DFS
+## DFS
 1、相关方法
 DFS -> 回溯法 -> 记忆化搜索
 2、涉及的数据结构
 - 二叉树、一维数组
 - 图、二维数组
 
-### BFS
+## BFS
 树、图、二维矩阵
 
 ## 思路：
@@ -248,7 +257,7 @@ DFS -> 回溯法 -> 记忆化搜索
 - 初始条件：dp[0]
 - 求最优解：
 
-# 排序
+## 排序
 - 一般排序算法    
   - 插入排序、冒泡排序、快速排序、归并排序、堆排序
 - 特殊排序算法
