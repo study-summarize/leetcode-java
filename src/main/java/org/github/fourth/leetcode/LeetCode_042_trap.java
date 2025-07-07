@@ -42,7 +42,7 @@ public class LeetCode_042_trap {
         // 计算总灌水量
         for (int i = 0; i < height.length; i++) {
             int minHeight = Math.min(left[i], right[i]);
-            // 只有左右边界都存在，且比最小边界大时；才能接雨水
+            // 只有左右边界都存在，且比最小边界大时；才能接雨水。但这里其实不需要
             if (minHeight > height[i]) {
                 result += (minHeight - height[i]);
             }
