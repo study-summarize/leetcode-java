@@ -18,7 +18,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @DisplayName("字母异位词分组")
 class LeetCode_049_groupAnagrensTest {
-    private final LeetCode_049_groupAnagrens groupAnagrens = new LeetCode_049_groupAnagrens();
+    private final LeetCode_049_groupAnagrams groupAnagrens = new LeetCode_049_groupAnagrams();
 
     @ParameterizedTest
     @MethodSource("generateRightCase")
@@ -31,7 +31,7 @@ class LeetCode_049_groupAnagrensTest {
         commonTest(expectedResult, x -> x.groupAnagrams2(strs));
     }
 
-    private void commonTest(List<List<String>> expectedResult, Function<LeetCode_049_groupAnagrens, List<List<String>>> function) {
+    private void commonTest(List<List<String>> expectedResult, Function<LeetCode_049_groupAnagrams, List<List<String>>> function) {
         Set<Set<String>> finalExpectResult = expectedResult.stream().map(HashSet::new).collect(Collectors.toSet());
         Set<Set<String>> actResult = function.apply(groupAnagrens).stream().map(HashSet::new).collect(Collectors.toSet());
         actResult.removeAll(finalExpectResult);
