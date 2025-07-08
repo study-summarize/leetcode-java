@@ -1,5 +1,7 @@
 package org.github.fourth;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -15,6 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 1. 线程B和C需要等线程A生成猜数结果后，才开始参数
  * 2. 线程B和C任意哪个线程都可以先猜数，但两个线程需要轮流猜数
  */
+@SuppressFBWarnings({"DMI_RANDOM_USED_ONLY_ONCE", "NN_NAKED_NOTIFY"})
 public class Demo {
 
     private static String threadName = null;
@@ -31,7 +34,6 @@ public class Demo {
     private static AtomicInteger number = new AtomicInteger(-100);
 
     private static AtomicInteger answer = new AtomicInteger(-1);
-
 
 
     private static Semaphore semaphore = new Semaphore(1);
@@ -74,7 +76,7 @@ public class Demo {
                 }
                 synchronized (lock) {
                     // 什么情况下，b不可以猜
-                    while (guess.get() || !giveAnswer(number) || (threadName != null && threadName.equals("C"))) {
+                    while (guess.get() || !giveAnswer(number) || "C".equals(threadName)) {
                         try {
                             if (bEnd.get()) {
                                 break;
@@ -117,7 +119,7 @@ public class Demo {
         Thread c = new Thread(() -> {
             while (!cEnd.get()) {
                 synchronized (lock) {
-                    while (guess.get() || !giveAnswer(number)  || (threadName != null && threadName.equals("B"))) {
+                    while (guess.get() || !giveAnswer(number) || "B".equals(threadName)) {
                         try {
                             if (cEnd.get()) {
                                 break;

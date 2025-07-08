@@ -3,11 +3,10 @@ package org.github.fourth;
 import java.util.*;
 
 
-
 public class Demo2 {
 
     public static void main(String[] args) {
-        Map<String,List<String>> map = new HashMap<>();
+        Map<String, List<String>> map = new HashMap<>();
         map.put("a", Arrays.asList("1", "2", "3"));
         map.put("b", Arrays.asList("4", "5", "6"));
 
@@ -16,7 +15,7 @@ public class Demo2 {
 
     }
 
-    public List<Map<String, String>> convert(Map<String,List<String>> map) {
+    public List<Map<String, String>> convert(Map<String, List<String>> map) {
         if (map == null) {
             return null;
         }
