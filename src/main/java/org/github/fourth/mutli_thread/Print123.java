@@ -1,4 +1,4 @@
-package org.github.fourth.scene;
+package org.github.fourth.mutli_thread;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 

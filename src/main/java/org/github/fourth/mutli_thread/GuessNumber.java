@@ -1,4 +1,4 @@
-package org.github.fourth;
+package org.github.fourth.mutli_thread;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 2. 线程B和C任意哪个线程都可以先猜数，但两个线程需要轮流猜数
  */
 @SuppressFBWarnings({"DMI_RANDOM_USED_ONLY_ONCE", "NN_NAKED_NOTIFY"})
-public class Demo {
+public class GuessNumber {
 
     private static String threadName = null;
 
