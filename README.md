@@ -247,6 +247,60 @@ DFS -> 回溯法 -> 记忆化搜索
 - 二叉树、一维数组
 - 图、二维数组
 
+3、回溯法算出解集模板
+```java
+public List<List<Integer>> solveProblem(int[] nums) {
+		// 解集
+		List<List<Integer>> result = new ArrayList<>();
+
+		// 判空基操
+		if(nums == null || nums.length == 0) {
+				return result;
+		}
+		// 单一解
+		List<Integer> list = new ArrayList<>();
+
+		// 元素数据源排序（根据情况）
+		// Arrays.sort(nums);
+
+		helper(result, list, nums, ?);
+
+		return result;
+}
+
+// pos主要是用于组合问题，因为需要求部分解，需要知道原来的位置
+private void helper(List<List<Integer>> result, List<Integer> list, int[] nums, int pos, ?) {
+		// 1.递归何时退出
+		if(condition xx) {
+				return;
+		}
+
+		// 2.单一解何时加入解集
+		if(condition xx) {
+				result.add(new ArrayList(list));
+		}
+		// note： 1.2步骤顺序不一定
+
+		// 剪枝
+		if(condition xx) {
+				// doSomething
+				return;
+		}
+
+		// 递归拆解子问题到下一层
+		for (sub : total-subs) {
+				if(condition xx) {
+						// 剪枝
+						break; // or continue
+				}
+				list.add(element);
+				helper(result, list, nums, ?);
+				// 回溯
+				list.remove(element);
+		}
+}
+```
+
 ## BFS
 树、图、二维矩阵
 
