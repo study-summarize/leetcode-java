@@ -26,6 +26,8 @@ public class LeetCode_128_longestConsecutive {
 
         int result = 1;
         for (int num : sets) {
+            // note: 这里是一个优化，避免一些重复计算
+            // 因为如果存在num - 1，可以等轮到num - 1时，再进行计算
             if (!sets.contains(num - 1)) {
                 int subLen = 1;
                 while (sets.contains(++num)) {
