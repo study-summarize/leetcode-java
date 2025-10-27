@@ -7,6 +7,9 @@ import org.github.fourth.Top100;
  * 找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
  * 返回容器可以储存的最大水量。
  * 说明：你不能倾斜容器。
+ *
+ * 解题思路：
+ * result其实就等于a * b。而其中a的最大值是最容易确定的，即nums.length，接下来就慢慢往中间挤看能不能b的最大值能打破a
  */
 @Top100
 public class LeetCode_011_maxArea {
